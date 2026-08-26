@@ -1,0 +1,40 @@
+name: Probe retailers
+
+# Diagnostic: runs whenever this file changes; results are read from the job
+# log. Used to investigate retailer platforms/URLs before adding them to the
+# roster (the dev sandbox has no direct network access to retailer sites).
+
+on:
+  push:
+    paths:
+      - '.github/workflows/probe.yml'
+  workflow_dispatch: {}
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Carbon Knife Co — Raquin collection (API view)
+        run: |
+          echo "== collection products.json =="
+          curl -sSL --max-time 30 "https://carbonknifeco.com/collections/bryan-raquin-knives/products.json?limit=250" | head -c 3000 || true
+          echo
+
+      - name: Carbon Knife Co — Raquin collection (page links)
+        run: |
+          curl -sSL --max-time 30 "https://carbonknifeco.com/collections/bryan-raquin-knives" -o page.html || true
+          echo "== raquin product links on page =="
+          grep -oiE 'href="[^"]*/products/[^"]*"' page.html | grep -i raquin | sort -u || echo "(none)"
+          echo "== sold-out markers =="
+          grep -cio 'sold out' page.html || true
+
+      - name: bryan-raquin.com — platform detection
+        run: |
+          echo "== homepage headers =="
+          curl -sSIL --max-time 30 "https://bryan-raquin.com" | head -30 || true
+          echo "== woocommerce store api =="
+          curl -sSL --max-time 30 "https://bryan-raquin.com/wp-json/wc/store/v1/products?per_page=5" | head -c 2000 || true
+          echo
+          echo "== shopify products.json =="
+          curl -sSL --max-time 30 "https://bryan-raquin.com/products.json?limit=5" | head -c 1000 || true
+          echo
