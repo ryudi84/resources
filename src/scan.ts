@@ -141,9 +141,46 @@ async function writeGithubSummary(result: ScanResult, fresh: GrailHit[]): Promis
   await appendFile(summaryPath, lines.join('\n') + '\n');
 }
 
+/** Fires a synthetic alert through every configured channel to verify setup. */
+async function sendTestAlert(): Promise<void> {
+  console.log('Sending TEST alert through all configured channels…');
+  await notify([
+    {
+      grailId: 'test',
+      grailName: 'Test alert — your channels work',
+      listing: {
+        retailerId: 'test',
+        retailerName: 'Grail Knife Finder',
+        title: 'This is what a real drop will look like. No knife yet — but the wiring is live.',
+        vendor: '',
+        productType: '',
+        tags: [],
+        handle: 'test',
+        url: 'https://github.com/ryudi84/resources',
+        priceMin: 0,
+        priceMax: 0,
+        available: true,
+        variantsAvailable: 1,
+        variantsTotal: 1,
+      },
+    },
+  ]);
+  console.log('Test alert dispatched.');
+}
+
 async function main(): Promise<void> {
-  const { values } = parseArgs({ options: { demo: { type: 'boolean', default: false } }, allowPositionals: true });
+  const { values } = parseArgs({
+    options: {
+      demo: { type: 'boolean', default: false },
+      'test-alert': { type: 'boolean', default: false },
+    },
+    allowPositionals: true,
+  });
   const demo = values.demo as boolean;
+
+  if (values['test-alert'] || process.env.TEST_ALERT === 'true') {
+    await sendTestAlert();
+  }
 
   const config = await loadConfig();
   console.log(

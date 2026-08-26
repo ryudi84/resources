@@ -5,7 +5,12 @@ on:
     # Every 20 minutes. Takada drops sell out fast — tighten to */10 if you
     # dare, but note GitHub delays busy cron slots.
     - cron: '*/20 * * * *'
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      test_alert:
+        description: 'Send a test alert through all configured channels (email/Discord/ntfy/Slack) before scanning'
+        type: boolean
+        default: false
   push:
     paths:
       - 'grails.json'
@@ -53,6 +58,7 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           NTFY_SERVER: ${{ secrets.NTFY_SERVER }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          TEST_ALERT: ${{ inputs.test_alert && 'true' || 'false' }}
         run: npm run scan
 
       - name: Commit updated stock data & dashboard
