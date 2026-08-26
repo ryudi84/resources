@@ -1,0 +1,90 @@
+name: Grail knife scan
+
+on:
+  schedule:
+    # Every 20 minutes. Takada drops sell out fast — tighten to */10 if you
+    # dare, but note GitHub delays busy cron slots.
+    - cron: '*/20 * * * *'
+    # Daily bargain digest (13:00 UTC). The digest step below keys off this.
+    - cron: '0 13 * * *'
+  workflow_dispatch:
+    inputs:
+      test_alert:
+        description: 'Send a test alert through all configured channels (email/Discord/ntfy/Slack) before scanning'
+        type: boolean
+        default: false
+      run_digest:
+        description: 'Post the daily bargain digest to Discord after scanning'
+        type: boolean
+        default: false
+  push:
+    paths:
+      - 'grails.json'
+      - 'retailers.json'
+      - 'src/**'
+      - '.github/workflows/scan.yml'
+
+concurrency:
+  group: grail-scan
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Run tests
+        run: npm test
+
+      - name: Scan retailers
+        env:
+          # Configure any of these as repository secrets to get pinged the
+          # moment a grail comes in stock. All channels are free.
+          #   Email: SMTP_USER = your Gmail address, SMTP_PASS = a Gmail app
+          #   password (Google Account → Security → 2-Step Verification →
+          #   App passwords). ALERT_EMAIL optionally overrides the recipient.
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          #   Discord: channel → Edit Channel → Integrations → Webhooks
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          #   ntfy.sh phone push: pick a unique topic, subscribe in the app
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          NTFY_SERVER: ${{ secrets.NTFY_SERVER }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          #   Panel password: set PANEL_PASSWORD to seal the hosted dashboard
+          #   with AES-256-GCM; visitors must enter it to unlock the page.
+          PANEL_PASSWORD: ${{ secrets.PANEL_PASSWORD }}
+          TEST_ALERT: ${{ inputs.test_alert && 'true' || 'false' }}
+        run: npm run scan
+
+      - name: Daily bargain digest
+        if: github.event.schedule == '0 13 * * *' || inputs.run_digest == true
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: npm run digest
+
+      - name: Commit updated stock data & dashboard
+        run: |
+          git config user.name "grail-scan-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/ docs/
+          if git diff --cached --quiet; then
+            echo "No stock changes this sweep."
+          else
+            git commit -m "scan: stock sweep $(date -u +'%Y-%m-%d %H:%MZ')"
+            git pull --rebase origin "${{ github.ref_name }}" || true
+            git push origin "${{ github.ref_name }}"
+          fi

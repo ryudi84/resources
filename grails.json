@@ -1,0 +1,68 @@
+{
+  "$comment": "Your grail watchlist. Add entries by hand or with: npm run grail:add -- --name \"...\" --all term1 --all term2. Matching is case/diacritic-insensitive against title + vendor + type + tags.",
+  "grails": [
+    {
+      "id": "takada-no-hamono",
+      "name": "Takada no Hamono (any knife)",
+      "match": {
+        "any": [
+          "takada"
+        ],
+        "none": [
+          "tenugui",
+          "t-shirt",
+          "t shirt",
+          "shirt",
+          "tote",
+          "towel",
+          "apron",
+          "sticker",
+          "print"
+        ]
+      },
+      "notes": "Mitsuaki Takada — Suiboku, Ginsan, Reika, W2. Sells out in minutes; this entry catches every knife listing that mentions Takada (merch excluded)."
+    },
+    {
+      "id": "takada-suiboku-gyuto-240",
+      "name": "Takada no Hamono Suiboku Gyuto 240",
+      "match": {
+        "all": [
+          "takada",
+          "suiboku",
+          "gyuto"
+        ],
+        "any": [
+          "240"
+        ]
+      },
+      "notes": "The specific grail: W2 Suiboku gyuto in 240mm."
+    },
+    {
+      "id": "example-disabled-grail",
+      "name": "Example: Kato Workhorse Gyuto (disabled)",
+      "enabled": false,
+      "match": {
+        "all": [
+          "kato",
+          "gyuto"
+        ],
+        "none": [
+          "petty",
+          "nakiri"
+        ]
+      },
+      "priceMax": 2000,
+      "notes": "Template showing all/none terms and a price cap. Flip enabled to true (or delete this) when you add real grails."
+    },
+    {
+      "id": "bryan-raquin-any-knife",
+      "name": "Bryan Raquin (any knife)",
+      "match": {
+        "any": [
+          "raquin"
+        ]
+      },
+      "notes": "French bladesmith, forge-finished carbon — sells out fast. Catch-all."
+    }
+  ]
+}
