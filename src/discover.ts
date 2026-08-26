@@ -180,7 +180,15 @@ async function main(): Promise<void> {
     search: (term) => searchWeb(term, fetchText),
     json: (url) => fetchJson(url, 12_000, 0),
     text: (url) => fetchText(url, 12_000),
-    fetchCatalog: catalogFetcher,
+    // Bound each candidate's verification: a slow or enormous catalog gets
+    // 60s, then we move on — liveness beats completeness in discovery.
+    fetchCatalog: (r) =>
+      Promise.race([
+        catalogFetcher(r),
+        new Promise<never>((_, reject) =>
+          setTimeout(() => reject(new Error('verification timed out (60s)')), 60_000).unref?.(),
+        ),
+      ]),
   };
   const found = await discoverRetailers(config, io);
 
