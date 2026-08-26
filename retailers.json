@@ -169,6 +169,12 @@
       "adapter": "shopify",
       "region": "DK",
       "currency": "EUR"
+    },
+    {
+      "id": "hitohira-japan-com",
+      "name": "hitohira-japan.com",
+      "url": "https://hitohira-japan.com",
+      "adapter": "shopify"
     }
   ]
 }
