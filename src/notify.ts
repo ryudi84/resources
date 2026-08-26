@@ -1,14 +1,21 @@
 import type { GrailHit } from './types.ts';
+import { sendMail } from './smtp.ts';
 
 /**
- * Push alerts for newly-in-stock grails. All channels are optional and
- * driven by env vars (set them as GitHub Actions secrets):
+ * Push alerts for newly-in-stock grails. All channels are optional, free,
+ * and driven by env vars (set them as GitHub Actions secrets):
  *
+ *   SMTP_USER           — email alerts: your Gmail address; sends mail to
+ *   SMTP_PASS             yourself via Gmail's free SMTP using an app
+ *                         password (Google Account → Security → App passwords)
+ *   ALERT_EMAIL         — optional recipient override, comma-separable
+ *                         (default: SMTP_USER)
+ *   SMTP_HOST/SMTP_PORT — optional non-Gmail provider (default smtp.gmail.com:465)
+ *   DISCORD_WEBHOOK_URL — post into a Discord channel
  *   NTFY_TOPIC          — push notifications to your phone via ntfy.sh, no
  *                         account needed: pick a unique topic string,
  *                         subscribe to it in the ntfy app, done.
  *   NTFY_SERVER         — optional self-hosted ntfy server (default https://ntfy.sh)
- *   DISCORD_WEBHOOK_URL — post into a Discord channel
  *   SLACK_WEBHOOK_URL   — post into a Slack channel
  */
 
@@ -47,6 +54,26 @@ export async function notify(newHits: GrailHit[]): Promise<void> {
   const body = lines(newHits).join('\n\n');
   const tasks: Promise<void>[] = [];
 
+  const smtpUser = process.env.SMTP_USER;
+  const smtpPass = process.env.SMTP_PASS;
+  if (smtpUser && smtpPass) {
+    const to = (process.env.ALERT_EMAIL ?? smtpUser)
+      .split(',')
+      .map((s) => s.trim())
+      .filter(Boolean);
+    tasks.push(
+      sendMail({
+        host: process.env.SMTP_HOST ?? 'smtp.gmail.com',
+        port: Number.parseInt(process.env.SMTP_PORT ?? '465', 10),
+        user: smtpUser,
+        pass: smtpPass,
+        to,
+        subject: title,
+        text: `${body}\n\n— Grail Knife Finder`,
+      }).catch((err: Error) => console.error('notify: email failed:', err.message)),
+    );
+  }
+
   const ntfyTopic = process.env.NTFY_TOPIC;
   if (ntfyTopic) {
     const server = process.env.NTFY_SERVER ?? 'https://ntfy.sh';
@@ -79,7 +106,7 @@ export async function notify(newHits: GrailHit[]): Promise<void> {
   }
 
   if (tasks.length === 0) {
-    console.log('notify: no channels configured (NTFY_TOPIC / DISCORD_WEBHOOK_URL / SLACK_WEBHOOK_URL); printing instead:\n');
+    console.log('notify: no channels configured (SMTP_USER+SMTP_PASS / DISCORD_WEBHOOK_URL / NTFY_TOPIC / SLACK_WEBHOOK_URL); printing instead:\n');
     console.log(`${title}\n${body}`);
     return;
   }

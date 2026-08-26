@@ -38,11 +38,20 @@ jobs:
       - name: Scan retailers
         env:
           # Configure any of these as repository secrets to get pinged the
-          # moment a grail comes in stock. NTFY_TOPIC is the easiest: pick a
-          # unique topic string and subscribe to it in the ntfy app.
+          # moment a grail comes in stock. All channels are free.
+          #   Email: SMTP_USER = your Gmail address, SMTP_PASS = a Gmail app
+          #   password (Google Account → Security → 2-Step Verification →
+          #   App passwords). ALERT_EMAIL optionally overrides the recipient.
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          #   Discord: channel → Edit Channel → Integrations → Webhooks
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          #   ntfy.sh phone push: pick a unique topic, subscribe in the app
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           NTFY_SERVER: ${{ secrets.NTFY_SERVER }}
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: npm run scan
 
