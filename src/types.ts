@@ -31,7 +31,9 @@ export interface Retailer {
   /** Base URL of the storefront, no trailing slash. */
   url: string;
   /** Which platform adapter to use — see src/adapters.ts for the registry. */
-  adapter: 'shopify' | 'woocommerce';
+  adapter: 'shopify' | 'woocommerce' | 'squarespace';
+  /** Squarespace only: the shop page path, e.g. "/boutique" or "/shop". */
+  path?: string;
   region?: string;
   currency?: string;
   /** Set false to skip without deleting. Default true. */

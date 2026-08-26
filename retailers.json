@@ -10,14 +10,6 @@
       "currency": "CAD"
     },
     {
-      "id": "knives-and-stones-us",
-      "name": "Knives and Stones (US)",
-      "url": "https://www.knivesandstones.us",
-      "adapter": "shopify",
-      "region": "US",
-      "currency": "USD"
-    },
-    {
       "id": "knives-and-stones-au",
       "name": "Knives and Stones (AU)",
       "url": "https://knivesandstones.com.au",
@@ -130,14 +122,6 @@
       "currency": "GBP"
     },
     {
-      "id": "miura-knives",
-      "name": "Miura Knives",
-      "url": "https://miuraknives.com",
-      "adapter": "woocommerce",
-      "region": "EU",
-      "currency": "EUR"
-    },
-    {
       "id": "ai-and-om",
       "name": "Ai and Om Knives",
       "url": "https://aiandomknives.com",
@@ -170,20 +154,13 @@
       "currency": "GBP"
     },
     {
-      "id": "cooks-edge",
-      "name": "The Cook's Edge",
-      "url": "https://www.thecooksedge.ca",
-      "adapter": "shopify",
-      "region": "CA",
-      "currency": "CAD"
-    },
-    {
-      "id": "chubo",
-      "name": "Chubo Knives",
-      "url": "https://chuboknives.com",
-      "adapter": "shopify",
-      "region": "US",
-      "currency": "USD"
+      "id": "bryan-raquin-direct",
+      "name": "Bryan Raquin (direct)",
+      "url": "https://www.bryanraquin.com",
+      "adapter": "squarespace",
+      "path": "/boutique",
+      "region": "FR",
+      "currency": "EUR"
     }
   ]
 }

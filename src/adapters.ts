@@ -1,6 +1,7 @@
 import type { Listing, Retailer } from './types.ts';
 import { fetchShopifyCatalog } from './shopify.ts';
 import { fetchWooCatalog } from './woocommerce.ts';
+import { fetchSquarespaceCatalog } from './squarespace.ts';
 
 /**
  * Platform adapter registry. To support another platform (BigCommerce,
@@ -10,6 +11,7 @@ import { fetchWooCatalog } from './woocommerce.ts';
 export const adapters: Record<Retailer['adapter'], (r: Retailer) => Promise<Listing[]>> = {
   shopify: fetchShopifyCatalog,
   woocommerce: fetchWooCatalog,
+  squarespace: fetchSquarespaceCatalog,
 };
 
 export function catalogFetcher(retailer: Retailer): Promise<Listing[]> {
