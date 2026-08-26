@@ -2,6 +2,7 @@ import { readFile, writeFile, appendFile } from 'node:fs/promises';
 import type { Config, Grail, Retailer } from './types.ts';
 import { fetchJson, fetchText } from './http.ts';
 import { catalogFetcher } from './adapters.ts';
+import { extractGraphQLToken } from './bigcommerce.ts';
 import { matchesGrail, normalize } from './matcher.ts';
 import { loadConfig } from './scan.ts';
 import { postToAlertsIssue } from './github.ts';
@@ -107,6 +108,9 @@ export async function detectPlatform(
         return { adapter: 'squarespace', path };
       }
     }
+  }
+  if (home && /bigcommerce/i.test(home) && extractGraphQLToken(home)) {
+    return { adapter: 'bigcommerce' };
   }
   return null;
 }

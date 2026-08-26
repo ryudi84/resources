@@ -14,39 +14,16 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: bryanraquin.com — discover shop pages
+      - name: JNS BigCommerce GraphQL token + query test
         run: |
-          curl -sSL --max-time 30 "https://www.bryanraquin.com" -o home.html || true
-          echo "== nav links =="
-          grep -oE 'href="/[a-z0-9-]+"' home.html | sort -u | head -30 || true
-
-      - name: bryanraquin.com — try Squarespace JSON endpoints
-        run: |
-          for p in shop store knives available-knives boutique couteaux products available; do
-            echo "===== /$p?format=json"
-            curl -sSL --max-time 20 "https://www.bryanraquin.com/$p?format=json" -o out.json || true
-            head -c 400 out.json; echo
-          done
-
-      - name: bryanraquin.com — inspect best candidate item shape
-        run: |
-          for p in shop store knives available-knives boutique couteaux products available; do
-            curl -sSL --max-time 20 "https://www.bryanraquin.com/$p?format=json" -o out.json 2>/dev/null || true
-            if grep -q '"items"' out.json 2>/dev/null; then
-              echo "===== /$p has items; first item excerpt:"
-              python3 -c "
-          import json
-          d = json.load(open('out.json'))
-          items = d.get('items', [])
-          print('item count:', len(items))
-          if items:
-              i = items[0]
-              print(json.dumps({k: i.get(k) for k in ['title','fullUrl','tags','categories']}, indent=1)[:800])
-              sc = i.get('structuredContent') or {}
-              print('structuredContent keys:', list(sc.keys())[:20])
-              print(json.dumps(sc.get('variants', []), indent=1)[:800])
-          print('pagination:', json.dumps(d.get('pagination', {}))[:300])
-          "
-              break
-            fi
-          done
+          curl -sSL --max-time 20 "https://www.japanesenaturalstones.com" -o h.html || true
+          echo "== token candidates =="
+          grep -oE 'graphQLToken[^,]{0,200}' h.html | head -c 500; echo
+          grep -oE '"storefront_api[^}]{0,300}' h.html | head -c 500; echo
+          TOKEN=$(grep -oE 'graphQLToken['"'"'"]?\s*[:=]\s*['"'"'"][A-Za-z0-9._-]+' h.html | grep -oE '[A-Za-z0-9._-]+$' | head -1)
+          echo "token length: ${#TOKEN}"
+          echo "== graphql products query =="
+          curl -sS --max-time 20 -X POST "https://www.japanesenaturalstones.com/graphql" \
+            -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" \
+            -d '{"query":"query{site{products(first:3){pageInfo{hasNextPage endCursor}edges{node{name path sku brand{name}prices{price{value currencyCode}basePrice{value}salePrice{value}}inventory{isInStock}}}}}}"}' | head -c 1500
+          echo
