@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T02:29:37.298Z",
+  "generatedAt": "2026-08-26T02:31:16.656Z",
   "retailers": [
     {
       "id": "tosho",
@@ -7,7 +7,7 @@
       "url": "https://toshoknifearts.com",
       "ok": true,
       "products": 1748,
-      "ms": 1110
+      "ms": 1153
     },
     {
       "id": "knives-and-stones-us",
@@ -15,7 +15,7 @@
       "url": "https://www.knivesandstones.us",
       "ok": true,
       "products": 0,
-      "ms": 245
+      "ms": 193
     },
     {
       "id": "knives-and-stones-au",
@@ -23,7 +23,7 @@
       "url": "https://knivesandstones.com.au",
       "ok": true,
       "products": 1756,
-      "ms": 2705
+      "ms": 1279
     },
     {
       "id": "carbon-knife-co",
@@ -31,7 +31,7 @@
       "url": "https://carbonknifeco.com",
       "ok": true,
       "products": 3147,
-      "ms": 1876
+      "ms": 1821
     },
     {
       "id": "strata",
@@ -39,7 +39,7 @@
       "url": "https://strataportland.com",
       "ok": true,
       "products": 3668,
-      "ms": 2357
+      "ms": 2445
     },
     {
       "id": "bernal",
@@ -47,7 +47,7 @@
       "url": "https://bernalcutlery.com",
       "ok": true,
       "products": 4830,
-      "ms": 6470
+      "ms": 6650
     },
     {
       "id": "sugi",
@@ -55,7 +55,7 @@
       "url": "https://sugicutlery.com",
       "ok": true,
       "products": 2519,
-      "ms": 7377
+      "ms": 1640
     },
     {
       "id": "tokushu",
@@ -63,7 +63,7 @@
       "url": "https://tokushuknife.com",
       "ok": true,
       "products": 889,
-      "ms": 1161
+      "ms": 595
     },
     {
       "id": "sharp-knife-shop",
@@ -71,7 +71,7 @@
       "url": "https://sharpknifeshop.com",
       "ok": true,
       "products": 354,
-      "ms": 878
+      "ms": 453
     },
     {
       "id": "knifewear",
@@ -79,7 +79,7 @@
       "url": "https://knifewear.com",
       "ok": true,
       "products": 499,
-      "ms": 717
+      "ms": 392
     },
     {
       "id": "district-cutlery",
@@ -87,7 +87,7 @@
       "url": "https://www.districtcutlery.com",
       "ok": true,
       "products": 427,
-      "ms": 1852
+      "ms": 320
     },
     {
       "id": "coutelier",
@@ -95,7 +95,7 @@
       "url": "https://couteliernola.com",
       "ok": true,
       "products": 801,
-      "ms": 2305
+      "ms": 631
     },
     {
       "id": "eating-tools",
@@ -103,7 +103,7 @@
       "url": "https://www.eatingtools.com",
       "ok": true,
       "products": 1080,
-      "ms": 5090
+      "ms": 1061
     },
     {
       "id": "modern-cooking",
@@ -111,7 +111,7 @@
       "url": "https://www.moderncooking.com",
       "ok": true,
       "products": 498,
-      "ms": 1149
+      "ms": 1486
     },
     {
       "id": "tetogi",
@@ -119,7 +119,7 @@
       "url": "https://tetogi.com",
       "ok": true,
       "products": 2069,
-      "ms": 5012
+      "ms": 6908
     }
   ],
   "hits": [
