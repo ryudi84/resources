@@ -10,7 +10,10 @@ import { fetchText } from './http.ts';
  */
 
 const PAGE_SIZE = 50;
-const MAX_PAGES = 100;
+// JNS alone lists 6.5k products, and BigCommerce cursors walk ascending
+// product ids — the newest (grail drops) come LAST, so truncation loses
+// exactly the listings that matter.
+const MAX_PAGES = 300;
 
 const PRODUCTS_QUERY = `query($after:String){site{products(first:${PAGE_SIZE},after:$after){pageInfo{hasNextPage endCursor}edges{node{name path sku brand{name}prices{price{value currencyCode}basePrice{value}salePrice{value}}inventory{isInStock}defaultImage{url(width:500)}}}}}}`;
 
@@ -114,7 +117,9 @@ export async function fetchBigCommerceCatalog(retailer: Retailer): Promise<Listi
     const edges = products?.edges ?? [];
     for (const edge of edges) listings.push(toListing(retailer, edge.node));
     if (!products?.pageInfo?.hasNextPage || edges.length === 0) break;
-    after = products.pageInfo.endCursor ?? null;
+    const next = products.pageInfo.endCursor ?? null;
+    if (next === after) break; // cursor stopped advancing — bail, never loop
+    after = next;
   }
   return listings;
 }
