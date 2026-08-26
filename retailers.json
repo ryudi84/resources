@@ -136,6 +136,54 @@
       "adapter": "woocommerce",
       "region": "EU",
       "currency": "EUR"
+    },
+    {
+      "id": "ai-and-om",
+      "name": "Ai and Om Knives",
+      "url": "https://aiandomknives.com",
+      "adapter": "shopify",
+      "region": "CA",
+      "currency": "CAD"
+    },
+    {
+      "id": "town-cutler",
+      "name": "Town Cutler",
+      "url": "https://www.towncutler.com",
+      "adapter": "shopify",
+      "region": "US",
+      "currency": "USD"
+    },
+    {
+      "id": "homebutcher",
+      "name": "Homebutcher",
+      "url": "https://homebutcher.com",
+      "adapter": "shopify",
+      "region": "US",
+      "currency": "USD"
+    },
+    {
+      "id": "kitchen-provisions",
+      "name": "Kitchen Provisions",
+      "url": "https://www.kitchenprovisions.co.uk",
+      "adapter": "shopify",
+      "region": "UK",
+      "currency": "GBP"
+    },
+    {
+      "id": "cooks-edge",
+      "name": "The Cook's Edge",
+      "url": "https://www.thecooksedge.ca",
+      "adapter": "shopify",
+      "region": "CA",
+      "currency": "CAD"
+    },
+    {
+      "id": "chubo",
+      "name": "Chubo Knives",
+      "url": "https://chuboknives.com",
+      "adapter": "shopify",
+      "region": "US",
+      "currency": "USD"
     }
   ]
 }
