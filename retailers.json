@@ -166,7 +166,7 @@
       "id": "jns",
       "name": "Japanese Natural Stones (JNS)",
       "url": "https://www.japanesenaturalstones.com",
-      "adapter": "shopify",
+      "adapter": "bigcommerce",
       "region": "DK",
       "currency": "EUR"
     },
