@@ -126,8 +126,16 @@ export interface DiscoveryIo {
   fetchCatalog: (r: Retailer) => Promise<import('./types.ts').Listing[]>;
 }
 
+export interface DiscoveryFind {
+  retailer: Retailer;
+  /** The grail listing that proved this shop stocks a grail — prefer in-stock. */
+  sample: import('./types.ts').Listing;
+  grailName: string;
+  matches: number;
+}
+
 /** One discovery pass: returns verified new retailers (not yet persisted). */
-export async function discoverRetailers(config: Config, io: DiscoveryIo): Promise<Retailer[]> {
+export async function discoverRetailers(config: Config, io: DiscoveryIo): Promise<DiscoveryFind[]> {
   const known = new Set(config.retailers.map((r) => new URL(r.url).hostname.replace(/^www\./, '')));
   const grails = config.grails.filter((g: Grail) => g.enabled !== false);
   const terms = [...new Set(grails.flatMap((g) => [...(g.match.all ?? []), ...(g.match.any ?? [])]))]
@@ -148,7 +156,7 @@ export async function discoverRetailers(config: Config, io: DiscoveryIo): Promis
     }
   }
 
-  const found: Retailer[] = [];
+  const found: DiscoveryFind[] = [];
   let probed = 0;
   for (const [bare, origin] of candidates) {
     if (probed >= MAX_CANDIDATES_PER_RUN) break;
@@ -161,11 +169,13 @@ export async function discoverRetailers(config: Config, io: DiscoveryIo): Promis
     const retailer: Retailer = { id: slug(bare), name: bare, url: origin, adapter: platform.adapter, ...(platform.path ? { path: platform.path } : {}) };
     try {
       const listings = await io.fetchCatalog(retailer);
-      const hit = listings.find((l) => grails.some((g) => matchesGrail(g, l)));
-      if (hit) {
-        retailer.currency = hit.currency;
-        found.push(retailer);
-        console.log(`  ★ ${bare}: ${platform.adapter}, stocks "${hit.title}" — added`);
+      const matched = listings.filter((l) => grails.some((g) => matchesGrail(g, l)));
+      if (matched.length > 0) {
+        const sample = matched.find((l) => l.available) ?? matched[0];
+        const grailName = grails.find((g) => matchesGrail(g, sample))?.name ?? 'grail';
+        retailer.currency = sample.currency;
+        found.push({ retailer, sample, grailName, matches: matched.length });
+        console.log(`  ★ ${bare}: ${platform.adapter}, ${matched.length} grail match(es), e.g. "${sample.title}" → ${sample.url}`);
       } else {
         console.log(`  · ${bare}: ${platform.adapter}, ${listings.length} products, no grail match`);
       }
@@ -202,11 +212,17 @@ async function main(): Promise<void> {
   }
 
   const file = JSON.parse(await readFile('retailers.json', 'utf8'));
-  file.retailers.push(...found);
+  file.retailers.push(...found.map((f) => f.retailer));
   await writeFile('retailers.json', JSON.stringify(file, null, 2) + '\n');
-  console.log(`Discovery: added ${found.length} retailer(s): ${found.map((r) => r.id).join(', ')}`);
+  console.log(`Discovery: added ${found.length} retailer(s): ${found.map((f) => f.retailer.id).join(', ')}`);
 
-  const lines = found.map((r) => `- **${r.name}** (${r.adapter}) — ${r.url}`);
+  const lines = found.map((f) => {
+    const l = f.sample;
+    const price = l.priceMin ? ` — ${l.priceMin} ${l.currency ?? ''}`.trimEnd() : '';
+    const stock = l.available ? '✅ IN STOCK' : '✖ sold out';
+    const more = f.matches > 1 ? ` (+${f.matches - 1} more ${f.grailName} listings at this shop)` : '';
+    return `- **${f.retailer.name}** (${f.retailer.adapter}): [${l.title}](${l.url})${price} · ${stock} · ${f.grailName}${more}`;
+  });
   const summaryPath = process.env.GITHUB_STEP_SUMMARY;
   if (summaryPath) await appendFile(summaryPath, `## 🔭 Discovery: ${found.length} new stockist(s)\n${lines.join('\n')}\n`);
   await postToAlertsIssue(`🔭 **Discovery** found ${found.length} new grail stockist(s), now in the sweep:\n${lines.join('\n')}`).catch(() => {});
