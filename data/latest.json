@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T12:00:57.630Z",
+  "generatedAt": "2026-08-26T13:05:09.474Z",
   "retailers": [
     {
       "id": "tosho",
@@ -7,7 +7,7 @@
       "url": "https://toshoknifearts.com",
       "ok": true,
       "products": 1748,
-      "ms": 1194
+      "ms": 6611
     },
     {
       "id": "knives-and-stones-au",
@@ -15,7 +15,7 @@
       "url": "https://knivesandstones.com.au",
       "ok": true,
       "products": 1758,
-      "ms": 2744
+      "ms": 6955
     },
     {
       "id": "carbon-knife-co",
@@ -23,7 +23,7 @@
       "url": "https://carbonknifeco.com",
       "ok": true,
       "products": 3147,
-      "ms": 1907
+      "ms": 8388
     },
     {
       "id": "strata",
@@ -31,7 +31,7 @@
       "url": "https://strataportland.com",
       "ok": true,
       "products": 3668,
-      "ms": 2248
+      "ms": 15012
     },
     {
       "id": "bernal",
@@ -39,7 +39,7 @@
       "url": "https://bernalcutlery.com",
       "ok": true,
       "products": 4830,
-      "ms": 7990
+      "ms": 26033
     },
     {
       "id": "sugi",
@@ -47,7 +47,7 @@
       "url": "https://sugicutlery.com",
       "ok": true,
       "products": 2519,
-      "ms": 7643
+      "ms": 12067
     },
     {
       "id": "tokushu",
@@ -55,7 +55,7 @@
       "url": "https://tokushuknife.com",
       "ok": true,
       "products": 889,
-      "ms": 3766
+      "ms": 4442
     },
     {
       "id": "sharp-knife-shop",
@@ -63,7 +63,7 @@
       "url": "https://sharpknifeshop.com",
       "ok": true,
       "products": 354,
-      "ms": 447
+      "ms": 2221
     },
     {
       "id": "knifewear",
@@ -71,7 +71,7 @@
       "url": "https://knifewear.com",
       "ok": true,
       "products": 499,
-      "ms": 760
+      "ms": 2019
     },
     {
       "id": "district-cutlery",
@@ -79,7 +79,7 @@
       "url": "https://www.districtcutlery.com",
       "ok": true,
       "products": 427,
-      "ms": 720
+      "ms": 2618
     },
     {
       "id": "coutelier",
@@ -87,7 +87,7 @@
       "url": "https://couteliernola.com",
       "ok": true,
       "products": 801,
-      "ms": 438
+      "ms": 3186
     },
     {
       "id": "eating-tools",
@@ -95,7 +95,7 @@
       "url": "https://www.eatingtools.com",
       "ok": true,
       "products": 1080,
-      "ms": 809
+      "ms": 5958
     },
     {
       "id": "modern-cooking",
@@ -103,7 +103,7 @@
       "url": "https://www.moderncooking.com",
       "ok": true,
       "products": 498,
-      "ms": 1620
+      "ms": 2873
     },
     {
       "id": "tetogi",
@@ -111,7 +111,7 @@
       "url": "https://tetogi.com",
       "ok": true,
       "products": 2069,
-      "ms": 4659
+      "ms": 9260
     },
     {
       "id": "oishya",
@@ -119,7 +119,7 @@
       "url": "https://oishya.com",
       "ok": true,
       "products": 53,
-      "ms": 1084
+      "ms": 1013
     },
     {
       "id": "ai-and-om",
@@ -127,7 +127,7 @@
       "url": "https://aiandomknives.com",
       "ok": true,
       "products": 938,
-      "ms": 705
+      "ms": 6116
     },
     {
       "id": "town-cutler",
@@ -135,7 +135,7 @@
       "url": "https://www.towncutler.com",
       "ok": true,
       "products": 203,
-      "ms": 550
+      "ms": 1172
     },
     {
       "id": "homebutcher",
@@ -143,7 +143,7 @@
       "url": "https://homebutcher.com",
       "ok": true,
       "products": 1142,
-      "ms": 635
+      "ms": 2588
     },
     {
       "id": "kitchen-provisions",
@@ -151,7 +151,7 @@
       "url": "https://www.kitchenprovisions.co.uk",
       "ok": true,
       "products": 249,
-      "ms": 490
+      "ms": 1642
     },
     {
       "id": "bryan-raquin-direct",
@@ -159,7 +159,7 @@
       "url": "https://www.bryanraquin.com",
       "ok": true,
       "products": 74,
-      "ms": 885
+      "ms": 342
     },
     {
       "id": "jns",
@@ -167,7 +167,7 @@
       "url": "https://www.japanesenaturalstones.com",
       "ok": true,
       "products": 6529,
-      "ms": 47608
+      "ms": 48298
     },
     {
       "id": "hitohira-japan-com",
@@ -175,7 +175,7 @@
       "url": "https://hitohira-japan.com",
       "ok": true,
       "products": 5826,
-      "ms": 10528
+      "ms": 15591
     }
   ],
   "hits": [
@@ -6002,8 +6002,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-gyuto-210mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-gyuto-210mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-gyuto-210mm-wood-handle-850909.jpg?v=1771519157",
-        "priceMin": 484,
-        "priceMax": 484,
+        "priceMin": 485,
+        "priceMax": 485,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6157,8 +6157,8 @@
         "handle": "takada-no-hamono-silver-3-hh-gyuto-210mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-hh-gyuto-210mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-hh-gyuto-210mm-ho-wood-handle-116179.jpg?v=1763742269",
-        "priceMin": 331,
-        "priceMax": 331,
+        "priceMin": 332,
+        "priceMax": 332,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6219,8 +6219,8 @@
         "handle": "takada-no-hamono-silver-3-hh-sujihiki-270mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-hh-sujihiki-270mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-hh-sujihiki-270mm-ho-wood-handle-386075.jpg?v=1763741464",
-        "priceMin": 331,
-        "priceMax": 331,
+        "priceMin": 332,
+        "priceMax": 332,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6568,8 +6568,8 @@
         "handle": "takada-no-hamono-blue-1-suiboku-gyuto-210mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-suiboku-gyuto-210mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-suiboku-gyuto-210mm-ho-wood-handle-603791.jpg?v=1763584937",
-        "priceMin": 433,
-        "priceMax": 433,
+        "priceMin": 434,
+        "priceMax": 434,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7929,8 +7929,8 @@
         "handle": "bca-w2hhh-05-ca135",
         "url": "https://hitohira-japan.com/products/bca-w2hhh-05-ca135",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC03159_614a437f-1db1-4386-9b24-6c5d69835a8b.jpg?v=1647016445",
-        "priceMin": 402,
-        "priceMax": 402,
+        "priceMin": 403,
+        "priceMax": 403,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8217,8 +8217,8 @@
         "handle": "bca-s3su-05-da180",
         "url": "https://hitohira-japan.com/products/bca-s3su-05-da180",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC08058_a27fb179-1fc1-43df-a6ec-0d781be2fc53.jpg?v=1647022801",
-        "priceMin": 486,
-        "priceMax": 486,
+        "priceMin": 487,
+        "priceMax": 487,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8576,8 +8576,8 @@
         "handle": "bca-w2hh-05-cb170",
         "url": "https://hitohira-japan.com/products/bca-w2hh-05-cb170",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC03609_6372eead-56f5-4e67-8c4b-6834e8bdbb74.jpg?v=1647030621",
-        "priceMin": 402,
-        "priceMax": 402,
+        "priceMin": 403,
+        "priceMax": 403,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8720,8 +8720,8 @@
         "handle": "bca-s3su-thin-06-fa210",
         "url": "https://hitohira-japan.com/products/bca-s3su-thin-06-fa210",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC05534_1ea71be0-0b3c-4c74-bb5a-8c03c52ade2d.jpg?v=1647033022",
-        "priceMin": 670,
-        "priceMax": 670,
+        "priceMin": 671,
+        "priceMax": 671,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8756,8 +8756,8 @@
         "handle": "bca-w1su-06-fa240",
         "url": "https://hitohira-japan.com/products/bca-w1su-06-fa240",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC06836_ac97e66c-a9fe-4e70-b806-2df65d485e47.jpg?v=1647034775",
-        "priceMin": 634,
-        "priceMax": 634,
+        "priceMin": 635,
+        "priceMax": 635,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -9368,8 +9368,8 @@
         "handle": "bca-b1su-06-fa240",
         "url": "https://hitohira-japan.com/products/bca-b1su-06-fa240",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC08793_9bef183b-6fe8-485a-a109-1328f90fa557.jpg?v=1647036825",
-        "priceMin": 634,
-        "priceMax": 634,
+        "priceMin": 635,
+        "priceMax": 635,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -10291,8 +10291,8 @@
         "handle": "bca-w1su-06-fa240",
         "url": "https://hitohira-japan.com/products/bca-w1su-06-fa240",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC06836_ac97e66c-a9fe-4e70-b806-2df65d485e47.jpg?v=1647034775",
-        "priceMin": 634,
-        "priceMax": 634,
+        "priceMin": 635,
+        "priceMax": 635,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -10363,8 +10363,8 @@
         "handle": "bca-b1su-06-fa240",
         "url": "https://hitohira-japan.com/products/bca-b1su-06-fa240",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC08793_9bef183b-6fe8-485a-a109-1328f90fa557.jpg?v=1647036825",
-        "priceMin": 634,
-        "priceMax": 634,
+        "priceMin": 635,
+        "priceMax": 635,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
