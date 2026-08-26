@@ -1,0 +1,22 @@
+{
+  "$comment": "Shopify storefronts known to stock Takada no Hamono and other high-end Japanese knives. A retailer that errors shows up in the dashboard's status strip — prune or fix its URL there. Add any Shopify knife shop by base URL.",
+  "retailers": [
+    { "id": "tosho", "name": "Tosho Knife Arts", "url": "https://toshoknifearts.com", "adapter": "shopify", "region": "CA", "currency": "CAD" },
+    { "id": "knives-and-stones-us", "name": "Knives and Stones (US)", "url": "https://www.knivesandstones.us", "adapter": "shopify", "region": "US", "currency": "USD" },
+    { "id": "knives-and-stones-au", "name": "Knives and Stones (AU)", "url": "https://knivesandstones.com.au", "adapter": "shopify", "region": "AU", "currency": "AUD" },
+    { "id": "carbon-knife-co", "name": "Carbon Knife Co", "url": "https://carbonknifeco.com", "adapter": "shopify", "region": "US", "currency": "USD" },
+    { "id": "strata", "name": "Strata Portland", "url": "https://strataportland.com", "adapter": "shopify", "region": "US", "currency": "USD" },
+    { "id": "bernal", "name": "Bernal Cutlery", "url": "https://bernalcutlery.com", "adapter": "shopify", "region": "US", "currency": "USD" },
+    { "id": "sugi", "name": "Sugi Cutlery", "url": "https://sugicutlery.com", "adapter": "shopify", "region": "US", "currency": "USD" },
+    { "id": "tokushu", "name": "Tokushu Knife", "url": "https://tokushuknife.com", "adapter": "shopify", "region": "US", "currency": "USD" },
+    { "id": "sharp-knife-shop", "name": "Sharp Knife Shop", "url": "https://sharpknifeshop.com", "adapter": "shopify", "region": "CA", "currency": "CAD" },
+    { "id": "knifewear", "name": "Knifewear", "url": "https://knifewear.com", "adapter": "shopify", "region": "CA", "currency": "CAD" },
+    { "id": "district-cutlery", "name": "District Cutlery", "url": "https://www.districtcutlery.com", "adapter": "shopify", "region": "US", "currency": "USD" },
+    { "id": "coutelier", "name": "Coutelier NOLA", "url": "https://couteliernola.com", "adapter": "shopify", "region": "US", "currency": "USD" },
+    { "id": "eating-tools", "name": "Eating Tools", "url": "https://www.eatingtools.com", "adapter": "shopify", "region": "US", "currency": "USD" },
+    { "id": "modern-cooking", "name": "Modern Cooking", "url": "https://www.moderncooking.com", "adapter": "shopify", "region": "EU", "currency": "EUR" },
+    { "id": "milan-blades", "name": "Milan Blades", "url": "https://www.milanblades.com", "adapter": "shopify", "region": "US", "currency": "USD" },
+    { "id": "tetogi", "name": "Tetogi", "url": "https://tetogi.com", "adapter": "shopify", "region": "US", "currency": "USD" },
+    { "id": "oishya", "name": "Oishya", "url": "https://oishya.com", "adapter": "shopify", "region": "EU", "currency": "EUR" }
+  ]
+}

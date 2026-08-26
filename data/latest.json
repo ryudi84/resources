@@ -1,0 +1,249 @@
+{
+  "generatedAt": "2026-08-26T02:25:10.945Z",
+  "demo": true,
+  "retailers": [
+    {
+      "id": "tosho",
+      "name": "Tosho Knife Arts",
+      "url": "https://toshoknifearts.com",
+      "ok": true,
+      "products": 2,
+      "ms": 0
+    },
+    {
+      "id": "knives-and-stones-us",
+      "name": "Knives and Stones (US)",
+      "url": "https://www.knivesandstones.us",
+      "ok": true,
+      "products": 1,
+      "ms": 0
+    },
+    {
+      "id": "knives-and-stones-au",
+      "name": "Knives and Stones (AU)",
+      "url": "https://knivesandstones.com.au",
+      "ok": true,
+      "products": 0,
+      "ms": 0
+    },
+    {
+      "id": "carbon-knife-co",
+      "name": "Carbon Knife Co",
+      "url": "https://carbonknifeco.com",
+      "ok": true,
+      "products": 2,
+      "ms": 0
+    },
+    {
+      "id": "strata",
+      "name": "Strata Portland",
+      "url": "https://strataportland.com",
+      "ok": true,
+      "products": 0,
+      "ms": 0
+    },
+    {
+      "id": "bernal",
+      "name": "Bernal Cutlery",
+      "url": "https://bernalcutlery.com",
+      "ok": true,
+      "products": 0,
+      "ms": 0
+    },
+    {
+      "id": "sugi",
+      "name": "Sugi Cutlery",
+      "url": "https://sugicutlery.com",
+      "ok": true,
+      "products": 0,
+      "ms": 0
+    },
+    {
+      "id": "tokushu",
+      "name": "Tokushu Knife",
+      "url": "https://tokushuknife.com",
+      "ok": true,
+      "products": 0,
+      "ms": 0
+    },
+    {
+      "id": "sharp-knife-shop",
+      "name": "Sharp Knife Shop",
+      "url": "https://sharpknifeshop.com",
+      "ok": true,
+      "products": 0,
+      "ms": 0
+    },
+    {
+      "id": "knifewear",
+      "name": "Knifewear",
+      "url": "https://knifewear.com",
+      "ok": true,
+      "products": 0,
+      "ms": 0
+    },
+    {
+      "id": "district-cutlery",
+      "name": "District Cutlery",
+      "url": "https://www.districtcutlery.com",
+      "ok": true,
+      "products": 0,
+      "ms": 0
+    },
+    {
+      "id": "coutelier",
+      "name": "Coutelier NOLA",
+      "url": "https://couteliernola.com",
+      "ok": true,
+      "products": 0,
+      "ms": 0
+    },
+    {
+      "id": "eating-tools",
+      "name": "Eating Tools",
+      "url": "https://www.eatingtools.com",
+      "ok": true,
+      "products": 0,
+      "ms": 0
+    },
+    {
+      "id": "modern-cooking",
+      "name": "Modern Cooking",
+      "url": "https://www.moderncooking.com",
+      "ok": true,
+      "products": 0,
+      "ms": 0
+    },
+    {
+      "id": "milan-blades",
+      "name": "Milan Blades",
+      "url": "https://www.milanblades.com",
+      "ok": true,
+      "products": 0,
+      "ms": 0
+    },
+    {
+      "id": "tetogi",
+      "name": "Tetogi",
+      "url": "https://tetogi.com",
+      "ok": true,
+      "products": 0,
+      "ms": 0
+    },
+    {
+      "id": "oishya",
+      "name": "Oishya",
+      "url": "https://oishya.com",
+      "ok": true,
+      "products": 0,
+      "ms": 0
+    }
+  ],
+  "hits": [
+    {
+      "grailId": "takada-no-hamono",
+      "grailName": "Takada no Hamono (anything)",
+      "listing": {
+        "retailerId": "tosho",
+        "retailerName": "Tosho Knife Arts",
+        "region": "CA",
+        "currency": "CAD",
+        "title": "Takada no Hamono Suiboku W2 Gyuto 240mm Ho/Horn",
+        "vendor": "Takada no Hamono",
+        "productType": "Gyuto",
+        "tags": [],
+        "handle": "takada-no-hamono-suiboku-w2-gyuto-240mm",
+        "url": "https://toshoknifearts.com/products/takada-no-hamono-suiboku-w2-gyuto-240mm",
+        "priceMin": 640,
+        "priceMax": 640,
+        "available": true,
+        "variantsAvailable": 1,
+        "variantsTotal": 1
+      }
+    },
+    {
+      "grailId": "takada-suiboku-gyuto-240",
+      "grailName": "Takada no Hamono Suiboku Gyuto 240",
+      "listing": {
+        "retailerId": "tosho",
+        "retailerName": "Tosho Knife Arts",
+        "region": "CA",
+        "currency": "CAD",
+        "title": "Takada no Hamono Suiboku W2 Gyuto 240mm Ho/Horn",
+        "vendor": "Takada no Hamono",
+        "productType": "Gyuto",
+        "tags": [],
+        "handle": "takada-no-hamono-suiboku-w2-gyuto-240mm",
+        "url": "https://toshoknifearts.com/products/takada-no-hamono-suiboku-w2-gyuto-240mm",
+        "priceMin": 640,
+        "priceMax": 640,
+        "available": true,
+        "variantsAvailable": 1,
+        "variantsTotal": 1
+      }
+    },
+    {
+      "grailId": "takada-no-hamono",
+      "grailName": "Takada no Hamono (anything)",
+      "listing": {
+        "retailerId": "tosho",
+        "retailerName": "Tosho Knife Arts",
+        "region": "CA",
+        "currency": "CAD",
+        "title": "Takada no Hamono Reika Blue 1 Petty 150mm",
+        "vendor": "Takada no Hamono",
+        "productType": "Petty",
+        "tags": [],
+        "handle": "takada-no-hamono-reika-petty-150mm",
+        "url": "https://toshoknifearts.com/products/takada-no-hamono-reika-petty-150mm",
+        "priceMin": 380,
+        "priceMax": 380,
+        "available": false,
+        "variantsAvailable": 0,
+        "variantsTotal": 1
+      }
+    },
+    {
+      "grailId": "takada-no-hamono",
+      "grailName": "Takada no Hamono (anything)",
+      "listing": {
+        "retailerId": "knives-and-stones-us",
+        "retailerName": "Knives and Stones (US)",
+        "region": "US",
+        "currency": "USD",
+        "title": "Takada no Hamono Suiboku White #2 Gyuto 210mm",
+        "vendor": "Takada no Hamono",
+        "productType": "Gyuto",
+        "tags": [],
+        "handle": "takada-suiboku-w2-gyuto-210",
+        "url": "https://www.knivesandstones.us/products/takada-suiboku-w2-gyuto-210",
+        "priceMin": 585,
+        "priceMax": 585,
+        "available": false,
+        "variantsAvailable": 0,
+        "variantsTotal": 1
+      }
+    },
+    {
+      "grailId": "takada-no-hamono",
+      "grailName": "Takada no Hamono (anything)",
+      "listing": {
+        "retailerId": "carbon-knife-co",
+        "retailerName": "Carbon Knife Co",
+        "region": "US",
+        "currency": "USD",
+        "title": "Takada no Hamono Ginsan Suiboku Sujihiki 270mm",
+        "vendor": "Takada no Hamono",
+        "productType": "Sujihiki",
+        "tags": [],
+        "handle": "takada-ginsan-suiboku-sujihiki-270",
+        "url": "https://carbonknifeco.com/products/takada-ginsan-suiboku-sujihiki-270",
+        "priceMin": 750,
+        "priceMax": 750,
+        "available": false,
+        "variantsAvailable": 0,
+        "variantsTotal": 1
+      }
+    }
+  ]
+}

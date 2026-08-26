@@ -1,0 +1,19 @@
+{
+  "name": "grail-knife-finder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Stock finder for Takada no Hamono and other grail knives — scans retailer inventory APIs, tracks a configurable grail watchlist, and alerts the moment stock lands.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "scan": "node --experimental-strip-types src/scan.ts",
+    "scan:demo": "node --experimental-strip-types src/scan.ts --demo",
+    "grail": "node --experimental-strip-types src/grail.ts",
+    "grail:add": "node --experimental-strip-types src/grail.ts add",
+    "grail:list": "node --experimental-strip-types src/grail.ts list",
+    "grail:remove": "node --experimental-strip-types src/grail.ts remove",
+    "test": "node --experimental-strip-types --test test/*.test.ts"
+  }
+}
