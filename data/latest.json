@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T02:25:59.934Z",
+  "generatedAt": "2026-08-26T02:29:11.265Z",
   "retailers": [
     {
       "id": "tosho",
@@ -7,7 +7,7 @@
       "url": "https://toshoknifearts.com",
       "ok": true,
       "products": 1748,
-      "ms": 5484
+      "ms": 4835
     },
     {
       "id": "knives-and-stones-us",
@@ -15,7 +15,7 @@
       "url": "https://www.knivesandstones.us",
       "ok": true,
       "products": 0,
-      "ms": 289
+      "ms": 898
     },
     {
       "id": "knives-and-stones-au",
@@ -23,7 +23,7 @@
       "url": "https://knivesandstones.com.au",
       "ok": true,
       "products": 1756,
-      "ms": 7238
+      "ms": 7079
     },
     {
       "id": "carbon-knife-co",
@@ -31,7 +31,7 @@
       "url": "https://carbonknifeco.com",
       "ok": true,
       "products": 3147,
-      "ms": 8025
+      "ms": 13238
     },
     {
       "id": "strata",
@@ -39,7 +39,7 @@
       "url": "https://strataportland.com",
       "ok": true,
       "products": 3668,
-      "ms": 16197
+      "ms": 27454
     },
     {
       "id": "bernal",
@@ -47,7 +47,7 @@
       "url": "https://bernalcutlery.com",
       "ok": true,
       "products": 4830,
-      "ms": 22824
+      "ms": 25911
     },
     {
       "id": "sugi",
@@ -55,7 +55,7 @@
       "url": "https://sugicutlery.com",
       "ok": true,
       "products": 2519,
-      "ms": 8491
+      "ms": 11576
     },
     {
       "id": "tokushu",
@@ -63,7 +63,7 @@
       "url": "https://tokushuknife.com",
       "ok": true,
       "products": 889,
-      "ms": 3665
+      "ms": 6973
     },
     {
       "id": "sharp-knife-shop",
@@ -71,15 +71,15 @@
       "url": "https://sharpknifeshop.com",
       "ok": true,
       "products": 354,
-      "ms": 2124
+      "ms": 2079
     },
     {
       "id": "knifewear",
       "name": "Knifewear",
       "url": "https://knifewear.com",
       "ok": true,
-      "products": 499,
-      "ms": 1742
+      "products": 233,
+      "ms": 1465
     },
     {
       "id": "district-cutlery",
@@ -87,7 +87,7 @@
       "url": "https://www.districtcutlery.com",
       "ok": true,
       "products": 427,
-      "ms": 2155
+      "ms": 4031
     },
     {
       "id": "coutelier",
@@ -95,7 +95,7 @@
       "url": "https://couteliernola.com",
       "ok": true,
       "products": 801,
-      "ms": 3111
+      "ms": 3292
     },
     {
       "id": "eating-tools",
@@ -103,7 +103,7 @@
       "url": "https://www.eatingtools.com",
       "ok": true,
       "products": 1080,
-      "ms": 5938
+      "ms": 8488
     },
     {
       "id": "modern-cooking",
@@ -111,7 +111,7 @@
       "url": "https://www.moderncooking.com",
       "ok": true,
       "products": 498,
-      "ms": 2273
+      "ms": 2070
     },
     {
       "id": "milan-blades",
@@ -120,7 +120,7 @@
       "ok": false,
       "error": "fetch failed",
       "products": 0,
-      "ms": 4811
+      "ms": 4727
     },
     {
       "id": "tetogi",
@@ -128,7 +128,7 @@
       "url": "https://tetogi.com",
       "ok": true,
       "products": 2069,
-      "ms": 11753
+      "ms": 7570
     },
     {
       "id": "oishya",
@@ -137,7 +137,7 @@
       "ok": false,
       "error": "Unexpected token '<', \"<!doctype \"... is not valid JSON",
       "products": 0,
-      "ms": 7970
+      "ms": 10547
     }
   ],
   "hits": [
@@ -4097,8 +4097,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-petty-135mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-petty-135mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-petty-135mm-wood-handle-239325.jpg?v=1766336648",
-        "priceMin": 293,
-        "priceMax": 293,
+        "priceMin": 1840,
+        "priceMax": 1840,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4128,8 +4128,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-gyuto-210mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-gyuto-210mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-gyuto-210mm-wood-handle-850909.jpg?v=1771519157",
-        "priceMin": 485,
-        "priceMax": 485,
+        "priceMin": 3040,
+        "priceMax": 3040,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4155,8 +4155,8 @@
         "handle": "takada-no-hamono-suiboku-t-shirts-double-extra-large",
         "url": "https://tetogi.com/products/takada-no-hamono-suiboku-t-shirts-double-extra-large",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-suiboku-t-shirts-double-extra-large-279571.jpg?v=1771519118",
-        "priceMin": 32,
-        "priceMax": 32,
+        "priceMin": 200,
+        "priceMax": 200,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4182,8 +4182,8 @@
         "handle": "takada-no-hamono-suiboku-t-shirts-large-1",
         "url": "https://tetogi.com/products/takada-no-hamono-suiboku-t-shirts-large-1",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-suiboku-t-shirts-extra-large-197597.jpg?v=1771519121",
-        "priceMin": 32,
-        "priceMax": 32,
+        "priceMin": 200,
+        "priceMax": 200,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4209,8 +4209,8 @@
         "handle": "takada-no-hamono-suiboku-t-shirts-large",
         "url": "https://tetogi.com/products/takada-no-hamono-suiboku-t-shirts-large",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-suiboku-t-shirts-large-830407.jpg?v=1771519118",
-        "priceMin": 32,
-        "priceMax": 32,
+        "priceMin": 200,
+        "priceMax": 200,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4236,8 +4236,8 @@
         "handle": "kopi-af-takada-no-hamono-t-shirts-black-extra-large",
         "url": "https://tetogi.com/products/kopi-af-takada-no-hamono-t-shirts-black-extra-large",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-t-shirts-white-extra-large-414041.jpg?v=1771519122",
-        "priceMin": 32,
-        "priceMax": 32,
+        "priceMin": 200,
+        "priceMax": 200,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4263,8 +4263,8 @@
         "handle": "kopi-af-takada-no-hamono-t-shirts-black-large-1",
         "url": "https://tetogi.com/products/kopi-af-takada-no-hamono-t-shirts-black-large-1",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-t-shirts-white-large-282302.jpg?v=1771519132",
-        "priceMin": 32,
-        "priceMax": 32,
+        "priceMin": 200,
+        "priceMax": 200,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4290,8 +4290,8 @@
         "handle": "kopi-af-takada-no-hamono-t-shirts-black-large",
         "url": "https://tetogi.com/products/kopi-af-takada-no-hamono-t-shirts-black-large",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-t-shirts-black-extra-large-127596.jpg?v=1771519146",
-        "priceMin": 32,
-        "priceMax": 32,
+        "priceMin": 200,
+        "priceMax": 200,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4317,8 +4317,8 @@
         "handle": "takada-no-hamono-t-shirts-black-large",
         "url": "https://tetogi.com/products/takada-no-hamono-t-shirts-black-large",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-t-shirts-black-large-133338.jpg?v=1771519139",
-        "priceMin": 32,
-        "priceMax": 32,
+        "priceMin": 200,
+        "priceMax": 200,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4348,8 +4348,8 @@
         "handle": "takada-no-hamono-blue-1-suiboku-nakiri-180mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-suiboku-nakiri-180mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-suiboku-nakiri-180mm-wood-handle-431623.jpg?v=1771518242",
-        "priceMin": 472,
-        "priceMax": 472,
+        "priceMin": 2960,
+        "priceMax": 2960,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4379,8 +4379,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-sujihiki-270mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-sujihiki-270mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-sujihiki-270mm-wood-handle-884472.jpg?v=1763743175",
-        "priceMin": 586,
-        "priceMax": 586,
+        "priceMin": 3680,
+        "priceMax": 3680,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4410,8 +4410,8 @@
         "handle": "takada-no-hamono-white-2-hh-sujihiki-270mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-white-2-hh-sujihiki-270mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-white-2-hh-sujihiki-270mm-wood-handle-786434.jpg?v=1763743475",
-        "priceMin": 319,
-        "priceMax": 319,
+        "priceMin": 2000,
+        "priceMax": 2000,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4441,8 +4441,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-sujihiki-300mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-sujihiki-300mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-sujihiki-300mm-wood-handle-494170.jpg?v=1763742276",
-        "priceMin": 669,
-        "priceMax": 669,
+        "priceMin": 4200,
+        "priceMax": 4200,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4472,8 +4472,8 @@
         "handle": "takada-no-hamono-silver-3-hh-gyuto-210mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-hh-gyuto-210mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-hh-gyuto-210mm-ho-wood-handle-116179.jpg?v=1763742269",
-        "priceMin": 332,
-        "priceMax": 332,
+        "priceMin": 2080,
+        "priceMax": 2080,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4503,8 +4503,8 @@
         "handle": "takada-no-hamono-white-2-hh-bunka-180mm-ho-wood-handle-mukimono-kaku-type",
         "url": "https://tetogi.com/products/takada-no-hamono-white-2-hh-bunka-180mm-ho-wood-handle-mukimono-kaku-type",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-white-2-hh-bunka-180mm-ho-wood-handle-mukimono-kaku-type-199919.jpg?v=1763741521",
-        "priceMin": 281,
-        "priceMax": 281,
+        "priceMin": 1760,
+        "priceMax": 1760,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4534,8 +4534,8 @@
         "handle": "takada-no-hamono-silver-3-hh-sujihiki-270mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-hh-sujihiki-270mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-hh-sujihiki-270mm-ho-wood-handle-386075.jpg?v=1763741464",
-        "priceMin": 332,
-        "priceMax": 332,
+        "priceMin": 2080,
+        "priceMax": 2080,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4565,8 +4565,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-sujihiki-210mm-tagayasan-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-sujihiki-210mm-tagayasan-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-sujihiki-210mm-tagayasan-handle-910909.jpg?v=1763741847",
-        "priceMin": 465,
-        "priceMax": 465,
+        "priceMin": 2920,
+        "priceMax": 2920,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4597,8 +4597,8 @@
         "handle": "takada-no-hamono-white-2-hh-santoku-180mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-white-2-hh-santoku-180mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-white-2-hh-santoku-180mm-ho-wood-handle-503546.jpg?v=1763585098",
-        "priceMin": 255,
-        "priceMax": 255,
+        "priceMin": 1600,
+        "priceMax": 1600,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4629,8 +4629,8 @@
         "handle": "takada-no-hamono-white-1-suiboku-santoku-180mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-white-1-suiboku-santoku-180mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-white-1-suiboku-santoku-180mm-ho-wood-handle-814589.jpg?v=1763585085",
-        "priceMin": 395,
-        "priceMax": 395,
+        "priceMin": 2480,
+        "priceMax": 2480,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4661,8 +4661,8 @@
         "handle": "takada-no-hamono-white-1-suiboku-petty-135mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-white-1-suiboku-petty-135mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-white-1-suiboku-petty-135mm-wood-handle-958427.jpg?v=1763585075",
-        "priceMin": 287,
-        "priceMax": 287,
+        "priceMin": 1800,
+        "priceMax": 1800,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4693,8 +4693,8 @@
         "handle": "takada-no-hamono-white-1-suiboku-petty-135mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-white-1-suiboku-petty-135mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-white-1-suiboku-petty-135mm-ho-wood-handle-640832.jpg?v=1763585064",
-        "priceMin": 274,
-        "priceMax": 274,
+        "priceMin": 1720,
+        "priceMax": 1720,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4724,8 +4724,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-santoku-180mm-wood-act-extra-thin",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-santoku-180mm-wood-act-extra-thin",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-santoku-180mm-wood-handle-extra-thin-504161.jpg?v=1763585058",
-        "priceMin": 408,
-        "priceMax": 408,
+        "priceMin": 2560,
+        "priceMax": 2560,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4756,8 +4756,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-petty-135mm-wood-act-extra-thin",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-petty-135mm-wood-act-extra-thin",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-petty-135mm-wood-handle-extra-thin-356956.jpg?v=1763585049",
-        "priceMin": 268,
-        "priceMax": 268,
+        "priceMin": 1680,
+        "priceMax": 1680,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4788,8 +4788,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-gyuto-240mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-gyuto-240mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-gyuto-240mm-wood-handle-827469.jpg?v=1763585037",
-        "priceMin": 567,
-        "priceMax": 567,
+        "priceMin": 3560,
+        "priceMax": 3560,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4820,8 +4820,8 @@
         "handle": "takada-no-hamono-blue-1-suiboku-santoku-180mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-suiboku-santoku-180mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-suiboku-santoku-180mm-ho-wood-handle-653939.jpg?v=1763585023",
-        "priceMin": 395,
-        "priceMax": 395,
+        "priceMin": 2480,
+        "priceMax": 2480,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4852,8 +4852,8 @@
         "handle": "takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-handle-654832.jpg?v=1763584947",
-        "priceMin": 497,
-        "priceMax": 497,
+        "priceMin": 3120,
+        "priceMax": 3120,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4883,8 +4883,8 @@
         "handle": "takada-no-hamono-blue-1-suiboku-gyuto-210mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-suiboku-gyuto-210mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-suiboku-gyuto-210mm-ho-wood-handle-603791.jpg?v=1763584937",
-        "priceMin": 434,
-        "priceMax": 434,
+        "priceMin": 2720,
+        "priceMax": 2720,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4915,8 +4915,8 @@
         "handle": "takada-no-hamono-blue-1-hh-petty-135mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-hh-petty-135mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-hh-petty-135mm-ho-wood-handle-470319.jpg?v=1763584926",
-        "priceMin": 230,
-        "priceMax": 230,
+        "priceMin": 1440,
+        "priceMax": 1440,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -5266,8 +5266,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-gyuto-240mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-gyuto-240mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-gyuto-240mm-wood-handle-827469.jpg?v=1763585037",
-        "priceMin": 567,
-        "priceMax": 567,
+        "priceMin": 3560,
+        "priceMax": 3560,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -5298,8 +5298,8 @@
         "handle": "takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-handle-654832.jpg?v=1763584947",
-        "priceMin": 497,
-        "priceMax": 497,
+        "priceMin": 3120,
+        "priceMax": 3120,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
