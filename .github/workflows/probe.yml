@@ -14,16 +14,21 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: JNS BigCommerce GraphQL token + query test
+      - name: JNS GraphQL diagnostics
         run: |
           curl -sSL --max-time 20 "https://www.japanesenaturalstones.com" -o h.html || true
-          echo "== token candidates =="
-          grep -oE 'graphQLToken[^,]{0,200}' h.html | head -c 500; echo
-          grep -oE '"storefront_api[^}]{0,300}' h.html | head -c 500; echo
-          TOKEN=$(grep -oE 'graphQLToken['"'"'"]?\s*[:=]\s*['"'"'"][A-Za-z0-9._-]+' h.html | grep -oE '[A-Za-z0-9._-]+$' | head -1)
+          TOKEN=$(grep -oE 'graphQLToken\\?["'"'"']?\s*[:=]\s*\\?["'"'"'][A-Za-z0-9._-]{20,}' h.html | grep -oE '[A-Za-z0-9._-]{20,}$' | head -1)
           echo "token length: ${#TOKEN}"
-          echo "== graphql products query =="
-          curl -sS --max-time 20 -X POST "https://www.japanesenaturalstones.com/graphql" \
-            -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" \
-            -d '{"query":"query{site{products(first:3){pageInfo{hasNextPage endCursor}edges{node{name path sku brand{name}prices{price{value currencyCode}basePrice{value}salePrice{value}}inventory{isInStock}}}}}}"}' | head -c 1500
-          echo
+          gq() { curl -sS --max-time 20 -X POST "https://www.japanesenaturalstones.com/graphql" -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -d "$1"; }
+          echo "== total items =="
+          gq '{"query":"query{site{products(first:1){collectionInfo{totalItems}edges{node{name}}pageInfo{endCursor}}}}"}' | head -c 600; echo
+          echo "== page1 names =="
+          gq '{"query":"query{site{products(first:3){pageInfo{endCursor}edges{node{name}}}}}"}' > p1.json
+          head -c 700 p1.json; echo
+          CURSOR=$(grep -oE '"endCursor":"[^"]+"' p1.json | head -1 | cut -d'"' -f4)
+          echo "== page2 names (after $CURSOR) =="
+          gq "{\"query\":\"query{site{products(first:3,after:\\\"$CURSOR\\\"){edges{node{name}}}}}\"}" | head -c 700; echo
+          echo "== search: raquin =="
+          gq '{"query":"query{site{search{searchProducts(filters:{searchTerm:\"raquin\"}){products(first:8){edges{node{name path brand{name}prices{price{value currencyCode}}inventory{isInStock}}}}}}}"}' | head -c 2000; echo
+          echo "== search: takada =="
+          gq '{"query":"query{site{search{searchProducts(filters:{searchTerm:\"takada\"}){products(first:8){edges{node{name inventory{isInStock}}}}}}}"}' | head -c 1200; echo
