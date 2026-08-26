@@ -175,6 +175,26 @@
       "name": "hitohira-japan.com",
       "url": "https://hitohira-japan.com",
       "adapter": "shopify"
+    },
+    {
+      "id": "shirasagistore-com",
+      "name": "shirasagistore.com",
+      "url": "https://shirasagistore.com",
+      "adapter": "woocommerce",
+      "currency": "JPY"
+    },
+    {
+      "id": "staysharpmtl-com",
+      "name": "staysharpmtl.com",
+      "url": "https://staysharpmtl.com",
+      "adapter": "shopify"
+    },
+    {
+      "id": "gourmetkitchenanddining-com",
+      "name": "gourmetkitchenanddining.com",
+      "url": "https://www.gourmetkitchenanddining.com",
+      "adapter": "woocommerce",
+      "currency": "USD"
     }
   ]
 }
