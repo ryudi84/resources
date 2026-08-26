@@ -161,6 +161,14 @@
       "path": "/boutique",
       "region": "FR",
       "currency": "EUR"
+    },
+    {
+      "id": "jns",
+      "name": "Japanese Natural Stones (JNS)",
+      "url": "https://www.japanesenaturalstones.com",
+      "adapter": "shopify",
+      "region": "DK",
+      "currency": "EUR"
     }
   ]
 }

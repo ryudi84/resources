@@ -1,5 +1,20 @@
 const UA = 'grail-knife-finder/1.0 (+https://github.com/ryudi84/resources)';
 
+/** GET a page as text; null on any failure (used for discovery probing). */
+export async function fetchText(url: string, timeoutMs = 15_000): Promise<string | null> {
+  try {
+    const res = await fetch(url, {
+      headers: { 'user-agent': UA, accept: 'text/html,application/json;q=0.9,*/*;q=0.8' },
+      signal: AbortSignal.timeout(timeoutMs),
+      redirect: 'follow',
+    });
+    if (!res.ok) return null;
+    return await res.text();
+  } catch {
+    return null;
+  }
+}
+
 /** GET a JSON endpoint with a deadline and exponential-backoff retries. */
 export async function fetchJson(url: string, timeoutMs = 20_000, retries = 2): Promise<unknown> {
   let lastError: unknown;
