@@ -68,15 +68,22 @@ title + vendor + product type + tags):
 | `retailers` | optional list of retailer ids to restrict the hunt |
 | `enabled: false` | pause without deleting |
 
-## Adding retailers
+## Retailer discovery — the roster grows itself
 
-Any Shopify knife shop works — append to `retailers.json`:
+You don't hand-curate `retailers.json`. Once a day (and on demand via Actions → Run
+workflow → "Run retailer discovery"), `src/discover.ts`:
 
-```json
-{ "id": "my-shop", "name": "My Shop", "url": "https://example.com", "adapter": "shopify", "region": "US", "currency": "USD" }
-```
+1. takes every enabled grail's maker terms,
+2. searches the open web for them (DuckDuckGo + Bing HTML endpoints — free, no API keys),
+3. fingerprints each candidate domain for a sweepable platform (Shopify → WooCommerce →
+   Squarespace probes), skipping marketplaces/socials/forums and known retailers,
+4. pulls the candidate's live catalog and only accepts it if it **actually stocks a
+   grail**, then
+5. auto-appends it to `retailers.json`, commits it, and announces it on the alerts issue.
 
-A retailer that errors shows up in the dashboard's status strip; fix its URL or delete it.
+Manual entries still work — append any shop to `retailers.json` with its `adapter`
+(`shopify` | `woocommerce` | `squarespace` + `path`). A retailer that errors shows up in
+the dashboard's status strip.
 
 ## Getting alerted — email, Discord, phone push (all free)
 
@@ -84,8 +91,15 @@ Everything here is free end-to-end: the repo is public so GitHub Actions minutes
 unlimited, Gmail SMTP costs nothing, Discord webhooks cost nothing, and ntfy.sh is free.
 Alerts fire around the clock — whenever a sweep catches a grail *newly* in stock.
 
-Set these as **GitHub Actions secrets** (repo → Settings → Secrets and variables →
-Actions → New repository secret), any or all:
+### 📬 Zero-setup default: GitHub notifications
+
+With no secrets at all, alerts and the daily digest are posted as comments on the
+repo's pinned **"🔪 Grail stock alerts" issue** with an @mention of the repo owner —
+GitHub then delivers them to your email and phone (GitHub app) through its normal
+notification pipeline. Nothing to configure.
+
+For richer channels, set these as **GitHub Actions secrets** (repo → Settings →
+Secrets and variables → Actions → New repository secret), any or all:
 
 ### 📧 Email
 
@@ -122,9 +136,9 @@ promo listings spotted by keyword. Fire one on demand from Actions → Run workf
 
 ## Hosted panel with a password (free)
 
-Enable GitHub Pages (Settings → Pages → Deploy from a branch → your branch, `/docs`
-folder) and the panel gets a URL like `https://ryudi84.github.io/resources/` that
-refreshes with every sweep.
+Hosting is automatic: `.github/workflows/pages.yml` creates the GitHub Pages site on
+its first run (no Settings clicks) and redeploys `docs/` after every sweep, so the
+panel lives at `https://ryudi84.github.io/resources/`.
 
 To lock it, add a `PANEL_PASSWORD` secret. From then on the published page contains
 **only AES-256-GCM ciphertext** (key derived from your password via PBKDF2-SHA-256,
@@ -141,7 +155,9 @@ src/scan.ts               # orchestrator: sweep → match → diff → report �
 src/adapters.ts           # platform adapter registry (add new platforms here)
 src/shopify.ts            # Shopify /products.json adapter (pagination, retries)
 src/woocommerce.ts        # WooCommerce Store API adapter
-src/digest.ts             # daily Discord bargain digest
+src/digest.ts             # daily bargain digest (GitHub issue + Discord)
+src/discover.ts           # retailer discovery engine (self-growing roster)
+src/github.ts             # zero-secret alert channel via the stock-alerts issue
 src/crypto.ts             # AES-256-GCM panel sealing (password protection)
 src/matcher.ts            # normalization + all/any/none matching engine
 src/grail.ts              # watchlist CLI (add/list/remove/pause/resume)

@@ -1,5 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import type { GrailHit, ScanResult } from './types.ts';
+import { postToAlertsIssue } from './github.ts';
 
 /**
  * Daily Discord digest: a once-a-day post summarizing the hunt — every grail
@@ -82,10 +83,22 @@ async function main(): Promise<void> {
   }
   const digest = buildDigest(result);
 
+  // Zero-secret channel first: the digest also lands on the GitHub alerts issue.
+  const md = (digest.embeds as Array<{ title?: string; description?: string }>)
+    .map((e) => (e.title ? `**${e.title}**\n${e.description ?? ''}` : e.description ?? ''))
+    .join('\n\n');
+  const posted = await postToAlertsIssue(`${digest.content}\n\n${md}`).catch((err: Error) => {
+    console.error('digest: GitHub issue failed:', err.message);
+    return false;
+  });
+  if (posted) console.log('digest: posted to GitHub alerts issue.');
+
   const discord = process.env.DISCORD_WEBHOOK_URL;
   if (!discord) {
-    console.log('digest: DISCORD_WEBHOOK_URL not set; printing instead:\n');
-    console.log(JSON.stringify(digest, null, 2));
+    if (!posted) {
+      console.log('digest: no channels available; printing instead:\n');
+      console.log(JSON.stringify(digest, null, 2));
+    }
     return;
   }
   const res = await fetch(discord, {

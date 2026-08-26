@@ -1,5 +1,6 @@
 import type { GrailHit } from './types.ts';
 import { sendMail } from './smtp.ts';
+import { postToAlertsIssue } from './github.ts';
 
 /**
  * Push alerts for newly-in-stock grails. All channels are optional, free,
@@ -53,6 +54,19 @@ export async function notify(newHits: GrailHit[]): Promise<void> {
   const title = `🔪 GRAIL IN STOCK — ${newHits.length} new listing${newHits.length > 1 ? 's' : ''}`;
   const body = lines(newHits).join('\n\n');
   const tasks: Promise<void>[] = [];
+
+  // Zero-secret channel: comment on the repo's alerts issue with an
+  // @mention → GitHub emails/pushes the owner. Active in any Actions run.
+  if (process.env.GITHUB_TOKEN && process.env.GITHUB_REPOSITORY) {
+    const issueMd = newHits
+      .map((h) => `- 🚨 **[${h.listing.title}](${h.listing.url})** @ ${h.listing.retailerName} — ${h.grailName}${formatPrice(h)}`)
+      .join('\n');
+    tasks.push(
+      postToAlertsIssue(`**${title}**\n\n${issueMd}`)
+        .then(() => console.log('notify: posted to GitHub alerts issue'))
+        .catch((err: Error) => console.error('notify: GitHub issue failed:', err.message)),
+    );
+  }
 
   const smtpUser = process.env.SMTP_USER;
   const smtpPass = process.env.SMTP_PASS;
