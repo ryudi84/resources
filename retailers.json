@@ -188,13 +188,6 @@
       "name": "staysharpmtl.com",
       "url": "https://staysharpmtl.com",
       "adapter": "shopify"
-    },
-    {
-      "id": "gourmetkitchenanddining-com",
-      "name": "gourmetkitchenanddining.com",
-      "url": "https://www.gourmetkitchenanddining.com",
-      "adapter": "woocommerce",
-      "currency": "USD"
     }
   ]
 }

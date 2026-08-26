@@ -2,7 +2,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createServer } from 'node:http';
 import { once } from 'node:events';
-import { extractResultUrls, isBlocked, detectPlatform, discoverRetailers } from '../src/discover.ts';
+import { extractResultUrls, isBlocked, detectPlatform, discoverRetailers, looksLikeCloneStore } from '../src/discover.ts';
+import type { Listing } from '../src/types.ts';
 import { demoCatalogs } from '../src/demo.ts';
 import type { Config, Retailer } from '../src/types.ts';
 
@@ -16,11 +17,34 @@ test('extractResultUrls parses DuckDuckGo uddg links and Bing redirects', () => 
   assert.ok(urls.includes('https://eatingtools.example/products/raquin'));
 });
 
-test('blocklist rejects marketplaces and socials', () => {
+test('blocklist rejects marketplaces, socials, and known scam storefronts', () => {
   assert.ok(isBlocked('www.ebay.com'));
   assert.ok(isBlocked('reddit.com'));
   assert.ok(isBlocked('www.kitchenknifeforums.com'));
+  assert.ok(isBlocked('www.gourmetkitchenanddining.com'));
   assert.ok(!isBlocked('japanesenaturalstones.com'));
+});
+
+test('clone-store check rejects scraped catalogs at implausible prices', () => {
+  const listing = (title: string, priceMin: number): Listing =>
+    ({ title, priceMin } as Listing);
+  const priceIndex = new Map<string, number>([
+    ['takada no hamono damascus blue #1 sujihiki 300mm', 895],
+    ['takada no hamono suiboku rosewood ginsan gyuto 270mm', 650],
+    ['takada no hamono suiboku blue #1 petty 135mm', 330],
+  ]);
+  const scam = [
+    listing('Takada no Hamono Damascus Blue #1 Sujihiki 300mm', 179),
+    listing('Takada no Hamono Suiboku Rosewood Ginsan Gyuto 270mm', 130),
+    listing('Takada no Hamono Suiboku Blue #1 Petty 135mm', 66),
+  ];
+  assert.ok(looksLikeCloneStore(scam, priceIndex));
+
+  const legit = [
+    listing('Takada no Hamono Damascus Blue #1 Sujihiki 300mm', 870), // near-known price
+    listing('Takada no Hamono Suiboku Gyuto 240mm Something Unique', 640), // unknown title
+  ];
+  assert.ok(!looksLikeCloneStore(legit, priceIndex));
 });
 
 async function startMock(handler: (path: string) => { status: number; body: string }): Promise<{ origin: string; close: () => void }> {
