@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T02:29:11.265Z",
+  "generatedAt": "2026-08-26T02:29:37.298Z",
   "retailers": [
     {
       "id": "tosho",
@@ -7,7 +7,7 @@
       "url": "https://toshoknifearts.com",
       "ok": true,
       "products": 1748,
-      "ms": 4835
+      "ms": 1110
     },
     {
       "id": "knives-and-stones-us",
@@ -15,7 +15,7 @@
       "url": "https://www.knivesandstones.us",
       "ok": true,
       "products": 0,
-      "ms": 898
+      "ms": 245
     },
     {
       "id": "knives-and-stones-au",
@@ -23,7 +23,7 @@
       "url": "https://knivesandstones.com.au",
       "ok": true,
       "products": 1756,
-      "ms": 7079
+      "ms": 2705
     },
     {
       "id": "carbon-knife-co",
@@ -31,7 +31,7 @@
       "url": "https://carbonknifeco.com",
       "ok": true,
       "products": 3147,
-      "ms": 13238
+      "ms": 1876
     },
     {
       "id": "strata",
@@ -39,7 +39,7 @@
       "url": "https://strataportland.com",
       "ok": true,
       "products": 3668,
-      "ms": 27454
+      "ms": 2357
     },
     {
       "id": "bernal",
@@ -47,7 +47,7 @@
       "url": "https://bernalcutlery.com",
       "ok": true,
       "products": 4830,
-      "ms": 25911
+      "ms": 6470
     },
     {
       "id": "sugi",
@@ -55,7 +55,7 @@
       "url": "https://sugicutlery.com",
       "ok": true,
       "products": 2519,
-      "ms": 11576
+      "ms": 7377
     },
     {
       "id": "tokushu",
@@ -63,7 +63,7 @@
       "url": "https://tokushuknife.com",
       "ok": true,
       "products": 889,
-      "ms": 6973
+      "ms": 1161
     },
     {
       "id": "sharp-knife-shop",
@@ -71,15 +71,15 @@
       "url": "https://sharpknifeshop.com",
       "ok": true,
       "products": 354,
-      "ms": 2079
+      "ms": 878
     },
     {
       "id": "knifewear",
       "name": "Knifewear",
       "url": "https://knifewear.com",
       "ok": true,
-      "products": 233,
-      "ms": 1465
+      "products": 499,
+      "ms": 717
     },
     {
       "id": "district-cutlery",
@@ -87,7 +87,7 @@
       "url": "https://www.districtcutlery.com",
       "ok": true,
       "products": 427,
-      "ms": 4031
+      "ms": 1852
     },
     {
       "id": "coutelier",
@@ -95,7 +95,7 @@
       "url": "https://couteliernola.com",
       "ok": true,
       "products": 801,
-      "ms": 3292
+      "ms": 2305
     },
     {
       "id": "eating-tools",
@@ -103,7 +103,7 @@
       "url": "https://www.eatingtools.com",
       "ok": true,
       "products": 1080,
-      "ms": 8488
+      "ms": 5090
     },
     {
       "id": "modern-cooking",
@@ -111,16 +111,7 @@
       "url": "https://www.moderncooking.com",
       "ok": true,
       "products": 498,
-      "ms": 2070
-    },
-    {
-      "id": "milan-blades",
-      "name": "Milan Blades",
-      "url": "https://www.milanblades.com",
-      "ok": false,
-      "error": "fetch failed",
-      "products": 0,
-      "ms": 4727
+      "ms": 1149
     },
     {
       "id": "tetogi",
@@ -128,207 +119,13 @@
       "url": "https://tetogi.com",
       "ok": true,
       "products": 2069,
-      "ms": 7570
-    },
-    {
-      "id": "oishya",
-      "name": "Oishya",
-      "url": "https://oishya.com",
-      "ok": false,
-      "error": "Unexpected token '<', \"<!doctype \"... is not valid JSON",
-      "products": 0,
-      "ms": 10547
+      "ms": 5012
     }
   ],
   "hits": [
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
-      "listing": {
-        "retailerId": "tosho",
-        "retailerName": "Tosho Knife Arts",
-        "region": "CA",
-        "currency": "CAD",
-        "title": "Takada no Hamono 100% Cotton Tenugui (Towel)",
-        "vendor": "Takada no Hamono",
-        "productType": "Accessories",
-        "tags": [
-          "Brand: Takada no Hamono"
-        ],
-        "handle": "tnhf",
-        "url": "https://toshoknifearts.com/products/tnhf",
-        "imageUrl": "https://cdn.shopify.com/s/files/1/0766/4111/files/IMG_7411.heic?v=1761229946",
-        "priceMin": 35,
-        "priceMax": 35,
-        "available": true,
-        "variantsAvailable": 1,
-        "variantsTotal": 1,
-        "publishedAt": "2025-10-23T10:34:09-04:00"
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
-      "listing": {
-        "retailerId": "carbon-knife-co",
-        "retailerName": "Carbon Knife Co",
-        "region": "US",
-        "currency": "USD",
-        "title": "Takada no Hamono Tenugui White",
-        "vendor": "Takeda",
-        "productType": "",
-        "tags": [
-          "tenugui"
-        ],
-        "handle": "takada-no-hamono-tenugui-white",
-        "url": "https://carbonknifeco.com/products/takada-no-hamono-tenugui-white",
-        "imageUrl": "https://cdn.shopify.com/s/files/1/1354/6027/files/DSC6686_718cdd64-482c-4e15-9685-8cc29537d2b1.jpg?v=1784572637",
-        "priceMin": 29.99,
-        "priceMax": 29.99,
-        "available": true,
-        "variantsAvailable": 1,
-        "variantsTotal": 1,
-        "publishedAt": "2026-07-20T12:37:28-06:00"
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
-      "listing": {
-        "retailerId": "carbon-knife-co",
-        "retailerName": "Carbon Knife Co",
-        "region": "US",
-        "currency": "USD",
-        "title": "Takada no Hamono Tenugui",
-        "vendor": "Takeda",
-        "productType": "",
-        "tags": [
-          "tenugui"
-        ],
-        "handle": "takada-no-hamono-tenugui",
-        "url": "https://carbonknifeco.com/products/takada-no-hamono-tenugui",
-        "imageUrl": "https://cdn.shopify.com/s/files/1/1354/6027/files/DSC0630.jpg?v=1753725696",
-        "priceMin": 29.99,
-        "priceMax": 29.99,
-        "available": true,
-        "variantsAvailable": 1,
-        "variantsTotal": 1,
-        "publishedAt": "2025-07-28T12:02:00-06:00"
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
-      "listing": {
-        "retailerId": "carbon-knife-co",
-        "retailerName": "Carbon Knife Co",
-        "region": "US",
-        "currency": "USD",
-        "title": "Takada no Hamono Tote Bag",
-        "vendor": "Takada no Hamono",
-        "productType": "Cooking Tool",
-        "tags": [
-          "bag",
-          "canvas",
-          "sakai",
-          "suiboku",
-          "takada",
-          "takada bag",
-          "takada no hamono",
-          "takadanohamono",
-          "totebag"
-        ],
-        "handle": "takada-no-hamono-tote-bag-black",
-        "url": "https://carbonknifeco.com/products/takada-no-hamono-tote-bag-black",
-        "imageUrl": "https://cdn.shopify.com/s/files/1/1354/6027/files/L1360218.jpg?v=1784402514",
-        "priceMin": 45,
-        "priceMax": 45,
-        "available": true,
-        "variantsAvailable": 3,
-        "variantsTotal": 4,
-        "publishedAt": "2020-10-14T09:19:19-06:00"
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
-      "listing": {
-        "retailerId": "bernal",
-        "retailerName": "Bernal Cutlery",
-        "region": "US",
-        "currency": "USD",
-        "title": "Takada no Hamono Suiboku T Shirt BLK",
-        "vendor": "Takada no Hamono",
-        "productType": "Softgoods",
-        "tags": [
-          "Discount Eligible",
-          "Sakai"
-        ],
-        "handle": "takada-no-hamono-suiboku-t-shirt-s-blk",
-        "url": "https://bernalcutlery.com/products/takada-no-hamono-suiboku-t-shirt-s-blk",
-        "imageUrl": "https://cdn.shopify.com/s/files/1/0455/3339/7144/files/IMG-4735.heic?v=1693853978",
-        "priceMin": 35,
-        "priceMax": 40,
-        "available": true,
-        "variantsAvailable": 2,
-        "variantsTotal": 5,
-        "publishedAt": "2023-09-05T18:31:53-07:00"
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
-      "listing": {
-        "retailerId": "bernal",
-        "retailerName": "Bernal Cutlery",
-        "region": "US",
-        "currency": "USD",
-        "title": "Takada no Hamono T Shirt Black",
-        "vendor": "Takada no Hamono",
-        "productType": "Softgoods",
-        "tags": [
-          "Discount Eligible",
-          "Sakai"
-        ],
-        "handle": "takada-no-hamono-t-shirt",
-        "url": "https://bernalcutlery.com/products/takada-no-hamono-t-shirt",
-        "imageUrl": "https://cdn.shopify.com/s/files/1/0455/3339/7144/files/IMG-4738.heic?v=1693854009",
-        "priceMin": 35,
-        "priceMax": 40,
-        "available": true,
-        "variantsAvailable": 1,
-        "variantsTotal": 5,
-        "publishedAt": "2023-09-05T18:31:52-07:00"
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
-      "listing": {
-        "retailerId": "tosho",
-        "retailerName": "Tosho Knife Arts",
-        "region": "CA",
-        "currency": "CAD",
-        "title": "Takada Print",
-        "vendor": "Tosho Knife Arts",
-        "productType": "Accessories",
-        "tags": [
-          "Brand: Takada no Hamono"
-        ],
-        "handle": "takada-print",
-        "url": "https://toshoknifearts.com/products/takada-print",
-        "imageUrl": "https://cdn.shopify.com/s/files/1/0766/4111/files/image_abb14adc-77e5-4110-8d05-91ee996e2c7f.jpg?v=1689808269",
-        "priceMin": 5,
-        "priceMax": 5,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1,
-        "publishedAt": "2026-04-24T07:42:30-04:00"
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -365,7 +162,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -402,7 +199,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -439,7 +236,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -476,7 +273,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -513,34 +310,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
-      "listing": {
-        "retailerId": "tosho",
-        "retailerName": "Tosho Knife Arts",
-        "region": "CA",
-        "currency": "CAD",
-        "title": "Takada no Hamono Black T-shirts (S, M, L, XL, XXL)",
-        "vendor": "Takada no Hamono",
-        "productType": "Accessories",
-        "tags": [
-          "Brand: Takada no Hamono",
-          "finalsale25",
-          "Style: T-shirts"
-        ],
-        "handle": "bcfab-010",
-        "url": "https://toshoknifearts.com/products/bcfab-010",
-        "imageUrl": "https://cdn.shopify.com/s/files/1/0766/4111/products/20220820_103542.jpg?v=1661006935",
-        "priceMin": 30,
-        "priceMax": 30,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 5,
-        "publishedAt": "2022-08-20T10:48:50-04:00"
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -577,7 +347,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -614,7 +384,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -651,7 +421,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -688,7 +458,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -725,7 +495,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -748,7 +518,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -785,7 +555,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -822,7 +592,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -859,7 +629,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -896,7 +666,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -933,7 +703,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -970,7 +740,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -1007,7 +777,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -1044,7 +814,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -1081,7 +851,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -1118,7 +888,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -1155,7 +925,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tosho",
         "retailerName": "Tosho Knife Arts",
@@ -1192,7 +962,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1222,7 +992,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1254,7 +1024,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1285,7 +1055,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1318,7 +1088,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1349,7 +1119,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1381,7 +1151,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1412,7 +1182,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1442,7 +1212,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1474,7 +1244,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1506,7 +1276,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1539,7 +1309,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1570,7 +1340,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1600,7 +1370,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1623,7 +1393,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1646,7 +1416,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1676,7 +1446,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1707,7 +1477,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1735,7 +1505,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1765,7 +1535,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1795,7 +1565,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1826,7 +1596,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1856,7 +1626,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1881,7 +1651,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1911,7 +1681,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1939,7 +1709,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1967,7 +1737,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -1997,7 +1767,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "carbon-knife-co",
         "retailerName": "Carbon Knife Co",
@@ -2027,7 +1797,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -2068,37 +1838,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
-      "listing": {
-        "retailerId": "strata",
-        "retailerName": "Strata Portland",
-        "region": "US",
-        "currency": "USD",
-        "title": "Takada no Hamono \"no Hamono no Life\" T-Shirt - White",
-        "vendor": "Takada no Hamono",
-        "productType": "T-Shirt",
-        "tags": [
-          "Brand",
-          "Merchandising",
-          "Mitsuaki Takada",
-          "Sale-able",
-          "T-Shirt",
-          "Textiles"
-        ],
-        "handle": "takada-no-hamono-no-hamono-no-life-t-shirt-white",
-        "url": "https://strataportland.com/products/takada-no-hamono-no-hamono-no-life-t-shirt-white",
-        "imageUrl": "https://cdn.shopify.com/s/files/1/0046/0049/6192/products/P1010664-2.jpg?v=1674596924",
-        "priceMin": 30,
-        "priceMax": 30,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 4,
-        "publishedAt": "2023-01-24T16:48:56-05:00"
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -2146,7 +1886,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -2186,37 +1926,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
-      "listing": {
-        "retailerId": "strata",
-        "retailerName": "Strata Portland",
-        "region": "US",
-        "currency": "USD",
-        "title": "Takada no Hamono \"no Hamono no Life\" T-Shirt - Black",
-        "vendor": "Takada no Hamono",
-        "productType": "T-Shirt",
-        "tags": [
-          "Brand",
-          "Merchandising",
-          "Mitsuaki Takada",
-          "Sale-able",
-          "T-Shirt",
-          "Textiles"
-        ],
-        "handle": "takada-no-hamono-no-hamono-no-life-t-shirt",
-        "url": "https://strataportland.com/products/takada-no-hamono-no-hamono-no-life-t-shirt",
-        "imageUrl": "https://cdn.shopify.com/s/files/1/0046/0049/6192/products/P1010214_8352dce4-3420-4104-b2d2-6ab1b1990abe.jpg?v=1663169958",
-        "priceMin": 30,
-        "priceMax": 30,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 4,
-        "publishedAt": "2022-09-17T13:10:57-04:00"
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -2256,7 +1966,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -2298,7 +2008,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -2339,7 +2049,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -2383,7 +2093,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -2428,7 +2138,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -2465,7 +2175,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -2506,7 +2216,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -2552,7 +2262,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -2598,7 +2308,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -2644,7 +2354,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -2691,7 +2401,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -2732,7 +2442,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -2771,7 +2481,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -2812,7 +2522,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -2853,7 +2563,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -2896,7 +2606,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -2940,7 +2650,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -2977,7 +2687,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -3021,7 +2731,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -3063,7 +2773,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -3107,7 +2817,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -3150,7 +2860,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -3190,7 +2900,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -3228,7 +2938,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -3267,7 +2977,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -3307,7 +3017,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -3348,7 +3058,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -3391,7 +3101,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "strata",
         "retailerName": "Strata Portland",
@@ -3433,7 +3143,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3456,7 +3166,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3479,7 +3189,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3502,7 +3212,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3525,7 +3235,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3548,7 +3258,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3571,7 +3281,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3594,7 +3304,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3617,7 +3327,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3640,7 +3350,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3663,7 +3373,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3688,7 +3398,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3713,32 +3423,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
-      "listing": {
-        "retailerId": "bernal",
-        "retailerName": "Bernal Cutlery",
-        "region": "US",
-        "currency": "USD",
-        "title": "Takada no Hamono Tote Bag Canvas",
-        "vendor": "Takada no Hamono",
-        "productType": "Softgoods",
-        "tags": [
-          "Sakai"
-        ],
-        "handle": "takada-no-hamono-tote-bag-blk-canvas",
-        "url": "https://bernalcutlery.com/products/takada-no-hamono-tote-bag-blk-canvas",
-        "imageUrl": "https://cdn.shopify.com/s/files/1/0455/3339/7144/files/IMG-4711.heic?v=1693783111",
-        "priceMin": 38,
-        "priceMax": 38,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 2,
-        "publishedAt": "2025-02-16T12:31:38-08:00"
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3764,7 +3449,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3790,7 +3475,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3816,7 +3501,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3842,7 +3527,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3868,7 +3553,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3894,7 +3579,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3920,7 +3605,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3946,7 +3631,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3972,7 +3657,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -3998,7 +3683,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -4024,7 +3709,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -4050,7 +3735,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "bernal",
         "retailerName": "Bernal Cutlery",
@@ -4076,7 +3761,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tetogi",
         "retailerName": "Tetogi",
@@ -4097,8 +3782,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-petty-135mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-petty-135mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-petty-135mm-wood-handle-239325.jpg?v=1766336648",
-        "priceMin": 1840,
-        "priceMax": 1840,
+        "priceMin": 293,
+        "priceMax": 293,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4107,7 +3792,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tetogi",
         "retailerName": "Tetogi",
@@ -4128,8 +3813,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-gyuto-210mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-gyuto-210mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-gyuto-210mm-wood-handle-850909.jpg?v=1771519157",
-        "priceMin": 3040,
-        "priceMax": 3040,
+        "priceMin": 485,
+        "priceMax": 485,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4138,196 +3823,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
-      "listing": {
-        "retailerId": "tetogi",
-        "retailerName": "Tetogi",
-        "region": "US",
-        "currency": "USD",
-        "title": "Takada no Hamono Suiboku T-shirts Double Extra Large",
-        "vendor": "Takada no Hamono",
-        "productType": "Tekstil",
-        "tags": [
-          "Apparel",
-          "bfsstd",
-          "t-shirt"
-        ],
-        "handle": "takada-no-hamono-suiboku-t-shirts-double-extra-large",
-        "url": "https://tetogi.com/products/takada-no-hamono-suiboku-t-shirts-double-extra-large",
-        "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-suiboku-t-shirts-double-extra-large-279571.jpg?v=1771519118",
-        "priceMin": 200,
-        "priceMax": 200,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1,
-        "publishedAt": "2023-08-13T12:51:29+02:00"
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
-      "listing": {
-        "retailerId": "tetogi",
-        "retailerName": "Tetogi",
-        "region": "US",
-        "currency": "USD",
-        "title": "Takada no Hamono Suiboku T-shirts Extra Large",
-        "vendor": "Takada no Hamono",
-        "productType": "Tekstil",
-        "tags": [
-          "Apparel",
-          "bfsstd-oos",
-          "t-shirt"
-        ],
-        "handle": "takada-no-hamono-suiboku-t-shirts-large-1",
-        "url": "https://tetogi.com/products/takada-no-hamono-suiboku-t-shirts-large-1",
-        "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-suiboku-t-shirts-extra-large-197597.jpg?v=1771519121",
-        "priceMin": 200,
-        "priceMax": 200,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1,
-        "publishedAt": "2023-08-13T12:50:17+02:00"
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
-      "listing": {
-        "retailerId": "tetogi",
-        "retailerName": "Tetogi",
-        "region": "US",
-        "currency": "USD",
-        "title": "Takada no Hamono Suiboku T-shirts Large",
-        "vendor": "Takada no Hamono",
-        "productType": "Tekstil",
-        "tags": [
-          "Apparel",
-          "bfsstd-oos",
-          "t-shirt"
-        ],
-        "handle": "takada-no-hamono-suiboku-t-shirts-large",
-        "url": "https://tetogi.com/products/takada-no-hamono-suiboku-t-shirts-large",
-        "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-suiboku-t-shirts-large-830407.jpg?v=1771519118",
-        "priceMin": 200,
-        "priceMax": 200,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1,
-        "publishedAt": "2023-08-13T12:46:54+02:00"
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
-      "listing": {
-        "retailerId": "tetogi",
-        "retailerName": "Tetogi",
-        "region": "US",
-        "currency": "USD",
-        "title": "Takada no Hamono T-shirts White Extra Large",
-        "vendor": "Takada no Hamono",
-        "productType": "Tekstil",
-        "tags": [
-          "Apparel",
-          "bfsstd",
-          "t-shirt"
-        ],
-        "handle": "kopi-af-takada-no-hamono-t-shirts-black-extra-large",
-        "url": "https://tetogi.com/products/kopi-af-takada-no-hamono-t-shirts-black-extra-large",
-        "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-t-shirts-white-extra-large-414041.jpg?v=1771519122",
-        "priceMin": 200,
-        "priceMax": 200,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1,
-        "publishedAt": "2023-08-13T12:44:34+02:00"
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
-      "listing": {
-        "retailerId": "tetogi",
-        "retailerName": "Tetogi",
-        "region": "US",
-        "currency": "USD",
-        "title": "Takada no Hamono T-shirts White Large",
-        "vendor": "Takada no Hamono",
-        "productType": "Tekstil",
-        "tags": [
-          "Apparel",
-          "bfsstd-oos",
-          "t-shirt"
-        ],
-        "handle": "kopi-af-takada-no-hamono-t-shirts-black-large-1",
-        "url": "https://tetogi.com/products/kopi-af-takada-no-hamono-t-shirts-black-large-1",
-        "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-t-shirts-white-large-282302.jpg?v=1771519132",
-        "priceMin": 200,
-        "priceMax": 200,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1,
-        "publishedAt": "2023-08-13T12:43:12+02:00"
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
-      "listing": {
-        "retailerId": "tetogi",
-        "retailerName": "Tetogi",
-        "region": "US",
-        "currency": "USD",
-        "title": "Takada no Hamono T-shirts Black Extra Large",
-        "vendor": "Takada no Hamono",
-        "productType": "Tekstil",
-        "tags": [
-          "Apparel",
-          "bfsstd-oos",
-          "t-shirt"
-        ],
-        "handle": "kopi-af-takada-no-hamono-t-shirts-black-large",
-        "url": "https://tetogi.com/products/kopi-af-takada-no-hamono-t-shirts-black-large",
-        "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-t-shirts-black-extra-large-127596.jpg?v=1771519146",
-        "priceMin": 200,
-        "priceMax": 200,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1,
-        "publishedAt": "2023-08-13T12:37:47+02:00"
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
-      "listing": {
-        "retailerId": "tetogi",
-        "retailerName": "Tetogi",
-        "region": "US",
-        "currency": "USD",
-        "title": "Takada no Hamono T-shirts Black Large",
-        "vendor": "Takada no Hamono",
-        "productType": "Tekstil",
-        "tags": [
-          "Apparel",
-          "bfsstd-oos",
-          "t-shirt"
-        ],
-        "handle": "takada-no-hamono-t-shirts-black-large",
-        "url": "https://tetogi.com/products/takada-no-hamono-t-shirts-black-large",
-        "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-t-shirts-black-large-133338.jpg?v=1771519139",
-        "priceMin": 200,
-        "priceMax": 200,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1,
-        "publishedAt": "2023-08-13T12:36:12+02:00"
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tetogi",
         "retailerName": "Tetogi",
@@ -4348,8 +3844,8 @@
         "handle": "takada-no-hamono-blue-1-suiboku-nakiri-180mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-suiboku-nakiri-180mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-suiboku-nakiri-180mm-wood-handle-431623.jpg?v=1771518242",
-        "priceMin": 2960,
-        "priceMax": 2960,
+        "priceMin": 472,
+        "priceMax": 472,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4358,7 +3854,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tetogi",
         "retailerName": "Tetogi",
@@ -4379,8 +3875,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-sujihiki-270mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-sujihiki-270mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-sujihiki-270mm-wood-handle-884472.jpg?v=1763743175",
-        "priceMin": 3680,
-        "priceMax": 3680,
+        "priceMin": 586,
+        "priceMax": 586,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4389,7 +3885,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tetogi",
         "retailerName": "Tetogi",
@@ -4410,8 +3906,8 @@
         "handle": "takada-no-hamono-white-2-hh-sujihiki-270mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-white-2-hh-sujihiki-270mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-white-2-hh-sujihiki-270mm-wood-handle-786434.jpg?v=1763743475",
-        "priceMin": 2000,
-        "priceMax": 2000,
+        "priceMin": 319,
+        "priceMax": 319,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4420,7 +3916,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tetogi",
         "retailerName": "Tetogi",
@@ -4441,8 +3937,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-sujihiki-300mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-sujihiki-300mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-sujihiki-300mm-wood-handle-494170.jpg?v=1763742276",
-        "priceMin": 4200,
-        "priceMax": 4200,
+        "priceMin": 669,
+        "priceMax": 669,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4451,7 +3947,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tetogi",
         "retailerName": "Tetogi",
@@ -4472,8 +3968,8 @@
         "handle": "takada-no-hamono-silver-3-hh-gyuto-210mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-hh-gyuto-210mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-hh-gyuto-210mm-ho-wood-handle-116179.jpg?v=1763742269",
-        "priceMin": 2080,
-        "priceMax": 2080,
+        "priceMin": 332,
+        "priceMax": 332,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4482,7 +3978,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tetogi",
         "retailerName": "Tetogi",
@@ -4503,8 +3999,8 @@
         "handle": "takada-no-hamono-white-2-hh-bunka-180mm-ho-wood-handle-mukimono-kaku-type",
         "url": "https://tetogi.com/products/takada-no-hamono-white-2-hh-bunka-180mm-ho-wood-handle-mukimono-kaku-type",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-white-2-hh-bunka-180mm-ho-wood-handle-mukimono-kaku-type-199919.jpg?v=1763741521",
-        "priceMin": 1760,
-        "priceMax": 1760,
+        "priceMin": 281,
+        "priceMax": 281,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4513,7 +4009,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tetogi",
         "retailerName": "Tetogi",
@@ -4534,8 +4030,8 @@
         "handle": "takada-no-hamono-silver-3-hh-sujihiki-270mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-hh-sujihiki-270mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-hh-sujihiki-270mm-ho-wood-handle-386075.jpg?v=1763741464",
-        "priceMin": 2080,
-        "priceMax": 2080,
+        "priceMin": 332,
+        "priceMax": 332,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4544,7 +4040,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tetogi",
         "retailerName": "Tetogi",
@@ -4565,8 +4061,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-sujihiki-210mm-tagayasan-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-sujihiki-210mm-tagayasan-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-sujihiki-210mm-tagayasan-handle-910909.jpg?v=1763741847",
-        "priceMin": 2920,
-        "priceMax": 2920,
+        "priceMin": 465,
+        "priceMax": 465,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4575,7 +4071,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tetogi",
         "retailerName": "Tetogi",
@@ -4597,8 +4093,8 @@
         "handle": "takada-no-hamono-white-2-hh-santoku-180mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-white-2-hh-santoku-180mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-white-2-hh-santoku-180mm-ho-wood-handle-503546.jpg?v=1763585098",
-        "priceMin": 1600,
-        "priceMax": 1600,
+        "priceMin": 255,
+        "priceMax": 255,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4607,7 +4103,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tetogi",
         "retailerName": "Tetogi",
@@ -4629,8 +4125,8 @@
         "handle": "takada-no-hamono-white-1-suiboku-santoku-180mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-white-1-suiboku-santoku-180mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-white-1-suiboku-santoku-180mm-ho-wood-handle-814589.jpg?v=1763585085",
-        "priceMin": 2480,
-        "priceMax": 2480,
+        "priceMin": 395,
+        "priceMax": 395,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4639,7 +4135,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tetogi",
         "retailerName": "Tetogi",
@@ -4661,8 +4157,8 @@
         "handle": "takada-no-hamono-white-1-suiboku-petty-135mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-white-1-suiboku-petty-135mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-white-1-suiboku-petty-135mm-wood-handle-958427.jpg?v=1763585075",
-        "priceMin": 1800,
-        "priceMax": 1800,
+        "priceMin": 287,
+        "priceMax": 287,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4671,7 +4167,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tetogi",
         "retailerName": "Tetogi",
@@ -4693,8 +4189,8 @@
         "handle": "takada-no-hamono-white-1-suiboku-petty-135mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-white-1-suiboku-petty-135mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-white-1-suiboku-petty-135mm-ho-wood-handle-640832.jpg?v=1763585064",
-        "priceMin": 1720,
-        "priceMax": 1720,
+        "priceMin": 274,
+        "priceMax": 274,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4703,7 +4199,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tetogi",
         "retailerName": "Tetogi",
@@ -4724,8 +4220,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-santoku-180mm-wood-act-extra-thin",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-santoku-180mm-wood-act-extra-thin",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-santoku-180mm-wood-handle-extra-thin-504161.jpg?v=1763585058",
-        "priceMin": 2560,
-        "priceMax": 2560,
+        "priceMin": 408,
+        "priceMax": 408,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4734,7 +4230,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tetogi",
         "retailerName": "Tetogi",
@@ -4756,8 +4252,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-petty-135mm-wood-act-extra-thin",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-petty-135mm-wood-act-extra-thin",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-petty-135mm-wood-handle-extra-thin-356956.jpg?v=1763585049",
-        "priceMin": 1680,
-        "priceMax": 1680,
+        "priceMin": 268,
+        "priceMax": 268,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4766,7 +4262,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tetogi",
         "retailerName": "Tetogi",
@@ -4788,8 +4284,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-gyuto-240mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-gyuto-240mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-gyuto-240mm-wood-handle-827469.jpg?v=1763585037",
-        "priceMin": 3560,
-        "priceMax": 3560,
+        "priceMin": 567,
+        "priceMax": 567,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4798,7 +4294,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tetogi",
         "retailerName": "Tetogi",
@@ -4820,8 +4316,8 @@
         "handle": "takada-no-hamono-blue-1-suiboku-santoku-180mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-suiboku-santoku-180mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-suiboku-santoku-180mm-ho-wood-handle-653939.jpg?v=1763585023",
-        "priceMin": 2480,
-        "priceMax": 2480,
+        "priceMin": 395,
+        "priceMax": 395,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4830,7 +4326,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tetogi",
         "retailerName": "Tetogi",
@@ -4852,8 +4348,8 @@
         "handle": "takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-handle-654832.jpg?v=1763584947",
-        "priceMin": 3120,
-        "priceMax": 3120,
+        "priceMin": 497,
+        "priceMax": 497,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4862,7 +4358,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tetogi",
         "retailerName": "Tetogi",
@@ -4883,8 +4379,8 @@
         "handle": "takada-no-hamono-blue-1-suiboku-gyuto-210mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-suiboku-gyuto-210mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-suiboku-gyuto-210mm-ho-wood-handle-603791.jpg?v=1763584937",
-        "priceMin": 2720,
-        "priceMax": 2720,
+        "priceMin": 434,
+        "priceMax": 434,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -4893,7 +4389,7 @@
     },
     {
       "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (anything)",
+      "grailName": "Takada no Hamono (any knife)",
       "listing": {
         "retailerId": "tetogi",
         "retailerName": "Tetogi",
@@ -4915,8 +4411,8 @@
         "handle": "takada-no-hamono-blue-1-hh-petty-135mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-hh-petty-135mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-hh-petty-135mm-ho-wood-handle-470319.jpg?v=1763584926",
-        "priceMin": 1440,
-        "priceMax": 1440,
+        "priceMin": 230,
+        "priceMax": 230,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -5266,8 +4762,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-gyuto-240mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-gyuto-240mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-gyuto-240mm-wood-handle-827469.jpg?v=1763585037",
-        "priceMin": 3560,
-        "priceMax": 3560,
+        "priceMin": 567,
+        "priceMax": 567,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -5298,8 +4794,8 @@
         "handle": "takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-handle-654832.jpg?v=1763584947",
-        "priceMin": 3120,
-        "priceMax": 3120,
+        "priceMin": 497,
+        "priceMax": 497,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
