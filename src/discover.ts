@@ -29,6 +29,8 @@ const BLOCKED = [
   'tiktok.com', 'x.com', 'twitter.com', 'quora.com', 'wikipedia.org',
   'kitchenknifeforums.com', 'chefknivestogoforums.com', 'bladeforums.com',
   'google.', 'bing.com', 'duckduckgo.com', 'github.com', 'discord.',
+  // Known scam clone-storefronts (scraped catalogs at ~90% off):
+  'gourmetkitchenanddining.com',
 ];
 
 export function isBlocked(hostname: string): boolean {
@@ -124,6 +126,26 @@ export interface DiscoveryIo {
   json: JsonFetcher;
   text: TextFetcher;
   fetchCatalog: (r: Retailer) => Promise<import('./types.ts').Listing[]>;
+  /** normalize(title) → highest price seen at established retailers; feeds the clone-store check. */
+  priceIndex?: Map<string, number>;
+}
+
+/**
+ * Scam heuristic: fake storefronts scrape real shops' catalogs verbatim and
+ * list everything at a fraction of the price. If a candidate's grail matches
+ * duplicate titles we already track at established retailers but priced
+ * under 45% of the known price, it's a clone store — reject it.
+ */
+export function looksLikeCloneStore(
+  matched: import('./types.ts').Listing[],
+  priceIndex: Map<string, number>,
+): boolean {
+  let clones = 0;
+  for (const l of matched) {
+    const known = priceIndex.get(normalize(l.title));
+    if (known && l.priceMin > 0 && l.priceMin < known * 0.45) clones++;
+  }
+  return clones >= 3 || (matched.length >= 4 && clones >= matched.length / 2);
 }
 
 export interface DiscoveryFind {
@@ -170,6 +192,10 @@ export async function discoverRetailers(config: Config, io: DiscoveryIo): Promis
     try {
       const listings = await io.fetchCatalog(retailer);
       const matched = listings.filter((l) => grails.some((g) => matchesGrail(g, l)));
+      if (matched.length > 0 && io.priceIndex && looksLikeCloneStore(matched, io.priceIndex)) {
+        console.log(`  ⚠ ${bare}: REJECTED — cloned listings at implausible prices (likely scam storefront)`);
+        continue;
+      }
       if (matched.length > 0) {
         const sample = matched.find((l) => l.available) ?? matched[0];
         const grailName = grails.find((g) => matchesGrail(g, sample))?.name ?? 'grail';
@@ -190,10 +216,28 @@ async function main(): Promise<void> {
   const config = await loadConfig();
   console.log(`Discovery: hunting new stockists for ${config.grails.filter((g) => g.enabled !== false).length} grail(s)…`);
 
+  // Price index from the last sweep's grail hits at established retailers —
+  // the reference the clone-store scam check compares candidates against.
+  const priceIndex = new Map<string, number>();
+  try {
+    const prev = JSON.parse(await readFile('data/latest.json', 'utf8')) as {
+      hits?: Array<{ listing: { title: string; priceMin: number } }>;
+    };
+    for (const h of prev.hits ?? []) {
+      if (h.listing.priceMin > 0) {
+        const key = normalize(h.listing.title);
+        priceIndex.set(key, Math.max(priceIndex.get(key) ?? 0, h.listing.priceMin));
+      }
+    }
+  } catch {
+    /* first run: no reference prices yet */
+  }
+
   const io: DiscoveryIo = {
     search: (term) => searchWeb(term, fetchText),
     json: (url) => fetchJson(url, 12_000, 0),
     text: (url) => fetchText(url, 12_000),
+    priceIndex,
     // Bound each candidate's verification: a slow or enormous catalog gets
     // 60s, then we move on — liveness beats completeness in discovery.
     fetchCatalog: (r) =>
