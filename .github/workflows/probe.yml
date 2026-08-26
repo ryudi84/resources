@@ -14,14 +14,16 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: japanesenaturalstones.com — platform detection
+      - name: JNS BigCommerce GraphQL token + query test
         run: |
-          for host in www.japanesenaturalstones.com japanesenaturalstones.com; do
-            echo "===== $host shopify probe"
-            curl -sSL --max-time 20 "https://$host/products.json?limit=1" | head -c 300; echo
-            echo "===== $host woocommerce probe"
-            curl -sSL --max-time 20 "https://$host/wp-json/wc/store/v1/products?per_page=1" | head -c 300; echo
-            echo "===== $host homepage platform markers"
-            curl -sSL --max-time 20 "https://$host" -o h.html || true
-            grep -oiE 'squarespace|woocommerce|shopify|bigcommerce|wp-content|cdn/shop' h.html | sort | uniq -c | head; echo
-          done
+          curl -sSL --max-time 20 "https://www.japanesenaturalstones.com" -o h.html || true
+          echo "== token candidates =="
+          grep -oE 'graphQLToken[^,]{0,200}' h.html | head -c 500; echo
+          grep -oE '"storefront_api[^}]{0,300}' h.html | head -c 500; echo
+          TOKEN=$(grep -oE 'graphQLToken['"'"'"]?\s*[:=]\s*['"'"'"][A-Za-z0-9._-]+' h.html | grep -oE '[A-Za-z0-9._-]+$' | head -1)
+          echo "token length: ${#TOKEN}"
+          echo "== graphql products query =="
+          curl -sS --max-time 20 -X POST "https://www.japanesenaturalstones.com/graphql" \
+            -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" \
+            -d '{"query":"query{site{products(first:3){pageInfo{hasNextPage endCursor}edges{node{name path sku brand{name}prices{price{value currencyCode}basePrice{value}salePrice{value}}inventory{isInStock}}}}}}"}' | head -c 1500
+          echo
