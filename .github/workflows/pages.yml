@@ -1,8 +1,10 @@
 name: Deploy panel to Pages
 
-# Publishes docs/ (the dashboard) to GitHub Pages after every sweep commit.
-# configure-pages with enablement:true CREATES the Pages site on first run —
-# no manual Settings → Pages setup required.
+# Deploys docs/ (the dashboard) to GitHub Pages — IF the Pages site exists.
+# Creating the site via the workflow token is no longer allowed by GitHub
+# ("Resource not accessible by integration"), so until Pages is enabled in
+# Settings the job no-ops green and the panel is served via raw.githack.com:
+#   https://raw.githack.com/ryudi84/resources/main/docs/index.html
 
 on:
   push:
@@ -23,16 +25,34 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+
+      - name: Check whether a Pages site exists
+        id: pages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/pages")
+          echo "exists=$([ "$code" = "200" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          echo "Pages site check: HTTP $code"
+
+      - name: Panel fallback URL (Pages not enabled)
+        if: steps.pages.outputs.exists != 'true'
+        run: |
+          echo "GitHub Pages is not enabled for this repo; the panel is served via githack instead:" >> "$GITHUB_STEP_SUMMARY"
+          echo "https://raw.githack.com/${{ github.repository }}/main/docs/index.html" >> "$GITHUB_STEP_SUMMARY"
+
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
+        if: steps.pages.outputs.exists == 'true'
+
       - uses: actions/upload-pages-artifact@v3
+        if: steps.pages.outputs.exists == 'true'
         with:
           path: docs
-      - id: deployment
-        uses: actions/deploy-pages@v4
+
+      - uses: actions/deploy-pages@v4
+        if: steps.pages.outputs.exists == 'true'

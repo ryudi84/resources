@@ -136,9 +136,15 @@ promo listings spotted by keyword. Fire one on demand from Actions → Run workf
 
 ## Hosted panel with a password (free)
 
-Hosting is automatic: `.github/workflows/pages.yml` creates the GitHub Pages site on
-its first run (no Settings clicks) and redeploys `docs/` after every sweep, so the
-panel lives at `https://ryudi84.github.io/resources/`.
+The live panel is always available with zero setup at:
+
+**https://raw.githack.com/ryudi84/resources/main/docs/index.html**
+
+(githack is a free CDN that renders GitHub files as real web pages; it picks up every
+sweep commit.) If GitHub Pages is ever enabled in Settings (`main`, GitHub Actions
+source), `.github/workflows/pages.yml` detects it automatically and also deploys to
+`https://ryudi84.github.io/resources/` — creating the Pages site itself from a
+workflow token is no longer permitted by GitHub, which is why that one click remains.
 
 To lock it, add a `PANEL_PASSWORD` secret. From then on the published page contains
 **only AES-256-GCM ciphertext** (key derived from your password via PBKDF2-SHA-256,
