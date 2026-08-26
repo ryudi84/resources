@@ -14,27 +14,39 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Carbon Knife Co — Raquin collection (API view)
+      - name: bryanraquin.com — discover shop pages
         run: |
-          echo "== collection products.json =="
-          curl -sSL --max-time 30 "https://carbonknifeco.com/collections/bryan-raquin-knives/products.json?limit=250" | head -c 3000 || true
-          echo
+          curl -sSL --max-time 30 "https://www.bryanraquin.com" -o home.html || true
+          echo "== nav links =="
+          grep -oE 'href="/[a-z0-9-]+"' home.html | sort -u | head -30 || true
 
-      - name: Carbon Knife Co — Raquin collection (page links)
+      - name: bryanraquin.com — try Squarespace JSON endpoints
         run: |
-          curl -sSL --max-time 30 "https://carbonknifeco.com/collections/bryan-raquin-knives" -o page.html || true
-          echo "== raquin product links on page =="
-          grep -oiE 'href="[^"]*/products/[^"]*"' page.html | grep -i raquin | sort -u || echo "(none)"
-          echo "== sold-out markers =="
-          grep -cio 'sold out' page.html || true
+          for p in shop store knives available-knives boutique couteaux products available; do
+            echo "===== /$p?format=json"
+            curl -sSL --max-time 20 "https://www.bryanraquin.com/$p?format=json" -o out.json || true
+            head -c 400 out.json; echo
+          done
 
-      - name: bryan-raquin.com — platform detection
+      - name: bryanraquin.com — inspect best candidate item shape
         run: |
-          echo "== homepage headers =="
-          curl -sSIL --max-time 30 "https://bryan-raquin.com" | head -30 || true
-          echo "== woocommerce store api =="
-          curl -sSL --max-time 30 "https://bryan-raquin.com/wp-json/wc/store/v1/products?per_page=5" | head -c 2000 || true
-          echo
-          echo "== shopify products.json =="
-          curl -sSL --max-time 30 "https://bryan-raquin.com/products.json?limit=5" | head -c 1000 || true
-          echo
+          for p in shop store knives available-knives boutique couteaux products available; do
+            curl -sSL --max-time 20 "https://www.bryanraquin.com/$p?format=json" -o out.json 2>/dev/null || true
+            if grep -q '"items"' out.json 2>/dev/null; then
+              echo "===== /$p has items; first item excerpt:"
+              python3 -c "
+          import json
+          d = json.load(open('out.json'))
+          items = d.get('items', [])
+          print('item count:', len(items))
+          if items:
+              i = items[0]
+              print(json.dumps({k: i.get(k) for k in ['title','fullUrl','tags','categories']}, indent=1)[:800])
+              sc = i.get('structuredContent') or {}
+              print('structuredContent keys:', list(sc.keys())[:20])
+              print(json.dumps(sc.get('variants', []), indent=1)[:800])
+          print('pagination:', json.dumps(d.get('pagination', {}))[:300])
+          "
+              break
+            fi
+          done
