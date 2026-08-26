@@ -3,13 +3,24 @@
   "grails": [
     {
       "id": "takada-no-hamono",
-      "name": "Takada no Hamono (anything)",
+      "name": "Takada no Hamono (any knife)",
       "match": {
         "any": [
           "takada"
+        ],
+        "none": [
+          "tenugui",
+          "t-shirt",
+          "t shirt",
+          "shirt",
+          "tote",
+          "towel",
+          "apron",
+          "sticker",
+          "print"
         ]
       },
-      "notes": "Mitsuaki Takada — Suiboku, Ginsan, Reika, W2. Sells out in minutes; this entry catches every listing that mentions Takada."
+      "notes": "Mitsuaki Takada — Suiboku, Ginsan, Reika, W2. Sells out in minutes; this entry catches every knife listing that mentions Takada (merch excluded)."
     },
     {
       "id": "takada-suiboku-gyuto-240",
