@@ -95,6 +95,11 @@ test('discoverRetailers verifies stock against grails and skips known/blocked do
   };
   const found = await discoverRetailers(config, io);
   assert.equal(found.length, 1);
-  assert.equal(found[0].id, 'newshop-example');
-  assert.equal(found[0].adapter, 'shopify');
+  assert.equal(found[0].retailer.id, 'newshop-example');
+  assert.equal(found[0].retailer.adapter, 'shopify');
+  // The announcement must carry the actual matched product, not just the shop.
+  assert.match(found[0].sample.title, /takada/i);
+  assert.ok(found[0].sample.url.startsWith('http'));
+  assert.equal(found[0].grailName, 'Takada');
+  assert.ok(found[0].matches >= 1);
 });
