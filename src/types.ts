@@ -30,7 +30,8 @@ export interface Retailer {
   name: string;
   /** Base URL of the storefront, no trailing slash. */
   url: string;
-  adapter: 'shopify';
+  /** Which platform adapter to use — see src/adapters.ts for the registry. */
+  adapter: 'shopify' | 'woocommerce';
   region?: string;
   currency?: string;
   /** Set false to skip without deleting. Default true. */
@@ -52,6 +53,10 @@ export interface Listing {
   imageUrl?: string;
   priceMin: number;
   priceMax: number;
+  /** Highest original (compare-at/regular) price when the listing is discounted. */
+  compareAtMax?: number;
+  /** Best discount across variants, whole percent (e.g. 20 = 20% off). */
+  salePct?: number;
   available: boolean;
   variantsAvailable: number;
   variantsTotal: number;

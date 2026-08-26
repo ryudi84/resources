@@ -1,18 +1,19 @@
 import type { Listing, Retailer } from './types.ts';
+import { fetchJson } from './http.ts';
 
 /**
  * Shopify storefronts expose their full public catalog at
  * /products.json?limit=250&page=N — no auth, no scraping, includes live
- * per-variant availability. Nearly every serious Japanese-knife retailer
- * runs Shopify, which makes this the cleanest possible stock signal.
+ * per-variant availability. Most serious Japanese-knife retailers run
+ * Shopify, which makes this the cleanest possible stock signal.
  */
 
 const PAGE_SIZE = 250;
 const MAX_PAGES = 40; // 10k products; more than any knife shop carries
-const UA = 'grail-knife-finder/1.0 (+https://github.com/ryudi84/resources)';
 
 interface ShopifyVariant {
   price: string;
+  compare_at_price?: string | null;
   available?: boolean;
 }
 
@@ -31,36 +32,24 @@ interface ShopifyProduct {
   images?: ShopifyImage[];
 }
 
-async function fetchJson(url: string, timeoutMs = 20_000, retries = 2): Promise<unknown> {
-  let lastError: unknown;
-  for (let attempt = 0; attempt <= retries; attempt++) {
-    try {
-      const res = await fetch(url, {
-        headers: { 'user-agent': UA, accept: 'application/json' },
-        signal: AbortSignal.timeout(timeoutMs),
-        redirect: 'follow',
-      });
-      if (res.status === 429 || res.status >= 500) {
-        throw new Error(`HTTP ${res.status}`);
-      }
-      if (!res.ok) return null; // 4xx other than 429: endpoint disabled/moved, don't retry
-      return await res.json();
-    } catch (err) {
-      lastError = err;
-      if (attempt < retries) {
-        await new Promise((r) => setTimeout(r, 1500 * 2 ** attempt));
-      }
-    }
-  }
-  throw lastError;
-}
-
 function toListing(retailer: Retailer, p: ShopifyProduct): Listing {
   const variants = p.variants ?? [];
   const prices = variants
     .map((v) => Number.parseFloat(v.price))
     .filter((n) => Number.isFinite(n));
   const availableCount = variants.filter((v) => v.available === true).length;
+
+  // Sale detection: a compare_at_price above the price means a live markdown.
+  let compareAtMax = 0;
+  let salePct = 0;
+  for (const v of variants) {
+    const price = Number.parseFloat(v.price);
+    const compareAt = Number.parseFloat(v.compare_at_price ?? '');
+    if (Number.isFinite(price) && Number.isFinite(compareAt) && compareAt > price) {
+      compareAtMax = Math.max(compareAtMax, compareAt);
+      salePct = Math.max(salePct, Math.round((1 - price / compareAt) * 100));
+    }
+  }
   const tags = Array.isArray(p.tags)
     ? p.tags
     : typeof p.tags === 'string'
@@ -80,6 +69,7 @@ function toListing(retailer: Retailer, p: ShopifyProduct): Listing {
     imageUrl: p.images?.[0]?.src,
     priceMin: prices.length ? Math.min(...prices) : 0,
     priceMax: prices.length ? Math.max(...prices) : 0,
+    ...(salePct > 0 ? { compareAtMax, salePct } : {}),
     available: availableCount > 0,
     variantsAvailable: availableCount,
     variantsTotal: variants.length,

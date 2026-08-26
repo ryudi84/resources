@@ -5,10 +5,16 @@ on:
     # Every 20 minutes. Takada drops sell out fast — tighten to */10 if you
     # dare, but note GitHub delays busy cron slots.
     - cron: '*/20 * * * *'
+    # Daily bargain digest (13:00 UTC). The digest step below keys off this.
+    - cron: '0 13 * * *'
   workflow_dispatch:
     inputs:
       test_alert:
         description: 'Send a test alert through all configured channels (email/Discord/ntfy/Slack) before scanning'
+        type: boolean
+        default: false
+      run_digest:
+        description: 'Post the daily bargain digest to Discord after scanning'
         type: boolean
         default: false
   push:
@@ -58,8 +64,17 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           NTFY_SERVER: ${{ secrets.NTFY_SERVER }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          #   Panel password: set PANEL_PASSWORD to seal the hosted dashboard
+          #   with AES-256-GCM; visitors must enter it to unlock the page.
+          PANEL_PASSWORD: ${{ secrets.PANEL_PASSWORD }}
           TEST_ALERT: ${{ inputs.test_alert && 'true' || 'false' }}
         run: npm run scan
+
+      - name: Daily bargain digest
+        if: github.event.schedule == '0 13 * * *' || inputs.run_digest == true
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: npm run digest
 
       - name: Commit updated stock data & dashboard
         run: |

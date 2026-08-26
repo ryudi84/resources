@@ -3,7 +3,7 @@ import { existsSync } from 'node:fs';
 import { parseArgs } from 'node:util';
 import type { Config, Grail, GrailHit, Listing, Retailer, RetailerStatus, ScanResult } from './types.ts';
 import { matchesGrail } from './matcher.ts';
-import { fetchShopifyCatalog } from './shopify.ts';
+import { adapters, catalogFetcher } from './adapters.ts';
 import { notify } from './notify.ts';
 import { renderDashboard } from './report.ts';
 import { demoCatalogs } from './demo.ts';
@@ -20,7 +20,7 @@ export async function loadConfig(): Promise<Config> {
     if (!g.id || !g.name || !g.match) throw new Error(`grails.json: entry missing id/name/match: ${JSON.stringify(g)}`);
   }
   for (const r of retailers) {
-    if (!r.id || !r.url || r.adapter !== 'shopify') throw new Error(`retailers.json: bad entry: ${JSON.stringify(r)}`);
+    if (!r.id || !r.url || !(r.adapter in adapters)) throw new Error(`retailers.json: bad entry: ${JSON.stringify(r)}`);
   }
   return { grails, retailers };
 }
@@ -189,7 +189,7 @@ async function main(): Promise<void> {
 
   const fetcher = demo
     ? async (r: Retailer): Promise<Listing[]> => demoCatalogs(r)
-    : fetchShopifyCatalog;
+    : catalogFetcher;
 
   const previous = await loadPrevious();
   const result = await runScan(config, fetcher, demo);
@@ -201,7 +201,9 @@ async function main(): Promise<void> {
   await mkdir(DATA_DIR, { recursive: true });
   await mkdir('docs', { recursive: true });
   await writeFile(LATEST, JSON.stringify(result, null, 2) + '\n');
-  await writeFile(DASHBOARD, renderDashboard(result, config));
+  const panelPassword = process.env.PANEL_PASSWORD?.trim() || undefined;
+  await writeFile(DASHBOARD, await renderDashboard(result, config, panelPassword));
+  if (panelPassword) console.log('Panel sealed with PANEL_PASSWORD (AES-256-GCM).');
 
   for (const r of result.retailers) {
     console.log(`  ${r.ok ? '✓' : '✗'} ${r.name.padEnd(26)} ${r.ok ? `${r.products} products` : r.error} (${r.ms}ms)`);

@@ -10,6 +10,7 @@
   "scripts": {
     "scan": "node --experimental-strip-types src/scan.ts",
     "scan:demo": "node --experimental-strip-types src/scan.ts --demo",
+    "digest": "node --experimental-strip-types src/digest.ts",
     "grail": "node --experimental-strip-types src/grail.ts",
     "grail:add": "node --experimental-strip-types src/grail.ts add",
     "grail:list": "node --experimental-strip-types src/grail.ts list",

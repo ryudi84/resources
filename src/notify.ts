@@ -89,8 +89,20 @@ export async function notify(newHits: GrailHit[]): Promise<void> {
 
   const discord = process.env.DISCORD_WEBHOOK_URL;
   if (discord) {
+    const embeds = newHits.slice(0, 10).map((h) => ({
+      title: h.listing.title.slice(0, 256),
+      url: h.listing.url,
+      description: [
+        `◈ **${h.grailName}**`,
+        `🏪 ${h.listing.retailerName}${h.listing.region ? ` (${h.listing.region})` : ''}`,
+        formatPrice(h) ? `💰${formatPrice(h).replace(' — ', ' ')}` : '',
+        h.listing.salePct ? `🏷️ **−${h.listing.salePct}%** (was ${h.listing.compareAtMax} ${h.listing.currency ?? ''})` : '',
+      ].filter(Boolean).join('\n'),
+      color: h.listing.salePct ? 0xe0a458 : 0x4ade80,
+    }));
+    const overflow = newHits.length > 10 ? `\n…and ${newHits.length - 10} more.` : '';
     tasks.push(
-      post(discord, JSON.stringify({ content: `**${title}**\n${body}`.slice(0, 1990) }), {
+      post(discord, JSON.stringify({ content: `**${title}**${overflow}`, embeds }), {
         'content-type': 'application/json',
       }),
     );

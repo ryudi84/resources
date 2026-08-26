@@ -1,5 +1,5 @@
 {
-  "$comment": "Shopify storefronts known to stock Takada no Hamono and other high-end Japanese knives. A retailer that errors shows up in the dashboard's status strip — prune or fix its URL there. Add any Shopify knife shop by base URL.",
+  "$comment": "Storefronts to sweep. adapter picks the platform (shopify | woocommerce — see src/adapters.ts to add more). A retailer that errors shows up in the dashboard's status strip; prune or fix its URL there.",
   "retailers": [
     {
       "id": "tosho",
@@ -120,6 +120,22 @@
       "adapter": "shopify",
       "region": "US",
       "currency": "USD"
+    },
+    {
+      "id": "oishya",
+      "name": "Oishya",
+      "url": "https://oishya.com",
+      "adapter": "woocommerce",
+      "region": "EU",
+      "currency": "GBP"
+    },
+    {
+      "id": "miura-knives",
+      "name": "Miura Knives",
+      "url": "https://miuraknives.com",
+      "adapter": "woocommerce",
+      "region": "EU",
+      "currency": "EUR"
     }
   ]
 }

@@ -3,9 +3,10 @@
 A stock finder for **Takada no Hamono** — and any other grail knife you decide to hunt.
 
 Takada drops sell out in minutes. This tool doesn't scrape web pages: it reads the **live
-inventory JSON API** (`/products.json`) that every Shopify storefront exposes, which is
-exactly what the serious knife retailers run on. That gives per-variant availability and
-prices with zero HTML parsing, zero brittleness, and near-zero latency.
+inventory JSON APIs** that e-commerce platforms expose — Shopify's `/products.json` and
+WooCommerce's Store API, with a pluggable adapter registry (`src/adapters.ts`) for adding
+any other platform. That gives per-variant availability, prices, and markdowns with zero
+HTML parsing, zero brittleness, and near-zero latency.
 
 ## How it works
 
@@ -111,10 +112,25 @@ Mail is sent through Gmail's own SMTP with a zero-dependency SMTP client (`src/s
 | `NTFY_SERVER` | Optional self-hosted ntfy server. |
 | `SLACK_WEBHOOK_URL` | Posts alerts into a Slack channel. |
 
-## Dashboard hosting (optional)
+## Daily bargain digest
 
-Enable GitHub Pages (Settings → Pages → deploy from branch, `/docs` folder) and the
-dashboard gets a public URL that refreshes with every sweep.
+Once a day (13:00 UTC cron) a digest posts to your Discord channel: every grail
+currently in stock, with **bargains first** — live markdowns detected from
+compare-at/regular prices (with the discount %), plus B-grade / seconds / clearance /
+promo listings spotted by keyword. Fire one on demand from Actions → Run workflow →
+"Post the daily bargain digest".
+
+## Hosted panel with a password (free)
+
+Enable GitHub Pages (Settings → Pages → Deploy from a branch → your branch, `/docs`
+folder) and the panel gets a URL like `https://ryudi84.github.io/resources/` that
+refreshes with every sweep.
+
+To lock it, add a `PANEL_PASSWORD` secret. From then on the published page contains
+**only AES-256-GCM ciphertext** (key derived from your password via PBKDF2-SHA-256,
+310k iterations) and shows an unlock screen; decryption happens in your browser via
+WebCrypto. No auth service, no server, no cost — GitHub Pages never sees the data or
+the password. Change the password by updating the secret; the next sweep re-seals.
 
 ## Repo layout
 
@@ -122,7 +138,11 @@ dashboard gets a public URL that refreshes with every sweep.
 grails.json               # ← your watchlist, the file you'll touch most
 retailers.json            # Shopify storefronts to sweep
 src/scan.ts               # orchestrator: sweep → match → diff → report → notify
+src/adapters.ts           # platform adapter registry (add new platforms here)
 src/shopify.ts            # Shopify /products.json adapter (pagination, retries)
+src/woocommerce.ts        # WooCommerce Store API adapter
+src/digest.ts             # daily Discord bargain digest
+src/crypto.ts             # AES-256-GCM panel sealing (password protection)
 src/matcher.ts            # normalization + all/any/none matching engine
 src/grail.ts              # watchlist CLI (add/list/remove/pause/resume)
 src/report.ts             # dashboard generator
