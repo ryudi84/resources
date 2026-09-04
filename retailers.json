@@ -188,6 +188,13 @@
       "name": "staysharpmtl.com",
       "url": "https://staysharpmtl.com",
       "adapter": "shopify"
+    },
+    {
+      "id": "bernalcutleryshop-com",
+      "name": "bernalcutleryshop.com",
+      "url": "https://www.bernalcutleryshop.com",
+      "adapter": "woocommerce",
+      "currency": "USD"
     }
   ]
 }
