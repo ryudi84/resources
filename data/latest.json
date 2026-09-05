@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T13:10:48.360Z",
+  "generatedAt": "2026-09-05T16:06:32.138Z",
   "retailers": [
     {
       "id": "tosho",
@@ -7,7 +7,7 @@
       "url": "https://toshoknifearts.com",
       "ok": true,
       "products": 1749,
-      "ms": 1063
+      "ms": 4457
     },
     {
       "id": "knives-and-stones-au",
@@ -15,7 +15,7 @@
       "url": "https://knivesandstones.com.au",
       "ok": true,
       "products": 1716,
-      "ms": 7781
+      "ms": 6233
     },
     {
       "id": "carbon-knife-co",
@@ -23,7 +23,7 @@
       "url": "https://carbonknifeco.com",
       "ok": true,
       "products": 3155,
-      "ms": 6670
+      "ms": 14764
     },
     {
       "id": "strata",
@@ -31,15 +31,15 @@
       "url": "https://strataportland.com",
       "ok": true,
       "products": 3697,
-      "ms": 2269
+      "ms": 14275
     },
     {
       "id": "bernal",
       "name": "Bernal Cutlery",
       "url": "https://bernalcutlery.com",
       "ok": true,
-      "products": 4842,
-      "ms": 20728
+      "products": 4845,
+      "ms": 19348
     },
     {
       "id": "sugi",
@@ -47,7 +47,7 @@
       "url": "https://sugicutlery.com",
       "ok": true,
       "products": 2525,
-      "ms": 2973
+      "ms": 9311
     },
     {
       "id": "tokushu",
@@ -55,7 +55,7 @@
       "url": "https://tokushuknife.com",
       "ok": true,
       "products": 899,
-      "ms": 1167
+      "ms": 10745
     },
     {
       "id": "sharp-knife-shop",
@@ -63,7 +63,7 @@
       "url": "https://sharpknifeshop.com",
       "ok": true,
       "products": 351,
-      "ms": 460
+      "ms": 1367
     },
     {
       "id": "knifewear",
@@ -71,7 +71,7 @@
       "url": "https://knifewear.com",
       "ok": true,
       "products": 499,
-      "ms": 791
+      "ms": 1767
     },
     {
       "id": "district-cutlery",
@@ -79,7 +79,7 @@
       "url": "https://www.districtcutlery.com",
       "ok": true,
       "products": 418,
-      "ms": 595
+      "ms": 912
     },
     {
       "id": "coutelier",
@@ -87,7 +87,7 @@
       "url": "https://couteliernola.com",
       "ok": true,
       "products": 818,
-      "ms": 2183
+      "ms": 2397
     },
     {
       "id": "eating-tools",
@@ -95,7 +95,7 @@
       "url": "https://www.eatingtools.com",
       "ok": true,
       "products": 1098,
-      "ms": 6008
+      "ms": 6965
     },
     {
       "id": "modern-cooking",
@@ -103,7 +103,7 @@
       "url": "https://www.moderncooking.com",
       "ok": true,
       "products": 501,
-      "ms": 3964
+      "ms": 2824
     },
     {
       "id": "tetogi",
@@ -111,7 +111,7 @@
       "url": "https://tetogi.com",
       "ok": true,
       "products": 2071,
-      "ms": 14032
+      "ms": 2731
     },
     {
       "id": "oishya",
@@ -119,7 +119,7 @@
       "url": "https://oishya.com",
       "ok": true,
       "products": 53,
-      "ms": 4623
+      "ms": 4568
     },
     {
       "id": "ai-and-om",
@@ -127,7 +127,7 @@
       "url": "https://aiandomknives.com",
       "ok": true,
       "products": 952,
-      "ms": 2376
+      "ms": 4121
     },
     {
       "id": "town-cutler",
@@ -135,7 +135,7 @@
       "url": "https://www.towncutler.com",
       "ok": true,
       "products": 203,
-      "ms": 718
+      "ms": 467
     },
     {
       "id": "homebutcher",
@@ -143,7 +143,7 @@
       "url": "https://homebutcher.com",
       "ok": true,
       "products": 1142,
-      "ms": 2405
+      "ms": 2225
     },
     {
       "id": "kitchen-provisions",
@@ -151,7 +151,7 @@
       "url": "https://www.kitchenprovisions.co.uk",
       "ok": true,
       "products": 249,
-      "ms": 1948
+      "ms": 1726
     },
     {
       "id": "bryan-raquin-direct",
@@ -159,15 +159,15 @@
       "url": "https://www.bryanraquin.com",
       "ok": true,
       "products": 74,
-      "ms": 881
+      "ms": 548
     },
     {
       "id": "jns",
       "name": "Japanese Natural Stones (JNS)",
       "url": "https://www.japanesenaturalstones.com",
       "ok": true,
-      "products": 6563,
-      "ms": 46394
+      "products": 6564,
+      "ms": 43048
     },
     {
       "id": "hitohira-japan-com",
@@ -175,15 +175,15 @@
       "url": "https://hitohira-japan.com",
       "ok": true,
       "products": 5876,
-      "ms": 15298
+      "ms": 16896
     },
     {
       "id": "shirasagistore-com",
       "name": "shirasagistore.com",
       "url": "https://shirasagistore.com",
       "ok": true,
-      "products": 1535,
-      "ms": 52333
+      "products": 100,
+      "ms": 3994
     },
     {
       "id": "staysharpmtl-com",
@@ -191,15 +191,15 @@
       "url": "https://staysharpmtl.com",
       "ok": true,
       "products": 1961,
-      "ms": 4878
+      "ms": 6336
     },
     {
       "id": "bernalcutleryshop-com",
       "name": "bernalcutleryshop.com",
       "url": "https://www.bernalcutleryshop.com",
       "ok": true,
-      "products": 2660,
-      "ms": 57045
+      "products": 0,
+      "ms": 250
     }
   ],
   "hits": [
@@ -242,470 +242,6 @@
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7729/81205/P1001697__29600.1787412308.jpg",
         "priceMin": 1087.8,
         "priceMax": 1087.8,
-        "available": true,
-        "variantsAvailable": 1,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "bernalcutleryshop-com",
-        "retailerName": "bernalcutleryshop.com",
-        "currency": "USD",
-        "title": "Best Pirce 👍 Takada No Hamono 240mm Gyuto Aogami 2 Mizu Honyaki &#8211; Ebony &amp; Horn Octagon &#8211; On Order 🧨",
-        "vendor": "",
-        "productType": "Styles Waiting Room",
-        "tags": [
-          "240mm",
-          "Aogami 2",
-          "Discount eligible",
-          "Gyuto",
-          "Takada No Hamono"
-        ],
-        "handle": "takada-no-hamono-240mm-gyuto-aogami-2-mizu-honyaki-ebony-horn-octagon-on-order",
-        "url": "https://www.bernalcutleryshop.com/takada-no-hamono-240mm-gyuto-aogami-2-mizu-honyaki-ebony-horn-octagon-on-order/",
-        "imageUrl": "https://www.bernalcutleryshop.com/wp-content/uploads/2023/01/image_ae5d7d25-b732-4d1d-b562-247a6c676059_1080x1080.webp",
-        "priceMin": 96.99,
-        "priceMax": 96.99,
-        "compareAtMax": 480,
-        "salePct": 80,
-        "available": true,
-        "variantsAvailable": 1,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "bernalcutleryshop-com",
-        "retailerName": "bernalcutleryshop.com",
-        "currency": "USD",
-        "title": "Discount 🛒 Takada No Hamono 210mm Kiritsuke Gyuto Ginsanko Stainless Suiboku Finish Octagonal Ho &amp; Horn Handle &#8211; On Order Waiting Room 👍",
-        "vendor": "",
-        "productType": "Styles Waiting Room",
-        "tags": [
-          "Discount eligible",
-          "Ginsanko",
-          "Gyuto",
-          "Stainless",
-          "Takada No Hamono"
-        ],
-        "handle": "takada-no-hamono-210mm-kiritsuke-gyuto-ginsanko-stainless-suiboku-finish-octagonal-ho-horn-handle-on-order-waiting-room",
-        "url": "https://www.bernalcutleryshop.com/takada-no-hamono-210mm-kiritsuke-gyuto-ginsanko-stainless-suiboku-finish-octagonal-ho-horn-handle-on-order-waiting-room/",
-        "imageUrl": "https://www.bernalcutleryshop.com/wp-content/uploads/2023/01/CDFCEEBE-F684-48BA-9C81-74F0B796ADD9_1080x1080.webp",
-        "priceMin": 97.99,
-        "priceMax": 97.99,
-        "compareAtMax": 476,
-        "salePct": 79,
-        "available": true,
-        "variantsAvailable": 1,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "bernalcutleryshop-com",
-        "retailerName": "bernalcutleryshop.com",
-        "currency": "USD",
-        "title": "Cheapest 😀 Takada No Hamono 210mm Gyuto Shirogami 2 Suiboku Finish Iron Clad Octagonal Ho &amp; Horn Handle &#8211; On Order Waiting Room 🧨",
-        "vendor": "",
-        "productType": "Styles Waiting Room",
-        "tags": [
-          "Discount eligible",
-          "Gyuto",
-          "Shirogami 2",
-          "Takada No Hamono"
-        ],
-        "handle": "takada-no-hamono-210mm-gyuto-shirogami-2-suiboku-finish-iron-clad-octagonal-ho-horn-handle-on-order-waiting-room",
-        "url": "https://www.bernalcutleryshop.com/takada-no-hamono-210mm-gyuto-shirogami-2-suiboku-finish-iron-clad-octagonal-ho-horn-handle-on-order-waiting-room/",
-        "imageUrl": "https://www.bernalcutleryshop.com/wp-content/uploads/2023/01/0D60A261-430A-48B1-A969-D89D851680E4_1080x1080.webp",
-        "priceMin": 94.99,
-        "priceMax": 94.99,
-        "compareAtMax": 498,
-        "salePct": 81,
-        "available": true,
-        "variantsAvailable": 1,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "bernalcutleryshop-com",
-        "retailerName": "bernalcutleryshop.com",
-        "currency": "USD",
-        "title": "Outlet 🎁 Takada No Hamono 210mm Gyuto Ginsanko Stainless Suiboku Finish Octagonal Ho &amp; Horn Handle &#8211; On Order 🥰",
-        "vendor": "",
-        "productType": "Styles Waiting Room",
-        "tags": [
-          "Discount eligible",
-          "Ginsanko",
-          "Gyuto",
-          "Stainless",
-          "Takada No Hamono"
-        ],
-        "handle": "takada-no-hamono-210mm-gyuto-ginsanko-stainless-suiboku-finish-octagonal-ho-horn-handle-on-order",
-        "url": "https://www.bernalcutleryshop.com/takada-no-hamono-210mm-gyuto-ginsanko-stainless-suiboku-finish-octagonal-ho-horn-handle-on-order/",
-        "imageUrl": "https://www.bernalcutleryshop.com/wp-content/uploads/2023/01/ABB2B4A1-4E0A-4C83-BC72-9F53F7BFC369_1080x1080.webp",
-        "priceMin": 91.99,
-        "priceMax": 91.99,
-        "compareAtMax": 440,
-        "salePct": 79,
-        "available": true,
-        "variantsAvailable": 1,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "bernalcutleryshop-com",
-        "retailerName": "bernalcutleryshop.com",
-        "currency": "USD",
-        "title": "Outlet ✔️ Takada No Hamono 180mm Santoku &#8211; Suiboku Finish Aogami 2 Iron Clad &#8211; Pakka &amp; Ebony &#8211; On Order 🥰",
-        "vendor": "",
-        "productType": "Styles Waiting Room",
-        "tags": [
-          "Aogami 2",
-          "Discount eligible",
-          "Sakai",
-          "Santoku",
-          "Takada No Hamono"
-        ],
-        "handle": "takada-no-hamono-180mm-santoku-suiboku-finish-aogami-2-iron-clad-pakka-ebony-on-order",
-        "url": "https://www.bernalcutleryshop.com/takada-no-hamono-180mm-santoku-suiboku-finish-aogami-2-iron-clad-pakka-ebony-on-order/",
-        "imageUrl": "https://www.bernalcutleryshop.com/wp-content/uploads/2023/01/5FD52C46-23F0-4A4D-950A-5E4FBAEE19D3_1080x1080.webp",
-        "priceMin": 97.99,
-        "priceMax": 97.99,
-        "compareAtMax": 438,
-        "salePct": 78,
-        "available": true,
-        "variantsAvailable": 1,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "bernalcutleryshop-com",
-        "retailerName": "bernalcutleryshop.com",
-        "currency": "USD",
-        "title": "Flash Sale ❤️ Takada No Hamono 180mm Santoku &#8211; Aogami 2 Iron Clad &#8211; Ho &amp; Horn Octagon &#8211; On Order Waiting Room 🧨",
-        "vendor": "",
-        "productType": "Styles Waiting Room",
-        "tags": [
-          "180mm",
-          "Aogami 2",
-          "Discount eligible",
-          "Santoku",
-          "Takada No Hamono"
-        ],
-        "handle": "takada-no-hamono-180mm-santoku-aogami-2-iron-clad-ho-horn-octagon-on-order-waiting-room",
-        "url": "https://www.bernalcutleryshop.com/takada-no-hamono-180mm-santoku-aogami-2-iron-clad-ho-horn-octagon-on-order-waiting-room/",
-        "imageUrl": "https://www.bernalcutleryshop.com/wp-content/uploads/2023/01/takada-hamono-180mm-santoku-blue-2-iron-clad-octag_1080x1080.webp",
-        "priceMin": 94.99,
-        "priceMax": 94.99,
-        "compareAtMax": 338,
-        "salePct": 72,
-        "available": true,
-        "variantsAvailable": 1,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "bernalcutleryshop-com",
-        "retailerName": "bernalcutleryshop.com",
-        "currency": "USD",
-        "title": "Best Pirce 💯 Takada No Hamono 180mm Nakiri &#8211; Suiboku Finish Aogami 2 Iron Clad &#8211; Pakka &amp; Ebony &#8211; On Order Waiting Room 🤩",
-        "vendor": "",
-        "productType": "Styles Waiting Room",
-        "tags": [
-          "Aogami 2",
-          "Carbon",
-          "Discount eligible",
-          "Nakiri",
-          "Takada No Hamono"
-        ],
-        "handle": "takada-no-hamono-180mm-nakiri-suiboku-finish-aogami-2-iron-clad-pakka-ebony-on-order-waiting-room",
-        "url": "https://www.bernalcutleryshop.com/takada-no-hamono-180mm-nakiri-suiboku-finish-aogami-2-iron-clad-pakka-ebony-on-order-waiting-room/",
-        "imageUrl": "https://www.bernalcutleryshop.com/wp-content/uploads/2023/01/90DEF1B4-B7F6-4069-B07B-7D39A3AA6E0C_1080x1080.webp",
-        "priceMin": 93.99,
-        "priceMax": 93.99,
-        "compareAtMax": 460,
-        "salePct": 80,
-        "available": true,
-        "variantsAvailable": 1,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "bernalcutleryshop-com",
-        "retailerName": "bernalcutleryshop.com",
-        "currency": "USD",
-        "title": "Cheap ❤️ Takada No Hamono 165mm Nakiri &#8211; Aogami 2 Iron Clad &#8211; Ho &amp; Horn Octagon &#8211; On Order Waiting Room 🌟",
-        "vendor": "",
-        "productType": "Styles Waiting Room",
-        "tags": [
-          "165mm",
-          "Aogami 2",
-          "Discount eligible",
-          "Nakiri",
-          "Takada No Hamono"
-        ],
-        "handle": "takada-no-hamono-165mm-nakiri-aogami-2-iron-clad-ho-horn-octagon-on-order-waiting-room",
-        "url": "https://www.bernalcutleryshop.com/takada-no-hamono-165mm-nakiri-aogami-2-iron-clad-ho-horn-octagon-on-order-waiting-room/",
-        "imageUrl": "https://www.bernalcutleryshop.com/wp-content/uploads/2023/01/takada-hamono-165mm-nakiri-blue-2-iron-clad-octago_1080x1080.webp",
-        "priceMin": 95.99,
-        "priceMax": 95.99,
-        "compareAtMax": 338,
-        "salePct": 72,
-        "available": true,
-        "variantsAvailable": 1,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "bernalcutleryshop-com",
-        "retailerName": "bernalcutleryshop.com",
-        "currency": "USD",
-        "title": "Cheapest ⭐ Waiting Room Takada No Hamono 150mm Petty Blue 2 Iron Clad Octagonal Tagayasan &amp; Ebony Handle &#8211; On Order 🎉",
-        "vendor": "",
-        "productType": "Styles Waiting Room",
-        "tags": [
-          "Aogami",
-          "Aogami 2",
-          "Discount eligible",
-          "Petty",
-          "Sakai",
-          "Takada No Hamono"
-        ],
-        "handle": "waiting-room-takada-no-hamono-150mm-petty-blue-2-iron-clad-octagonal-tagayasan-ebony-handle-on-order",
-        "url": "https://www.bernalcutleryshop.com/waiting-room-takada-no-hamono-150mm-petty-blue-2-iron-clad-octagonal-tagayasan-ebony-handle-on-order/",
-        "imageUrl": "https://www.bernalcutleryshop.com/wp-content/uploads/2023/01/EF27810A-0240-4305-BEAE-8D01A7173323_1080x1080.webp",
-        "priceMin": 93.99,
-        "priceMax": 93.99,
-        "compareAtMax": 255,
-        "salePct": 63,
-        "available": true,
-        "variantsAvailable": 1,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "bernalcutleryshop-com",
-        "retailerName": "bernalcutleryshop.com",
-        "currency": "USD",
-        "title": "Best reviews of 🎉 Waiting Room Takada No Hamono 135mm Petty Shirogami 2 Iron Clad Octagonal Ho &amp; Horn Handle &#8211; On Order ❤️",
-        "vendor": "",
-        "productType": "Styles Waiting Room",
-        "tags": [
-          "Carbon",
-          "Discount eligible",
-          "Petty",
-          "Sakai",
-          "Shirogami 2",
-          "Takada No Hamono"
-        ],
-        "handle": "waiting-room-takada-no-hamono-135mm-petty-shirogami-2-iron-clad-octagonal-ho-horn-handle-on-order",
-        "url": "https://www.bernalcutleryshop.com/waiting-room-takada-no-hamono-135mm-petty-shirogami-2-iron-clad-octagonal-ho-horn-handle-on-order/",
-        "imageUrl": "https://www.bernalcutleryshop.com/wp-content/uploads/2023/01/60505A51-FAD2-46DF-A5C8-D1B7051B0FE6_1080x1080.webp",
-        "priceMin": 97.99,
-        "priceMax": 97.99,
-        "compareAtMax": 258,
-        "salePct": 62,
-        "available": true,
-        "variantsAvailable": 1,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "bernalcutleryshop-com",
-        "retailerName": "bernalcutleryshop.com",
-        "currency": "USD",
-        "title": "Best Pirce 😀 Takada No Hamono 135mm Petty Blue 2 Iron Clad Octagonal Ho &amp; Horn Handle &#8211; On Order ✨",
-        "vendor": "",
-        "productType": "Styles Waiting Room",
-        "tags": [
-          "135mm",
-          "Discount eligible",
-          "Takada No Hamono"
-        ],
-        "handle": "takada-no-hamono-135mm-petty-blue-2-iron-clad-octagonal-ho-horn-handle-on-order",
-        "url": "https://www.bernalcutleryshop.com/takada-no-hamono-135mm-petty-blue-2-iron-clad-octagonal-ho-horn-handle-on-order/",
-        "imageUrl": "https://www.bernalcutleryshop.com/wp-content/uploads/2023/01/takada-hamono-135mm-petty-blue-2-iron-clad-octagon_1080x1080.webp",
-        "priceMin": 98.99,
-        "priceMax": 98.99,
-        "compareAtMax": 225,
-        "salePct": 56,
-        "available": true,
-        "variantsAvailable": 1,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "bernalcutleryshop-com",
-        "retailerName": "bernalcutleryshop.com",
-        "currency": "USD",
-        "title": "Outlet ⌛ Slicer Takada No Hamono 270mm Sujihiki Ginsanko Stainless Suiboku Finish Octagonal Rosewood Handle &#8211; On Order 🔔",
-        "vendor": "",
-        "productType": "Slicer Styles Waiting Room Western Kitchen Knives",
-        "tags": [
-          "Discount eligible",
-          "Ginsanko",
-          "Slicer",
-          "Stainless",
-          "Sujihiki",
-          "Takada No Hamono"
-        ],
-        "handle": "slicer-takada-no-hamono-270mm-sujihiki-ginsanko-stainless-suiboku-finish-octagonal-rosewood-handle-on-order",
-        "url": "https://www.bernalcutleryshop.com/slicer-takada-no-hamono-270mm-sujihiki-ginsanko-stainless-suiboku-finish-octagonal-rosewood-handle-on-order/",
-        "imageUrl": "https://www.bernalcutleryshop.com/wp-content/uploads/2023/01/94CEAB72-DA21-46F9-ACCB-324C9D47AE26_1080x1080.webp",
-        "priceMin": 95.99,
-        "priceMax": 95.99,
-        "compareAtMax": 540,
-        "salePct": 82,
-        "available": true,
-        "variantsAvailable": 1,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "bernalcutleryshop-com",
-        "retailerName": "bernalcutleryshop.com",
-        "currency": "USD",
-        "title": "Hot Sale ✨ Takada No Hamano Takada No Hamono 210mm Gyuto &#8211; Suiboku Finish Aogami 2 Iron Clad &#8211; Cherry &amp; Ebony Octagon 💯",
-        "vendor": "",
-        "productType": "Gyuto Japan Japanese Kitchen Knives Makers Styles Takada no Hamano",
-        "tags": [
-          "210mm",
-          "Aogami 2",
-          "Discount eligible",
-          "Gyuto",
-          "Takada No Hamono"
-        ],
-        "handle": "takada-no-hamano-takada-no-hamono-210mm-gyuto-suiboku-finish-aogami-2-iron-clad-cherry-ebony-octagon",
-        "url": "https://www.bernalcutleryshop.com/takada-no-hamano-takada-no-hamono-210mm-gyuto-suiboku-finish-aogami-2-iron-clad-cherry-ebony-octagon/",
-        "imageUrl": "https://www.bernalcutleryshop.com/wp-content/uploads/2023/01/23b83c58-97e4-43ba-b196-052014999137_1080x1080.webp",
-        "priceMin": 97.99,
-        "priceMax": 97.99,
-        "compareAtMax": 548,
-        "salePct": 82,
-        "available": true,
-        "variantsAvailable": 1,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "bernalcutleryshop-com",
-        "retailerName": "bernalcutleryshop.com",
-        "currency": "USD",
-        "title": "Discount ⌛ Takada No Hamano Takada No Hamono 210mm Gyuto Shirogami 2 Reika Iron Clad Octagonal Cherry &amp; Ebony Handle 🔔",
-        "vendor": "",
-        "productType": "Gyuto Japan Japanese Kitchen Knives Makers Styles Takada no Hamano",
-        "tags": [
-          "Carbon",
-          "Discount eligible",
-          "Gyuto",
-          "Shirogami 2",
-          "Takada No Hamono"
-        ],
-        "handle": "takada-no-hamano-takada-no-hamono-210mm-gyuto-shirogami-2-reika-iron-clad-octagonal-cherry-ebony-handle",
-        "url": "https://www.bernalcutleryshop.com/takada-no-hamano-takada-no-hamono-210mm-gyuto-shirogami-2-reika-iron-clad-octagonal-cherry-ebony-handle/",
-        "imageUrl": "https://www.bernalcutleryshop.com/wp-content/uploads/2023/01/5DB9F02F-AC32-4C95-8F66-0B73866F5222_1080x1080.webp",
-        "priceMin": 96.99,
-        "priceMax": 96.99,
-        "compareAtMax": 394,
-        "salePct": 75,
-        "available": true,
-        "variantsAvailable": 1,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "bernalcutleryshop-com",
-        "retailerName": "bernalcutleryshop.com",
-        "currency": "USD",
-        "title": "Cheapest 😉 Takada No Hamano Takada No Hamono 210mm Gyuto &#8211; Aogami 2 Iron Clad &#8211; Ho &amp; Horn Octagon 🌟",
-        "vendor": "",
-        "productType": "Gyuto Japan Japanese Kitchen Knives Makers Styles Takada no Hamano",
-        "tags": [
-          "210mm",
-          "Aogami 2",
-          "Discount eligible",
-          "Gyuto",
-          "Takada No Hamono"
-        ],
-        "handle": "takada-no-hamano-takada-no-hamono-210mm-gyuto-aogami-2-iron-clad-ho-horn-octagon",
-        "url": "https://www.bernalcutleryshop.com/takada-no-hamano-takada-no-hamono-210mm-gyuto-aogami-2-iron-clad-ho-horn-octagon/",
-        "imageUrl": "https://www.bernalcutleryshop.com/wp-content/uploads/2023/01/takada-hamono-210mm-gyuto-blue-2-iron-clad-octagon_1080x1080.webp",
-        "priceMin": 93.99,
-        "priceMax": 93.99,
-        "compareAtMax": 388,
-        "salePct": 76,
-        "available": true,
-        "variantsAvailable": 1,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "bernalcutleryshop-com",
-        "retailerName": "bernalcutleryshop.com",
-        "currency": "USD",
-        "title": "Promo 🎁 Takada No Hamono 240mm Gyuto &#8211; Aogami 2 Iron Clad &#8211; Ho &amp; Horn Octagon 🔥",
-        "vendor": "",
-        "productType": "Gyuto Japan Japanese Kitchen Knives Makers Styles Takada no Hamano",
-        "tags": [
-          "240mm",
-          "Aogami 2",
-          "Discount eligible",
-          "Gyuto",
-          "Takada No Hamono"
-        ],
-        "handle": "takada-no-hamono-240mm-gyuto-aogami-2-iron-clad-ho-horn-octagon",
-        "url": "https://www.bernalcutleryshop.com/takada-no-hamono-240mm-gyuto-aogami-2-iron-clad-ho-horn-octagon/",
-        "imageUrl": "https://www.bernalcutleryshop.com/wp-content/uploads/2023/01/takada-hamono-240mm-gyuto-blue-2-iron-clad-octagon_1080x1080.webp",
-        "priceMin": 93.99,
-        "priceMax": 93.99,
-        "compareAtMax": 438,
-        "salePct": 79,
         "available": true,
         "variantsAvailable": 1,
         "variantsTotal": 1
@@ -7158,8 +6694,8 @@
         "handle": "bca-b1d-04-fa240",
         "url": "https://hitohira-japan.com/products/bca-b1d-04-fa240",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC09852_91c79575-d200-47b3-b9e0-c20fe3ba4526.jpg?v=1672723589",
-        "priceMin": 808,
-        "priceMax": 808,
+        "priceMin": 809,
+        "priceMax": 809,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7194,8 +6730,8 @@
         "handle": "bca-b1su-05-ga270",
         "url": "https://hitohira-japan.com/products/bca-b1su-05-ga270",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC09391_01c3cc34-248b-44a2-8177-2f15bbed9520.jpg?v=1670226533",
-        "priceMin": 588,
-        "priceMax": 588,
+        "priceMin": 589,
+        "priceMax": 589,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7230,8 +6766,8 @@
         "handle": "bca-b1d-04-fa210",
         "url": "https://hitohira-japan.com/products/bca-b1d-04-fa210",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC06937_6cb15c18-6211-43b4-a1fc-4234cccdbe99.jpg?v=1660985294",
-        "priceMin": 708,
-        "priceMax": 708,
+        "priceMin": 709,
+        "priceMax": 709,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7374,8 +6910,8 @@
         "handle": "bca-b1hh-05-ga270",
         "url": "https://hitohira-japan.com/products/bca-b1hh-05-ga270",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC05859_bcec626d-06ee-4f57-985b-6cf5b43994ba.jpg?v=1657344798",
-        "priceMin": 386,
-        "priceMax": 386,
+        "priceMin": 387,
+        "priceMax": 387,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7410,8 +6946,8 @@
         "handle": "bca-s3su-06-ga300",
         "url": "https://hitohira-japan.com/products/bca-s3su-06-ga300",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC04434_f4893f42-d5a9-4923-89dc-9bd8fc42c955.jpg?v=1653552734",
-        "priceMin": 702,
-        "priceMax": 702,
+        "priceMin": 703,
+        "priceMax": 703,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7769,8 +7305,8 @@
         "handle": "bca-w2hon-04-fa210",
         "url": "https://hitohira-japan.com/products/bca-w2hon-04-fa210",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC02524_a37a6ac4-e3f9-4d20-966a-d93918bba824.jpg?v=1647499608",
-        "priceMin": 1470,
-        "priceMax": 1470,
+        "priceMin": 1471,
+        "priceMax": 1471,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7804,8 +7340,8 @@
         "handle": "bca-zzw2-04-fb180",
         "url": "https://hitohira-japan.com/products/bca-zzw2-04-fb180",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC02510_5ceb3fd6-1748-43a6-99b8-d75975b6d36a.jpg?v=1647499470",
-        "priceMin": 1780,
-        "priceMax": 1780,
+        "priceMin": 1781,
+        "priceMax": 1781,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8379,8 +7915,8 @@
         "handle": "bca-w2hh-05-oa",
         "url": "https://hitohira-japan.com/products/bca-w2hh-05-oa",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC03183_8e144b39-32ad-4368-a0eb-154236d0961b.jpg?v=1647016474",
-        "priceMin": 402,
-        "priceMax": 402,
+        "priceMin": 403,
+        "priceMax": 403,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8487,8 +8023,8 @@
         "handle": "bca-s3su-05-fa240",
         "url": "https://hitohira-japan.com/products/bca-s3su-05-fa240",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC05944_d229e520-ccef-4d3a-87e8-3417c2ae1545.jpg?v=1647019999",
-        "priceMin": 592,
-        "priceMax": 592,
+        "priceMin": 593,
+        "priceMax": 593,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8738,8 +8274,8 @@
         "handle": "bca-w2hon-04-fa270",
         "url": "https://hitohira-japan.com/products/bca-w2hon-04-fa270",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC08095_a4bc9ca5-c7e6-4797-9cb3-99ad22683766.jpg?v=1647022874",
-        "priceMin": 1833,
-        "priceMax": 1833,
+        "priceMin": 1834,
+        "priceMax": 1834,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -9206,8 +8742,8 @@
         "handle": "bca-s3su-thin-06-fa210",
         "url": "https://hitohira-japan.com/products/bca-s3su-thin-06-fa210",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC05534_1ea71be0-0b3c-4c74-bb5a-8c03c52ade2d.jpg?v=1647033022",
-        "priceMin": 682,
-        "priceMax": 682,
+        "priceMin": 683,
+        "priceMax": 683,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -9674,8 +9210,8 @@
         "handle": "bca-b1su-05-ba135",
         "url": "https://hitohira-japan.com/products/bca-b1su-05-ba135",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC08228_2240819e-2c62-4d80-9a76-3662d2a338cb.jpg?v=1647036217",
-        "priceMin": 336,
-        "priceMax": 336,
+        "priceMin": 337,
+        "priceMax": 337,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -9710,8 +9246,8 @@
         "handle": "bca-b1su-06-ba135",
         "url": "https://hitohira-japan.com/products/bca-b1su-06-ba135",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC08244_381de5e5-cc8a-491d-a257-be8cbcb72d08.jpg?v=1647036235",
-        "priceMin": 347,
-        "priceMax": 347,
+        "priceMin": 348,
+        "priceMax": 348,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -9782,8 +9318,8 @@
         "handle": "bca-b1hh-05-fa210",
         "url": "https://hitohira-japan.com/products/bca-b1hh-05-fa210",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC08745_b07deb6e-222e-4a18-958f-0077ed302a88.jpg?v=1647036739",
-        "priceMin": 356,
-        "priceMax": 356,
+        "priceMin": 357,
+        "priceMax": 357,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -10178,8 +9714,8 @@
         "handle": "bca-w1su-05-ba135",
         "url": "https://hitohira-japan.com/products/bca-w1su-05-ba135",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC00922_8984d454-85ca-4141-af23-1b7a789670b9.jpg?v=1644546303",
-        "priceMin": 336,
-        "priceMax": 336,
+        "priceMin": 337,
+        "priceMax": 337,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -10214,8 +9750,8 @@
         "handle": "bca-w1su-06-ba135",
         "url": "https://hitohira-japan.com/products/bca-w1su-06-ba135",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC00906_2181631e-3c16-4df0-bb93-4b2dc4e0404c.jpg?v=1644546230",
-        "priceMin": 347,
-        "priceMax": 347,
+        "priceMin": 348,
+        "priceMax": 348,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -10256,540 +9792,6 @@
         "variantsAvailable": 0,
         "variantsTotal": 1,
         "publishedAt": "2022-02-11T12:01:11+09:00"
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "Gyuto (Chef’s Knife) Takada No Hamono Blue Steel #1 Suminagashi (Damascus)240mm",
-        "vendor": "",
-        "productType": "Gyuto (Chef's Knife)",
-        "tags": [],
-        "handle": "gyuto-chefs-knife-takada-no-hamono-blue-steel-1-suminagashi-damascus240mm",
-        "url": "https://shirasagistore.com/product/gyuto-chefs-knife-takada-no-hamono-blue-steel-1-suminagashi-damascus240mm/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2024/12/ShirasagiStore.com_.jpg",
-        "priceMin": 143000,
-        "priceMax": 143000,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "Kiritsuke Gyuto (Chef’s Knife) Takada No Hamono Blue Steel #1 Suiboku 210mm",
-        "vendor": "",
-        "productType": "Gyuto (Chef's Knife)",
-        "tags": [],
-        "handle": "kiritsuke-gyuto-chefs-knife-takada-no-hamono-blue-steel-1-suiboku-210mm",
-        "url": "https://shirasagistore.com/product/kiritsuke-gyuto-chefs-knife-takada-no-hamono-blue-steel-1-suiboku-210mm/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2024/10/1-7.jpg",
-        "priceMin": 102300,
-        "priceMax": 102300,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "Sujihiki (Slicer) Takada No Hamono Blue Steel #1 Suminagashi (Damascus) Ebony Handle 270mm",
-        "vendor": "",
-        "productType": "Sujihiki (Slicer)",
-        "tags": [],
-        "handle": "sujihiki-slicer-takada-no-hamono-blue-steel-1-suminagashi-damascus-ebony-handle-270mm",
-        "url": "https://shirasagistore.com/product/sujihiki-slicer-takada-no-hamono-blue-steel-1-suminagashi-damascus-ebony-handle-270mm/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2023/12/1-min-4-scaled.jpg",
-        "priceMin": 129810,
-        "priceMax": 129810,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "Sujihiki (Slicer) Takada No Hamono Blue Steel #1 Suminagashi 270mm",
-        "vendor": "",
-        "productType": "",
-        "tags": [],
-        "handle": "sujihiki-slicer-takada-no-hamono-blue-steel-1-suminagashi-270mm",
-        "url": "https://shirasagistore.com/product/sujihiki-slicer-takada-no-hamono-blue-steel-1-suminagashi-270mm/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2023/12/cxxd.png",
-        "priceMin": 129810,
-        "priceMax": 129810,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "Sujihiki (Slicer) Takada No Hamono Blue Steel #1 Suiboku 270mm",
-        "vendor": "",
-        "productType": "Sujihiki (Slicer)",
-        "tags": [],
-        "handle": "sujihiki-slicer-takada-no-hamono-suiboku-blue-steel-1-aogami-i-270mm",
-        "url": "https://shirasagistore.com/product/sujihiki-slicer-takada-no-hamono-suiboku-blue-steel-1-aogami-i-270mm/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2023/11/1-8.jpg",
-        "priceMin": 97320,
-        "priceMax": 97320,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "Gyuto (Chef’s Knife) Takada No Hamono Blue Steel #1 Suminagashi (Damascus) Ebony Handle 210mm",
-        "vendor": "",
-        "productType": "Gyuto (Chef's Knife)",
-        "tags": [],
-        "handle": "gyuto-chefs-knife-takada-no-hamono-blue-steel-1-damascus-ebony-handle-210mm",
-        "url": "https://shirasagistore.com/product/gyuto-chefs-knife-takada-no-hamono-blue-steel-1-damascus-ebony-handle-210mm/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2023/06/1-3.jpg",
-        "priceMin": 121000,
-        "priceMax": 121000,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "高田ノハモノ 筋引き包丁 水墨 銀三鋼 240mm",
-        "vendor": "",
-        "productType": "筋引",
-        "tags": [
-          "ginsan",
-          "suiboku",
-          "sujihiki",
-          "takadanohamono"
-        ],
-        "handle": "%e9%ab%98%e7%94%b0%e3%83%8e%e3%83%8f%e3%83%a2%e3%83%8e-%e7%ad%8b%e5%bc%95%e3%81%8d%e5%8c%85%e4%b8%81-%e6%b0%b4%e5%a2%a8-%e9%8a%80%e4%b8%89%e9%8b%bc-240mm",
-        "url": "https://shirasagistore.com/ja/product/%e9%ab%98%e7%94%b0%e3%83%8e%e3%83%8f%e3%83%a2%e3%83%8e-%e7%ad%8b%e5%bc%95%e3%81%8d%e5%8c%85%e4%b8%81-%e6%b0%b4%e5%a2%a8-%e9%8a%80%e4%b8%89%e9%8b%bc-240mm/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2023/04/IMG_6182-scaled.jpg",
-        "priceMin": 85815,
-        "priceMax": 85815,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "Sujihiki (Slicer) Takada No Hamono Silver Steel #3 Suiboku 240mm",
-        "vendor": "",
-        "productType": "Sujihiki (Slicer)",
-        "tags": [
-          "ginsan",
-          "suiboku",
-          "sujihiki",
-          "takadanohamono"
-        ],
-        "handle": "sujihiki-slicer-takada-no-hamono-suiboku-silver-steel-3-ginsan-steel-240mm",
-        "url": "https://shirasagistore.com/product/sujihiki-slicer-takada-no-hamono-suiboku-silver-steel-3-ginsan-steel-240mm/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2023/04/IMG_6182-scaled.jpg",
-        "priceMin": 85815,
-        "priceMax": 85815,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "高田ノハモノ 牛刀 墨流し 青一鋼 240mm",
-        "vendor": "",
-        "productType": "牛刀",
-        "tags": [
-          "Aogami",
-          "damascus",
-          "gyuto",
-          "takadanohamono"
-        ],
-        "handle": "%e9%ab%98%e7%94%b0%e3%83%8e%e3%83%8f%e3%83%a2%e3%83%8e-%e7%89%9b%e5%88%80-%e5%a2%a8%e6%b5%81%e3%81%97-%e9%9d%92%e4%b8%80%e9%8b%bc-240mm-2-2",
-        "url": "https://shirasagistore.com/ja/product/%e9%ab%98%e7%94%b0%e3%83%8e%e3%83%8f%e3%83%a2%e3%83%8e-%e7%89%9b%e5%88%80-%e5%a2%a8%e6%b5%81%e3%81%97-%e9%9d%92%e4%b8%80%e9%8b%bc-240mm-2-2/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2023/02/1.jpg",
-        "priceMin": 138600,
-        "priceMax": 138600,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "Gyuto (Chef’s Knife) Takada No Hamono Blue Steel #1 Suminagashi (Damascus)240mm",
-        "vendor": "",
-        "productType": "Gyuto (Chef's Knife)",
-        "tags": [
-          "Aogami",
-          "damascus",
-          "gyuto",
-          "takadanohamono"
-        ],
-        "handle": "gyuto-chefs-knife-takada-no-hamono-damascus-suminagashi-blue-steel-1-aogami-i-240mm-2",
-        "url": "https://shirasagistore.com/product/gyuto-chefs-knife-takada-no-hamono-damascus-suminagashi-blue-steel-1-aogami-i-240mm-2/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2023/02/1.jpg",
-        "priceMin": 138600,
-        "priceMax": 138600,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "高田ノハモノ 牛刀 水墨 青一鋼 210mm",
-        "vendor": "",
-        "productType": "牛刀",
-        "tags": [
-          "Aogami",
-          "suiboku",
-          "takadanohamono"
-        ],
-        "handle": "%e9%ab%98%e7%94%b0%e3%83%8e%e3%83%8f%e3%83%a2%e3%83%8e-%e7%89%9b%e5%88%80-%e6%b0%b4%e5%a2%a8-%e9%9d%92%e4%b8%80%e9%8b%bc-210mm-2",
-        "url": "https://shirasagistore.com/ja/product/%e9%ab%98%e7%94%b0%e3%83%8e%e3%83%8f%e3%83%a2%e3%83%8e-%e7%89%9b%e5%88%80-%e6%b0%b4%e5%a2%a8-%e9%9d%92%e4%b8%80%e9%8b%bc-210mm-2/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2023/02/20230208100852_IMG_0362.jpg",
-        "priceMin": 89100,
-        "priceMax": 89100,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "Gyuto (Chef’s Knife) Takada No Hamono Blue Steel #1 Suiboku 210mm",
-        "vendor": "",
-        "productType": "Gyuto (Chef's Knife)",
-        "tags": [
-          "Aogami",
-          "suiboku",
-          "takadanohamono"
-        ],
-        "handle": "gyuto-chefs-knife-takada-no-hamono-suiboku-blue-steel-1-aogami-i-210mm-2",
-        "url": "https://shirasagistore.com/product/gyuto-chefs-knife-takada-no-hamono-suiboku-blue-steel-1-aogami-i-210mm-2/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2023/02/20230208100852_IMG_0362.jpg",
-        "priceMin": 89100,
-        "priceMax": 89100,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "高田ノハモノ 菜切包丁 水墨 青一鋼 180mm",
-        "vendor": "",
-        "productType": "菜切り包丁",
-        "tags": [
-          "Aogami",
-          "suiboku",
-          "takadanohamono"
-        ],
-        "handle": "%e9%ab%98%e7%94%b0%e3%83%8e%e3%83%8f%e3%83%a2%e3%83%8e-%e8%8f%9c%e5%88%87%e5%8c%85%e4%b8%81-%e6%b0%b4%e5%a2%a8-%e9%9d%92%e4%b8%80%e9%8b%bc-180mm-2",
-        "url": "https://shirasagistore.com/ja/product/%e9%ab%98%e7%94%b0%e3%83%8e%e3%83%8f%e3%83%a2%e3%83%8e-%e8%8f%9c%e5%88%87%e5%8c%85%e4%b8%81-%e6%b0%b4%e5%a2%a8-%e9%9d%92%e4%b8%80%e9%8b%bc-180mm-2/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2022/09/20220906_114135-scaled.jpg",
-        "priceMin": 84495,
-        "priceMax": 84495,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "Nakiri Knife Takada No Hamono Blue Steel #1 Suiboku 180mm",
-        "vendor": "",
-        "productType": "Nakiri Knife",
-        "tags": [
-          "Aogami",
-          "suiboku",
-          "takadanohamono"
-        ],
-        "handle": "nakiri-knife-takada-no-hamono-suiboku-aogami-i-steel-180mm",
-        "url": "https://shirasagistore.com/product/nakiri-knife-takada-no-hamono-suiboku-aogami-i-steel-180mm/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2022/09/20220906_114135-scaled.jpg",
-        "priceMin": 84495,
-        "priceMax": 84495,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "高田ノハモノ 菜切包丁 水墨 銀三鋼 180mm",
-        "vendor": "",
-        "productType": "菜切り包丁",
-        "tags": [
-          "ginsan",
-          "suiboku",
-          "takadanohamono"
-        ],
-        "handle": "%e9%ab%98%e7%94%b0%e3%83%8e%e3%83%8f%e3%83%a2%e3%83%8e-%e8%8f%9c%e5%88%87%e5%8c%85%e4%b8%81-%e6%b0%b4%e5%a2%a8-%e9%8a%80%e4%b8%89%e9%8b%bc-180mm-2",
-        "url": "https://shirasagistore.com/ja/product/%e9%ab%98%e7%94%b0%e3%83%8e%e3%83%8f%e3%83%a2%e3%83%8e-%e8%8f%9c%e5%88%87%e5%8c%85%e4%b8%81-%e6%b0%b4%e5%a2%a8-%e9%8a%80%e4%b8%89%e9%8b%bc-180mm-2/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2022/09/20220906_112829-scaled.jpg",
-        "priceMin": 83535,
-        "priceMax": 83535,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "Nakiri Knife Takada No Hamono Silver Steel #3 Suiboku 180mm",
-        "vendor": "",
-        "productType": "Nakiri Knife",
-        "tags": [
-          "ginsan",
-          "suiboku",
-          "takadanohamono"
-        ],
-        "handle": "nakiri-knife-takada-no-hamono-suiboku-ginsan-steel-180mm",
-        "url": "https://shirasagistore.com/product/nakiri-knife-takada-no-hamono-suiboku-ginsan-steel-180mm/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2022/09/20220906_112829-scaled.jpg",
-        "priceMin": 83535,
-        "priceMax": 83535,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "高田ノハモノ 筋引き包丁 水墨 青一鋼 300mm",
-        "vendor": "",
-        "productType": "筋引",
-        "tags": [
-          "Aogami",
-          "suiboku",
-          "sujihiki",
-          "takadanohamono"
-        ],
-        "handle": "%e9%ab%98%e7%94%b0%e3%83%8e%e3%83%8f%e3%83%a2%e3%83%8e-%e7%ad%8b%e5%bc%95%e3%81%8d%e5%8c%85%e4%b8%81-%e6%b0%b4%e5%a2%a8-%e9%9d%92%e4%b8%80%e9%8b%bc-300mm-2",
-        "url": "https://shirasagistore.com/ja/product/%e9%ab%98%e7%94%b0%e3%83%8e%e3%83%8f%e3%83%a2%e3%83%8e-%e7%ad%8b%e5%bc%95%e3%81%8d%e5%8c%85%e4%b8%81-%e6%b0%b4%e5%a2%a8-%e9%9d%92%e4%b8%80%e9%8b%bc-300mm-2/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2022/04/1.jpg",
-        "priceMin": 112815,
-        "priceMax": 112815,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "Sujihiki (Slicer) Takada No Hamono Blue Steel #1 Suiboku 300mm",
-        "vendor": "",
-        "productType": "Sujihiki (Slicer)",
-        "tags": [
-          "Aogami",
-          "suiboku",
-          "sujihiki",
-          "takadanohamono"
-        ],
-        "handle": "sujihiki-takada-no-hamono-suiboku-aogami-i-300mm",
-        "url": "https://shirasagistore.com/product/sujihiki-takada-no-hamono-suiboku-aogami-i-300mm/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2022/04/1.jpg",
-        "priceMin": 112815,
-        "priceMax": 112815,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "高田ノハモノ 筋引き包丁 水墨 青一鋼 330mm",
-        "vendor": "",
-        "productType": "筋引",
-        "tags": [
-          "Aogami",
-          "suiboku",
-          "sujihiki",
-          "takadanohamono"
-        ],
-        "handle": "%e9%ab%98%e7%94%b0%e3%83%8e%e3%83%8f%e3%83%a2%e3%83%8e-%e7%ad%8b%e5%bc%95%e3%81%8d%e5%8c%85%e4%b8%81-%e6%b0%b4%e5%a2%a8-%e9%9d%92%e4%b8%80%e9%8b%bc-330mm-2",
-        "url": "https://shirasagistore.com/ja/product/%e9%ab%98%e7%94%b0%e3%83%8e%e3%83%8f%e3%83%a2%e3%83%8e-%e7%ad%8b%e5%bc%95%e3%81%8d%e5%8c%85%e4%b8%81-%e6%b0%b4%e5%a2%a8-%e9%9d%92%e4%b8%80%e9%8b%bc-330mm-2/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2022/03/20220330112645_IMG_4947.jpg",
-        "priceMin": 154950,
-        "priceMax": 154950,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "Sujihiki (Slicer) Takada No Hamono Blue Steel #1 Suiboku 330mm",
-        "vendor": "",
-        "productType": "Sujihiki (Slicer)",
-        "tags": [
-          "Aogami",
-          "suiboku",
-          "sujihiki",
-          "takadanohamono"
-        ],
-        "handle": "sujihiki-takada-no-hamono-suiboku-aogami-i-330mm",
-        "url": "https://shirasagistore.com/product/sujihiki-takada-no-hamono-suiboku-aogami-i-330mm/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2022/03/20220330112645_IMG_4947.jpg",
-        "priceMin": 154950,
-        "priceMax": 154950,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "高田ノハモノ 牛刀 水墨 青一鋼 240mm",
-        "vendor": "",
-        "productType": "牛刀",
-        "tags": [
-          "Aogami",
-          "suiboku",
-          "takadanohamono"
-        ],
-        "handle": "%e9%ab%98%e7%94%b0%e3%83%8e%e3%83%8f%e3%83%a2%e3%83%8e-%e7%89%9b%e5%88%80-%e6%b0%b4%e5%a2%a8-%e9%9d%92%e4%b8%80%e9%8b%bc-240mm-2",
-        "url": "https://shirasagistore.com/ja/product/%e9%ab%98%e7%94%b0%e3%83%8e%e3%83%8f%e3%83%a2%e3%83%8e-%e7%89%9b%e5%88%80-%e6%b0%b4%e5%a2%a8-%e9%9d%92%e4%b8%80%e9%8b%bc-240mm-2/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2023/02/20230208100852_IMG_0362.jpg",
-        "priceMin": 103400,
-        "priceMax": 103400,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
-      }
-    },
-    {
-      "grailId": "takada-no-hamono",
-      "grailName": "Takada no Hamono (any knife)",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "Gyuto (Chef&#8217;s Knife) Takada No Hamono Blue Steel #1 Suiboku 240mm",
-        "vendor": "",
-        "productType": "Gyuto (Chef's Knife)",
-        "tags": [
-          "Aogami",
-          "suiboku",
-          "takadanohamono"
-        ],
-        "handle": "gyuto-takada-no-hamono-suiboku-aogami-i-240mm",
-        "url": "https://shirasagistore.com/product/gyuto-takada-no-hamono-suiboku-aogami-i-240mm/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2023/02/20230208100852_IMG_0362.jpg",
-        "priceMin": 103400,
-        "priceMax": 103400,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
       }
     },
     {
@@ -11781,8 +10783,8 @@
         "handle": "bca-s3su-05-fa240",
         "url": "https://hitohira-japan.com/products/bca-s3su-05-fa240",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC05944_d229e520-ccef-4d3a-87e8-3417c2ae1545.jpg?v=1647019999",
-        "priceMin": 592,
-        "priceMax": 592,
+        "priceMin": 593,
+        "priceMax": 593,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -11967,31 +10969,6 @@
         "variantsAvailable": 0,
         "variantsTotal": 1,
         "publishedAt": "2022-03-12T11:25:42+09:00"
-      }
-    },
-    {
-      "grailId": "takada-suiboku-gyuto-240",
-      "grailName": "Takada no Hamono Suiboku Gyuto 240",
-      "listing": {
-        "retailerId": "shirasagistore-com",
-        "retailerName": "shirasagistore.com",
-        "currency": "JPY",
-        "title": "Gyuto (Chef&#8217;s Knife) Takada No Hamono Blue Steel #1 Suiboku 240mm",
-        "vendor": "",
-        "productType": "Gyuto (Chef's Knife)",
-        "tags": [
-          "Aogami",
-          "suiboku",
-          "takadanohamono"
-        ],
-        "handle": "gyuto-takada-no-hamono-suiboku-aogami-i-240mm",
-        "url": "https://shirasagistore.com/product/gyuto-takada-no-hamono-suiboku-aogami-i-240mm/",
-        "imageUrl": "https://shirasagistore.com/wp-content/uploads/2023/02/20230208100852_IMG_0362.jpg",
-        "priceMin": 103400,
-        "priceMax": 103400,
-        "available": false,
-        "variantsAvailable": 0,
-        "variantsTotal": 1
       }
     },
     {
