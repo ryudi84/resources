@@ -1,0 +1,79 @@
+name: Token off-chain probe
+
+# Is the team alive? Pulls pump.fun comments, CoinGecko community/dev data,
+# X (syndication + Wayback), Telegram preview, the project site, Roblox group
+# and Creator Store, from the runner (the sandbox cannot reach any of them).
+# Fast (< 1 min). Push trigger only so the workflow registers; dispatch by id.
+
+on:
+  push:
+    paths:
+      - '.github/workflows/offchain-probe.yml'
+      - 'tools/offchain-probe.sh'
+  workflow_dispatch:
+    inputs:
+      label:
+        description: 'Report label (token symbol)'
+        type: string
+        default: 'BLOXX'
+      mint:
+        description: 'Mint address'
+        type: string
+        default: 'B1rGc4HM4Q6q4nU78ADM7fGguxqiasH53fh6ViDXpump'
+      coingecko:
+        description: 'CoinGecko coin id'
+        type: string
+        default: 'bloxapi'
+      x_handle:
+        description: 'X handle without @'
+        type: string
+        default: 'BloxApi'
+      telegram:
+        description: 'Telegram channel/group name'
+        type: string
+        default: 'blox_api'
+      site:
+        description: 'Project site host'
+        type: string
+        default: 'bloxapi.soulseed.io'
+      roblox_group:
+        description: 'Roblox group id (optional)'
+        type: string
+        default: '34217909'
+
+concurrency:
+  group: offchain-probe
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+env:
+  LABEL: ${{ inputs.label || 'BLOXX' }}
+  MINT: ${{ inputs.mint || 'B1rGc4HM4Q6q4nU78ADM7fGguxqiasH53fh6ViDXpump' }}
+  CG: ${{ inputs.coingecko || 'bloxapi' }}
+  XH: ${{ inputs.x_handle || 'BloxApi' }}
+  TG: ${{ inputs.telegram || 'blox_api' }}
+  SITE: ${{ inputs.site || 'bloxapi.soulseed.io' }}
+  RBX: ${{ inputs.roblox_group || '34217909' }}
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - name: Probe
+        run: bash tools/offchain-probe.sh "$LABEL" "$MINT" "$CG" "$XH" "$TG" "$SITE" "$RBX"
+      - name: Commit
+        run: |
+          git config user.name "token-forensics-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add investigations/
+          if git diff --cached --quiet; then echo "No changes."; else
+            git commit -m "offchain: $LABEL $(date -u +'%Y-%m-%d %H:%MZ')"
+            git pull --rebase origin "${{ github.ref_name }}" || true
+            git push origin "${{ github.ref_name }}"
+          fi
