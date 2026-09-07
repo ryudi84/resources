@@ -167,8 +167,9 @@ async function pmap<T, R>(items: T[], limit: number, fn: (t: T, i: number) => Pr
 
 // --------------------------------------------------------------------- RPC
 
+// `||` not `??`: an unset Actions secret arrives as an empty string.
 const RPC_URLS = (
-  process.env.SOLANA_RPC_URLS ??
+  process.env.SOLANA_RPC_URLS ||
   'https://api.mainnet-beta.solana.com,https://solana-rpc.publicnode.com,https://solana.drpc.org'
 )
   .split(',')
@@ -181,7 +182,8 @@ let lastRpcAt = 0;
 const RPC_MIN_GAP_MS = Number(process.env.RPC_MIN_GAP_MS ?? 90);
 
 async function rpc<T = unknown>(method: string, params: unknown[], timeoutMs = 60_000): Promise<T> {
-  let lastErr: unknown;
+  if (RPC_URLS.length === 0) throw new Error('no RPC endpoints configured');
+  let lastErr: unknown = new Error(`${method}: all RPC endpoints failed`);
   for (let attempt = 0; attempt < RPC_URLS.length * 3; attempt++) {
     const url = RPC_URLS[rpcIdx % RPC_URLS.length];
     const wait = lastRpcAt + RPC_MIN_GAP_MS - Date.now();
@@ -872,7 +874,7 @@ async function main() {
 
 if (process.argv[1] && /token-forensics\.ts$/.test(process.argv[1])) {
   main().catch((e) => {
-    console.error(e);
+    console.error(e instanceof Error ? e.stack ?? e.message : String(e));
     process.exit(1);
   });
 }
