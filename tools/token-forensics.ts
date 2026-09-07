@@ -1133,7 +1133,7 @@ async function main() {
       out: { type: 'string', default: 'investigations' },
       top: { type: 'string', default: '150' },
       activity: { type: 'string', default: '400' },
-      'parse-tx': { type: 'string', default: '350' },
+      'parse-tx': { type: 'string', default: '220' },
       days: { type: 'string', default: '30' },
     },
   });
@@ -1289,7 +1289,8 @@ async function main() {
     }
     h.txCount = a.count;
     h.txCountCapped = a.capped;
-    h.firstTxTime = a.first?.blockTime ?? undefined;
+    // A capped scan never reached the wallet's first tx, so its age is unknown.
+    h.firstTxTime = a.capped ? undefined : (a.first?.blockTime ?? undefined);
     h.lastTxTime = a.last?.blockTime ?? undefined;
     if (deep && a.first && !a.capped) {
       h.funder = await funderOf(h.owner, a.first.signature);
@@ -1308,7 +1309,7 @@ async function main() {
   let launch: LaunchInfo | null = null;
   if (curveAddr) {
     try {
-      launch = await traceLaunch(curveAddr, mint, supply.amount, 80);
+      launch = await traceLaunch(curveAddr, mint, supply.amount, 60);
       if (launch) {
         const byWallet = new Map<string, { slot: number; sol: number }>();
         for (const b of launch.bundled) byWallet.set(b.wallet, { slot: b.slot, sol: (byWallet.get(b.wallet)?.sol ?? 0) + b.sol });
@@ -1331,11 +1332,11 @@ async function main() {
   // ---- deep: whale bag provenance for the largest balance holders
   const poolOwners = new Set(holders.filter((h) => h.ownerProgram && h.ownerProgram !== SYSTEM_PROGRAM).map((h) => h.owner));
   if (curveAddr) poolOwners.add(curveAddr);
-  const whales = wallets.filter((h) => h.pct > 0 && h.tokenAccounts?.length).slice(0, 15);
+  const whales = wallets.filter((h) => h.pct > 0 && h.tokenAccounts?.length).slice(0, 12);
   let provFailures = 0;
   await pmap(whales, 1, async (h) => {
     try {
-      h.provenance = (await traceProvenance(h, mint, poolOwners, 8, 4)) ?? undefined;
+      h.provenance = (await traceProvenance(h, mint, poolOwners, 6, 3)) ?? undefined;
     } catch {
       provFailures++;
     }
@@ -1564,7 +1565,7 @@ async function main() {
       L.push(`| \`${short(h.owner)}\` | ${fmtPct(h.pct)} | ${iso(p.firstSeen)} | ${p.txCount}${p.txCount >= 3000 ? '+' : ''} | ${p.swapsIn} (${p.swapSol.toFixed(2)}) | ${tin || '–'} | ${tout || '–'} |`);
     }
     L.push('');
-    L.push('`*` = counterparty is itself a top holder. Only the newest 8 and oldest 4 transactions per token account are parsed.');
+    L.push('`*` = counterparty is itself a top holder. Only the newest 6 and oldest 3 transactions per token account are parsed.');
     L.push('');
   }
 
