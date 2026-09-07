@@ -80,6 +80,15 @@ non-swap transactions on a red day are arbitrage bots cycling between pools afte
 noise. Decompose the USD move: the SOL leg is what the token inherits from the market; the
 rest is the token's own story. Users see the SOL leg and read it as "following Bitcoin."
 
+**Off-chain liveness.** Silence on X is not death. Check the pump.fun thread date (they all
+die after launch, so it is weak), then the team's sites: `last-modified` headers, Wayback
+version dates, and above all the JS bundle. A 1–2 MB bundle with Stripe, wallet and token
+payment endpoints, and an MCP/agent contract is a shipping team even if the shell HTML is
+one sentence. Distinguish "building quietly" from "dead", and both from "the token still
+matters": look for pay-with-token endpoints, holder tiers, or airdrop claim gates in the
+code. A product pivot that keeps the token as a payment rail is different from one that
+drops it.
+
 ## Things that looked like findings and were not
 
 **Portfolio-fingerprint clusters.** Seven busy wallets sharing 38 obscure tokens looked like

@@ -35,6 +35,16 @@ following SOL / Bitcoin": USD-move decomposition into the SOL leg and the token-
 leg, correlation and beta on trade days, lagged correlation, and what Bitcoin did on the
 token's step days. Run it on any report JSON; it takes under a minute.
 
+`scripts/offchain-probe.sh` (workflow `assets/offchain-probe.yml`, under a minute) answers "is
+the team alive?" from sources the sandbox cannot reach: pump.fun thread dates and creator
+replies, CoinGecko community/developer data and ATH, socials auto-discovered from the token's
+listings (Telegram previews with last-message dates, Discord invite member counts, Roblox
+community games and wall), the project sites with headers, Wayback history, crawler blocks,
+llms.txt, sitemap routes, and the JavaScript bundles mined for domains, endpoints, payment
+and token-gating code. Run it whenever the question is "is this project dead" or when a
+user mentions a launch you cannot find in search; a site that looks like a one-sentence
+shell is usually a single-page app with the real product in its bundle.
+
 It writes `investigations/<SYMBOL>-<mint8>.md` (human report) and `.json` (everything, for
 follow-up analysis with a few lines of Python). `references/method.md` explains each signal
 and the scoring.

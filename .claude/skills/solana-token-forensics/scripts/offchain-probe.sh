@@ -113,6 +113,10 @@ for SITE in $SITE; do
     say "- text sample: $(sed -e 's/<script[^>]*>.*<\/script>//g' -e 's/<[^>]*>/ /g' /tmp/site.html | tr -s ' \n' ' ' | cut -c1-700)"
     # Hidden crawler blocks and sitemaps often carry the product text an SPA hides.
     say "- crawler/static block: $(sed -n '/Static block/,/<\/div>/p' /tmp/site.html | sed -e 's/<[^>]*>/ /g' | tr -s ' \n' ' ' | cut -c1-2500)"
+    for DOC in llms.txt robots.txt docs/overview pricing; do
+      DT=$(curl -sSL -m 20 -A "$UA" "https://$SITE/$DOC" 2>/dev/null | sed -e 's/<script[^>]*>.*<\/script>//g' -e 's/<style[^>]*>.*<\/style>//g' -e 's/<[^>]*>/ /g' | tr -s ' \n\t' ' ' | cut -c1-2200)
+      case "$DT" in *"<!doctype"*|*"<!DOCTYPE"*|"") ;; *) [ ${#DT} -gt 40 ] && say "- /$DOC: $DT";; esac
+    done
     SM=$(curl -sSL -m 20 -A "$UA" "https://$SITE/sitemap.xml" 2>/dev/null | grep -oE '<loc>[^<]+' | sed 's/<loc>//' | head -40 | tr '\n' ' ')
     [ -n "$SM" ] && say "- sitemap routes: $SM"
     # Single-page apps carry their real content in the JS bundle: pull the first bundles and mine them.
