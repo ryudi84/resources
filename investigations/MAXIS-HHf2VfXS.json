@@ -2,26 +2,26 @@
   "mint": "HHf2VfXSPUVqQth6tXypfdUX2vawCiVKfkbAX4CJpump",
   "name": "Axis",
   "symbol": "MAXIS",
-  "generatedAt": "2026-09-07T16:12:50.653Z",
-  "overall": "MIXED — meaningful bot/insider presence alongside some organic holders. Treat as high-risk.",
+  "generatedAt": "2026-09-07T16:52:49.389Z",
+  "overall": "MOSTLY ORGANIC — holder behaviour looks like real, independently-funded wallets.",
   "flags": [
     "2 funder clusters covering 5 holders",
-    "53.66% of holders are dust (< 0.001% supply)",
-    "top-10 wallets hold 59.67% of circulating supply"
+    "top-10 wallets hold 59.66% of circulating supply"
   ],
   "summary": {
-    "bots": 2,
-    "suspicious": 14,
-    "organic": 25,
-    "unknown": 0,
+    "bots": 0,
+    "suspicious": 28,
+    "organic": 42,
+    "unknown": 2,
     "pools": 1,
-    "botSupplyPct": 1.0485165959842058,
-    "susSupplyPct": 14.154368056487765,
-    "top10Pct": 59.66555387434392,
-    "poolPct": 10.046051686959705
+    "botSupplyPct": 0,
+    "susSupplyPct": 27.958470742839058,
+    "top10Pct": 59.6648592155563,
+    "poolPct": 10.045004382038549
   },
   "unavailable": [
-    "pump.fun trade tape"
+    "pump.fun trade tape",
+    "wallet activity for 2 wallet(s) (RPC errors)"
   ],
   "holders": [
     {
@@ -30,16 +30,19 @@
       "pct": 17.285139411883243,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 20381744812,
-      "txCount": 0,
+      "txCount": 600,
       "txCountCapped": false,
+      "firstTxTime": 1759129830,
+      "lastTxTime": 1788708357,
+      "funder": "3kbyTX9s6zDcahauLHvNHGsR1ECMSWja9PhSBPrAJGHf",
       "score": 0,
       "verdict": "organic",
       "reasons": []
     },
     {
       "owner": "5WgYinqANwpEXJiW59nL2dDr683QyzqKahJQxCJJ1NFv",
-      "amount": 100457050.93984902,
-      "pct": 10.046051686959705,
+      "amount": 100446578.251962,
+      "pct": 10.045004382038549,
       "ownerProgram": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
       "lamports": 2985840,
       "label": "PumpSwap pool",
@@ -54,17 +57,15 @@
       "amount": 72288742.382876,
       "pct": 7.229123646069661,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 14914024065,
-      "txCount": 1,
-      "txCountCapped": false,
-      "firstTxTime": 1788796899,
-      "lastTxTime": 1788796899,
-      "funder": "2p41GwwKcLeN5TLN2QtaH9fm3d6Etqhddp3RyUCjj5XH",
-      "freshAtBuy": true,
+      "lamports": 12913948968,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "firstTxTime": 1734314767,
+      "lastTxTime": 1788798755,
       "score": 0.25,
       "verdict": "suspicious",
       "reasons": [
-        "fresh wallet: first tx < 24h before its buy, < 15 lifetime txs"
+        "automated trading wallet (≥3000 lifetime txs)"
       ]
     },
     {
@@ -88,16 +89,23 @@
       "owner": "mP4tnNkwAtRLpSZG5CqcH3CVPJHgVw7XH3j6YRyayQP",
       "amount": 68258810.40096399,
       "pct": 6.826116543965288,
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 1.6051568940000038,
+      "recentSolOut": 0,
+      "buyShare": 0.014102413640057966,
+      "regularBuyer": false,
+      "firstBuyTime": 1784566392,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 39485614678,
+      "lamports": 39491276380,
       "txCount": 3000,
       "txCountCapped": true,
-      "firstTxTime": 1788757350,
-      "lastTxTime": 1788797506,
-      "score": 0.1,
-      "verdict": "organic",
+      "firstTxTime": 1788759829,
+      "lastTxTime": 1788799333,
+      "score": 0.25,
+      "verdict": "suspicious",
       "reasons": [
-        "hyperactive wallet (≥3000 txs; trading bot or MEV)"
+        "automated trading wallet (≥3000 lifetime txs)"
       ]
     },
     {
@@ -119,16 +127,23 @@
       "owner": "H9LMapGT1t3AJ179HVycRYs2xFj7jGQM9PwosciRjjhN",
       "amount": 24691350.186992,
       "pct": 2.469220207826625,
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 5.739003605999983,
+      "recentSolOut": 0,
+      "buyShare": 0.05042111648781656,
+      "regularBuyer": false,
+      "firstBuyTime": 1788070218,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 122819724,
       "txCount": 3000,
       "txCountCapped": true,
       "firstTxTime": 1767878664,
       "lastTxTime": 1788701951,
-      "score": 0.1,
-      "verdict": "organic",
+      "score": 0.25,
+      "verdict": "suspicious",
       "reasons": [
-        "hyperactive wallet (≥3000 txs; trading bot or MEV)"
+        "automated trading wallet (≥3000 lifetime txs)"
       ]
     },
     {
@@ -141,54 +156,57 @@
       "txCountCapped": true,
       "firstTxTime": 1781219694,
       "lastTxTime": 1788784500,
-      "score": 0.1,
-      "verdict": "organic",
+      "score": 0.25,
+      "verdict": "suspicious",
       "reasons": [
-        "hyperactive wallet (≥3000 txs; trading bot or MEV)"
+        "automated trading wallet (≥3000 lifetime txs)"
       ]
     },
     {
       "owner": "2d3q3QS2pAY8yZFau6o9Mukh4pByNu8UCKdBfUkQmrAT",
       "amount": 20156502.101386003,
       "pct": 2.015719753311126,
-      "recentBuys": 2,
+      "recentBuys": 3,
       "recentSells": 0,
-      "recentSolIn": 6.63707365099998,
+      "recentSolIn": 14.052783908999999,
       "recentSolOut": 0,
-      "buyShare": 0.20953664780091408,
+      "buyShare": 0.12346342729477024,
       "regularBuyer": false,
+      "repeatSize": 1,
+      "firstBuyTime": 1786986239,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 22484234,
       "txCount": 3000,
       "txCountCapped": true,
       "firstTxTime": 1779939496,
       "lastTxTime": 1788792924,
-      "score": 0.30000000000000004,
+      "score": 0.25,
       "verdict": "suspicious",
       "reasons": [
-        "drives 21% of recent buy volume",
-        "hyperactive wallet (≥3000 txs; trading bot or MEV)"
+        "automated trading wallet (≥3000 lifetime txs)"
       ]
     },
     {
       "owner": "Ctr9PdTza3ycKf2t9vhb4B9oJ8MQbX127bvbrjxgWUJ6",
       "amount": 19125147.393034004,
       "pct": 1.9125807241363861,
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 0.9802173900000071,
+      "recentSolOut": 0,
+      "buyShare": 0.008611887811483981,
+      "regularBuyer": false,
+      "firstBuyTime": 1784355859,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 12443098907,
-      "txCount": 2,
+      "txCount": 260,
       "txCountCapped": false,
-      "firstTxTime": 1788796991,
+      "firstTxTime": 1776393868,
       "lastTxTime": 1788797000,
-      "funder": "GL1NNcZNNyvoDfUdtBpwGfAU4oAMCK1voNmDJe3jEGhi",
-      "freshAtBuy": true,
-      "fundedBySameAs": 2,
-      "score": 0.35,
-      "verdict": "suspicious",
-      "reasons": [
-        "fresh wallet: first tx < 24h before its buy, < 15 lifetime txs",
-        "shares its funder with 1 other holder"
-      ]
+      "funder": "wfNBgpCqHLh6Ew547YAd7bRFp8zAAQkFtxi775a7LGw",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": []
     },
     {
       "owner": "3SzgTYxweHagQrtB5M7DXdFDApPp4787dJpNKXXLBQcr",
@@ -196,8 +214,11 @@
       "pct": 1.747161571130788,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 142716758,
-      "txCount": 0,
+      "txCount": 48,
       "txCountCapped": false,
+      "firstTxTime": 1768953202,
+      "lastTxTime": 1785595179,
+      "funder": "3qiPFPDJZyrhdAVfKPoD9eyUzc2yG92eRkpVoCZSYHHT",
       "score": 0,
       "verdict": "organic",
       "reasons": []
@@ -206,27 +227,42 @@
       "owner": "JCyBcNFFiEGqaaB93HyKr2GcQ6B76At1VVE3fa8VaUKS",
       "amount": 15749344.642825,
       "pct": 1.5749888020533176,
+      "recentBuys": 0,
+      "recentSells": 1,
+      "recentSolIn": 0,
+      "recentSolOut": 9.284245115999994,
+      "buyShare": 0,
+      "regularBuyer": false,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 50248151,
-      "txCount": 6,
-      "txCountCapped": false,
-      "firstTxTime": 1788787753,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "firstTxTime": 1759412199,
       "lastTxTime": 1788795316,
-      "freshAtBuy": true,
       "score": 0.25,
       "verdict": "suspicious",
       "reasons": [
-        "fresh wallet: first tx < 24h before its buy, < 15 lifetime txs"
+        "automated trading wallet (≥3000 lifetime txs)"
       ]
     },
     {
       "owner": "5nqX5BRcZbFVwHkCSkiQCTYKNs9ChdtMurwZnquBRHQ4",
       "amount": 12662381.936414,
       "pct": 1.266281880894633,
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 3.630790246999993,
+      "recentSolOut": 0,
+      "buyShare": 0.03189900382627769,
+      "regularBuyer": false,
+      "firstBuyTime": 1785266202,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 282118876,
-      "txCount": 0,
+      "txCount": 24,
       "txCountCapped": false,
+      "firstTxTime": 1770356657,
+      "lastTxTime": 1785266202,
+      "funder": "J1BDJEdvTmmcjeTMVTHLPaaNvuQ3mdxeuWEM1YyMksLy",
       "score": 0,
       "verdict": "organic",
       "reasons": []
@@ -237,12 +273,16 @@
       "pct": 1.1373668846576745,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 2477455,
-      "txCount": 0,
+      "txCount": 1687,
       "txCountCapped": false,
-      "score": 0.05,
+      "firstTxTime": 1703489311,
+      "lastTxTime": 1788104725,
+      "funder": "5tzFkiKscXHK5ZXCGbXZxdw7gTjjD1mBwuoFbhUvuAi9",
+      "funderCex": "Binance",
+      "score": 0,
       "verdict": "organic",
       "reasons": [
-        "near-zero SOL balance (disposable wallet)"
+        "funded from Binance (exchange on-ramp → real person)"
       ]
     },
     {
@@ -251,8 +291,11 @@
       "pct": 1.093010688529001,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 18971000,
-      "txCount": 0,
+      "txCount": 114,
       "txCountCapped": false,
+      "firstTxTime": 1771989602,
+      "lastTxTime": 1777617293,
+      "funder": "9K9F3CezqQX17ptSHKgH1mRK4Egkaaiy4EaVDKHEDe5s",
       "score": 0,
       "verdict": "organic",
       "reasons": []
@@ -263,11 +306,17 @@
       "pct": 1.0000345016075587,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 72070002,
-      "txCount": 0,
+      "txCount": 8,
       "txCountCapped": false,
-      "score": 0,
-      "verdict": "organic",
-      "reasons": []
+      "firstTxTime": 1769923518,
+      "lastTxTime": 1771445752,
+      "funder": "34CwK1PeyTZ5EFty5LzYAJdjhJzuvGg6fBjZKZUsJDjY",
+      "fundedBySameAs": 3,
+      "score": 0.25,
+      "verdict": "suspicious",
+      "reasons": [
+        "funded by the same wallet as 2 other holders (34CwK1…)"
+      ]
     },
     {
       "owner": "2kpYCN2ZCAMcmDZgQdRN1iD6sE4b93W2CSr59ZCcQAhE",
@@ -275,11 +324,17 @@
       "pct": 1.0000345016075587,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 71970002,
-      "txCount": 0,
+      "txCount": 6,
       "txCountCapped": false,
-      "score": 0,
-      "verdict": "organic",
-      "reasons": []
+      "firstTxTime": 1769923650,
+      "lastTxTime": 1771445914,
+      "funder": "34CwK1PeyTZ5EFty5LzYAJdjhJzuvGg6fBjZKZUsJDjY",
+      "fundedBySameAs": 3,
+      "score": 0.25,
+      "verdict": "suspicious",
+      "reasons": [
+        "funded by the same wallet as 2 other holders (34CwK1…)"
+      ]
     },
     {
       "owner": "DPvGgbJZjRAbSQAxa7TcSbzWFZgTKmacnfHc9mFU8L3n",
@@ -287,36 +342,44 @@
       "pct": 1.0000345016075587,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 71970002,
-      "txCount": 0,
+      "txCount": 7,
       "txCountCapped": false,
-      "score": 0,
-      "verdict": "organic",
-      "reasons": []
+      "firstTxTime": 1769919056,
+      "lastTxTime": 1771445914,
+      "funder": "34CwK1PeyTZ5EFty5LzYAJdjhJzuvGg6fBjZKZUsJDjY",
+      "fundedBySameAs": 3,
+      "score": 0.25,
+      "verdict": "suspicious",
+      "reasons": [
+        "funded by the same wallet as 2 other holders (34CwK1…)"
+      ]
     },
     {
       "owner": "2j18M4HWFEtX7Exv5HhgxAt8BhFeHNQ36oDv4SshALBC",
       "amount": 9431495.366301,
       "pct": 0.9431820768052821,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 25535623323,
-      "txCount": 4,
+      "lamports": 22791807496,
+      "txCount": 1546,
       "txCountCapped": false,
-      "firstTxTime": 1788791878,
-      "lastTxTime": 1788797531,
-      "funder": "sighWH8KaiT7QhtV4w29ReVF8kG6D5yG3EQP1KYyGVF",
-      "freshAtBuy": true,
-      "fundedBySameAs": 3,
-      "score": 0.5,
-      "verdict": "bot",
-      "reasons": [
-        "fresh wallet: first tx < 24h before its buy, < 15 lifetime txs",
-        "funded by the same wallet as 2 other holders (sighWH…)"
-      ]
+      "firstTxTime": 1658357467,
+      "lastTxTime": 1788797564,
+      "funder": "AsSJzYgZzGHmWSQm15P8gX7bAKgnSEK7CUFPd4HXTkA8",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": []
     },
     {
       "owner": "J36RfC1dDRGcfV1AayosvB6JnV1PhQoaNE38aKS2WmmC",
       "amount": 9289490.293484,
       "pct": 0.9289810795832527,
+      "recentBuys": 2,
+      "recentSells": 0,
+      "recentSolIn": 2.5853855329999647,
+      "recentSolOut": 0,
+      "buyShare": 0.02271440028178775,
+      "regularBuyer": false,
+      "firstBuyTime": 1786861320,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 101775785,
       "txCount": 1045,
@@ -329,6 +392,125 @@
       "reasons": []
     },
     {
+      "owner": "7NfyynANY3TpWMfgWgZmBoEFCnGWTydAqqWwdN5gEhin",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 1,
+      "recentSolIn": 0,
+      "recentSolOut": 13.844709057000046,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 55232915,
+      "txCount": 217,
+      "txCountCapped": false,
+      "firstTxTime": 1784971578,
+      "lastTxTime": 1788789600,
+      "funder": "BmFdpraQhkiDQE6SnfG5omcA1VwzqfXrwtNYBwWTymy6",
+      "funderCex": "KuCoin",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": [
+        "funded from KuCoin (exchange on-ramp → real person)"
+      ]
+    },
+    {
+      "owner": "6aeqiV4HHLYPnT7doDzSh7nSro5uRbTsrD5Yc6RvynVX",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 12.858669959999986,
+      "recentSolOut": 0,
+      "buyShare": 0.11297231025499181,
+      "regularBuyer": false,
+      "firstBuyTime": 1785128709,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 28552926,
+      "txCount": 13,
+      "txCountCapped": false,
+      "firstTxTime": 1785128051,
+      "lastTxTime": 1787456693,
+      "funder": "ASTyfSima4LLAdDgoFGkgqoKowG1LZFDr9fAQrg7iaJZ",
+      "funderCex": "MEXC",
+      "freshAtBuy": true,
+      "score": 0.04999999999999999,
+      "verdict": "organic",
+      "reasons": [
+        "fresh wallet: first tx < 24h before its buy, < 15 lifetime txs",
+        "funded from MEXC (exchange on-ramp → real person)"
+      ]
+    },
+    {
+      "owner": "3DCp6TufpAbbok6sWZKi3NJUhBPqsiYQotF2ugC4f71U",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 2,
+      "recentSolIn": 0,
+      "recentSolOut": 12.19388163100001,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 1000000,
+      "txCount": 302,
+      "txCountCapped": false,
+      "firstTxTime": 1787496116,
+      "lastTxTime": 1788794381,
+      "funder": "43rWPpsmQ4FkH9HeaF9bRf1W5SXdnf8YEZcUASyLP8te",
+      "score": 0.05,
+      "verdict": "organic",
+      "reasons": [
+        "near-zero SOL balance (disposable wallet)"
+      ]
+    },
+    {
+      "owner": "dpyaxU61FT7p1X2krHnmuHMv5HhFjvNrtcQ1Mtt97Jy",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 8,
+      "recentSells": 0,
+      "recentSolIn": 6.4045852949999755,
+      "recentSolOut": 0,
+      "buyShare": 0.05626871202480853,
+      "regularBuyer": false,
+      "repeatSize": 1,
+      "firstBuyTime": 1784873055,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 68152213,
+      "txCount": 982,
+      "txCountCapped": false,
+      "firstTxTime": 1767673024,
+      "lastTxTime": 1788779803,
+      "funder": "2snHHreXbpJ7UwZxPe37gnUNf7Wx7wv6UKDSR2JckKuS",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": []
+    },
+    {
+      "owner": "Gtw5QKLnYazyApkzmCXo9GvXa5sCjwvx2bdRLaid8FHu",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 1,
+      "recentSolIn": 0,
+      "recentSolOut": 5.679047921999995,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 3093407252,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "firstTxTime": 1788598283,
+      "lastTxTime": 1788799467,
+      "score": 0.25,
+      "verdict": "suspicious",
+      "reasons": [
+        "automated trading wallet (≥3000 lifetime txs)"
+      ]
+    },
+    {
       "owner": "6PLWbWGqRcBGtAPetfKBY1aG31rwy4Sr7g3Y97ArVuLd",
       "amount": 0,
       "pct": 0,
@@ -336,45 +518,362 @@
       "recentSells": 0,
       "recentSolIn": 5.07882440100002,
       "recentSolOut": 0,
-      "buyShare": 0.16034172524131793,
+      "buyShare": 0.04462098550979512,
       "regularBuyer": false,
       "repeatSize": 1,
+      "firstBuyTime": 1788790367,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 491241718,
       "txCount": 3000,
       "txCountCapped": true,
-      "firstTxTime": 1769429668,
-      "lastTxTime": 1788797059,
-      "score": 0.1,
-      "verdict": "organic",
-      "reasons": [
-        "hyperactive wallet (≥3000 txs; trading bot or MEV)"
-      ]
-    },
-    {
-      "owner": "GJeipeY4SWs21t2Two5L9jzXaX81KhoCna8paXoLjdo6",
-      "amount": 0,
-      "pct": 0,
-      "recentBuys": 5,
-      "recentSells": 1,
-      "recentSolIn": 3.1227535419999413,
-      "recentSolOut": 0.6037660220000021,
-      "buyShare": 0.09858732078414005,
-      "regularBuyer": false,
-      "repeatSize": 2,
-      "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 13317831,
-      "txCount": 10,
-      "txCountCapped": false,
-      "firstTxTime": 1788790656,
-      "lastTxTime": 1788791403,
-      "funder": "HrAfGUAUEfqped7Xx9TpYm756rxi2kvH7WHcxbcEqSmm",
-      "freshAtBuy": true,
+      "firstTxTime": 1769431117,
+      "lastTxTime": 1788799397,
       "score": 0.25,
       "verdict": "suspicious",
       "reasons": [
-        "fresh wallet: first tx < 24h before its buy, < 15 lifetime txs"
+        "automated trading wallet (≥3000 lifetime txs)"
       ]
+    },
+    {
+      "owner": "BUDz9HggSPfiteVh3NJTydr7KACSqjZu9ycamEtLLamQ",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 4,
+      "recentSells": 3,
+      "recentSolIn": 2.7524455100000296,
+      "recentSolOut": 2.162212619999991,
+      "buyShare": 0.024182137739203847,
+      "regularBuyer": false,
+      "repeatSize": 1,
+      "firstBuyTime": 1788789237,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 8043712,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "firstTxTime": 1767518848,
+      "lastTxTime": 1788798231,
+      "score": 0.25,
+      "verdict": "suspicious",
+      "reasons": [
+        "automated trading wallet (≥3000 lifetime txs)"
+      ]
+    },
+    {
+      "owner": "DiVG1rHxQoVLuZsLVBEPe5A3pBU5ymvYBBtVSNhhhmKb",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 2,
+      "recentSells": 2,
+      "recentSolIn": 3.084819793999941,
+      "recentSolOut": 1.6348904400000208,
+      "buyShare": 0.027102275735561503,
+      "regularBuyer": false,
+      "firstBuyTime": 1787378845,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 65543058,
+      "txCount": 379,
+      "txCountCapped": false,
+      "firstTxTime": 1768780150,
+      "lastTxTime": 1788696384,
+      "funder": "ASTyfSima4LLAdDgoFGkgqoKowG1LZFDr9fAQrg7iaJZ",
+      "funderCex": "MEXC",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": [
+        "funded from MEXC (exchange on-ramp → real person)"
+      ]
+    },
+    {
+      "owner": "7b4YpJsszdXGKraYwwAG1vDWSJBzrxvsy3hvUBchLW7X",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 1,
+      "recentSolIn": 0,
+      "recentSolOut": 4.575656901000002,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 712022061,
+      "txCount": 72,
+      "txCountCapped": false,
+      "firstTxTime": 1787596006,
+      "lastTxTime": 1788785906,
+      "funder": "Es1cxdGdMyaifvnPWg2UiXkDyASkcNa7ZcfLqxM7u3zW",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": []
+    },
+    {
+      "owner": "7DbM3iS7CymTWXdc6QaEqPXeXjbc7R9QDuY1LdguaV67",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 1,
+      "recentSolIn": 0,
+      "recentSolOut": 4.557854636999991,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 0,
+      "txCount": 81,
+      "txCountCapped": false,
+      "firstTxTime": 1769246986,
+      "lastTxTime": 1788779527,
+      "funder": "Em8J3gBWapfVBGVhVipwQnLrqCvnWBnLajw6XFsFECPF",
+      "score": 0.05,
+      "verdict": "organic",
+      "reasons": [
+        "near-zero SOL balance (disposable wallet)"
+      ]
+    },
+    {
+      "owner": "FhtXTXBWAdER77os8Tz4RHyjBfrFG9sigdHZm7qoeLz8",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 1,
+      "recentSolIn": 0,
+      "recentSolOut": 4.453385948000005,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 890880,
+      "txCount": 53,
+      "txCountCapped": false,
+      "firstTxTime": 1764761284,
+      "lastTxTime": 1788534667,
+      "funder": "is6MTRHEgyFLNTfYcuV4QBWLjrZBfmhVNYR6ccgr8KV",
+      "fundedBySameAs": 2,
+      "score": 0.15000000000000002,
+      "verdict": "organic",
+      "reasons": [
+        "shares its funder with 1 other holder",
+        "near-zero SOL balance (disposable wallet)"
+      ]
+    },
+    {
+      "owner": "8xSVeCtZzbSQcBgpnpAqVr8ag7w5E6Y38RnZ1BcDHDVN",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 9,
+      "recentSolIn": 0,
+      "recentSolOut": 4.274666853000042,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 2341364159,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "firstTxTime": 1776605429,
+      "lastTxTime": 1788774647,
+      "score": 0.25,
+      "verdict": "suspicious",
+      "reasons": [
+        "automated trading wallet (≥3000 lifetime txs)"
+      ]
+    },
+    {
+      "owner": "EjqJgyRNUdbjJDmnFyMmrH5gG4ronAh5HCZgCmoCG1a6",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 8,
+      "recentSells": 2,
+      "recentSolIn": 3.6408690629999683,
+      "recentSolOut": 0.5748481129999732,
+      "buyShare": 0.03198755319660092,
+      "regularBuyer": false,
+      "repeatSize": 2,
+      "firstBuyTime": 1787031260,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 10711142,
+      "score": 0,
+      "verdict": "unknown",
+      "reasons": []
+    },
+    {
+      "owner": "Emk5yXD9o7zqh5vNSgHxp5xTGYK3PNq7ULdpKZRCN7CX",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 1,
+      "recentSells": 1,
+      "recentSolIn": 1.9802136490000066,
+      "recentSolOut": 2.135949374000006,
+      "buyShare": 0.01739754666866016,
+      "regularBuyer": false,
+      "firstBuyTime": 1788734024,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 46647637,
+      "txCount": 2136,
+      "txCountCapped": false,
+      "firstTxTime": 1740498396,
+      "lastTxTime": 1788795706,
+      "funder": "5tzFkiKscXHK5ZXCGbXZxdw7gTjjD1mBwuoFbhUvuAi9",
+      "funderCex": "Binance",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": [
+        "funded from Binance (exchange on-ramp → real person)"
+      ]
+    },
+    {
+      "owner": "DDrgjDKWeCxMC8Po8MLfHcdzcBTH7aWSYnAy1o15jMqm",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 1,
+      "recentSolIn": 0,
+      "recentSolOut": 4.008819960000011,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 626336047,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "firstTxTime": 1774203327,
+      "lastTxTime": 1788790571,
+      "score": 0.25,
+      "verdict": "suspicious",
+      "reasons": [
+        "automated trading wallet (≥3000 lifetime txs)"
+      ]
+    },
+    {
+      "owner": "HvLi4xBRLC6Dz9VTeGCKAEonRzSJHmYLVL3xzmUEuU6n",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 1,
+      "recentSolIn": 0,
+      "recentSolOut": 3.6222198410000033,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 3928070588,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "firstTxTime": 1788519802,
+      "lastTxTime": 1788799532,
+      "score": 0.25,
+      "verdict": "suspicious",
+      "reasons": [
+        "automated trading wallet (≥3000 lifetime txs)"
+      ]
+    },
+    {
+      "owner": "SPxFPQ7f5fxYibEY7RL3oS43R1DUJwtbj7V57bZoFKU",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 1,
+      "recentSolIn": 0,
+      "recentSolOut": 3.608624624000015,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 33157678,
+      "txCount": 1441,
+      "txCountCapped": false,
+      "firstTxTime": 1763734526,
+      "lastTxTime": 1788688736,
+      "funder": "ED8RJ888RtGrpARYQn7gwE3Gtndt3EukUE6iNib15phU",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": []
+    },
+    {
+      "owner": "6UykY7jVE48cswifJRvaC6iUSrAzMZwYJ6vTtUCm1MZ7",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 2,
+      "recentSolIn": 0,
+      "recentSolOut": 3.303304603999976,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 1478631253,
+      "txCount": 2993,
+      "txCountCapped": false,
+      "firstTxTime": 1769085349,
+      "lastTxTime": 1788670224,
+      "funder": "3HrqgyMvu4zezpg37S6puPQ7BHLRvinB4VBFGGF4Am1d",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": []
+    },
+    {
+      "owner": "J5HaT7Uyp6BK5RNTGgpXwjHbbrHysq17HGvKuPLukRWM",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 3.1916662989999907,
+      "recentSolOut": 0,
+      "buyShare": 0.028040996190326732,
+      "regularBuyer": false,
+      "firstBuyTime": 1786368558,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 6741346,
+      "txCount": 828,
+      "txCountCapped": false,
+      "firstTxTime": 1767641644,
+      "lastTxTime": 1787489340,
+      "funder": "5tzFkiKscXHK5ZXCGbXZxdw7gTjjD1mBwuoFbhUvuAi9",
+      "funderCex": "Binance",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": [
+        "funded from Binance (exchange on-ramp → real person)"
+      ]
+    },
+    {
+      "owner": "83VfboTKK4VPXLfceop1UgNxb3umjpW2JXXgtTh6qMGV",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 2.9703557300000227,
+      "recentSolOut": 0,
+      "buyShare": 0.02609662975573063,
+      "regularBuyer": false,
+      "firstBuyTime": 1786848305,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 28730523965,
+      "txCount": 142,
+      "txCountCapped": false,
+      "firstTxTime": 1786001274,
+      "lastTxTime": 1788797484,
+      "funder": "is6MTRHEgyFLNTfYcuV4QBWLjrZBfmhVNYR6ccgr8KV",
+      "fundedBySameAs": 2,
+      "score": 0.1,
+      "verdict": "organic",
+      "reasons": [
+        "shares its funder with 1 other holder"
+      ]
+    },
+    {
+      "owner": "AodhYAJEjDJV8e6Sc3qtMgwQJatAXwu5PzbEPhsoDUoZ",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 2,
+      "recentSells": 0,
+      "recentSolIn": 2.9688521960000003,
+      "recentSolOut": 0,
+      "buyShare": 0.026083420169509205,
+      "regularBuyer": false,
+      "firstBuyTime": 1786860268,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 43101002,
+      "txCount": 2493,
+      "txCountCapped": false,
+      "firstTxTime": 1783720919,
+      "lastTxTime": 1788797018,
+      "funder": "B7DJdoZidxKwsPtxLWfYTA2QSsnSkq6gRirMknjjCNho",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": []
     },
     {
       "owner": "BbGriCL6sGQMSJAXnjjpvG2EyetQwmoALG1secBrjm6V",
@@ -384,44 +883,89 @@
       "recentSells": 0,
       "recentSolIn": 2.943560829999967,
       "recentSolOut": 0,
-      "buyShare": 0.09293009259033026,
+      "buyShare": 0.025861218024542706,
       "regularBuyer": false,
+      "firstBuyTime": 1788795861,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 10226790,
-      "txCount": 13,
-      "txCountCapped": false,
-      "firstTxTime": 1788781975,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "firstTxTime": 1760211452,
       "lastTxTime": 1788795983,
-      "freshAtBuy": true,
       "score": 0.25,
       "verdict": "suspicious",
       "reasons": [
-        "fresh wallet: first tx < 24h before its buy, < 15 lifetime txs"
+        "automated trading wallet (≥3000 lifetime txs)"
       ]
     },
     {
-      "owner": "BUDz9HggSPfiteVh3NJTydr7KACSqjZu9ycamEtLLamQ",
+      "owner": "E8oXDWch45FBcZPRgPqCHY2zmscdgKo1aV2yKgQT5YR3",
       "amount": 0,
       "pct": 0,
-      "recentBuys": 4,
+      "recentBuys": 6,
       "recentSells": 0,
-      "recentSolIn": 2.7524455100000296,
+      "recentSolIn": 2.904406862999906,
       "recentSolOut": 0,
-      "buyShare": 0.08689646005859658,
+      "buyShare": 0.025517223340690922,
       "regularBuyer": false,
       "repeatSize": 1,
+      "firstBuyTime": 1788183563,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 9981364,
-      "txCount": 9,
+      "lamports": 11580906,
+      "txCount": 1007,
       "txCountCapped": false,
-      "firstTxTime": 1788789237,
-      "lastTxTime": 1788791453,
-      "freshAtBuy": true,
+      "firstTxTime": 1779469771,
+      "lastTxTime": 1788798208,
+      "funder": "A77HErqtfN1hLLpvZ9pCtu66FEtM8BveoaKbbMoZ4RiR",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": []
+    },
+    {
+      "owner": "HNEwmdmXxo6L9i2sHx2pD6tuppLiSsqccyywmQYjs4As",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 2,
+      "recentSells": 0,
+      "recentSolIn": 2.772332014,
+      "recentSolOut": 0,
+      "buyShare": 0.024356854432824607,
+      "regularBuyer": false,
+      "firstBuyTime": 1785511438,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 8742886,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "firstTxTime": 1772455231,
+      "lastTxTime": 1788796456,
       "score": 0.25,
       "verdict": "suspicious",
       "reasons": [
-        "fresh wallet: first tx < 24h before its buy, < 15 lifetime txs"
+        "automated trading wallet (≥3000 lifetime txs)"
       ]
+    },
+    {
+      "owner": "GJeipeY4SWs21t2Two5L9jzXaX81KhoCna8paXoLjdo6",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 4,
+      "recentSells": 1,
+      "recentSolIn": 2.130388122999989,
+      "recentSolOut": 0.6037660220000021,
+      "buyShare": 0.01871693330210527,
+      "regularBuyer": false,
+      "repeatSize": 1,
+      "firstBuyTime": 1788790701,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 13317831,
+      "txCount": 70,
+      "txCountCapped": false,
+      "firstTxTime": 1772615435,
+      "lastTxTime": 1788791403,
+      "funder": "HrAfybUvBMnh4FsW9vZjBC8HFQrmDSqcDgqHzJJsqSmm",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": []
     },
     {
       "owner": "8N5hwg8DajX8nDS4MhQsHTuRy2qqSBj3s2ouz2fRHxAg",
@@ -431,14 +975,16 @@
       "recentSells": 0,
       "recentSolIn": 2.606764983000005,
       "recentSolOut": 0,
-      "buyShare": 0.08229723291684916,
+      "buyShare": 0.022902233538726374,
       "regularBuyer": false,
+      "firstBuyTime": 1788790804,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 305868841,
-      "txCount": 16,
+      "txCount": 1453,
       "txCountCapped": false,
-      "firstTxTime": 1788790385,
+      "firstTxTime": 1786400829,
       "lastTxTime": 1788796371,
+      "funder": "7J6vCDGJdFmhCdC51yijkpknm8weHCuKkp1cCMpdCNbS",
       "score": 0,
       "verdict": "organic",
       "reasons": []
@@ -451,39 +997,124 @@
       "recentSells": 1,
       "recentSolIn": 1.288427299000034,
       "recentSolOut": 1.303400537000016,
-      "buyShare": 0.04067647149387554,
+      "buyShare": 0.011319725058378674,
       "regularBuyer": false,
+      "firstBuyTime": 1788791031,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 44771081,
-      "txCount": 32,
+      "txCount": 1479,
       "txCountCapped": false,
-      "firstTxTime": 1788784685,
+      "firstTxTime": 1757617643,
       "lastTxTime": 1788794319,
+      "funder": "2DWUhcVFmwL2EDK2xAgmk4NrTAvVT8cDJP7zzcsvP38n",
       "score": 0,
       "verdict": "organic",
       "reasons": []
     },
     {
-      "owner": "Emk5yXD9o7zqh5vNSgHxp5xTGYK3PNq7ULdpKZRCN7CX",
+      "owner": "xsWXk2mWSYGSnt2tm5yntr6mhuDQijDHcKxRoFCN4Bs",
       "amount": 0,
       "pct": 0,
       "recentBuys": 0,
       "recentSells": 1,
       "recentSolIn": 0,
-      "recentSolOut": 2.135949374000006,
+      "recentSolOut": 2.51667386699998,
       "buyShare": 0,
       "regularBuyer": false,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 46647637,
-      "txCount": 3,
+      "lamports": 79791325,
+      "txCount": 214,
       "txCountCapped": false,
-      "firstTxTime": 1788795687,
-      "lastTxTime": 1788795706,
-      "freshAtBuy": true,
+      "firstTxTime": 1781230535,
+      "lastTxTime": 1788202289,
+      "funder": "GA2Bn5iGFC4MuY6Z6vC9sSXpWEYTyMeKwwgA79PG6skN",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": []
+    },
+    {
+      "owner": "CzZMnQxpsodfaH8dhCUVmxWrFjef7gsVTNa5ADFMzLiG",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 2.4740434989999756,
+      "recentSolOut": 0,
+      "buyShare": 0.021736183495090735,
+      "regularBuyer": false,
+      "firstBuyTime": 1787564978,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 47510220,
+      "score": 0,
+      "verdict": "unknown",
+      "reasons": []
+    },
+    {
+      "owner": "FixukbsKfJZEr996ubcWvwTAt1b6QJ2SfP3FJsBSbH33",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 2,
+      "recentSolIn": 0,
+      "recentSolOut": 2.1782108640000217,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 323058681754,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "firstTxTime": 1788332644,
+      "lastTxTime": 1788799630,
       "score": 0.25,
       "verdict": "suspicious",
       "reasons": [
-        "fresh wallet: first tx < 24h before its buy, < 15 lifetime txs"
+        "automated trading wallet (≥3000 lifetime txs)"
+      ]
+    },
+    {
+      "owner": "HgLNy8YgtFiTLMcrBxfJGvAXbriZa69k6Rrrk221xjNR",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 2.075627501000014,
+      "recentSolOut": 0,
+      "buyShare": 0.018235823358574415,
+      "regularBuyer": false,
+      "firstBuyTime": 1786854029,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 136048709,
+      "txCount": 23,
+      "txCountCapped": false,
+      "firstTxTime": 1786510187,
+      "lastTxTime": 1788745270,
+      "funder": "xsWXk2mWSYGSnt2tm5yntr6mhuDQijDHcKxRoFCN4Bs",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": []
+    },
+    {
+      "owner": "C8XzAiFwd9J4DPX6QoKE6ZS4bY4j2jZVzLXzMbQ2fkAW",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 1,
+      "recentSolIn": 0,
+      "recentSolOut": 2.0702957270000013,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 75106751,
+      "txCount": 2069,
+      "txCountCapped": false,
+      "firstTxTime": 1768781137,
+      "lastTxTime": 1786451497,
+      "funder": "ASTyfSima4LLAdDgoFGkgqoKowG1LZFDr9fAQrg7iaJZ",
+      "funderCex": "MEXC",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": [
+        "funded from MEXC (exchange on-ramp → real person)"
       ]
     },
     {
@@ -494,91 +1125,246 @@
       "recentSells": 1,
       "recentSolIn": 1.3780427770000188,
       "recentSolOut": 0.6059849329999736,
-      "buyShare": 0.043505689284514974,
+      "buyShare": 0.012107059021825673,
       "regularBuyer": false,
+      "firstBuyTime": 1788791219,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 13550228,
-      "txCount": 3,
-      "txCountCapped": false,
-      "firstTxTime": 1788779400,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "firstTxTime": 1768735742,
       "lastTxTime": 1788791293,
-      "funder": "sighWH8KaiT7QhtV4w29ReVF8kG6D5yG3EQP1KYyGVF",
-      "freshAtBuy": true,
-      "fundedBySameAs": 3,
-      "score": 0.5,
-      "verdict": "bot",
-      "reasons": [
-        "fresh wallet: first tx < 24h before its buy, < 15 lifetime txs",
-        "funded by the same wallet as 2 other holders (sighWH…)"
-      ]
-    },
-    {
-      "owner": "E8oXDWch45FBcZPRgPqCHY2zmscdgKo1aV2yKgQT5YR3",
-      "amount": 0,
-      "pct": 0,
-      "recentBuys": 5,
-      "recentSells": 0,
-      "recentSolIn": 1.9362389819999066,
-      "recentSolOut": 0,
-      "buyShare": 0.061128299452965655,
-      "regularBuyer": false,
-      "repeatSize": 1,
-      "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 12097467,
-      "txCount": 23,
-      "txCountCapped": false,
-      "firstTxTime": 1788780041,
-      "lastTxTime": 1788794519,
-      "funder": "sighWH8KaiT7QhtV4w29ReVF8kG6D5yG3EQP1KYyGVF",
-      "fundedBySameAs": 3,
       "score": 0.25,
       "verdict": "suspicious",
       "reasons": [
-        "funded by the same wallet as 2 other holders (sighWH…)"
+        "automated trading wallet (≥3000 lifetime txs)"
       ]
     },
     {
-      "owner": "FixukbsKfJZEr996ubcWvwTAt1b6QJ2SfP3FJsBSbH33",
+      "owner": "4q1b1ENvqxMzyeter97qt2pdccJApwXZkRRGbtMQcLzd",
       "amount": 0,
       "pct": 0,
-      "recentBuys": 0,
-      "recentSells": 1,
-      "recentSolIn": 0,
-      "recentSolOut": 1.4634006140000224,
-      "buyShare": 0,
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 1.9792347980000216,
+      "recentSolOut": 0,
+      "buyShare": 0.01738894678553012,
       "regularBuyer": false,
+      "firstBuyTime": 1787635125,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 323060870653,
-      "txCount": 118,
+      "lamports": 1757991,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "firstTxTime": 1761238427,
+      "lastTxTime": 1788747059,
+      "score": 0.3,
+      "verdict": "suspicious",
+      "reasons": [
+        "automated trading wallet (≥3000 lifetime txs)",
+        "near-zero SOL balance (disposable wallet)"
+      ]
+    },
+    {
+      "owner": "HUmFddQhMacCxeo8DA5yDe16cgwmhK5Fu94p7YC7staW",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 1.9606113689999916,
+      "recentSolOut": 0,
+      "buyShare": 0.017225327079483693,
+      "regularBuyer": false,
+      "firstBuyTime": 1787202645,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 3295175251,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "firstTxTime": 1784503071,
+      "lastTxTime": 1788799127,
+      "score": 0.25,
+      "verdict": "suspicious",
+      "reasons": [
+        "automated trading wallet (≥3000 lifetime txs)"
+      ]
+    },
+    {
+      "owner": "3nZjnsyGWpe8CR4a6f3nuLcdR9XMvBU7cM1ZUjBBfBFn",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 1.8037958129999936,
+      "recentSolOut": 0,
+      "buyShare": 0.015847593946869656,
+      "regularBuyer": false,
+      "firstBuyTime": 1787857692,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 2428465,
+      "txCount": 800,
       "txCountCapped": false,
-      "firstTxTime": 1788777802,
-      "lastTxTime": 1788797529,
+      "firstTxTime": 1753227177,
+      "lastTxTime": 1788794560,
+      "funder": "2K4SLgDcGQ8zvrGe2My5L4XhxChmfNXmJyJtrDrv6ZXd",
+      "score": 0.05,
+      "verdict": "organic",
+      "reasons": [
+        "near-zero SOL balance (disposable wallet)"
+      ]
+    },
+    {
+      "owner": "8i7E2NjyE2LdDFbjgF1obn7Fw6uZfnxdy8Tovz7UGFMM",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 1.6262172849999956,
+      "recentSolOut": 0,
+      "buyShare": 0.014287443742980252,
+      "regularBuyer": false,
+      "firstBuyTime": 1787344550,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 89997384,
+      "txCount": 223,
+      "txCountCapped": false,
+      "firstTxTime": 1787219356,
+      "lastTxTime": 1788797642,
+      "funder": "EWK8XKaEY8W11WgTmLhrQSXZWcn3ypLWUcYJCyFNDxM6",
       "score": 0,
       "verdict": "organic",
       "reasons": []
     },
     {
-      "owner": "dpyaxU61FT7p1X2krHnmuHMv5HhFjvNrtcQ1Mtt97Jy",
+      "owner": "BM9CcyErJcu2mjrFvUsRRrD3snGeHDDVirJLvL6EjvMN",
       "amount": 0,
       "pct": 0,
-      "recentBuys": 2,
+      "recentBuys": 1,
       "recentSells": 0,
-      "recentSolIn": 1.20438633699996,
+      "recentSolIn": 1.5998246080000058,
       "recentSolOut": 0,
-      "buyShare": 0.038023244728370785,
+      "buyShare": 0.014055565819075388,
       "regularBuyer": false,
+      "firstBuyTime": 1788521423,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 68152213,
-      "txCount": 2,
-      "txCountCapped": false,
-      "firstTxTime": 1788778531,
-      "lastTxTime": 1788779803,
-      "freshAtBuy": true,
+      "lamports": 128940413234,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "firstTxTime": 1788774429,
+      "lastTxTime": 1788799792,
       "score": 0.25,
       "verdict": "suspicious",
       "reasons": [
-        "fresh wallet: first tx < 24h before its buy, < 15 lifetime txs"
+        "automated trading wallet (≥3000 lifetime txs)"
       ]
+    },
+    {
+      "owner": "8nvP149GGw4Ep2Wmtq7T1jz4Kj1qBQixUrR7SxwKBKiD",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 2,
+      "recentSolIn": 0,
+      "recentSolOut": 1.348256291000041,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 51006181,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "firstTxTime": 1694782207,
+      "lastTxTime": 1788751428,
+      "score": 0.25,
+      "verdict": "suspicious",
+      "reasons": [
+        "automated trading wallet (≥3000 lifetime txs)"
+      ]
+    },
+    {
+      "owner": "H1w8X9ubRKcXZVMt5NVMgcavviqJNeTWTnx6GbXGEBZu",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 3,
+      "recentSolIn": 0,
+      "recentSolOut": 1.3089908139999409,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 24097431,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "firstTxTime": 1738156984,
+      "lastTxTime": 1788789083,
+      "score": 0.25,
+      "verdict": "suspicious",
+      "reasons": [
+        "automated trading wallet (≥3000 lifetime txs)"
+      ]
+    },
+    {
+      "owner": "76WoCZAGzoVSinUrsdbjJzki9z8qVs7ixbLfW2gTrMmv",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 1,
+      "recentSells": 1,
+      "recentSolIn": 0.594364832999986,
+      "recentSolOut": 0.6869756069999937,
+      "buyShare": 0.005221906194591441,
+      "regularBuyer": false,
+      "firstBuyTime": 1786904861,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 60095144556,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "firstTxTime": 1787870418,
+      "lastTxTime": 1788799679,
+      "score": 0.25,
+      "verdict": "suspicious",
+      "reasons": [
+        "automated trading wallet (≥3000 lifetime txs)"
+      ]
+    },
+    {
+      "owner": "43ijP5TDBhU8Gn8i5Z93HSVVc6GN8MVQpx4TgM3SYhF6",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 1,
+      "recentSolIn": 0,
+      "recentSolOut": 1.203730964000016,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 14671802384,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "firstTxTime": 1775068604,
+      "lastTxTime": 1788678088,
+      "score": 0.25,
+      "verdict": "suspicious",
+      "reasons": [
+        "automated trading wallet (≥3000 lifetime txs)"
+      ]
+    },
+    {
+      "owner": "4AuqKA8jc9o4j4vqjsY4oDgSjqyM9Q7upHwPYuxyR5zw",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 1,
+      "recentSolIn": 0,
+      "recentSolOut": 1.1625106760000108,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 167972400,
+      "txCount": 1657,
+      "txCountCapped": false,
+      "firstTxTime": 1766077739,
+      "lastTxTime": 1788220879,
+      "funder": "GT2zuHVaZQYZSyQMgJPLzvkmyztfyXg2NJunqFp4p3A4",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": []
     },
     {
       "owner": "62HrTQstdgMvAgFpjRwke8QQZkAbXLs9x9Ga5D1ZXzAj",
@@ -588,17 +1374,41 @@
       "recentSells": 0,
       "recentSolIn": 1.1595845680000139,
       "recentSolOut": 0,
-      "buyShare": 0.03660882430975976,
+      "buyShare": 0.010187752542876398,
       "regularBuyer": false,
+      "firstBuyTime": 1788789298,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 9940359,
       "txCount": 50,
       "txCountCapped": false,
       "firstTxTime": 1783843197,
       "lastTxTime": 1788789308,
+      "funder": "3TW4n3GhKHCTN9ZenJ2NEiz9mxT1bkrcepAMuPNM2Q7j",
       "score": 0,
       "verdict": "organic",
       "reasons": []
+    },
+    {
+      "owner": "3X6Sa4zdPgwBoTt1n5Ga6u16kXBw67t6wH7QA1gnyAc2",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 1,
+      "recentSolIn": 0,
+      "recentSolOut": 1.0773404980000123,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 4363490030,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "firstTxTime": 1783333033,
+      "lastTxTime": 1788799374,
+      "score": 0.25,
+      "verdict": "suspicious",
+      "reasons": [
+        "automated trading wallet (≥3000 lifetime txs)"
+      ]
     },
     {
       "owner": "3XzWbnrDHtAXp5vxm8hrgm7gFzi3cnSDZjuxQHFGVnUS",
@@ -608,229 +1418,189 @@
       "recentSells": 0,
       "recentSolIn": 1.0681623569999772,
       "recentSolOut": 0,
-      "buyShare": 0.03372256680610687,
+      "buyShare": 0.009384545180262552,
       "regularBuyer": false,
+      "firstBuyTime": 1788788757,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 0,
-      "txCount": 3,
+      "txCount": 109,
       "txCountCapped": false,
-      "firstTxTime": 1788781905,
+      "firstTxTime": 1786768019,
       "lastTxTime": 1788788757,
-      "funder": "AgmLJBMDCqWynYnQiPCuj9ewsNNsBJXyzoUhD9LJzN51",
-      "freshAtBuy": true,
-      "score": 0.3,
-      "verdict": "suspicious",
+      "funder": "9sP1tn9NtaNLPKud74vYJm15nUBRfYxU6vE7cEjcDSkd",
+      "score": 0.05,
+      "verdict": "organic",
       "reasons": [
-        "fresh wallet: first tx < 24h before its buy, < 15 lifetime txs",
         "near-zero SOL balance (disposable wallet)"
       ]
     },
     {
-      "owner": "9nnKYM8y2iNg4QgMzWM1irSECYRLXuLPpB1K1ei6tgvK",
+      "owner": "Dkc2DnnQ92HZbQZavPWfqyWn4zrk5a2VBsAHxJQKLBwX",
       "amount": 0,
       "pct": 0,
       "recentBuys": 1,
       "recentSells": 0,
-      "recentSolIn": 0.2942105779999906,
+      "recentSolIn": 0.9901185759999862,
       "recentSolOut": 0,
-      "buyShare": 0.009288415573390415,
+      "buyShare": 0.008698876579386228,
+      "regularBuyer": false,
+      "firstBuyTime": 1784060825,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 168304536,
+      "txCount": 2851,
+      "txCountCapped": false,
+      "firstTxTime": 1762167526,
+      "lastTxTime": 1787924840,
+      "funder": "9MK2JqpKMbzJNqZmmemrmF63defWcKc1BFzvkstkxRM6",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": []
+    },
+    {
+      "owner": "CgmxssHPLS3xnrz8s8kd7aoTpP5TbtmCKRzSDbCfSDGg",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 1,
+      "recentSolIn": 0,
+      "recentSolOut": 0.9847654259999956,
+      "buyShare": 0,
       "regularBuyer": false,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 1016334263,
-      "txCount": 2,
+      "lamports": 0,
+      "txCount": 1429,
       "txCountCapped": false,
-      "firstTxTime": 1788782470,
-      "lastTxTime": 1788782473,
-      "funder": "GL1NNcZNNyvoDfUdtBpwGfAU4oAMCK1voNmDJe3jEGhi",
-      "freshAtBuy": true,
-      "fundedBySameAs": 2,
-      "score": 0.35,
-      "verdict": "suspicious",
+      "firstTxTime": 1784901641,
+      "lastTxTime": 1788799560,
+      "funder": "2AQdpHJ2JpcEgPiATUXjQxA8QmafFegfQwSLWSprPicm",
+      "funderCex": "Coinbase",
+      "score": 0,
+      "verdict": "organic",
       "reasons": [
-        "fresh wallet: first tx < 24h before its buy, < 15 lifetime txs",
-        "shares its funder with 1 other holder"
+        "funded from Coinbase (exchange on-ramp → real person)"
+      ]
+    },
+    {
+      "owner": "FhUfDm6DbHi1tRKbW8otDGowbePqM18mnUqcmyCnhUFc",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 1,
+      "recentSells": 1,
+      "recentSolIn": 0.4953040030000011,
+      "recentSolOut": 0.42493752599997947,
+      "buyShare": 0.004351588280243533,
+      "regularBuyer": false,
+      "firstBuyTime": 1786936223,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 55516541,
+      "txCount": 1145,
+      "txCountCapped": false,
+      "firstTxTime": 1770368376,
+      "lastTxTime": 1788230080,
+      "funder": "AgmLJBMDCqWynYnQiPCuj9ewsNNsBJXyzoUhD9LJzN51",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": []
+    },
+    {
+      "owner": "AJQBDU71fwVdsG1gWyRpMhuH3C1jCrE4bnDqA2okiUZ4",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 1,
+      "recentSolIn": 0,
+      "recentSolOut": 0.8719147720000251,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 145064092,
+      "txCount": 2140,
+      "txCountCapped": false,
+      "firstTxTime": 1778680688,
+      "lastTxTime": 1788779732,
+      "funder": "6Y6RKjD4WffvgUcgXLoPexdWUfYVArcAbriG2ZuGsMzu",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": []
+    },
+    {
+      "owner": "FSgm9HH28xyaFmRoDLNKgEdywvUy38BsYX2ZwXQs5Eam",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 1,
+      "recentSolIn": 0,
+      "recentSolOut": 0.8627529100000118,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 0,
+      "txCount": 901,
+      "txCountCapped": false,
+      "firstTxTime": 1718596255,
+      "lastTxTime": 1788769809,
+      "funder": "3NEUdjqBLzXDqEw8n7S5wSWxx8m399bMz9mQbVgJYBiy",
+      "score": 0.05,
+      "verdict": "organic",
+      "reasons": [
+        "near-zero SOL balance (disposable wallet)"
+      ]
+    },
+    {
+      "owner": "3AudKVvBwK5hKhWG8iAS9qnaj5USw5oZYWnj8UtUnf2j",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 2,
+      "recentSells": 1,
+      "recentSolIn": 0.4626917540000193,
+      "recentSolOut": 0.369588283000013,
+      "buyShare": 0.004065067114088725,
+      "regularBuyer": false,
+      "firstBuyTime": 1786862148,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 0,
+      "txCount": 1156,
+      "txCountCapped": false,
+      "firstTxTime": 1769543728,
+      "lastTxTime": 1788798750,
+      "funder": "7iVCXQn4u6tiTEfNVqbWSEsRdEi69E9oYsSMiepuECwi",
+      "score": 0.05,
+      "verdict": "organic",
+      "reasons": [
+        "near-zero SOL balance (disposable wallet)"
       ]
     },
     {
       "owner": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
       "amount": 0,
       "pct": 0,
-      "recentBuys": 7,
-      "recentSells": 42,
-      "recentSolIn": 0.05152488800007404,
-      "recentSolOut": 0.2407299579999176,
-      "buyShare": 0.0016266735729573256,
+      "recentBuys": 41,
+      "recentSells": 64,
+      "recentSolIn": 0.22370681300006368,
+      "recentSolOut": 0.5485449010000139,
+      "buyShare": 0.0019654190956775014,
       "regularBuyer": false,
-      "repeatSize": 3,
+      "repeatSize": 26,
+      "firstBuyTime": 1787340048,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 163810189828,
+      "lamports": 163832897605,
       "txCount": 3000,
       "txCountCapped": true,
-      "firstTxTime": 1788797526,
-      "lastTxTime": 1788797550,
-      "score": 0.2,
-      "verdict": "organic",
-      "reasons": [
-        "3 identical-size buys",
-        "hyperactive wallet (≥3000 txs; trading bot or MEV)"
-      ]
-    },
-    {
-      "owner": "AYyzFvBDD5fgiWvJyteoBVJofYvPHZgkjdKsPgRwoNMA",
-      "amount": 0,
-      "pct": 0,
-      "recentBuys": 1,
-      "recentSells": 1,
-      "recentSolIn": 0.029732937000005677,
-      "recentSolOut": 0.19032619800003658,
-      "buyShare": 0.0009386877825769325,
-      "regularBuyer": false,
-      "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 2093514154,
-      "txCount": 7,
-      "txCountCapped": false,
-      "firstTxTime": 1788787418,
-      "lastTxTime": 1788796111,
-      "freshAtBuy": true,
-      "score": 0.25,
+      "firstTxTime": 1788799891,
+      "lastTxTime": 1788799939,
+      "score": 0.35,
       "verdict": "suspicious",
       "reasons": [
-        "fresh wallet: first tx < 24h before its buy, < 15 lifetime txs"
-      ]
-    },
-    {
-      "owner": "KqFAUJi7NW3qJoKc9zshg8BbdDnhwFgHgubqQa1B4b4",
-      "amount": 0,
-      "pct": 0,
-      "recentBuys": 0,
-      "recentSells": 1,
-      "recentSolIn": 0,
-      "recentSolOut": 0.137749782999947,
-      "buyShare": 0,
-      "regularBuyer": false,
-      "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 775255013,
-      "txCount": 39,
-      "txCountCapped": false,
-      "firstTxTime": 1788788795,
-      "lastTxTime": 1788796485,
-      "score": 0,
-      "verdict": "organic",
-      "reasons": []
-    },
-    {
-      "owner": "FMVHP1xw6ZHB9zLGyrJeeAvEzCBgouH8bPzdkYqq2C5W",
-      "amount": 0,
-      "pct": 0,
-      "recentBuys": 0,
-      "recentSells": 2,
-      "recentSolIn": 0,
-      "recentSolOut": 0.12293598999997357,
-      "buyShare": 0,
-      "regularBuyer": false,
-      "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 9096857198,
-      "txCount": 285,
-      "txCountCapped": false,
-      "firstTxTime": 1788777440,
-      "lastTxTime": 1788797459,
-      "funder": "2k5hrzuykwyTbUe8L7UriYAQhr5hijNLgBvEB4B9pP5y",
-      "score": 0,
-      "verdict": "organic",
-      "reasons": []
-    },
-    {
-      "owner": "7UFYdQre66c2Pet3HgDeh6KoPqpWv8tByZRYyYdnkWgJ",
-      "amount": 0,
-      "pct": 0,
-      "recentBuys": 1,
-      "recentSells": 1,
-      "recentSolIn": 0.00991097799999352,
-      "recentSolOut": 0.1001244259999794,
-      "buyShare": 0.0003128958959547421,
-      "regularBuyer": false,
-      "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 208994855,
-      "txCount": 3,
-      "txCountCapped": false,
-      "firstTxTime": 1788789596,
-      "lastTxTime": 1788791067,
-      "freshAtBuy": true,
-      "score": 0.25,
-      "verdict": "suspicious",
-      "reasons": [
-        "fresh wallet: first tx < 24h before its buy, < 15 lifetime txs"
-      ]
-    },
-    {
-      "owner": "5QVZVRbv2abixZ3x3dxLjExESuukf3QNUmQXJcFFpAh1",
-      "amount": 0,
-      "pct": 0,
-      "recentBuys": 1,
-      "recentSells": 0,
-      "recentSolIn": 0.0935350089999929,
-      "recentSolOut": 0,
-      "buyShare": 0.0029529598838991247,
-      "regularBuyer": false,
-      "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 268423700,
-      "txCount": 289,
-      "txCountCapped": false,
-      "firstTxTime": 1753027295,
-      "lastTxTime": 1788796298,
-      "score": 0,
-      "verdict": "organic",
-      "reasons": []
-    },
-    {
-      "owner": "EjqJgyRNUdbjJDmnFyMmrH5gG4ronAh5HCZgCmoCG1a6",
-      "amount": 0,
-      "pct": 0,
-      "recentBuys": 0,
-      "recentSells": 1,
-      "recentSolIn": 0,
-      "recentSolOut": 0.055665434999980334,
-      "buyShare": 0,
-      "regularBuyer": false,
-      "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 10711142,
-      "txCount": 22,
-      "txCountCapped": false,
-      "firstTxTime": 1788784535,
-      "lastTxTime": 1788794496,
-      "funder": "6yNCQ9nH7zDxBpaCjge4JvsKPHnT13jkhC3hywtbst5L",
-      "score": 0,
-      "verdict": "organic",
-      "reasons": []
-    },
-    {
-      "owner": "FE7xMeMgzi3cQX5SEtzE6c1sCWzcSAo5FbAZXWkpDohM",
-      "amount": 0,
-      "pct": 0,
-      "recentBuys": 1,
-      "recentSells": 1,
-      "recentSolIn": 0.019821956999976464,
-      "recentSolOut": 0.020224517000031028,
-      "buyShare": 0.000625791823479788,
-      "regularBuyer": false,
-      "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 1516584657,
-      "txCount": 3000,
-      "txCountCapped": true,
-      "firstTxTime": 1781695654,
-      "lastTxTime": 1788794778,
-      "score": 0.1,
-      "verdict": "organic",
-      "reasons": [
-        "hyperactive wallet (≥3000 txs; trading bot or MEV)"
+        "26 identical-size buys",
+        "automated trading wallet (≥3000 lifetime txs)"
       ]
     }
   ],
   "trades": null,
   "pool": {
     "address": "5WgYinqANwpEXJiW59nL2dDr683QyzqKahJQxCJJ1NFv",
-    "sigsScanned": 94,
-    "parsed": 94,
+    "sigsScanned": 3671,
+    "parsed": 350,
     "swaps": [
       {
         "signature": "3NUtemPPuGBTGL24EDHT6f1dMsMYCf49Lk1CswEaNhihZFwmSVBfTd4rNLfJuwNf1FUYTnhwAXemMru97WMeSGqG",
@@ -1130,15 +1900,6 @@
         "sol": 0.0014762069999960659
       },
       {
-        "signature": "2sfnLwgRS6JgKQueSk1cWWLiuuvNLRXTRoo2gYh4kEGT6M8TarJtZhdRvAvrhoBJB5bdVwrosv9pkCXaW9nsWzDB",
-        "slot": 445088053,
-        "time": 1788791301,
-        "trader": "GJeipeY4SWs21t2Two5L9jzXaX81KhoCna8paXoLjdo6",
-        "isBuy": true,
-        "tokens": 360159.75911,
-        "sol": 0.9923654189999525
-      },
-      {
         "signature": "b6F7tLLuAc8rrLUmEEdNoGgvpT7JPpQwsTTxvmpUq69M5JYM2UQzzirbii3ZwFisBK3vetmHwWnkXPFGcdYuU7K",
         "slot": 445088026,
         "time": 1788791293,
@@ -1301,15 +2062,6 @@
         "sol": 1.288427299000034
       },
       {
-        "signature": "3o6nG1K37yYKbtfhUf2mo2BJfnvqSS6phFHRheMqUG1TQubwkVPR21nq8YJv54HSQYydPa7SXdh2jsizpAWrDkd1",
-        "slot": 445087056,
-        "time": 1788790987,
-        "trader": "AYyzFvBDD5fgiWvJyteoBVJofYvPHZgkjdKsPgRwoNMA",
-        "isBuy": true,
-        "tokens": 11084.757599,
-        "sol": 0.029732937000005677
-      },
-      {
         "signature": "MjBYJCFhgBSLecnk2pBgc89FHTBqYoV3cpHpNQy96gUoT6jmebEGewdMzNf78jYexj3iMzNEgFckmidQYt4Mhm6",
         "slot": 445087014,
         "time": 1788790973,
@@ -1335,15 +2087,6 @@
         "isBuy": false,
         "tokens": 422.7322159999967,
         "sol": 0.0011268819999941115
-      },
-      {
-        "signature": "4Lzw9BuBXHrMqeyeBH3SHR266gparZuaXFNygnuh6vB8MPWCDp1LYQZ4xkFSscSbCsrgnWftZ4p4CQdVXi3h6LGi",
-        "slot": 445086739,
-        "time": 1788790885,
-        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
-        "isBuy": false,
-        "tokens": 684.0541089999897,
-        "sol": 0.0018235109999977794
       },
       {
         "signature": "5aPawZv77HWomq7hR8Pnfage1y4Sw6bspc1F3emeMcKamJAqedC9YctjjJgkDSPTa1udqCDDApgKr6DygeyKbu3J",
@@ -1677,34 +2420,2091 @@
         "isBuy": true,
         "tokens": 40477.631087,
         "sol": 0.0935350089999929
+      },
+      {
+        "signature": "4NiVi8oXCwqU9hatdyABiv4Xqng1kdeH59YagWaNKtJz78s132fXDt1wWA1PLtisPdA4BAgAC6CzNqo2L9Zb8qVz",
+        "slot": 445038650,
+        "time": 1788775653,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 12953.580358999956,
+        "sol": 0.02980596000000446
+      },
+      {
+        "signature": "2XuQQ4fmD7G3avgDGmuwnnwPu94dJzrfn6geLkxPL3khRaqjpyVygnjj4xomrBkxXdbPag17Z62ukYfXkNtaPHjf",
+        "slot": 445038334,
+        "time": 1788775553,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 1033.382998999965,
+        "sol": 0.0023875860000259763
+      },
+      {
+        "signature": "6oXTAGhQNnKK2w4gcVRyKAfd9mdeC8Mw9eojeWnksyRsNKGQqg9wsn57DKAuWY8y48iGUaGW7fJTimt6T4tUfVG",
+        "slot": 445038333,
+        "time": 1788775553,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 1508.0021660000202,
+        "sol": 0.0034840909999900305
+      },
+      {
+        "signature": "3xTqf8yrnsoiL1h3TywuLyAegaQ5dPEZunDduMoHUDnf9WCmykZZ9HS4M7ZfrA2N1BfLWBZwHMsS1ouXcRYa91g4",
+        "slot": 445036775,
+        "time": 1788775058,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 244.93038800000795,
+        "sol": 0.0005658789999927194
+      },
+      {
+        "signature": "4jMi5bQqt7WFFK7BDiTJuUVAAoLdQADNKr12C36MZd2A42jccvFtss3s4r3NBwgc6ys1xXARSrnRpYgdBa2dBDfJ",
+        "slot": 445036000,
+        "time": 1788774812,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 2269.0844820000057,
+        "sol": 0.005242293000009113
+      },
+      {
+        "signature": "5Pk3R2JNdXRdFXGP3q1eYzmDEvYwceUunQcZNYctfYfVZ2rihqFBUms9dJktFSpAscHfd8dkbY6csPeqezqBRxEz",
+        "slot": 445035999,
+        "time": 1788774812,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 15895.872206999979,
+        "sol": 0.03671835800000167
+      },
+      {
+        "signature": "3Hx9FsqN5medd3MsZF62TwrdQxAgfvVJa6jrCSJh7XhGTE3Jkh4JuQivAUQDZpkfBPB1c9FpoBrbyLaLy6VScajM",
+        "slot": 445035440,
+        "time": 1788774636,
+        "trader": "8xSVeCtZzbSQcBgpnpAqVr8ag7w5E6Y38RnZ1BcDHDVN",
+        "isBuy": false,
+        "tokens": 199163.98907299992,
+        "sol": 0.45898021200000017
+      },
+      {
+        "signature": "4hvDtADsAzNpS9i4wv6x5FtiQsH2vNDHiqXjQSq1FF8B8ep5RmKKjRsBqwQrhj68q69Jz2VAyqchgCdVd4wdLtAT",
+        "slot": 445034394,
+        "time": 1788774309,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 684.7714350000024,
+        "sol": 0.0015872649999835176
+      },
+      {
+        "signature": "3vka4tmzG9JtYkvvbEyJ8HsS7Ei18gwB7erNpHNJqWVozyyHDWFR6sZcibp9xcSizJdywsCwbXSqzNnUPuPrupa3",
+        "slot": 445028176,
+        "time": 1788772335,
+        "trader": "H1w8X9ubRKcXZVMt5NVMgcavviqJNeTWTnx6GbXGEBZu",
+        "isBuy": false,
+        "tokens": 122235.139251,
+        "sol": 0.2825149530000033
+      },
+      {
+        "signature": "2mzovKnP2u5Pqymt9aFDbNj4Sk7ejvt5MWfYSkcFesnKqaxAaLWmLsampptyEWrNQAp8mHtq3pwHfFfQmgq4ZEnF",
+        "slot": 445026828,
+        "time": 1788771907,
+        "trader": "DDBFu8UJJywLYcCe7v6kQgBoohSuvHWSTNJLut9ZKNF4",
+        "isBuy": true,
+        "tokens": 51626.991187,
+        "sol": 0.11987754600002631
+      },
+      {
+        "signature": "3CBxL4qDZHcg1LDpwHAMCzCiTGrwVZcPQcWKat5RY3ykJLW4o2kNX2af7HmckgS65dvZymFshMwA1rBTkwvgs4FC",
+        "slot": 445024076,
+        "time": 1788771035,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 1183.6538810000056,
+        "sol": 0.002747117999973625
+      },
+      {
+        "signature": "3tLqZvL3xzoEEP35v5EhAZE247odjFZjBeG3bVMCmVLYgDQmE2rKxvSD1ctDfhdsd6w5J7fEV6YVX246Hzp9BJNu",
+        "slot": 445024076,
+        "time": 1788771035,
+        "trader": "8xSVeCtZzbSQcBgpnpAqVr8ag7w5E6Y38RnZ1BcDHDVN",
+        "isBuy": false,
+        "tokens": 199163.98907299992,
+        "sol": 0.46121911999998133
+      },
+      {
+        "signature": "3EE9wyvdLDYLrQnmfj8BBRprqGeS6hDmRibkhq9DPAvWF1iW72ABRT9FoJZSbMPaM5rDxCnqdHrJENywWdfcndLy",
+        "slot": 445012700,
+        "time": 1788767435,
+        "trader": "8xSVeCtZzbSQcBgpnpAqVr8ag7w5E6Y38RnZ1BcDHDVN",
+        "isBuy": false,
+        "tokens": 199163.98907299992,
+        "sol": 0.46289486800000645
+      },
+      {
+        "signature": "7tFGT2uYWcCKm4K5HBtbKYtPNLNg14uKkRcmUg3qHZ9zzsgZm45Z79pH8XXfFTbcBobb6DQzNnZbZsMT6cExUS3",
+        "slot": 445001341,
+        "time": 1788763833,
+        "trader": "8xSVeCtZzbSQcBgpnpAqVr8ag7w5E6Y38RnZ1BcDHDVN",
+        "isBuy": false,
+        "tokens": 199163.98907300085,
+        "sol": 0.4645797700000003
+      },
+      {
+        "signature": "45wEm9vP3gYW9zZS2ExwVMxcNLUGnfm82tdy3Yt8vD8AiWBA97sLCUCsA2VowSeowizjPMwHYFy3ju4XPcU7UNyj",
+        "slot": 444989960,
+        "time": 1788760232,
+        "trader": "8xSVeCtZzbSQcBgpnpAqVr8ag7w5E6Y38RnZ1BcDHDVN",
+        "isBuy": false,
+        "tokens": 199163.98907299992,
+        "sol": 0.46627389099998595
+      },
+      {
+        "signature": "39g7che6fV77126YxQtnTe2DjTCkbM2zH63U9ST3yo3sVe1W6n5UHtxGVubcdPFcGsqxcsQFzhfStFVyVBMK9w5g",
+        "slot": 444978601,
+        "time": 1788756632,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 993.5601329999918,
+        "sol": 0.0023396429999706925
+      },
+      {
+        "signature": "2U2Tocy2dJv7hnBuJN7rQ2yYjNkUwGELVEXVecyKz5xjbqRUD1q5jji2mEqDjUpc16u9sxqUztxxBvtsLtwasPAB",
+        "slot": 444978601,
+        "time": 1788756632,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 1024.3543110000319,
+        "sol": 0.0024121140000374908
+      },
+      {
+        "signature": "9fLQ2YaVMEbp8GAY8UZVC9kj6QkLQZydWjDdT4AiFzGa18r1cxe3wB4RXVCwSNGL23iEhmMNhfxN2GaGfpDMBLL",
+        "slot": 444978600,
+        "time": 1788756631,
+        "trader": "8xSVeCtZzbSQcBgpnpAqVr8ag7w5E6Y38RnZ1BcDHDVN",
+        "isBuy": false,
+        "tokens": 199163.98907299992,
+        "sol": 0.4679599590000407
+      },
+      {
+        "signature": "2oGcezQHAezGe7aM7rsg94Vsj7JSzse58s8jTiDQy7Vbcxzxw5pgr3TMMiJ8Ek7RNLYYNFZ42Q8MQ3zAcuv1jNSy",
+        "slot": 444977747,
+        "time": 1788756359,
+        "trader": "C3MWG3iWK6VwvZSMuunTpsMwYcjXEJS4HhFruR5mb88h",
+        "isBuy": false,
+        "tokens": 204100,
+        "sol": 0.4772356919999652
+      },
+      {
+        "signature": "5bR2ikKGSedTFgGABGMJKxymma6swgFJLhHvTuF8HjkZDeEEPe9uVQT6jcggpPDSumzwTKyterwFkxfBRDpeYbCu",
+        "slot": 444968113,
+        "time": 1788753312,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 1013.3700309999986,
+        "sol": 0.0024038440000140326
+      },
+      {
+        "signature": "5ukbkyoJWpJdpYqtqG6GyEpYEf7it7QBdAwC1Wiyk1tB4hGnBK2xwQNW8FHbqAHQtzvmxmGGB5DYwipd11dAavBV",
+        "slot": 444968113,
+        "time": 1788753312,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 5256.4934679999715,
+        "sol": 0.012468348999959744
+      },
+      {
+        "signature": "3Kd2DtY1NXKDydaJsCfST46N3PEy6nYjirpwXDrYCWwSvm2mP8wgq8uLXMJ3aA2cMmCZ8JNntCtDnYxJGbEBrChA",
+        "slot": 444968113,
+        "time": 1788753312,
+        "trader": "7DbM3iS7CymTWXdc6QaEqPXeXjbc7R9QDuY1LdguaV67",
+        "isBuy": false,
+        "tokens": 1895755.802874,
+        "sol": 4.557854636999991
+      },
+      {
+        "signature": "5evsCBGHEX2vxEcRCeikMftdvkmjnvZCZzmUCBmyMU74LB4pmLC6TzvNuDnLHyiJw7sj6Y1vbSb7fqQNYbf4vbmH",
+        "slot": 444962162,
+        "time": 1788751428,
+        "trader": "8nvP149GGw4Ep2Wmtq7T1jz4Kj1qBQixUrR7SxwKBKiD",
+        "isBuy": false,
+        "tokens": 276094.14085399965,
+        "sol": 0.6740623110000001
+      },
+      {
+        "signature": "5PMZ5d7AKyGDzm28JyxNWwKM6CveAqrQC5sp6rU2qvkPW4bJf28nc59BZj9tPCoWGo51RLrBAgGeXH1Wj24UPJQt",
+        "slot": 444961954,
+        "time": 1788751360,
+        "trader": "8nvP149GGw4Ep2Wmtq7T1jz4Kj1qBQixUrR7SxwKBKiD",
+        "isBuy": false,
+        "tokens": 274735.1613190002,
+        "sol": 0.6741939800000409
+      },
+      {
+        "signature": "Z8V27gXQnjRsFvmNoLMmU2Lw3evAmEUNGcXWnyQ4CEPUHcSEsza5iLmjv2p4Jqz7FnbbJDwFYj41HxWTwCkEskb",
+        "slot": 444955904,
+        "time": 1788749429,
+        "trader": "8xSVeCtZzbSQcBgpnpAqVr8ag7w5E6Y38RnZ1BcDHDVN",
+        "isBuy": false,
+        "tokens": 199163.98907299992,
+        "sol": 0.49512726699998666
+      },
+      {
+        "signature": "2M3AprRzNUcBT7qp9wesvN21VoXDTBBmNSJXVzZDZLW4U7PseCJ4TUhGULGpXrHPGYL6RbGN1jzUeW4ymNHGy4xw",
+        "slot": 444944568,
+        "time": 1788745828,
+        "trader": "8xSVeCtZzbSQcBgpnpAqVr8ag7w5E6Y38RnZ1BcDHDVN",
+        "isBuy": false,
+        "tokens": 199163.98907299992,
+        "sol": 0.4969914220000078
+      },
+      {
+        "signature": "3o9nwNCfK7iPhZfBXmGCoV1dfa4rPD9b562hz1TGXdQUGadQe2bUcmPBbJjhgDC7zggQDSgmYZsH6VmwNShfvu6q",
+        "slot": 444944560,
+        "time": 1788745826,
+        "trader": "H1w8X9ubRKcXZVMt5NVMgcavviqJNeTWTnx6GbXGEBZu",
+        "isBuy": false,
+        "tokens": 189063.948459,
+        "sol": 0.46949021399996127
+      },
+      {
+        "signature": "5QzgJDo7uQK2vz6bijdwW6n2N46Z4KfjheB2BNTns7z7zYgd714sJhSRh5E6ErscFLbEesAtWKVUKia8VNZd8j7o",
+        "slot": 444933245,
+        "time": 1788742227,
+        "trader": "8xSVeCtZzbSQcBgpnpAqVr8ag7w5E6Y38RnZ1BcDHDVN",
+        "isBuy": false,
+        "tokens": 199163.98907299992,
+        "sol": 0.5006403440000327
+      },
+      {
+        "signature": "2rbdTnWjRNemcnuuEdMTFAHAjqeMGArCQXdhhM5jeuT3kWAepJxw6ezgiBKs9DRvZKdYKV8fn9SpiaDtdiVmCt3t",
+        "slot": 444918109,
+        "time": 1788737434,
+        "trader": "H1w8X9ubRKcXZVMt5NVMgcavviqJNeTWTnx6GbXGEBZu",
+        "isBuy": false,
+        "tokens": 222590.34400499996,
+        "sol": 0.5569856469999763
+      },
+      {
+        "signature": "3mGsdaHK5Lohr8VcPcRFVt4xHYxV4NC82mcykMb7tRX9qegsztw5whnXaC77baEuScy3iHkkbKe5GRDbcAhw9pY2",
+        "slot": 444912452,
+        "time": 1788735643,
+        "trader": "HKCkmsdBFEoNtmEdyAFcaowbebNLXGFHXDJB2ZJSXGRK",
+        "isBuy": true,
+        "tokens": 2450.866977999991,
+        "sol": 0.006223044999956073
+      },
+      {
+        "signature": "5ufzs6tHcbCn5uWeXuVtZDwNvhDCbPbNURM9hAercxDUXEyoExfm4DwFcFY4eLrTAyMDLKLanHAmo3D56MudBwak",
+        "slot": 444911523,
+        "time": 1788735350,
+        "trader": "FBd9Q7xtgdpzyCYfHJLm25gNtdQScGL4npKxWKEZ4W6B",
+        "isBuy": false,
+        "tokens": 246423.69645,
+        "sol": 0.6246487329999582
+      },
+      {
+        "signature": "4Y6cwCJY69qCXcPjHmjqVf93Lzcio2CDE3QQYUgXmUAvu8UdvLrosaWhAa7qSJzM4Lp6UVJdSrcjjCv48nLWzyNL",
+        "slot": 444907324,
+        "time": 1788734024,
+        "trader": "Emk5yXD9o7zqh5vNSgHxp5xTGYK3PNq7ULdpKZRCN7CX",
+        "isBuy": true,
+        "tokens": 782052.468127,
+        "sol": 1.9802136490000066
+      },
+      {
+        "signature": "4AxyyESEp3HkeupVV7KpAh3ixbhHPzqoWVB9DjAt2yDCv9BBTu9jCPuyk6Nko2qYXLis64mcaGge42LWW6oBT2fS",
+        "slot": 444898058,
+        "time": 1788731086,
+        "trader": "Fiwaaqdz8hHYYtWriB1buztk5n2z6qMJXmoy2zZow1RR",
+        "isBuy": false,
+        "tokens": 84930.459754,
+        "sol": 0.2127764319999983
+      },
+      {
+        "signature": "4SG7oUSdJo5Q3JiUzje1ifAadiutvQ1ruye2VZzK1xZeFj79huL86J76Xauop8Y97KNmzuS4JtHbuzv6X67MKEr6",
+        "slot": 444896681,
+        "time": 1788730647,
+        "trader": "Fq8gdNYimftZFwagb16Pkp8nJmX7ShPcguPFcFQiU1Zx",
+        "isBuy": false,
+        "tokens": 7624.216315,
+        "sol": 0.019117711000035342
+      },
+      {
+        "signature": "xh5SvnUGSoeYZd7YdXXw8UBwPjZ1CqXWSCJHByVQPzT2EizRzqrKtnWaXxK3ZnnVKZsMpDTZe9fHY5bdaugYTQf",
+        "slot": 444890578,
+        "time": 1788728719,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 148.40281399997184,
+        "sol": 0.0003721470000073168
+      },
+      {
+        "signature": "4oFgWFWpKN7y2FuvjarJsSF2nhJMbm85vA1JHEGNdnLcecJ2irxpzJ9GFf3WAfUwJutMsnEjfMMtnqwv12QQrKyL",
+        "slot": 444890578,
+        "time": 1788728719,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 10084.320264000038,
+        "sol": 0.025290729000005285
+      },
+      {
+        "signature": "5K8NJKFwZRKUg3dkNhszd4EJXsWc2uMGCbUDYnYW8wLkrzqe6ecuMiMt6gZFuNayBM112vC6nNwbP85YRWBoiu9X",
+        "slot": 444888155,
+        "time": 1788727954,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 2361.4800389999873,
+        "sol": 0.00594659099999717
+      },
+      {
+        "signature": "2hyYgpXfsmfpPFHFcSkYrhjZ8Yi3uqUoZ3NT97gFnP9E7EAGoYAGacTbfHvSzoh3wCDd5Vd9NcibZAt5odi2ZtPx",
+        "slot": 444886081,
+        "time": 1788727298,
+        "trader": "CCi3K8YvmamREX9Y1aXmmS3zskD645yUFL75p8ok3uDw",
+        "isBuy": false,
+        "tokens": 4629.695444,
+        "sol": 0.011612030999970102
+      },
+      {
+        "signature": "5kwAhAH1XQXzuHoVKRkympSB7ETQMb2dERkzp4jY2RNCtFXYNztAuKCaQ9FFKWssEwh6BKUmkbF1ngsL9P6aCDum",
+        "slot": 444885080,
+        "time": 1788726985,
+        "trader": "BvoxKEUeCkbWV7geTs74z8bhExE8FjVfaR4STkGe8tBi",
+        "isBuy": false,
+        "tokens": 1943.292762,
+        "sol": 0.004874398000026758
+      },
+      {
+        "signature": "3ntc2TCJZQVGwMHMkdMaGPR1Qiz9rp6Th1aFtcyHY5gGKobBRwSjR67g2JRY2mE4U7dybsDBgMiSEujyQ4c7xPpw",
+        "slot": 444884459,
+        "time": 1788726789,
+        "trader": "2WfZhRrmKnb4Tybg7eAuir8ctrqzhxWKqHnVymVoxNnV",
+        "isBuy": false,
+        "tokens": 5260.853815,
+        "sol": 0.013196800000002895
+      },
+      {
+        "signature": "5pSVv6BRWJimyvKap6GTXrx8dmXSuMB5YN3xpUfmwwz1mngqprgdmsLvZWrPiWEUqhSLwpG9Y3gNtEuzsYYjS6ap",
+        "slot": 444876461,
+        "time": 1788724252,
+        "trader": "Ahm2g912efgQWGTujMLQnQnpCFBNyTGaatMcj195ys2v",
+        "isBuy": false,
+        "tokens": 96500,
+        "sol": 0.24230255799994893
+      },
+      {
+        "signature": "5ecqkaYvMJgDnog44gTngNuwqa5ZWK7dwFPyP7LgStthPvbn5nKktb3Stoy7DchzCNice4BCbVZhNpZyXcYaoCqv",
+        "slot": 444875866,
+        "time": 1788724064,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 2233.1794099999825,
+        "sol": 0.005612558000052559
+      },
+      {
+        "signature": "5x6RPEDxTkiWRuU56EesWAFs92iVAxP1aD6VvnR5dsYv5pFmvwBphq2S9om9xJUzE7bgUSf2tUjMQHAoSqGJCtFC",
+        "slot": 444871248,
+        "time": 1788722600,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 1717.2062110000115,
+        "sol": 0.00433310400001119
+      },
+      {
+        "signature": "5KGc3kt3EY5tFbrNvVh8WdaXkHQY7NsxUx4wq71y1o7QnReToCvjYduUGqSrZinS5r1W3hVe9tR4NJcSetWrojsn",
+        "slot": 444871248,
+        "time": 1788722600,
+        "trader": "7b4YpJsszdXGKraYwwAG1vDWSJBzrxvsy3hvUBchLW7X",
+        "isBuy": false,
+        "tokens": 1789777.613024,
+        "sol": 4.575656901000002
+      },
+      {
+        "signature": "1mw4DWReJBL6i611WxcTExi7SBMRunruEGeTVhpzV6mXmG9CTscVJV4ZqWhHSB4zEQyk3GGKuTFfkd6gQbytT7H",
+        "slot": 444867576,
+        "time": 1788721438,
+        "trader": "Fq8gdNYimftZFwagb16Pkp8nJmX7ShPcguPFcFQiU1Zx",
+        "isBuy": false,
+        "tokens": 7095.0120080000015,
+        "sol": 0.018453308999994533
+      },
+      {
+        "signature": "29AC4azxas1CY95PAKPSoFASs46eLqWqa5snuWz3ygG2cUNk9phWioMnbYZ9dm1fEADeAtFzYsJE2rCFqWp7QKbo",
+        "slot": 444864022,
+        "time": 1788720320,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 2087.372418999992,
+        "sol": 0.005451040000025387
+      },
+      {
+        "signature": "5e97KR7sK2ExmQDWLn9fFQkrNzbfXguhPaNEZmndFG4Xknd9Xrdzhz2TAdmQ1X2gbzYbG96mFipahU94Yym84c6R",
+        "slot": 444859862,
+        "time": 1788718996,
+        "trader": "AJQBDU71fwVdsG1gWyRpMhuH3C1jCrE4bnDqA2okiUZ4",
+        "isBuy": false,
+        "tokens": 334149.41000000003,
+        "sol": 0.8719147720000251
+      },
+      {
+        "signature": "3sTy48fX9U7qNQNcL7VQzjEbgypf8e353Hxta4GngBnUuy6EH4x2n3wGUgHVBdJyq2oScKEGRiRXJWZ1KN8adGMR",
+        "slot": 444858612,
+        "time": 1788718600,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 827.6862360000086,
+        "sol": 0.0021753839999973934
+      },
+      {
+        "signature": "2MFPstAHAo9AH4Q1AYm6X5duN3a8q1adGHKK9eUKLFY6YwbnN98fLxmeDyz51MHPyevm6DCGQTh9wfmnzwksu6Ka",
+        "slot": 444848115,
+        "time": 1788715272,
+        "trader": "BUDz9HggSPfiteVh3NJTydr7KACSqjZu9ycamEtLLamQ",
+        "isBuy": false,
+        "tokens": 608884.055821,
+        "sol": 1.602635035999981
+      },
+      {
+        "signature": "2rn6ByqrPwtKfTVrTjsGE7vUP9PzKc7NW3ut63Leo93aNBgh7motAg8N2fhJAKuYxYVkyRTbTHUdUC93Bx8Qv3bz",
+        "slot": 444833261,
+        "time": 1788710554,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 3241.5637220000062,
+        "sol": 0.008253623000030075
+      },
+      {
+        "signature": "2GevP8wNgrQp5K2tjcRbzAy6qraHWJswe6cXmzTKE4NXbt9nujoRgXFZceWjDfTSp5hssa77auoy1ySnezj61Njy",
+        "slot": 444830890,
+        "time": 1788709796,
+        "trader": "3SyrJDwFcJ2PY5yAkUtSUBd9GBb5WqKVU72Nh8ocF9T2",
+        "isBuy": false,
+        "tokens": 7515.575783,
+        "sol": 0.01844131800004334
+      },
+      {
+        "signature": "5bF6U986wuQir5rErLb6VpS5quBz3JPKzLbszTK42YHsWr9JRojcBPi3Mz6dv6csb8EQ3YJgj8aZE8JcNjXNgJGR",
+        "slot": 444820569,
+        "time": 1788706519,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 1261.1608990000095,
+        "sol": 0.0024456130000203302
+      },
+      {
+        "signature": "CVyXTDi9ia4FbshRJWFuZ1iwzsnnpCmneshawMtHC88WJynLe4Yv8GB5WLLFqwDk7v3mxv3WRNCNeWd6i2VU9oV",
+        "slot": 444811103,
+        "time": 1788703517,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 323.5631300000241,
+        "sol": 0.0006433100000151626
+      },
+      {
+        "signature": "5Y9hcYahkVmoq1MZ2wViEgKYqdA4VRg6K9SRHzhRyHyzaFpm9ysDAoxNdWE3kN8JoRTXB6nrT9FTn7YpUzEwTfQc",
+        "slot": 444806882,
+        "time": 1788702183,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 1421.0966430000262,
+        "sol": 0.0028945290000024215
+      },
+      {
+        "signature": "2WzzNHsoyfUERLX9NaSYd27LYHjukQF2tANYJDfX8N5diDYF3PKp3aHFTUq6TgJgyfhkVcujeEFXmCAb6K6ykX7V",
+        "slot": 444799544,
+        "time": 1788699858,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 477.8907140000083,
+        "sol": 0.0010407720000102927
+      },
+      {
+        "signature": "3PBKGqwkLDZHBcG9wbPzGJWvQYeSJ4NKjoTqVG9Y4zwkze7R9aXmNMUnp7zVz4nv5URwUakRb9uuPFAf7oLDBfcD",
+        "slot": 444783461,
+        "time": 1788694755,
+        "trader": "3AudKVvBwK5hKhWG8iAS9qnaj5USw5oZYWnj8UtUnf2j",
+        "isBuy": false,
+        "tokens": 160566.39960900007,
+        "sol": 0.369588283000013
+      },
+      {
+        "signature": "26qyoxJ5AnTNS37TWLYjYCbMMEVMEDEXt8t1x1kU3t7n733Tf6yx9Nz6PbuKBczGNUGQd9mrHYPBxmBJQvu35YfL",
+        "slot": 444759834,
+        "time": 1788687271,
+        "trader": "CkUZV387xnoGpF7wC2moMa6mPmAgCvTT4pWgzq4M9fCD",
+        "isBuy": true,
+        "tokens": 41249.277853,
+        "sol": 0.10054590599997937
+      },
+      {
+        "signature": "2u1SKHwNFLnABFSR3fni37cUd3YLejJamYQMfZ4MDWtgFeoD4rHUGUtpRo4TeSpJFmpCx9hzS5yTKM9Cs1mgzC3i",
+        "slot": 444682962,
+        "time": 1788662928,
+        "trader": "F73QsRqXvoPBRaJEzUtdxxJyUkFjBntSGE3cSC5FedH3",
+        "isBuy": true,
+        "tokens": 65906.493046,
+        "sol": 0.15992365599998948
+      },
+      {
+        "signature": "2tZ19j2eVAu3Zbq9QkoRamRHL8aNLRmbRRfqSJnh2aeo62bLuRfVGB751GWrdXXwFVLf6KDXWJs6KPSKdsaWKjZc",
+        "slot": 444468280,
+        "time": 1788595244,
+        "trader": "2WfZhRrmKnb4Tybg7eAuir8ctrqzhxWKqHnVymVoxNnV",
+        "isBuy": false,
+        "tokens": 595.20619,
+        "sol": 0.0014856519999852935
+      },
+      {
+        "signature": "ji7AVkpi68sFYvRLdtieRtovwAgLH99hwnydYn7s5osVSbLrUo937FBYdN39saNCLWH7kJzw3ty7AFsWCMMyGEz",
+        "slot": 444385930,
+        "time": 1788569308,
+        "trader": "BUDz9HggSPfiteVh3NJTydr7KACSqjZu9ycamEtLLamQ",
+        "isBuy": false,
+        "tokens": 144000,
+        "sol": 0.33189353100001995
+      },
+      {
+        "signature": "4FkxTCBAz2BawbrhiV2avRuYbDd8w5HYPSK4rvaP4MrsFhm16KF56eAfviZ61G6QvsLeVQGSr5wqFjBjFQf49XNd",
+        "slot": 444330963,
+        "time": 1788552012,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 667.9433260000078,
+        "sol": 0.0015732840000168835
+      },
+      {
+        "signature": "3vAVQLkAXXWQx8aiVj5gfruRQ2cy6NAaiBv5hEsyF1vrRcsaNBy7taSqy2rUji1bWnX4Mtm89XaaPGC2Ugu6ofsT",
+        "slot": 444314581,
+        "time": 1788546847,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 653.7922640000033,
+        "sol": 0.001587586999960422
+      },
+      {
+        "signature": "39mMxWWF1k2kjgBrCvfesMbjRznqhzLh5KVix67BKJHm7D9BUKHZxoR6shy85SjD2frusFSQhoKcojd4ui977JPJ",
+        "slot": 444310427,
+        "time": 1788545538,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 90.34809200000018,
+        "sol": 0.00022978700002340702
+      },
+      {
+        "signature": "eJwHWdxmH5jEtbmWxrRVXt6xdPjjdvcdc2U87AiDQnByqhvGojRmmNfBJDwtRnRjfs9hDRA4HFxjauTpQMq2zU5",
+        "slot": 444252925,
+        "time": 1788527335,
+        "trader": "DiVG1rHxQoVLuZsLVBEPe5A3pBU5ymvYBBtVSNhhhmKb",
+        "isBuy": true,
+        "tokens": 370145.187899,
+        "sol": 0.9700082259999476
+      },
+      {
+        "signature": "41aFFLXYKNpdhTdZKaNSKeMdqd5UkJ17rARuphNJ4kiiLsDHWavxtYxQzXm81VxAwkTT8c1E4aVifHpYJS4SjG1t",
+        "slot": 444234172,
+        "time": 1788521423,
+        "trader": "BM9CcyErJcu2mjrFvUsRRrD3snGeHDDVirJLvL6EjvMN",
+        "isBuy": true,
+        "tokens": 574736.6452059997,
+        "sol": 1.5998246080000058
+      },
+      {
+        "signature": "5qZHJzghBZbzkodtMEs1pdcxSCb98bku1rTBr2D9wkdgnpTFU9Ey682c1ZN4ntLTQSmDMSkgx8A4WMS3oDQbcubH",
+        "slot": 444180791,
+        "time": 1788504598,
+        "trader": "3DCp6TufpAbbok6sWZKi3NJUhBPqsiYQotF2ugC4f71U",
+        "isBuy": false,
+        "tokens": 2995980.4628010006,
+        "sol": 8.371757865000006
+      },
+      {
+        "signature": "LTpieXfzWrC2QprpR8jqSNMbADJWSxa4Er79WRV6ovdYpHnpLvDMzd3GFLTsdh66ooooFS4bmDZtgxLKSmWAMhm",
+        "slot": 444120744,
+        "time": 1788485675,
+        "trader": "EjqJgyRNUdbjJDmnFyMmrH5gG4ronAh5HCZgCmoCG1a6",
+        "isBuy": true,
+        "tokens": 173060.707222,
+        "sol": 0.47883753000002116
+      },
+      {
+        "signature": "YCzAPtJdyVPHVd2sVWgDogK7ZfVHkZjrrwSMfyhSQHSAv2gjdGVh3yZNMYT6EbWtgzJsPgifmE5rjYVTqxKJfVm",
+        "slot": 444072333,
+        "time": 1788470419,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 1334.0906969999778,
+        "sol": 0.003640671999960432
+      },
+      {
+        "signature": "34uDJmqdq6j4iruwwAuWyBDENppGzUfXFsBPFQWZphxJsqDfGFUB34bxiZqDjTwvdjKu6a6XPRojA4GaDTDE7G6C",
+        "slot": 444002976,
+        "time": 1788448508,
+        "trader": "7NfyynANY3TpWMfgWgZmBoEFCnGWTydAqqWwdN5gEhin",
+        "isBuy": false,
+        "tokens": 4841232.015236,
+        "sol": 13.844709057000046
+      },
+      {
+        "signature": "2Dzp56xtAywFYKfZHAYUkyBdRnhctkutWYZR6GJhou5rbvybTNbTFeene9GGr1bQhU3DR9c8mEHQLT2HLdGqK7j3",
+        "slot": 443944626,
+        "time": 1788430134,
+        "trader": "FMVHP1xw6ZHB9zLGyrJeeAvEzCBgouH8bPzdkYqq2C5W",
+        "isBuy": false,
+        "tokens": 33116.415773,
+        "sol": 0.10144340300001886
+      },
+      {
+        "signature": "4gXhHEhUtfX5WpgwTLQJhQuLkLc8Ft4GxDFnTzF1wGefuDfozRP5EqfeFcRc2rSz2p4MBbdRWT3CiM4rNtSGDSuC",
+        "slot": 443876460,
+        "time": 1788408691,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 503.96426199999405,
+        "sol": 0.0014328990000080921
+      },
+      {
+        "signature": "3MVwMPq5xUQpL62bUbE4mu3j72x6xiYeTRKvAqEZKycYhAHjp3Kx1kcKLBBHAD4bir8SUbSeaF6LciWZrJncuVJ9",
+        "slot": 443824631,
+        "time": 1788392392,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 2570.8549969999585,
+        "sol": 0.007897349000018039
+      },
+      {
+        "signature": "25ViMDEcGfmBcMQNGjy4T23b5At3rLLo6fZBS2L5RrXyC96Lp8WCjxo8CjD4jjT6h7ZCiHtvGQ1BTLCiPVSd3Zdo",
+        "slot": 443744198,
+        "time": 1788367048,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 571.2430100000056,
+        "sol": 0.0017677729999832081
+      },
+      {
+        "signature": "53VHAXFVbLCB5Gd8ppq31dS6ZahN7YNHMLfz44jBngVmLbULqzN2Zixv7LBxZd8tK2DBaWmAKeTxbZFLyLZEmpm3",
+        "slot": 443732613,
+        "time": 1788363376,
+        "trader": "HKCkmsdBFEoNtmEdyAFcaowbebNLXGFHXDJB2ZJSXGRK",
+        "isBuy": true,
+        "tokens": 19048.244622999977,
+        "sol": 0.029890630000011242
+      },
+      {
+        "signature": "5PJBrZ6bihXZ5MUkBivitfBc2WrxN7j3miLEQyxCa1DuKsdrwUy1gQNd6x415rLYEhmWLRMm9tUBkLDYyA7aUTKB",
+        "slot": 443728835,
+        "time": 1788362187,
+        "trader": "CyikjW4YUJLsT7kmcUMRJ7CFQF5sGBdC9AUMQieefANe",
+        "isBuy": true,
+        "tokens": 1522.443473,
+        "sol": 0.00428450200001862
+      },
+      {
+        "signature": "3kV4JzCx3ECEUvafHEi4g1W7hvvQPAPDE4qLuDmLWKHdLQUW6giYGaUs1mrcHSZPQNpPFCgkMYBFMCAKfrhSWZn3",
+        "slot": 443724607,
+        "time": 1788360856,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 1679.8179450000025,
+        "sol": 0.004529293000018697
+      },
+      {
+        "signature": "5yL1vfRoc1gNWw7BEAgiN9GHKoYPbEfeeGH5STJ7ouGAG3nW5a7oRrYfjr1ZdGm19AnFzYnQ1k15eKGNtUmzotZQ",
+        "slot": 443691119,
+        "time": 1788350316,
+        "trader": "FMa4zBwq95uyBebM6wvYaoo1XiGB7fPLdeTEwZRyhzfX",
+        "isBuy": false,
+        "tokens": 238827.20166,
+        "sol": 0.6025591620000341
+      },
+      {
+        "signature": "5kwDr9VtQRQQfLju4HH8P2TZWNaAwMrjGYpbXcshRMHy97afuedJgr5TjhGK16j4BTAFfQ1zK7vgSUUHgib5jPU3",
+        "slot": 443620642,
+        "time": 1788328153,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 900.0506680000108,
+        "sol": 0.002365365999992264
+      },
+      {
+        "signature": "3y5s9YvSAPX4k8AzmXzJx2WEp77RY5KwH28USatNGSz8kryeNKoPZV7p1gCzLBUNiTNeeNAum9oVH7acj1Atojzs",
+        "slot": 443593484,
+        "time": 1788319618,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 6967.2407980000135,
+        "sol": 0.019117836000020816
+      },
+      {
+        "signature": "LoRuGoPGh5XJSEMAH9x3YDcR4r7rdriwmT8w5z5r23YgFHqfbyGwDAC6Fv84DyKSNqBQbgGGJs1An822kWLBL6L",
+        "slot": 443495648,
+        "time": 1788288666,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 1823.1635910000186,
+        "sol": 0.004504537999991953
+      },
+      {
+        "signature": "4VtxvQGFj5A14nwybuQzQ9dBykRMLYJNBcngVsFqwNxvJ4u4wX7AjbiLp6bQ9UZdxyxaQ9nGkuie3cu8FtB8CuGq",
+        "slot": 443426687,
+        "time": 1788266715,
+        "trader": "EjqJgyRNUdbjJDmnFyMmrH5gG4ronAh5HCZgCmoCG1a6",
+        "isBuy": false,
+        "tokens": 220303.17858800013,
+        "sol": 0.5191826779999928
+      },
+      {
+        "signature": "5XBFKTy3HiznwWe2STov8VyfLKmD5qCCoY1RtujVjnhyYmne3QjbXJwu1NJCTGLrLKV4XGt34UAXhxpawyqXcbud",
+        "slot": 443392604,
+        "time": 1788255889,
+        "trader": "EjqJgyRNUdbjJDmnFyMmrH5gG4ronAh5HCZgCmoCG1a6",
+        "isBuy": true,
+        "tokens": 205794.2603839999,
+        "sol": 0.48483163899999226
+      },
+      {
+        "signature": "41GV7M9X5GhsBrhWMq8qtoBXcP7QNamHeAexdLXa2uyXJLxqozHkJgskP4skbtjHEPQoVkSv1bUhQyZUCcsgGn2s",
+        "slot": 443293689,
+        "time": 1788224474,
+        "trader": "BUDz9HggSPfiteVh3NJTydr7KACSqjZu9ycamEtLLamQ",
+        "isBuy": false,
+        "tokens": 100000,
+        "sol": 0.22768405299999017
+      },
+      {
+        "signature": "VbSV6b4S1Dc83ELgctLUvTzzBEaKSGSvvZKXFrtWpgyYqYr5NQqN8bVpJ9Z1qY99RAzk4UQFAa521Kzhjz3mEPM",
+        "slot": 443205502,
+        "time": 1788196482,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 1802.5872279999894,
+        "sol": 0.0043756880000387355
+      },
+      {
+        "signature": "47b6RJgwDtuRyNRgCmaG7DHkqCvqn4HrJVcVAHHXUJPxCGe2Rd1YT1nBPNiwUCHjkGwBqqAgHi22pmteZ9BdM7sw",
+        "slot": 443196942,
+        "time": 1788193758,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 6403.4683540000115,
+        "sol": 0.01551803999996082
+      },
+      {
+        "signature": "cQ7GhjPC4VYA8qWTm3zcRmuWkHVc2yLV5Hx9gqtmwNBXUaioobos1pvAP5FKnPHCog7i8fGkoZYAVcKcnA2ZXnj",
+        "slot": 443164858,
+        "time": 1788183563,
+        "trader": "E8oXDWch45FBcZPRgPqCHY2zmscdgKo1aV2yKgQT5YR3",
+        "isBuy": true,
+        "tokens": 361621.593623,
+        "sol": 0.9681678809999994
+      },
+      {
+        "signature": "5vkYQzKC5khuZd6gFHcAqnw5V8wf1EiZFhrt2Bqz9rn8ZaeXpwa51oajz24QsJbdmKGQDHSezb54hKN39vyW2ZB8",
+        "slot": 443043644,
+        "time": 1788145126,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 2362.799838999985,
+        "sol": 0.006062795999980608
+      },
+      {
+        "signature": "3De6mMXEqxaRx3AgpGAnAGky2TuUWptiH1WCJeS4MPPYtdi1zvhMGw9wwgfsg9tdaRxGQodgmkHyupx3DsKG3hwr",
+        "slot": 443020194,
+        "time": 1788137649,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 11089.167703999963,
+        "sol": 0.02849653800001306
+      },
+      {
+        "signature": "2HSQbPE9mvKQU9TcBX9cyVBT8R7zV4mkqSVfmof8Kr7DCy5rxLdoGBroxBuypVB8oRchZYbZsHQSAYZdFF3iiDxh",
+        "slot": 442937550,
+        "time": 1788111394,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 365.9341209999984,
+        "sol": 0.0009181309999917175
+      },
+      {
+        "signature": "mZzcgKFkq6o8SXbtbxsAmHfTjQfkrse2tzQfyEL326eZJq4tVfyrRiqVaY2cAQmJF8CvrkGKhE8qGhSKWw7edHx",
+        "slot": 442889589,
+        "time": 1788096188,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 2043.1572670000023,
+        "sol": 0.004953043000000434
+      },
+      {
+        "signature": "2QQah344YuaoQtSNt4rxhRKLJqGCEfXyaX6kAAaZ6bmbnb1WSVEkQ3DcbEgJyvk71KJKkyHvFvfrCgbnqmsH8u6w",
+        "slot": 442807549,
+        "time": 1788070218,
+        "trader": "H9LMapGT1t3AJ179HVycRYs2xFj7jGQM9PwosciRjjhN",
+        "isBuy": true,
+        "tokens": 2369212.806211002,
+        "sol": 5.739003605999983
+      },
+      {
+        "signature": "3Eu7MECpnMHEeHbdRZYu1p6fYUiuFHR216LzCQ3hw2NsMZ4Udo4XbbteoTHagpAL3sBdFXuPEdGcSXLMxaoWSJVL",
+        "slot": 442736709,
+        "time": 1788047735,
+        "trader": "6UykY7jVE48cswifJRvaC6iUSrAzMZwYJ6vTtUCm1MZ7",
+        "isBuy": false,
+        "tokens": 535512.4159519998,
+        "sol": 1.383539844999973
+      },
+      {
+        "signature": "4ZqoFfLizLH9ZYQ3cZbSFHmjKZnwuGMcXBxTWsbLJtW4qaCxAQNkz2wMQprbb9eYRm9CeAiUGw4XnxCa3NNc7KPA",
+        "slot": 442713898,
+        "time": 1788040510,
+        "trader": "AYyzFvBDD5fgiWvJyteoBVJofYvPHZgkjdKsPgRwoNMA",
+        "isBuy": false,
+        "tokens": 73449.492342,
+        "sol": 0.1923592549999853
+      },
+      {
+        "signature": "4L7WFZboctDYxoZofPY8moRqNQDkTw2UMgHff4mAW2AwdEULg3XZvfBUnXHX9KWZPa7pKQ3pDPhzadbY6hKfkc6W",
+        "slot": 442712534,
+        "time": 1788040078,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 8669.144200999988,
+        "sol": 0.022102875000030053
+      },
+      {
+        "signature": "PKDoXoGPwpj2xU2pGQJfkoAj38Jz8256gjfWRRNUxgXNpxyyPkibj5P15iYZxmt4TvizN1BKj7AYYrkyBSGjaty",
+        "slot": 442711853,
+        "time": 1788039862,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 427.7923599999922,
+        "sol": 0.000995273000000907
+      },
+      {
+        "signature": "2uLgsrowQaa8Vjk6NJrfsLot7kFbNgwTjS72ew57b9CRE6MmxzUvnF6x64NhavV9Jkr3VBUMgsE4aBjuEUMCLhXv",
+        "slot": 442663677,
+        "time": 1788024590,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 5457.085902999854,
+        "sol": 0.011370964999997568
+      },
+      {
+        "signature": "2EfaKhqgbq1JbBYuXW6wwHrm1qAahBW4E8NCjnboVjDTEBLSc9a64CW724TQBsiYbaMhenG6seWb5bg8VCfa2fJZ",
+        "slot": 442623268,
+        "time": 1788011768,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 2650.198900000076,
+        "sol": 0.005624514999993835
+      },
+      {
+        "signature": "2MQkEGrbZd11C4QuP8zCsEGTGJZXZK6qwo7Lemkt4mHVink4D65Nc3sdQTtAnE4yoaQoHy6WmUx3ZekpC1RKkTvE",
+        "slot": 442517444,
+        "time": 1787978264,
+        "trader": "FhtXTXBWAdER77os8Tz4RHyjBfrFG9sigdHZm7qoeLz8",
+        "isBuy": false,
+        "tokens": 2190296.944056,
+        "sol": 4.453385948000005
+      },
+      {
+        "signature": "bj32oMYeeHUYWTt8Ja4HTqms83kpsmL4gvT3JmUupGQmaoDiQXh1Fqtn9DxBYV4gCefrqk7hTDKdNqESJZnhcnN",
+        "slot": 442417790,
+        "time": 1787946645,
+        "trader": "94rPpfbUNa53mLNDxiftJo2fxJzVqzUsfMHN77T1YBqh",
+        "isBuy": false,
+        "tokens": 14293.254581,
+        "sol": 0.027088149999997313
+      },
+      {
+        "signature": "3UVmcX2o42q6NXCV3uXGnesDLP5kSsJYv99a1FCvJWRCuXNWhtDDUhaJRe5YjUa7eTzCLPnMJ9pLDs23QUGtiV4v",
+        "slot": 442344433,
+        "time": 1787922043,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 2663.295836000005,
+        "sol": 0.0050375719999919966
+      },
+      {
+        "signature": "5RT44ieVYJkpsw8qZNaDJ3TmbFekPjfyExzuMyFqx1k68T9BjgwwWqX9ukoeEjACyooAR6NEiZyBKfrRPo5Xa15U",
+        "slot": 442280497,
+        "time": 1787898659,
+        "trader": "EjqJgyRNUdbjJDmnFyMmrH5gG4ronAh5HCZgCmoCG1a6",
+        "isBuy": true,
+        "tokens": 226051.05513799982,
+        "sol": 0.4615636959999847
+      },
+      {
+        "signature": "5RtWWSuHC8RV1BjCJGSJ57tagUWQ1wVFTNXfMWaay3mejWZxSjQadA2YC7Fp2f74WAhpaAUf92SVcLku4eBejKCi",
+        "slot": 442228068,
+        "time": 1787879503,
+        "trader": "FhfKBno4vUSjjuRmzDB7P4bNBcbQrTXA2FXLNPDeBC7r",
+        "isBuy": false,
+        "tokens": 244659.65187899998,
+        "sol": 0.5209325390000004
+      },
+      {
+        "signature": "27AVshCjQigCgDwSSxiFV81Mz3Kt7C9V9TR1T4Sm8nAXSSpHKCXRSauZcoQEUC3i4FycLJ24CsvDsU1zoMbFAD98",
+        "slot": 442191981,
+        "time": 1787866279,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 3127.0816589999013,
+        "sol": 0.0066148020000014185
+      },
+      {
+        "signature": "3SLEEF2Ap5MnoFY3ke8kMnQBzqdQsBhU4nWF5eKkYnAPdgRtr6mV47nAZ6PoeQnVLXWf4gSYfJk9yyRv7Wx1aZHe",
+        "slot": 442168574,
+        "time": 1787857692,
+        "trader": "3nZjnsyGWpe8CR4a6f3nuLcdR9XMvBU7cM1ZUjBBfBFn",
+        "isBuy": true,
+        "tokens": 899441.2267080001,
+        "sol": 1.8037958129999936
+      },
+      {
+        "signature": "3MqhQVfSg32DXit5dqrcEQNmUAyFdyAJwU5GxjL5H5RvuGrxKdxv4gg2WwfoheTW454mjWwXGsqr9ShxEFqMQp81",
+        "slot": 442118744,
+        "time": 1787839400,
+        "trader": "3DCp6TufpAbbok6sWZKi3NJUhBPqsiYQotF2ugC4f71U",
+        "isBuy": false,
+        "tokens": 1997320.3085339991,
+        "sol": 3.8221237660000043
+      },
+      {
+        "signature": "49ERafEHK2rgm5VMVLnw1ZpqpqknM7RPoG7ZHvUw1kTQ8HbrPwfcXbykyf1FGtU84z5P4WvRPDeLqGJ3bAdbxKmQ",
+        "slot": 442109089,
+        "time": 1787835869,
+        "trader": "6UykY7jVE48cswifJRvaC6iUSrAzMZwYJ6vTtUCm1MZ7",
+        "isBuy": false,
+        "tokens": 893414.107361,
+        "sol": 1.919764759000003
+      },
+      {
+        "signature": "3G5LYwXaL94Ef3fThqwDK7Q9Aki4gojamBS1wAeuzovVq7Gj25SZGhjeZhMUVdYk2dTZibrcprTRAjcqSti9gBcs",
+        "slot": 442045170,
+        "time": 1787812546,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 19510.642692999972,
+        "sol": 0.03990762300000483
+      },
+      {
+        "signature": "3rieCryf26Z8tJdgiseNosQnz4xtemPCg4DoCA4YEAdJmHucyGpPM2gKnbwvVzbAhA6W334EMLN4qrTzEY9Z5kK2",
+        "slot": 441961552,
+        "time": 1787781980,
+        "trader": "CCi3K8YvmamREX9Y1aXmmS3zskD645yUFL75p8ok3uDw",
+        "isBuy": false,
+        "tokens": 4794.194676,
+        "sol": 0.00925851700000635
+      },
+      {
+        "signature": "4GqRG65YJakxZ8BnxRcjKjfLhstrbeXB4mxgoq27Z6NnJ2A1pQna9JkEC1qwpjJFitneCmvVurH65AMH8QXGuTrr",
+        "slot": 441895959,
+        "time": 1787757961,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 10479.98146499996,
+        "sol": 0.019530220999996573
+      },
+      {
+        "signature": "HtV6h1yRqnYo34RhS4YCtsj37zJxaC67Y2tLXjPBPfohELrLfwm8NA3VMPFoqFj711aggb6D2mzegnHSwiFa4gT",
+        "slot": 441839968,
+        "time": 1787737457,
+        "trader": "APwTtKJRWc5qJo4Q4qD3Tb1vkqXLHSo64pBzrjLwzs2Y",
+        "isBuy": true,
+        "tokens": 182224.47417499998,
+        "sol": 0.3314780649999989
+      },
+      {
+        "signature": "58chg5V4rXqcaa75mBkFPoLkJiaqMEtqLSKoWcbxZLxQw2zw7ngv6ZJUvgnXCzZu3nKKxUrDKtkdgFTEXrA2kgbq",
+        "slot": 441823653,
+        "time": 1787731510,
+        "trader": "5VpKSovqMhcPVfvTcACFwkgVZ2m5euS7K9RYb97LxKmo",
+        "isBuy": true,
+        "tokens": 223733.357937,
+        "sol": 0.39624320199999374
+      },
+      {
+        "signature": "3LEtJVn5eoewEgjoSTt2BWmXNe6GX1nB4MLrvrKF5FjbTML8kjW4HMSUh56BwCvC2TzLooqkiqBuMAUrh8cirLCE",
+        "slot": 441797917,
+        "time": 1787722145,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 5471.266591999971,
+        "sol": 0.010283914000012828
+      },
+      {
+        "signature": "5vNGrC8ZgDjbo16tpzqBrfkn3CUvCvabLw9NKZRPt7DTq44kAkeFrCZXu4VSQAoifHcB2DWQ6Fi47hFKcnbq3avS",
+        "slot": 441681606,
+        "time": 1787679656,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 1212.5795250000083,
+        "sol": 0.0025318089999757376
+      },
+      {
+        "signature": "2BjmE2YnEG4wEJu8gpdteZ9KNjkxMnteafTbtwMACx3orWiJ3wEHknAx5XTA7fN492s6Sa9E7ixJa4wrYztggEmS",
+        "slot": 441647464,
+        "time": 1787667141,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 4111.69393400001,
+        "sol": 0.008268345000004729
+      },
+      {
+        "signature": "5r6JFnZ4bnBC4ckCSGACFMyfe2jaSoRC6FiKzniFVY46aJ1qcxuFEKNhFGM654YuCMbST1Rf8Rbk8G6wPhNRdoZN",
+        "slot": 441599964,
+        "time": 1787649776,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 1535.7885489999899,
+        "sol": 0.003023977999987437
+      },
+      {
+        "signature": "45z26WYjFMYuyHYBhpFVCrnSS3ezGGV9QhQXZhEaYoBTb5yubnaXaic8D3kZBEgiLY4AjZs7t6bWL1NfXNm2Cag3",
+        "slot": 441559825,
+        "time": 1787635125,
+        "trader": "4q1b1ENvqxMzyeter97qt2pdccJApwXZkRRGbtMQcLzd",
+        "isBuy": true,
+        "tokens": 1061534.311513,
+        "sol": 1.9792347980000216
+      },
+      {
+        "signature": "49rzMDxwZYq7XXhvVGBC6PNAEdvEDzwaKBxpiecvdsrtNc32uo3J9JKGuAujxvP2HvhYc2DMw9vZSqagnspi5CXf",
+        "slot": 441538907,
+        "time": 1787627476,
+        "trader": "JCyBcNFFiEGqaaB93HyKr2GcQ6B76At1VVE3fa8VaUKS",
+        "isBuy": false,
+        "tokens": 5000442.276434,
+        "sol": 9.284245115999994
+      },
+      {
+        "signature": "66vB1Z19AjPfA8iqUhtxRkQSVC4mVTapxPZUJuYrTPRZ7opeDY8QXsVgVSJfEuhuScSqhP2dtEyjVQKpfp8WGJs9",
+        "slot": 441501119,
+        "time": 1787613628,
+        "trader": "NksKamSbqsLYNbTgBNjPb3vW6niPTRytHtsuu7wDfqQ",
+        "isBuy": false,
+        "tokens": 318437.464742,
+        "sol": 0.5908111749999989
+      },
+      {
+        "signature": "2xVTc5DQ4sTF3WRMw2k9Tdm9Coj8BsPtXDboJtzTbuLd7FfmJaiiHyVdxVMkqALYnqzfXF4AWxTRgD3fBGemkfV8",
+        "slot": 441490075,
+        "time": 1787609596,
+        "trader": "D9LcgmcrfNUg8nS9YHqe2H6eSyK9GBE5R5BMkwNarCe3",
+        "isBuy": true,
+        "tokens": 5472.333266,
+        "sol": 0.009906079000018053
+      },
+      {
+        "signature": "631oiWox5pMVeQDXDo3bW97waPc33DXGa9HSQXiJ3rMpWghUKegBUC1yyffWu7e1fnizpbe2uyeKD5eH8wCRtmoR",
+        "slot": 441473897,
+        "time": 1787603653,
+        "trader": "5RwVkx8QGfgAGh1Cgz6vpCRA6jpPyWmnaQGggFgXeGYJ",
+        "isBuy": false,
+        "tokens": 7379.808681,
+        "sol": 0.0155732789999945
+      },
+      {
+        "signature": "23ztMNu8B3cVxc2CaHZRV9ieJVdNr5keUJfqY9zXw4aK341BEuwH1MR8H9zSHrW9ohan8Ny1sE3baqC9yvNuaiZv",
+        "slot": 441398333,
+        "time": 1787575977,
+        "trader": "EjqJgyRNUdbjJDmnFyMmrH5gG4ronAh5HCZgCmoCG1a6",
+        "isBuy": true,
+        "tokens": 94859.19687899994,
+        "sol": 0.2059262030000184
+      },
+      {
+        "signature": "2jfuBdkUbJY28mj9PuBsPPVtHWLXG6AwDm2vpU1ZH3DFcecfeaJpxcKyk5kntQsBvus9v59LGQo6PAtp3xUoVPcT",
+        "slot": 441371978,
+        "time": 1787566382,
+        "trader": "Gtw5QKLnYazyApkzmCXo9GvXa5sCjwvx2bdRLaid8FHu",
+        "isBuy": false,
+        "tokens": 2429351.249102,
+        "sol": 5.679047921999995
+      },
+      {
+        "signature": "2m1Bwjm2FWMXJ7nrj5qkeAKJVPdrNNnVLWYJgzMLxqcEWuMwKFwH7G8FcmUERy2WqFGfEkLn7aNQwvcpmefyHWuh",
+        "slot": 441368136,
+        "time": 1787564978,
+        "trader": "CzZMnQxpsodfaH8dhCUVmxWrFjef7gsVTNa5ADFMzLiG",
+        "isBuy": true,
+        "tokens": 1057719.773416,
+        "sol": 2.4740434989999756
+      },
+      {
+        "signature": "3CsLvGcoPgSoHqRgG1s3ad7xD6SVwFzupgKmiQL19EP4Vutsx3AmQWegTDyQHKAjaqQxt6ktsYkxm1HK6fqVX87y",
+        "slot": 441361152,
+        "time": 1787562440,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 15494.338725000038,
+        "sol": 0.0332880160000002
+      },
+      {
+        "signature": "2EX3UxvCL6hqnkc8RejJnZCgLrQKfmZW8pcWwZYwhVgWz3KmZBTPdEYfq7KHQsVFwuFYKbuqsmS84ThAqFMq7dY4",
+        "slot": 441344106,
+        "time": 1787556218,
+        "trader": "46SXAG5yh4TJmwpXZRanTXBsGkds7LiMMqBaqj7XFufe",
+        "isBuy": true,
+        "tokens": 70639.452166,
+        "sol": 0.11741698900002007
+      },
+      {
+        "signature": "4ZucZ2163v4YXZVkYUAozRqLtTcbnR2JymFfvEPjdguN1CTWg9qf4Xk4Hn3JZmmNWhrn68ufoT1cPChMjtqcNkWy",
+        "slot": 441307526,
+        "time": 1787542872,
+        "trader": "SPxFPQ7f5fxYibEY7RL3oS43R1DUJwtbj7V57bZoFKU",
+        "isBuy": false,
+        "tokens": 2000000.480967,
+        "sol": 3.608624624000015
+      },
+      {
+        "signature": "4r7FxyngBbwGyXrtUhiEuYpamrQEW3d6qnpiTDmBvuV8maCdwUUoJ8ajWXy7czFQ4DvzSqnmMVzAFQU3jo72FMy7",
+        "slot": 441155126,
+        "time": 1787487176,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": false,
+        "tokens": 12210.996864999994,
+        "sol": 0.021283693999976094
+      },
+      {
+        "signature": "5wojxd23eofThB8cYTEvzpAdz7tV7Mhxo5XpcNzrFFQkqKBQ31UdKapWbbs26G8sY9Hv4fnRh4uC7RqThLP7XLyZ",
+        "slot": 441096588,
+        "time": 1787465795,
+        "trader": "EM1WuH1ru8tbHED3ChcgjPzuBCz8xgu2hYPWhJcLchYn",
+        "isBuy": false,
+        "tokens": 25602.37799,
+        "sol": 0.04633837899999094
+      },
+      {
+        "signature": "3i6twSfe1fwx15hyYjzuw9YW5rYvY64wb7doyq2tSJnsr8eHiJXMEegkwRSENvMqhsy7sBnHdxLaZzbAStJRAnXX",
+        "slot": 441074660,
+        "time": 1787457787,
+        "trader": "6xtdKj1epMniARd7k9duwMZkPMH6rgBCUxSYbrkAe4NC",
+        "isBuy": true,
+        "tokens": 120921.312852,
+        "sol": 0.20967984700001807
+      },
+      {
+        "signature": "3VjnpZS5voJHgru79Xs1MiEn1EtCaW4XKxtZpryEPZBb5pCXfkDgKb2G8xmwGipVqb6hYj8VCPReVtS6AxXePLop",
+        "slot": 441068805,
+        "time": 1787455653,
+        "trader": "udH4u5k3vWX7izz119MHDckeLE6pxdypupWtd41JfJL",
+        "isBuy": true,
+        "tokens": 5493.463845,
+        "sol": 0.009906078999989631
+      },
+      {
+        "signature": "59JaJHruBoCMP41Uv9ivnzfgXwVdgGm7spSBj11CfrorDMYm42m54DhZyciiDySmA6sJSmS3Fmh44C4vwD6ciR9g",
+        "slot": 441028094,
+        "time": 1787440693,
+        "trader": "33AHKQhNNnB3kywM8dp46vX5C2fmejWy5vu9VsziXGJJ",
+        "isBuy": false,
+        "tokens": 79503.279363,
+        "sol": 0.16969625400000155
+      },
+      {
+        "signature": "5pseRq2vcD5dY2xL3f43qJxd5kd19zw62psGeyy8KjWduG5ARNThdpGv7WnjQGBRwnDjgvaGcQPDjnYc3PMFcRL4",
+        "slot": 440931056,
+        "time": 1787405030,
+        "trader": "3fuga4fDgNY974eJDfBgYX8pwTCW9wtWS9qoxSWdSPRu",
+        "isBuy": true,
+        "tokens": 276897.803179,
+        "sol": 0.5943648029999906
+      },
+      {
+        "signature": "5fN2yyoSeJjHTVgvCB9xFZgmHtbpSjkPnewPTzYcJ729Kjemx9rTHrH53GG3wMCunrsh76WkFNxkH2tkWW4DdcPc",
+        "slot": 440870742,
+        "time": 1787382936,
+        "trader": "FE7xMeMgzi3cQX5SEtzE6c1sCWzcSAo5FbAZXWkpDohM",
+        "isBuy": false,
+        "tokens": 4676.836896,
+        "sol": 0.009749335000009296
+      },
+      {
+        "signature": "pY6ZCbK5wyRS2QzgHb3QAAHDibE62FsYFuvLaL8LesnQDuQSP1d47b4cyNUr9VakbUJQanPSpFcBaA1UDWpqSVb",
+        "slot": 440859601,
+        "time": 1787378845,
+        "trader": "DiVG1rHxQoVLuZsLVBEPe5A3pBU5ymvYBBtVSNhhhmKb",
+        "isBuy": true,
+        "tokens": 1069661.2987960002,
+        "sol": 2.1148115679999933
+      },
+      {
+        "signature": "4MVbVyiym1DVa4f4gzb2zF6VkTTPDmFrnzFwHE9pxj3fp9L5w3ttKLeRcm3L3eG1gj7rUou9wJRMkKwA8vswFGBH",
+        "slot": 440812474,
+        "time": 1787361539,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 3129.678279999993,
+        "sol": 0.0054483460000085415
+      },
+      {
+        "signature": "4UZywvZpG4Tk74FcWKKBLwcC1upEBuiA4ociKgVxdABAZBPBmtg8zsYouzmskuTvpKyqMoKdZScidVk2px4bKMd1",
+        "slot": 440766065,
+        "time": 1787344550,
+        "trader": "8i7E2NjyE2LdDFbjgF1obn7Fw6uZfnxdy8Tovz7UGFMM",
+        "isBuy": true,
+        "tokens": 985281.843621,
+        "sol": 1.6262172849999956
+      },
+      {
+        "signature": "4G6VGpdRekgqm3ENVxnuk4Peggadn7FEfFcdTUjVD1ctpcm5Y3CU6T7HixChzXbVdCuCafHXFhbteL44gRG4SYHS",
+        "slot": 440753791,
+        "time": 1787340048,
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "isBuy": true,
+        "tokens": 6669.699534000014,
+        "sol": 0.01091591099998368
+      },
+      {
+        "signature": "3knp1K2XHGtcxEXgeMCfwwqSETf5krQKr37j9hxRXwgw1eG9wnNqhs78mGeZGdNKQckfqF5Ce8L9UzTNC4tfbRpz",
+        "slot": 440695462,
+        "time": 1787318677,
+        "trader": "EjqJgyRNUdbjJDmnFyMmrH5gG4ronAh5HCZgCmoCG1a6",
+        "isBuy": true,
+        "tokens": 332854.0342110004,
+        "sol": 0.5473577219999868
+      },
+      {
+        "signature": "3rKTmxw4eCu1uth665orKpWX7K8jTSYATAE4864NZNxV9LdjpVE4LMwxWsZo7og9Ne8D6GsMUVm3zqKVHGFNE5Rk",
+        "slot": 440630003,
+        "time": 1787294208,
+        "trader": "EjqJgyRNUdbjJDmnFyMmrH5gG4ronAh5HCZgCmoCG1a6",
+        "isBuy": true,
+        "tokens": 315367.5046640001,
+        "sol": 0.5488132999999777
+      },
+      {
+        "signature": "4gveJivJx9GTpeLgqv7xTvZAHW7CEWyVwp1uvmq6k4XPLs6PTHF4TJ1EMCE4x2YKKfprzyVxAGiHLnK6QoZfd66w",
+        "slot": 440520693,
+        "time": 1787248776,
+        "trader": "FSgm9HH28xyaFmRoDLNKgEdywvUy38BsYX2ZwXQs5Eam",
+        "isBuy": false,
+        "tokens": 514293.753677,
+        "sol": 0.8627529100000118
+      },
+      {
+        "signature": "4ufqjm3NbsRsJtqqvUcFDvxNx2oAfpgx6Br1q1BkGvxTVxwfKiLSjR9eP5mKXyMpxRs2Bnus7C5f4dLM2hsJh6ZC",
+        "slot": 440440552,
+        "time": 1787215448,
+        "trader": "DiVG1rHxQoVLuZsLVBEPe5A3pBU5ymvYBBtVSNhhhmKb",
+        "isBuy": false,
+        "tokens": 446919.439266,
+        "sol": 0.8620271780000053
+      },
+      {
+        "signature": "4rWBGVSSqLJX9xQVZWAUXJRe9iBA8a6TsC1JkDCFXQxhNZ6kXPWkrVtWzdzpPygv1J658rnneYcS9wPS45o1YXCx",
+        "slot": 440409765,
+        "time": 1787202645,
+        "trader": "HUmFddQhMacCxeo8DA5yDe16cgwmhK5Fu94p7YC7staW",
+        "isBuy": true,
+        "tokens": 1053771.6903030002,
+        "sol": 1.9606113689999916
+      },
+      {
+        "signature": "uz5CTMtNgp7LBaY9iqyVhzvNrSa9uHpmaWM32gYwYPHqufFESU74DHmrWgXfwxwZheWKarDF1oYZo7kxDWF7gKA",
+        "slot": 440366826,
+        "time": 1787184803,
+        "trader": "4AuqKA8jc9o4j4vqjsY4oDgSjqyM9Q7upHwPYuxyR5zw",
+        "isBuy": false,
+        "tokens": 645136.228293,
+        "sol": 1.1625106760000108
+      },
+      {
+        "signature": "3kwwbhvPjfdXcHBnrT6M3LndHCT4SBdbz4iRoATSkYxGQAmhCHuc7q46C3rgFcNfJk7qZFvaMKnDV12gdHoAtcg3",
+        "slot": 440318529,
+        "time": 1787164663,
+        "trader": "8kF6xKA1ysXJTHJTk6M9UoFwPPjLHL5GapxitEZSonc3",
+        "isBuy": true,
+        "tokens": 730.686565,
+        "sol": 0.0013117139999963001
+      },
+      {
+        "signature": "5SejQ7U7niHte8ijNNygrVsv2hGqLDsnZYnENqtaPgfQGXJ7hsZM6cPMjYpzuavEpTWYdsksjCegZKKEi7W5GDWF",
+        "slot": 440268324,
+        "time": 1787143711,
+        "trader": "DiVG1rHxQoVLuZsLVBEPe5A3pBU5ymvYBBtVSNhhhmKb",
+        "isBuy": false,
+        "tokens": 446919.439266,
+        "sol": 0.7728632620000155
+      },
+      {
+        "signature": "3AK9TX8B9nRB85abXvE6mRKFTeSjv7pFrKzqELKVuq5nD5jR2W6Xa9EwFTdDr1RoSFo1S9GWpF4MQMVJNUqNhev4",
+        "slot": 440204347,
+        "time": 1787117131,
+        "trader": "3X6Sa4zdPgwBoTt1n5Ga6u16kXBw67t6wH7QA1gnyAc2",
+        "isBuy": false,
+        "tokens": 585547.593356,
+        "sol": 1.0773404980000123
+      },
+      {
+        "signature": "3VqfnPW3wbNHL85SX6bFjXe8v9UEMEAJMynjm8ZajJa6tLqZ2byBtUaKbTgX6aAAJ6zko2ZEesB4pK5Ee8vjHzed",
+        "slot": 440168059,
+        "time": 1787102035,
+        "trader": "89q3zEgHzuPSYkrSq1TANDqP7HJMLAnxxXtCJGEnVqB4",
+        "isBuy": true,
+        "tokens": 1326.4515220000003,
+        "sol": 0.0018673579999983758
+      },
+      {
+        "signature": "5F2XzGuTDgCkyTHKrb36CsmmFkoXqZjSuQvG4t8PWfEPbeU3m3dn9kYekisTRXfpwWZYcJubdRq3Anj5e5frt5AZ",
+        "slot": 440096008,
+        "time": 1787072070,
+        "trader": "DTGVktvbS4Gv5UrA14CMJzbNCzgQcLW3cuh2RXtS51gr",
+        "isBuy": false,
+        "tokens": 3418.687474,
+        "sol": 0.005115592999999308
+      },
+      {
+        "signature": "5JwXg9VU1q9oz9ZxwyaivmrUoVwoVU4ydbY3rCfvU6vZHH38JFmdya5CgvfvmU9RF8sHrNco8bkZHX2pYmg6s62W",
+        "slot": 440030169,
+        "time": 1787044692,
+        "trader": "EjqJgyRNUdbjJDmnFyMmrH5gG4ronAh5HCZgCmoCG1a6",
+        "isBuy": true,
+        "tokens": 416319.14897399954,
+        "sol": 0.6517157929999939
+      },
+      {
+        "signature": "5jyFTgNHU8YEKh3P3h1DNauNoAr8vbe43eyKS4k2Yooqn3D8LGKU7nzUTou4RnC6moZ5sALjonXptZqENKBqASbc",
+        "slot": 439997738,
+        "time": 1787031260,
+        "trader": "EjqJgyRNUdbjJDmnFyMmrH5gG4ronAh5HCZgCmoCG1a6",
+        "isBuy": true,
+        "tokens": 169640.3355100006,
+        "sol": 0.26182317999999327
+      },
+      {
+        "signature": "886m56Rwn3tmgGZQD69XUyHdhJrjrrQLmN1Q72WWWekRrVitXDvGSQpfcTsJ6gR3GcMKhT3W1qssryKVjCBr4ge",
+        "slot": 439979774,
+        "time": 1787023805,
+        "trader": "CuTgJYbTjfYiMBM6y3zKXoiwWDHUn1PSyaP855W2v4Ky",
+        "isBuy": false,
+        "tokens": 30554.893252,
+        "sol": 0.05223676800000021
+      },
+      {
+        "signature": "5ENje8Hk9BBX77p7j2VxmkumsqWiHWtGJuaAmQXmGQ4qkgbH3S3rhBFX4SNYoej1LHt1j4Nq4E5UpmMH1eBdNtHz",
+        "slot": 439932759,
+        "time": 1787004320,
+        "trader": "yEt54Tf8WDiNBdouDH5eRrvJXV5rFMQaWUPxdxvFdXP",
+        "isBuy": false,
+        "tokens": 122944.05625399994,
+        "sol": 0.2015495180000073
+      },
+      {
+        "signature": "2Po16Co6W59KGEbTgzK8iNBhCwnBGYVTqRiHbzH9aSQxdoYz6X9zxSYFzimz6XZu137VVew6XJqmEanpEaF5LysT",
+        "slot": 439917164,
+        "time": 1786997844,
+        "trader": "7UFYdQre66c2Pet3HgDeh6KoPqpWv8tByZRYyYdnkWgJ",
+        "isBuy": true,
+        "tokens": 11337.992696000001,
+        "sol": 0.01981215899999711
+      },
+      {
+        "signature": "5KegkVDhbinZQEPai67GK2kXEHZUZPy3qy6S1zqnMBHChbQPd9q1XivVVGbNka2YxQgc1ET1sW4WXyRGSfb6hopU",
+        "slot": 439889275,
+        "time": 1786986239,
+        "trader": "2d3q3QS2pAY8yZFau6o9Mukh4pByNu8UCKdBfUkQmrAT",
+        "isBuy": true,
+        "tokens": 4171596.719651,
+        "sol": 7.4157102580000185
+      },
+      {
+        "signature": "44MyvTipn5PvSHJbQJhbsArfhPt8STKH3xmr3oDXCWMmE5Da5wcY9wV1NGXjDmPxVjB5985r5jB8EesPSnxa3GFy",
+        "slot": 439864787,
+        "time": 1786975982,
+        "trader": "H5h4uyRjMXwhCp95WM87zFxGsyv575B4wjiDKPBzbaZ5",
+        "isBuy": false,
+        "tokens": 16231.821158,
+        "sol": 0.026321187999997164
+      },
+      {
+        "signature": "51QfYLx7kj9mqqoNW3ueCZ2obodVWwXHxq2qYxe32YJDG9cMczyr95V65bpoBmZVxHu5zRDm56e37Ya8k9Jm3oBW",
+        "slot": 439859507,
+        "time": 1786973789,
+        "trader": "CkUZV387xnoGpF7wC2moMa6mPmAgCvTT4pWgzq4M9fCD",
+        "isBuy": true,
+        "tokens": 220238.722858,
+        "sol": 0.3727624130000038
+      },
+      {
+        "signature": "46LZ8i6Szi853ch4NWcHF3YxSFqukE5Ki72P9NxBhbXjVtvg7RSnPJD7ihyVQprgmYbxAH4CAqBkFp9G5jyEgZAS",
+        "slot": 439836995,
+        "time": 1786964485,
+        "trader": "FhUfDm6DbHi1tRKbW8otDGowbePqM18mnUqcmyCnhUFc",
+        "isBuy": false,
+        "tokens": 283111.311883,
+        "sol": 0.42493752599997947
+      },
+      {
+        "signature": "5fsE7bjwK5B3sCWW34vx2rA8B2G5m85aJfxzPyawn2pg16qTRJxoMuZfhb9jBZVqmndGxoqAKhknfXK1n1aucPK4",
+        "slot": 439822070,
+        "time": 1786958284,
+        "trader": "GuqtTntfKM9KfSbLP1p5ZHj94bbh125FE7BhPwwK7RSW",
+        "isBuy": true,
+        "tokens": 6166.882877,
+        "sol": 0.009906081000025324
+      },
+      {
+        "signature": "5afj9CJhtmWZAYNTKFgCiYtwoMq6ghSoWAPaA8LaJSQ3oUwTsLjFWwhgXaah41Yx8dVeLeKSDuo1We2JY4Ksb62h",
+        "slot": 439805289,
+        "time": 1786951313,
+        "trader": "317eczCRjWeCDT2F2DE13SE7UzVsTQks1igysxq7ivhm",
+        "isBuy": false,
+        "tokens": 22656.444053,
+        "sol": 0.037774089999999205
+      },
+      {
+        "signature": "4ojcgGCf5unp4k4DnZbiQjVuJkEbsSJpaCu2mBd288GBvx6tm6P2WmWVQnfYivCZZ1yxwggAJAiu89qV6UpACCer",
+        "slot": 439787152,
+        "time": 1786943802,
+        "trader": "76WoCZAGzoVSinUrsdbjJzki9z8qVs7ixbLfW2gTrMmv",
+        "isBuy": false,
+        "tokens": 375271.373241,
+        "sol": 0.6869756069999937
+      },
+      {
+        "signature": "2c74mppn7pkhVvCFzTgacPzhE7DspDRfbd3fea2meVchVhQQBA2EVpVPcCumj66VDKq9nGQFw1igRjSg2xjjy7QX",
+        "slot": 439779089,
+        "time": 1786940458,
+        "trader": "xsWXk2mWSYGSnt2tm5yntr6mhuDQijDHcKxRoFCN4Bs",
+        "isBuy": false,
+        "tokens": 1579185.908356,
+        "sol": 2.51667386699998
+      },
+      {
+        "signature": "FYXUPtKuaqATZpmB81Tp4hGxyn2qFYxyG1aj54d5VQMue814apcBWfDnVTDEVNR5Czbduo9Vv1h6LPAhYBoHNp8",
+        "slot": 439768846,
+        "time": 1786936223,
+        "trader": "FhUfDm6DbHi1tRKbW8otDGowbePqM18mnUqcmyCnhUFc",
+        "isBuy": true,
+        "tokens": 283111.311883,
+        "sol": 0.4953040030000011
+      },
+      {
+        "signature": "VhVkiERrqSeHkTcmL43HZZtrEQqusKTQxPHXHNbRyWPzmVkTRABRnEcmzF5Pt7NHmbh1frBRDc8cCacPtXXUVLz",
+        "slot": 439761023,
+        "time": 1786932981,
+        "trader": "7edkzBExZyDSUPXrREctsxuFiBhkVUcyFHaGWi6njfVH",
+        "isBuy": true,
+        "tokens": 31865.374843999998,
+        "sol": 0.04948086899997861
+      },
+      {
+        "signature": "5VT5UksWWp3gtSke358gkpaPQ41b4iSmsvkd4LQjmoizaHtb3b5g5JCryc7GcL1ejDKYCgQykK6LzQ6veCQFrHCW",
+        "slot": 439753007,
+        "time": 1786929662,
+        "trader": "3xHj9og9CHhaMvAHCz1E6x3mVtgNXHs96gSPfS5xPUTG",
+        "isBuy": true,
+        "tokens": 6568.866258,
+        "sol": 0.009906080999996902
+      },
+      {
+        "signature": "4YLeJXJrDTmREU5ZtuRbb2DxGdsmBCZiadLJRHV3nfwxz3Nzn3uMLz6NK79EvWTxSiNwGcuZE8tAcSB6WsKiBY2B",
+        "slot": 439748994,
+        "time": 1786927987,
+        "trader": "3SD2pHV9bKbrv3yV5wHTzF1av6Ah1SJQyhoPin1UPeS9",
+        "isBuy": true,
+        "tokens": 6096.67552,
+        "sol": 0.009906080999996902
+      },
+      {
+        "signature": "3Y5q7Sf2KctWoCU8we696KZ2cxcySRYxJBxf7YHdV7VM81cP7ZZTcVypdbF6DdW1NACKGVPvrLQXNBVwi4zxeQfK",
+        "slot": 439747333,
+        "time": 1786927296,
+        "trader": "45Sn4KL1MHqwnpvcyjLnQnCtJDmw6zDeBnPevs5b4ZyG",
+        "isBuy": true,
+        "tokens": 350394.605197,
+        "sol": 0.5862148629999808
+      },
+      {
+        "signature": "3HPcQHURCFK4cNRELuTD6yQtbbWNHpQ4oAzqJeR2uuGJqibL33BWP8SyiVSqknvrHTwzaswfvSjL5upWh6BdDWQP",
+        "slot": 439746825,
+        "time": 1786927085,
+        "trader": "BrawzCH5Vk112TFhX2D1PRhTvpF5wieoCR7bhC3WdKE5",
+        "isBuy": true,
+        "tokens": 26639.261842,
+        "sol": 0.0459132309999859
+      },
+      {
+        "signature": "3qr5dHScSYajhSEBZxCDD2B5VpkTFLuwhXUMw9aCcncziFFGzvb8KGnYfLGPAHoGrjkoUxUTB2v1zW9RaUxwitBq",
+        "slot": 439742181,
+        "time": 1786925158,
+        "trader": "CuTgJYbTjfYiMBM6y3zKXoiwWDHUn1PSyaP855W2v4Ky",
+        "isBuy": false,
+        "tokens": 29450.263684,
+        "sol": 0.059013751999998476
+      },
+      {
+        "signature": "49eSvUgTudD5ewnNd8fDYpgmVqzKgKhQQnyMtFDnKPbxFd9z5xAz6JXkw4RfL4Jue3ikZuQS9eGG8z5yHV5r9TGd",
+        "slot": 439733204,
+        "time": 1786921441,
+        "trader": "J36RfC1dDRGcfV1AayosvB6JnV1PhQoaNE38aKS2WmmC",
+        "isBuy": true,
+        "tokens": 196867.0526010003,
+        "sol": 0.35516092499997853
+      },
+      {
+        "signature": "3JYvz6EKJvsnfnFqHBj7U2cfQXtanmCerjTxATeH98vq9QF5Uoy57nwBJiZTRB15P7RgE5QbmKu2ANghX21yA8J6",
+        "slot": 439730718,
+        "time": 1786920407,
+        "trader": "AodhYAJEjDJV8e6Sc3qtMgwQJatAXwu5PzbEPhsoDUoZ",
+        "isBuy": true,
+        "tokens": 1209522.536872,
+        "sol": 1.9792347980000216
+      },
+      {
+        "signature": "4BFJoaWMPvDaz6WJPqpmgHr9yjuMoi6YEmHSXBpXXd8VSurEoh4mB5ab2AjeCGkS4bsauFprFnRYW9BfthLxwrJ6",
+        "slot": 439702475,
+        "time": 1786908689,
+        "trader": "DHPv75RyPDLJAJ5CSiMy6bxRRtHqyjaySXvVXhoDp9Tv",
+        "isBuy": false,
+        "tokens": 20998.871835,
+        "sol": 0.03319485099999042
+      },
+      {
+        "signature": "45ZpFPe25WoJJ3fSHy2DQZBE5GbgbWYePi3mWsEddKHZwbjRHhVqXq2AY5dcSte2Cy5iifdmmihpLT6R8c6tpz1R",
+        "slot": 439693292,
+        "time": 1786904861,
+        "trader": "76WoCZAGzoVSinUrsdbjJzki9z8qVs7ixbLfW2gTrMmv",
+        "isBuy": true,
+        "tokens": 390295.752185,
+        "sol": 0.594364832999986
+      },
+      {
+        "signature": "5G4Js9Tb1rVCcNwp9gBgLP782gH6kwdVzNeX1fjddby34y3Jydw7vVxbY5fwccgynrjEWZ3Tb3x57gGMLycLYFRq",
+        "slot": 439672801,
+        "time": 1786896344,
+        "trader": "CgmxssHPLS3xnrz8s8kd7aoTpP5TbtmCKRzSDbCfSDGg",
+        "isBuy": false,
+        "tokens": 540858.645373,
+        "sol": 0.9847654259999956
+      },
+      {
+        "signature": "5a486KKDFe6noZ7re2RH3K7PM55UuHtBqPM7N8cNZn8qj21NgBbXaNRE52uBxK5UYsaxYFA1NbmyfGCNbYnbBSuo",
+        "slot": 439647469,
+        "time": 1786885798,
+        "trader": "WZog2TKUBKhAYTiMPd6P41nqjxeJPhqLRSDeRtW3c3M",
+        "isBuy": true,
+        "tokens": 50108.399933,
+        "sol": 0.09906079999998951
+      },
+      {
+        "signature": "2odN9viyZwJhFWmz9NBtJhaotgHPwNEURj6ug4Gh2nyk8c3k71zMZeEDyGr4Hpx23g8ptJdEppGjN133obMAyXoQ",
+        "slot": 439637090,
+        "time": 1786881486,
+        "trader": "3txmkZiLVu7Scp1m4YHvdUc2jrWVsgR3HPUTWJxwWyqr",
+        "isBuy": false,
+        "tokens": 143008.839699,
+        "sol": 0.28062415499999815
+      },
+      {
+        "signature": "9TJ9jYfU2FBch3syGJZ3uDjziMu9JjxtHExZ98LHaUDDuCqCRCxMUvrEnEsCMfG4RuiobiwpcHFCcaPELHugqfQ",
+        "slot": 439618739,
+        "time": 1786873865,
+        "trader": "GJHaMmRvWDPbMuGAedrk1nSCrvy5wubcHeeCYBjtXYfX",
+        "isBuy": true,
+        "tokens": 6531.208569999784,
+        "sol": 0.013090759999982993
+      },
+      {
+        "signature": "3rXnYUo2fmffSvf1adaCy82Bhp27TziSQF6f92i7aanukZafKFHN4EC9q3EjW5waqZtQpTgrv81Vit8Z4YyUpoFb",
+        "slot": 439597817,
+        "time": 1786865160,
+        "trader": "3AudKVvBwK5hKhWG8iAS9qnaj5USw5oZYWnj8UtUnf2j",
+        "isBuy": true,
+        "tokens": 150419.816896,
+        "sol": 0.3387406610000028
+      },
+      {
+        "signature": "58pUkJPiy25L6jednRQcqdeRr3SQXWFojrACekPRjk7VTRGXDdWq1zqu5LsJeWkTA6eUDuhsqRUP5TEpPRbDaWyQ",
+        "slot": 439590563,
+        "time": 1786862148,
+        "trader": "3AudKVvBwK5hKhWG8iAS9qnaj5USw5oZYWnj8UtUnf2j",
+        "isBuy": true,
+        "tokens": 57962.18028399999,
+        "sol": 0.1239510930000165
+      },
+      {
+        "signature": "5AZ64g6CpwbhvuijisTZh5HGPPVC6VHNvFEKmzyvH9wo1CVzHX2GziBKJ75VLMEY5TCySYERQagi1vjnBTaY5DS6",
+        "slot": 439588574,
+        "time": 1786861320,
+        "trader": "J36RfC1dDRGcfV1AayosvB6JnV1PhQoaNE38aKS2WmmC",
+        "isBuy": true,
+        "tokens": 1069081.3048029998,
+        "sol": 2.230224607999986
+      },
+      {
+        "signature": "pe1YQN9ktafDCvWpxuYfhVzJuxPAQpWy8GBVJwAQsXmZifuwwjxctXxDSdK98CyujtR7r29EU9c6qg4E2vwKuRs",
+        "slot": 439588460,
+        "time": 1786861273,
+        "trader": "FwPVCdTP3mMs1QWyarqE2pkuQsvASYUQHbVcnfSCabUj",
+        "isBuy": true,
+        "tokens": 25725.73345,
+        "sol": 0.049530399999980546
+      },
+      {
+        "signature": "jLAgTVXTkYuXWe6etCmP9zx8SQt1ji4AJHgLujtVBBiYDyn7oPAUZiZVucyhtT8JznE2rwYDKk946hd2Usapo8Q",
+        "slot": 439586060,
+        "time": 1786860268,
+        "trader": "AodhYAJEjDJV8e6Sc3qtMgwQJatAXwu5PzbEPhsoDUoZ",
+        "isBuy": true,
+        "tokens": 607600.9361419999,
+        "sol": 0.9896173979999787
+      },
+      {
+        "signature": "2KyAvdnLzLMZ4W9YjiuVanHXTum48CReTFFFyBaxqWEyw2Tn3L9Hoyr7tfzi6CTovd4sQxZ4KZWvDe7XEGTh7vtJ",
+        "slot": 439571089,
+        "time": 1786854029,
+        "trader": "HgLNy8YgtFiTLMcrBxfJGvAXbriZa69k6Rrrk221xjNR",
+        "isBuy": true,
+        "tokens": 1600660.947306,
+        "sol": 2.075627501000014
+      },
+      {
+        "signature": "4FNTNs5Emqa85GuBPDKkXvfYpNQugY6hbGQC66Qun5ntJzjyxDmuHt73KV6rY9FtefAxAdfiS8R2uwFhQrRPVFRS",
+        "slot": 439557320,
+        "time": 1786848305,
+        "trader": "83VfboTKK4VPXLfceop1UgNxb3umjpW2JXXgtTh6qMGV",
+        "isBuy": true,
+        "tokens": 2037075.133673,
+        "sol": 2.9703557300000227
+      },
+      {
+        "signature": "4j1Eb5zy94bnL6xXQ2GakgdULyujkXxu6thhsyZZCrADgLfTfYXWThiGSrwuweRCXUf6y4H7jtXk7tB6V1a66cLQ",
+        "slot": 439540387,
+        "time": 1786841277,
+        "trader": "B4tNdaY2rEWPPVFp2zpFGjF34BmCXqJ4bytEgVFoy9GB",
+        "isBuy": true,
+        "tokens": 343710.189567,
+        "sol": 0.45917874200000597
+      },
+      {
+        "signature": "49E6o81ePYLVKEPod9ZUn9NszTUqPd2GQrSRt5swK9VH2UpKHWYoCKsmHqVYqUp7gaACDfSNDnKYfapJXJzSXEh8",
+        "slot": 439510837,
+        "time": 1786828989,
+        "trader": "GJHaMmRvWDPbMuGAedrk1nSCrvy5wubcHeeCYBjtXYfX",
+        "isBuy": true,
+        "tokens": 9881.205277999863,
+        "sol": 0.013038332999997237
+      },
+      {
+        "signature": "41yfRYC8NwwzpzbAvEf9319Guw2yvV2L1mkJtXARn1e7LE4Q4YyqYW2JY7n7tMy2MiviEZ1AeVNasxqAFrdjFAdF",
+        "slot": 439456265,
+        "time": 1786806259,
+        "trader": "dpyaxU61FT7p1X2krHnmuHMv5HhFjvNrtcQ1Mtt97Jy",
+        "isBuy": true,
+        "tokens": 2747711.7876399998,
+        "sol": 3.0442232569999987
+      },
+      {
+        "signature": "66MbM194bz9qykkMby7X1nXcNLckkyRuc1Pc5TDqPBjYCKHpGpBN8Y3BTcp3byyQXX3syG4dkZgosv4VkH4b92Ev",
+        "slot": 438702348,
+        "time": 1786491713,
+        "trader": "dpyaxU61FT7p1X2krHnmuHMv5HhFjvNrtcQ1Mtt97Jy",
+        "isBuy": true,
+        "tokens": 201581.92104100017,
+        "sol": 0.19369485600000758
+      },
+      {
+        "signature": "2VhgitBZQPWNF2Y6wVDUtfJAuDSRRdohAyTBZp2SeFo4rJ58SWNXBmLfpzyteoa2iUd4uPbxpf7oaJekVRVm5Kov",
+        "slot": 438488978,
+        "time": 1786401828,
+        "trader": "DDrgjDKWeCxMC8Po8MLfHcdzcBTH7aWSYnAy1o15jMqm",
+        "isBuy": false,
+        "tokens": 3383868.199519,
+        "sol": 4.008819960000011
+      },
+      {
+        "signature": "5jMpn8nhqoakYLR1qzDUaXhFs4DErec3JsP8DBaL6s7RCgcPZ6w54QMykH2wrtimCteMoFxrqZLkTusLK8AGRpQg",
+        "slot": 438410216,
+        "time": 1786368558,
+        "trader": "J5HaT7Uyp6BK5RNTGgpXwjHbbrHysq17HGvKuPLukRWM",
+        "isBuy": true,
+        "tokens": 3000020.736157,
+        "sol": 3.1916662989999907
+      },
+      {
+        "signature": "4ArUwumJHesrMnNuSeTpfNMMcfr6L2tdvxQDMpPYdCyz8KCsWsfBp8T2q51VneEgG1wdmHxan1S1A4JsoFad9S9J",
+        "slot": 438192628,
+        "time": 1786276501,
+        "trader": "dpyaxU61FT7p1X2krHnmuHMv5HhFjvNrtcQ1Mtt97Jy",
+        "isBuy": true,
+        "tokens": 244948.815511,
+        "sol": 0.25408303200001114
+      },
+      {
+        "signature": "2SDpmwwPeKwksT64SHhNAvi3a3Xc9z5PXexamo8XhWPxenBfJaEbmdbL8qEJcdVF6SQzZHHfxRQennWwaRCrBKVi",
+        "slot": 437798290,
+        "time": 1786109975,
+        "trader": "C8XzAiFwd9J4DPX6QoKE6ZS4bY4j2jZVzLXzMbQ2fkAW",
+        "isBuy": false,
+        "tokens": 2025248.773912,
+        "sol": 2.0702957270000013
+      },
+      {
+        "signature": "4hfNcns1kQj5JLL5ZV8HxRgSdCSFg3vjGSMz8R138Np8Vh4MSuhLPjpiUk2A2NLQvgecQHcjvP9es2A2QKGQxXV9",
+        "slot": 437415012,
+        "time": 1785948109,
+        "trader": "BhsnCREr81VLeWwaBkdLw9KbTMyK6pgffCQkxpM1YRD",
+        "isBuy": true,
+        "tokens": 565515.898273,
+        "sol": 0.4940691689999994
+      },
+      {
+        "signature": "4kdM5oaYfwoutPeFYJK4fTug9rMLc4P2yU55hX4bypmi1153Tzs1Dxxjrp67hXYJQ5APw8mK1DWM9zAhZ3NPe8Kx",
+        "slot": 437367484,
+        "time": 1785928001,
+        "trader": "dpyaxU61FT7p1X2krHnmuHMv5HhFjvNrtcQ1Mtt97Jy",
+        "isBuy": true,
+        "tokens": 475451.50906500034,
+        "sol": 0.39750425400001177
+      },
+      {
+        "signature": "3jBGUJG6jdd9kivw8ErZe1XwvAZKXBcG3rf6NEcMZbd2xHmqRPCZjmYQQoKAoSZXrZEJ4NhhFDrEYCqScVyUcSJ8",
+        "slot": 437356004,
+        "time": 1785923165,
+        "trader": "FixukbsKfJZEr996ubcWvwTAt1b6QJ2SfP3FJsBSbH33",
+        "isBuy": false,
+        "tokens": 804414.399197,
+        "sol": 0.7148102499999993
+      },
+      {
+        "signature": "2iFEpPVBY6mvRGugKcNpFLuiquQL93EuEsLnLposw2KSMbVxBctWP1QhDrykSsMctfzUP9jd6rsSfm6NRnf8xUPs",
+        "slot": 437354127,
+        "time": 1785922373,
+        "trader": "CMsSHtxyWBhUbXHk5KcC1N2w1wHAAM2EjnN4zpia9Nj3",
+        "isBuy": true,
+        "tokens": 111799.17457999999,
+        "sol": 0.09901185600000417
+      },
+      {
+        "signature": "Mcho4QNiLfqs589oVxUGPd2ijki8SDb666abZrQG5vpRVZsfR4X8BUmk8XWxhVCm9mY6YUKVMvh4Sj7CqXjm9vc",
+        "slot": 437175378,
+        "time": 1785846690,
+        "trader": "HNEwmdmXxo6L9i2sHx2pD6tuppLiSsqccyywmQYjs4As",
+        "isBuy": true,
+        "tokens": 2143515.565718,
+        "sol": 2.0792490110000017
+      },
+      {
+        "signature": "2Q3bAynPR9VyDPigSFDPh5FGQSNGJF7eXQvJGeVjvTUtSmFSFqmmS2mTdMhKwYhUQvRAwGS2j3VoNaoyn2xbgBdb",
+        "slot": 437135145,
+        "time": 1785829713,
+        "trader": "HvLi4xBRLC6Dz9VTeGCKAEonRzSJHmYLVL3xzmUEuU6n",
+        "isBuy": false,
+        "tokens": 3148544.941331,
+        "sol": 3.6222198410000033
+      },
+      {
+        "signature": "2MJXsQmd4DbUx4jK8uHc4bKBvmJqmjJyEEQkyH9LBUvtoLNzZKwsw43NVWMjiXR86SsuYBuqHp7MWuHqujB9HC4E",
+        "slot": 436972976,
+        "time": 1785761037,
+        "trader": "3zp5CfK1eXVknFzKkh1bZaT6TT9jr8oLd4RPhhRVrbwM",
+        "isBuy": false,
+        "tokens": 20180.453091,
+        "sol": 0.02591053599999782
+      },
+      {
+        "signature": "46gEAVbT152nh2CZ8VC5wSrsTzVzZei77hJfLbpBtzjBif1XgYc5Awevq25ChMDSBxc3y2kWzrGFnJBQRjvjeYWG",
+        "slot": 436936190,
+        "time": 1785745488,
+        "trader": "3zp5CfK1eXVknFzKkh1bZaT6TT9jr8oLd4RPhhRVrbwM",
+        "isBuy": true,
+        "tokens": 20180.453091,
+        "sol": 0.02931994300001861
+      },
+      {
+        "signature": "3HTYyMgqMypHoGxcsWTjHtifrCjzwm3Ynwx1eMmRjM7BGwnFE5yFgiQ42x54HeZVgZjiUd9c8rzukH4q74rNZjLg",
+        "slot": 436860651,
+        "time": 1785713647,
+        "trader": "E6dFsHyC126YHjD9oVdQbV9L1LzK1aqZo2q2cAwNekiX",
+        "isBuy": true,
+        "tokens": 154740.61832899996,
+        "sol": 0.2008088020000116
+      },
+      {
+        "signature": "4sVDxkSQEqysGTRTuhgR7e37JgBdQ7mB8T3PckHjLRi5fdDw6HQRrzDzoJsCTwUy26AQ1LF7iqrhBuXAat8WrEcq",
+        "slot": 436381690,
+        "time": 1785511438,
+        "trader": "HNEwmdmXxo6L9i2sHx2pD6tuppLiSsqccyywmQYjs4As",
+        "isBuy": true,
+        "tokens": 549378.4943239999,
+        "sol": 0.6930830029999981
+      },
+      {
+        "signature": "52j2JkagywSahL41DNTpAerENJHZudZw6PEegiRG3ykR6AjMqzWv4EzDaxfEMbVmwA3DCo11B9tPsJ3qzfv6rLFV",
+        "slot": 436168068,
+        "time": 1785421356,
+        "trader": "dpyaxU61FT7p1X2krHnmuHMv5HhFjvNrtcQ1Mtt97Jy",
+        "isBuy": true,
+        "tokens": 545361.182701,
+        "sol": 0.6606751249999832
+      },
+      {
+        "signature": "2YYaUp5CaWomG5wPP2AbwTbR1wfPoMAXaGb27TmnH9L1LZr7p5aUEz26U7Rht6afsswgdSTFor8PJmWKxfqo46JU",
+        "slot": 436166796,
+        "time": 1785420813,
+        "trader": "43ijP5TDBhU8Gn8i5Z93HSVVc6GN8MVQpx4TgM3SYhF6",
+        "isBuy": false,
+        "tokens": 811884.059198,
+        "sol": 1.203730964000016
+      },
+      {
+        "signature": "3MBeSuYjcFfwmm912eXhbwp5WdVMwG2FfSzRpctMxQ7sswBWsKoLL1XwvPEw9FEKSGKuQJVDhjyEw27DB89rVV9U",
+        "slot": 436146148,
+        "time": 1785412101,
+        "trader": "AuDgrKHZ5T1NBuwC3HnMYo4ijBuVx84HhfmD3y9m8m47",
+        "isBuy": false,
+        "tokens": 5.518034,
+        "sol": 0.000006621000011364231
+      },
+      {
+        "signature": "2KqRUK5cpodQaa9MpAzLKSM9A48vDt2DaQcC1gWvERoFbKChDrJj2ySyQgHgzG4EZBN6WL7FinhFYM5qTurFPrYq",
+        "slot": 435800911,
+        "time": 1785266202,
+        "trader": "5nqX5BRcZbFVwHkCSkiQCTYKNs9ChdtMurwZnquBRHQ4",
+        "isBuy": true,
+        "tokens": 2644909.694983,
+        "sol": 3.630790246999993
+      },
+      {
+        "signature": "51xyaJTFhmnfzHmePH1hAG3Bxfg28aya5b21D3E4RFpq4PwtSMDVLDDwqPuwHoFsUKGLFy3Z9oJ6Y8gnEAprTaKB",
+        "slot": 435723368,
+        "time": 1785233361,
+        "trader": "6Y6RKjD4WffvgUcgXLoPexdWUfYVArcAbriG2ZuGsMzu",
+        "isBuy": true,
+        "tokens": 449042.2831990002,
+        "sol": 0.6741649109999912
+      },
+      {
+        "signature": "5orNgVrNf71LjwhkFwVrXxvYSsPa2s6R8C3yqtASKnbE4vPefwbYQS7mv9p7ZQBZtLvyFowmPZPhhpPGEjtRb9Yp",
+        "slot": 435673645,
+        "time": 1785212431,
+        "trader": "F7CEGwbax3m9RBXdSCEXaPjr124xaGTqt63x39CHPUGj",
+        "isBuy": false,
+        "tokens": 8480.685239,
+        "sol": 0.009973570999989079
+      },
+      {
+        "signature": "43zU1eKk37gLbMhNnzoC1sL1H6aBxNMe7RdoXpJ5CSUSDPAiqmFiQfwC13Uw4MDXCnQg2znaW72gyP4zMkRM7ebm",
+        "slot": 435606174,
+        "time": 1785184025,
+        "trader": "HKCkmsdBFEoNtmEdyAFcaowbebNLXGFHXDJB2ZJSXGRK",
+        "isBuy": true,
+        "tokens": 12705.47060900001,
+        "sol": 0.014006919999985712
+      },
+      {
+        "signature": "2CmzECeN6wWU4fBtgAToMYmGh2vTBCYesXttxHfax6hDPGG9dWEVfAUEXY9Wm4LsBDin5jWGDASaCHLZtRWNeyBf",
+        "slot": 435474866,
+        "time": 1785128709,
+        "trader": "6aeqiV4HHLYPnT7doDzSh7nSro5uRbTsrD5Yc6RvynVX",
+        "isBuy": true,
+        "tokens": 12224688.961961,
+        "sol": 12.858669959999986
+      },
+      {
+        "signature": "2GzWJnkBc2fqLrtpGU94Z7nt7WFNQrkZxjqGX2wkPkzcmoF4xdnd7DV8gjXJQYbSorw6nRhdT2e5eFFJHy5kd4Si",
+        "slot": 434866100,
+        "time": 1784873055,
+        "trader": "dpyaxU61FT7p1X2krHnmuHMv5HhFjvNrtcQ1Mtt97Jy",
+        "isBuy": true,
+        "tokens": 691207.0081409999,
+        "sol": 0.6500184340000033
+      },
+      {
+        "signature": "3vdjiYm4U67dRyV3wmcfNRnn17KFNMDXoDH9P8Y7eiPv6zeRi23Zttv14sPwouwKh24ALRLU27tbsmcbnMDFRKXG",
+        "slot": 434495959,
+        "time": 1784717698,
+        "trader": "FpFFpmFU8G1W3SNHQTCUz3dsVfKdDSzWwHxSJBiNwj5h",
+        "isBuy": false,
+        "tokens": 1614.369256,
+        "sol": 0.0015205460000231596
+      },
+      {
+        "signature": "2aHBEhhL8KQJvMnyAYbEBxJN3eaJyysyKV2qhgK4vHeuXzivNfc3WPmoqPwdKUEZN7iWYQTZGSnzFgBxrQ9mt6iK",
+        "slot": 434136082,
+        "time": 1784566392,
+        "trader": "mP4tnNkwAtRLpSZG5CqcH3CVPJHgVw7XH3j6YRyayQP",
+        "isBuy": true,
+        "tokens": 1516095.7900929973,
+        "sol": 1.6051568940000038
+      },
+      {
+        "signature": "2fP1b2Frfq3Dp4tLDt3T7Q5sGYj7jGZMnMWjY1XoXPfGxd2Qk7tbYTWW4jsLYqkRgXr1e6sypfwjCQzMZiuUDj4e",
+        "slot": 433636441,
+        "time": 1784355859,
+        "trader": "Ctr9PdTza3ycKf2t9vhb4B9oJ8MQbX127bvbrjxgWUJ6",
+        "isBuy": true,
+        "tokens": 1126172.7941270005,
+        "sol": 0.9802173900000071
+      },
+      {
+        "signature": "4UBcfsnPArgbJ1oEtMxVLRDt8Kcp4ULWWfvMrRtHHKsi36RUvPBkeKESYGgfajrZfbhRFY338RsMvHYrtE1Q2He7",
+        "slot": 433076925,
+        "time": 1784124172,
+        "trader": "GwGGXZL3XaDzFVr6RvrMNEXofk9jixdYwaL1TRcZULu9",
+        "isBuy": false,
+        "tokens": 3465.228284999961,
+        "sol": 0.003504354000000376
+      },
+      {
+        "signature": "2YWovJmXLERtaEvh1sfjiJSKFL8az5fPi113mRdK9VvCvBRmVxjP9ctQzrhtWVn2j9w3waC83HBp7uAZckv62XzK",
+        "slot": 432923200,
+        "time": 1784060825,
+        "trader": "Dkc2DnnQ92HZbQZavPWfqyWn4zrk5a2VBsAHxJQKLBwX",
+        "isBuy": true,
+        "tokens": 918927.982233,
+        "sol": 0.9901185759999862
       }
     ],
-    "buyVol": 31.675001583999887,
-    "sellVol": 6.980257786999886,
-    "buyers": 18,
-    "sellers": 12,
-    "topBuyerShare": 0.20953664780091408,
-    "top3BuyerShare": 0.4684656938263721,
+    "buyVol": 113.82143049899975,
+    "sellVol": 105.28101879800008,
+    "buyers": 70,
+    "sellers": 67,
+    "topBuyerShare": 0.12346342729477024,
+    "top3BuyerShare": 0.2927044495745706,
     "regularBuyers": [],
     "traders": [
       {
         "trader": "2d3q3QS2pAY8yZFau6o9Mukh4pByNu8UCKdBfUkQmrAT",
-        "buys": 2,
+        "buys": 3,
         "sells": 0,
-        "solIn": 6.63707365099998,
+        "solIn": 14.052783908999999,
         "solOut": 0,
-        "tokensIn": 2709178.8123250008,
+        "tokensIn": 6880775.531976001,
         "tokensOut": 0,
-        "first": 1788789181,
+        "first": 1786986239,
         "last": 1788789260,
         "buyTimes": [
           1788789260,
-          1788789181
+          1788789181,
+          1786986239
         ],
         "buySizes": [
           1.6840336120000075,
-          4.953040038999973
+          4.953040038999973,
+          7.4157102580000185
+        ],
+        "repeatSize": 1
+      },
+      {
+        "trader": "7NfyynANY3TpWMfgWgZmBoEFCnGWTydAqqWwdN5gEhin",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 13.844709057000046,
+        "tokensIn": 0,
+        "tokensOut": 4841232.015236,
+        "first": 1788448508,
+        "last": 1788448508,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "6aeqiV4HHLYPnT7doDzSh7nSro5uRbTsrD5Yc6RvynVX",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 12.858669959999986,
+        "solOut": 0,
+        "tokensIn": 12224688.961961,
+        "tokensOut": 0,
+        "first": 1785128709,
+        "last": 1785128709,
+        "buyTimes": [
+          1785128709
+        ],
+        "buySizes": [
+          12.858669959999986
         ]
+      },
+      {
+        "trader": "3DCp6TufpAbbok6sWZKi3NJUhBPqsiYQotF2ugC4f71U",
+        "buys": 0,
+        "sells": 2,
+        "solIn": 0,
+        "solOut": 12.19388163100001,
+        "tokensIn": 0,
+        "tokensOut": 4993300.771335,
+        "first": 1787839400,
+        "last": 1788504598,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "JCyBcNFFiEGqaaB93HyKr2GcQ6B76At1VVE3fa8VaUKS",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 9.284245115999994,
+        "tokensIn": 0,
+        "tokensOut": 5000442.276434,
+        "first": 1787627476,
+        "last": 1787627476,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "dpyaxU61FT7p1X2krHnmuHMv5HhFjvNrtcQ1Mtt97Jy",
+        "buys": 8,
+        "sells": 0,
+        "solIn": 6.4045852949999755,
+        "solOut": 0,
+        "tokensIn": 5426177.716155,
+        "tokensOut": 0,
+        "first": 1784873055,
+        "last": 1788779803,
+        "buyTimes": [
+          1788779803,
+          1788778531,
+          1786806259,
+          1786491713,
+          1786276501,
+          1785928001,
+          1785421356,
+          1784873055
+        ],
+        "buySizes": [
+          0.9408075269999756,
+          0.2635788099999843,
+          3.0442232569999987,
+          0.19369485600000758,
+          0.25408303200001114,
+          0.39750425400001177,
+          0.6606751249999832,
+          0.6500184340000033
+        ],
+        "intervalCv": 1.0779400895085436,
+        "repeatSize": 1
+      },
+      {
+        "trader": "H9LMapGT1t3AJ179HVycRYs2xFj7jGQM9PwosciRjjhN",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 5.739003605999983,
+        "solOut": 0,
+        "tokensIn": 2369212.806211002,
+        "tokensOut": 0,
+        "first": 1788070218,
+        "last": 1788070218,
+        "buyTimes": [
+          1788070218
+        ],
+        "buySizes": [
+          5.739003605999983
+        ]
+      },
+      {
+        "trader": "Gtw5QKLnYazyApkzmCXo9GvXa5sCjwvx2bdRLaid8FHu",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 5.679047921999995,
+        "tokensIn": 0,
+        "tokensOut": 2429351.249102,
+        "first": 1787566382,
+        "last": 1787566382,
+        "buyTimes": [],
+        "buySizes": []
       },
       {
         "trader": "6PLWbWGqRcBGtAPetfKBY1aG31rwy4Sr7g3Y97ArVuLd",
@@ -1729,31 +4529,272 @@
         "repeatSize": 1
       },
       {
-        "trader": "GJeipeY4SWs21t2Two5L9jzXaX81KhoCna8paXoLjdo6",
-        "buys": 5,
-        "sells": 1,
-        "solIn": 3.1227535419999413,
-        "solOut": 0.6037660220000021,
-        "tokensIn": 1160552.9550349999,
-        "tokensOut": 221096.175375,
-        "first": 1788790701,
-        "last": 1788791403,
+        "trader": "BUDz9HggSPfiteVh3NJTydr7KACSqjZu9ycamEtLLamQ",
+        "buys": 4,
+        "sells": 3,
+        "solIn": 2.7524455100000296,
+        "solOut": 2.162212619999991,
+        "tokensIn": 1058070.665798,
+        "tokensOut": 852884.055821,
+        "first": 1788224474,
+        "last": 1788791453,
         "buyTimes": [
-          1788791403,
-          1788791301,
-          1788790972,
-          1788790753,
-          1788790701
+          1788791453,
+          1788790885,
+          1788790809,
+          1788789237
         ],
         "buySizes": [
-          0.993869654999969,
-          0.9923654189999525,
-          0.4793889030000287,
-          0.3386550949999787,
-          0.3184744700000124
+          0.617267054000024,
+          0.6283690619999902,
+          0.45851275900002975,
+          1.0482966349999856
         ],
-        "intervalCv": 0.61176656154556,
+        "intervalCv": 0.8427998672328395,
+        "repeatSize": 1
+      },
+      {
+        "trader": "DiVG1rHxQoVLuZsLVBEPe5A3pBU5ymvYBBtVSNhhhmKb",
+        "buys": 2,
+        "sells": 2,
+        "solIn": 3.084819793999941,
+        "solOut": 1.6348904400000208,
+        "tokensIn": 1439806.4866950002,
+        "tokensOut": 893838.878532,
+        "first": 1787143711,
+        "last": 1788527335,
+        "buyTimes": [
+          1788527335,
+          1787378845
+        ],
+        "buySizes": [
+          0.9700082259999476,
+          2.1148115679999933
+        ]
+      },
+      {
+        "trader": "7b4YpJsszdXGKraYwwAG1vDWSJBzrxvsy3hvUBchLW7X",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 4.575656901000002,
+        "tokensIn": 0,
+        "tokensOut": 1789777.613024,
+        "first": 1788722600,
+        "last": 1788722600,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "7DbM3iS7CymTWXdc6QaEqPXeXjbc7R9QDuY1LdguaV67",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 4.557854636999991,
+        "tokensIn": 0,
+        "tokensOut": 1895755.802874,
+        "first": 1788753312,
+        "last": 1788753312,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "FhtXTXBWAdER77os8Tz4RHyjBfrFG9sigdHZm7qoeLz8",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 4.453385948000005,
+        "tokensIn": 0,
+        "tokensOut": 2190296.944056,
+        "first": 1787978264,
+        "last": 1787978264,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "8xSVeCtZzbSQcBgpnpAqVr8ag7w5E6Y38RnZ1BcDHDVN",
+        "buys": 0,
+        "sells": 9,
+        "solIn": 0,
+        "solOut": 4.274666853000042,
+        "tokensIn": 0,
+        "tokensOut": 1792475.9016570002,
+        "first": 1788742227,
+        "last": 1788774636,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "EjqJgyRNUdbjJDmnFyMmrH5gG4ronAh5HCZgCmoCG1a6",
+        "buys": 8,
+        "sells": 2,
+        "solIn": 3.6408690629999683,
+        "solOut": 0.5748481129999732,
+        "tokensIn": 1933946.2429820003,
+        "tokensOut": 240303.17858800013,
+        "first": 1787031260,
+        "last": 1788791800,
+        "buyTimes": [
+          1788485675,
+          1788255889,
+          1787898659,
+          1787575977,
+          1787318677,
+          1787294208,
+          1787044692,
+          1787031260
+        ],
+        "buySizes": [
+          0.47883753000002116,
+          0.48483163899999226,
+          0.4615636959999847,
+          0.2059262030000184,
+          0.5473577219999868,
+          0.5488132999999777,
+          0.6517157929999939,
+          0.26182317999999327
+        ],
+        "intervalCv": 0.6076783405177345,
         "repeatSize": 2
+      },
+      {
+        "trader": "Emk5yXD9o7zqh5vNSgHxp5xTGYK3PNq7ULdpKZRCN7CX",
+        "buys": 1,
+        "sells": 1,
+        "solIn": 1.9802136490000066,
+        "solOut": 2.135949374000006,
+        "tokensIn": 782052.468127,
+        "tokensOut": 782052.468127,
+        "first": 1788734024,
+        "last": 1788795687,
+        "buyTimes": [
+          1788734024
+        ],
+        "buySizes": [
+          1.9802136490000066
+        ]
+      },
+      {
+        "trader": "DDrgjDKWeCxMC8Po8MLfHcdzcBTH7aWSYnAy1o15jMqm",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 4.008819960000011,
+        "tokensIn": 0,
+        "tokensOut": 3383868.199519,
+        "first": 1786401828,
+        "last": 1786401828,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "5nqX5BRcZbFVwHkCSkiQCTYKNs9ChdtMurwZnquBRHQ4",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 3.630790246999993,
+        "solOut": 0,
+        "tokensIn": 2644909.694983,
+        "tokensOut": 0,
+        "first": 1785266202,
+        "last": 1785266202,
+        "buyTimes": [
+          1785266202
+        ],
+        "buySizes": [
+          3.630790246999993
+        ]
+      },
+      {
+        "trader": "HvLi4xBRLC6Dz9VTeGCKAEonRzSJHmYLVL3xzmUEuU6n",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 3.6222198410000033,
+        "tokensIn": 0,
+        "tokensOut": 3148544.941331,
+        "first": 1785829713,
+        "last": 1785829713,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "SPxFPQ7f5fxYibEY7RL3oS43R1DUJwtbj7V57bZoFKU",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 3.608624624000015,
+        "tokensIn": 0,
+        "tokensOut": 2000000.480967,
+        "first": 1787542872,
+        "last": 1787542872,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "6UykY7jVE48cswifJRvaC6iUSrAzMZwYJ6vTtUCm1MZ7",
+        "buys": 0,
+        "sells": 2,
+        "solIn": 0,
+        "solOut": 3.303304603999976,
+        "tokensIn": 0,
+        "tokensOut": 1428926.5233129999,
+        "first": 1787835869,
+        "last": 1788047735,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "J5HaT7Uyp6BK5RNTGgpXwjHbbrHysq17HGvKuPLukRWM",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 3.1916662989999907,
+        "solOut": 0,
+        "tokensIn": 3000020.736157,
+        "tokensOut": 0,
+        "first": 1786368558,
+        "last": 1786368558,
+        "buyTimes": [
+          1786368558
+        ],
+        "buySizes": [
+          3.1916662989999907
+        ]
+      },
+      {
+        "trader": "83VfboTKK4VPXLfceop1UgNxb3umjpW2JXXgtTh6qMGV",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 2.9703557300000227,
+        "solOut": 0,
+        "tokensIn": 2037075.133673,
+        "tokensOut": 0,
+        "first": 1786848305,
+        "last": 1786848305,
+        "buyTimes": [
+          1786848305
+        ],
+        "buySizes": [
+          2.9703557300000227
+        ]
+      },
+      {
+        "trader": "AodhYAJEjDJV8e6Sc3qtMgwQJatAXwu5PzbEPhsoDUoZ",
+        "buys": 2,
+        "sells": 0,
+        "solIn": 2.9688521960000003,
+        "solOut": 0,
+        "tokensIn": 1817123.4730139999,
+        "tokensOut": 0,
+        "first": 1786860268,
+        "last": 1786920407,
+        "buyTimes": [
+          1786920407,
+          1786860268
+        ],
+        "buySizes": [
+          1.9792347980000216,
+          0.9896173979999787
+        ]
       },
       {
         "trader": "BbGriCL6sGQMSJAXnjjpvG2EyetQwmoALG1secBrjm6V",
@@ -1773,28 +4814,76 @@
         ]
       },
       {
-        "trader": "BUDz9HggSPfiteVh3NJTydr7KACSqjZu9ycamEtLLamQ",
-        "buys": 4,
+        "trader": "E8oXDWch45FBcZPRgPqCHY2zmscdgKo1aV2yKgQT5YR3",
+        "buys": 6,
         "sells": 0,
-        "solIn": 2.7524455100000296,
+        "solIn": 2.904406862999906,
         "solOut": 0,
-        "tokensIn": 1058070.665798,
+        "tokensIn": 1114093.399983,
         "tokensOut": 0,
-        "first": 1788789237,
-        "last": 1788791453,
+        "first": 1788183563,
+        "last": 1788791192,
         "buyTimes": [
-          1788791453,
-          1788790885,
-          1788790809,
-          1788789237
+          1788791192,
+          1788790884,
+          1788790835,
+          1788790707,
+          1788790683,
+          1788183563
         ],
         "buySizes": [
-          0.617267054000024,
-          0.6283690619999902,
-          0.45851275900002975,
-          1.0482966349999856
+          0.25227921799995556,
+          0.5940640940000321,
+          0.6178266579999558,
+          0.14851602300001332,
+          0.3235529889999498,
+          0.9681678809999994
         ],
-        "intervalCv": 0.8427998672328395,
+        "intervalCv": 1.997905962098218,
+        "repeatSize": 1
+      },
+      {
+        "trader": "HNEwmdmXxo6L9i2sHx2pD6tuppLiSsqccyywmQYjs4As",
+        "buys": 2,
+        "sells": 0,
+        "solIn": 2.772332014,
+        "solOut": 0,
+        "tokensIn": 2692894.0600419994,
+        "tokensOut": 0,
+        "first": 1785511438,
+        "last": 1785846690,
+        "buyTimes": [
+          1785846690,
+          1785511438
+        ],
+        "buySizes": [
+          2.0792490110000017,
+          0.6930830029999981
+        ]
+      },
+      {
+        "trader": "GJeipeY4SWs21t2Two5L9jzXaX81KhoCna8paXoLjdo6",
+        "buys": 4,
+        "sells": 1,
+        "solIn": 2.130388122999989,
+        "solOut": 0.6037660220000021,
+        "tokensIn": 800393.195925,
+        "tokensOut": 221096.175375,
+        "first": 1788790701,
+        "last": 1788791403,
+        "buyTimes": [
+          1788791403,
+          1788790972,
+          1788790753,
+          1788790701
+        ],
+        "buySizes": [
+          0.993869654999969,
+          0.4793889030000287,
+          0.3386550949999787,
+          0.3184744700000124
+        ],
+        "intervalCv": 0.6627744514222073,
         "repeatSize": 1
       },
       {
@@ -1832,15 +4921,94 @@
         ]
       },
       {
-        "trader": "Emk5yXD9o7zqh5vNSgHxp5xTGYK3PNq7ULdpKZRCN7CX",
+        "trader": "J36RfC1dDRGcfV1AayosvB6JnV1PhQoaNE38aKS2WmmC",
+        "buys": 2,
+        "sells": 0,
+        "solIn": 2.5853855329999647,
+        "solOut": 0,
+        "tokensIn": 1265948.3574040001,
+        "tokensOut": 0,
+        "first": 1786861320,
+        "last": 1786921441,
+        "buyTimes": [
+          1786921441,
+          1786861320
+        ],
+        "buySizes": [
+          0.35516092499997853,
+          2.230224607999986
+        ]
+      },
+      {
+        "trader": "xsWXk2mWSYGSnt2tm5yntr6mhuDQijDHcKxRoFCN4Bs",
         "buys": 0,
         "sells": 1,
         "solIn": 0,
-        "solOut": 2.135949374000006,
+        "solOut": 2.51667386699998,
         "tokensIn": 0,
-        "tokensOut": 782052.468127,
-        "first": 1788795687,
-        "last": 1788795687,
+        "tokensOut": 1579185.908356,
+        "first": 1786940458,
+        "last": 1786940458,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "CzZMnQxpsodfaH8dhCUVmxWrFjef7gsVTNa5ADFMzLiG",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 2.4740434989999756,
+        "solOut": 0,
+        "tokensIn": 1057719.773416,
+        "tokensOut": 0,
+        "first": 1787564978,
+        "last": 1787564978,
+        "buyTimes": [
+          1787564978
+        ],
+        "buySizes": [
+          2.4740434989999756
+        ]
+      },
+      {
+        "trader": "FixukbsKfJZEr996ubcWvwTAt1b6QJ2SfP3FJsBSbH33",
+        "buys": 0,
+        "sells": 2,
+        "solIn": 0,
+        "solOut": 2.1782108640000217,
+        "tokensIn": 0,
+        "tokensOut": 1392992.9486039998,
+        "first": 1785923165,
+        "last": 1788790268,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "HgLNy8YgtFiTLMcrBxfJGvAXbriZa69k6Rrrk221xjNR",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 2.075627501000014,
+        "solOut": 0,
+        "tokensIn": 1600660.947306,
+        "tokensOut": 0,
+        "first": 1786854029,
+        "last": 1786854029,
+        "buyTimes": [
+          1786854029
+        ],
+        "buySizes": [
+          2.075627501000014
+        ]
+      },
+      {
+        "trader": "C8XzAiFwd9J4DPX6QoKE6ZS4bY4j2jZVzLXzMbQ2fkAW",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 2.0702957270000013,
+        "tokensIn": 0,
+        "tokensOut": 2025248.773912,
+        "first": 1786109975,
+        "last": 1786109975,
         "buyTimes": [],
         "buySizes": []
       },
@@ -1864,63 +5032,175 @@
         ]
       },
       {
-        "trader": "E8oXDWch45FBcZPRgPqCHY2zmscdgKo1aV2yKgQT5YR3",
-        "buys": 5,
+        "trader": "4q1b1ENvqxMzyeter97qt2pdccJApwXZkRRGbtMQcLzd",
+        "buys": 1,
         "sells": 0,
-        "solIn": 1.9362389819999066,
+        "solIn": 1.9792347980000216,
         "solOut": 0,
-        "tokensIn": 752471.80636,
+        "tokensIn": 1061534.311513,
         "tokensOut": 0,
-        "first": 1788790683,
-        "last": 1788791192,
+        "first": 1787635125,
+        "last": 1787635125,
         "buyTimes": [
-          1788791192,
-          1788790884,
-          1788790835,
-          1788790707,
-          1788790683
+          1787635125
         ],
         "buySizes": [
-          0.25227921799995556,
-          0.5940640940000321,
-          0.6178266579999558,
-          0.14851602300001332,
-          0.3235529889999498
-        ],
-        "intervalCv": 0.8738084068741803,
-        "repeatSize": 1
+          1.9792347980000216
+        ]
       },
       {
-        "trader": "FixukbsKfJZEr996ubcWvwTAt1b6QJ2SfP3FJsBSbH33",
+        "trader": "HUmFddQhMacCxeo8DA5yDe16cgwmhK5Fu94p7YC7staW",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 1.9606113689999916,
+        "solOut": 0,
+        "tokensIn": 1053771.6903030002,
+        "tokensOut": 0,
+        "first": 1787202645,
+        "last": 1787202645,
+        "buyTimes": [
+          1787202645
+        ],
+        "buySizes": [
+          1.9606113689999916
+        ]
+      },
+      {
+        "trader": "3nZjnsyGWpe8CR4a6f3nuLcdR9XMvBU7cM1ZUjBBfBFn",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 1.8037958129999936,
+        "solOut": 0,
+        "tokensIn": 899441.2267080001,
+        "tokensOut": 0,
+        "first": 1787857692,
+        "last": 1787857692,
+        "buyTimes": [
+          1787857692
+        ],
+        "buySizes": [
+          1.8037958129999936
+        ]
+      },
+      {
+        "trader": "8i7E2NjyE2LdDFbjgF1obn7Fw6uZfnxdy8Tovz7UGFMM",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 1.6262172849999956,
+        "solOut": 0,
+        "tokensIn": 985281.843621,
+        "tokensOut": 0,
+        "first": 1787344550,
+        "last": 1787344550,
+        "buyTimes": [
+          1787344550
+        ],
+        "buySizes": [
+          1.6262172849999956
+        ]
+      },
+      {
+        "trader": "mP4tnNkwAtRLpSZG5CqcH3CVPJHgVw7XH3j6YRyayQP",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 1.6051568940000038,
+        "solOut": 0,
+        "tokensIn": 1516095.7900929973,
+        "tokensOut": 0,
+        "first": 1784566392,
+        "last": 1784566392,
+        "buyTimes": [
+          1784566392
+        ],
+        "buySizes": [
+          1.6051568940000038
+        ]
+      },
+      {
+        "trader": "BM9CcyErJcu2mjrFvUsRRrD3snGeHDDVirJLvL6EjvMN",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 1.5998246080000058,
+        "solOut": 0,
+        "tokensIn": 574736.6452059997,
+        "tokensOut": 0,
+        "first": 1788521423,
+        "last": 1788521423,
+        "buyTimes": [
+          1788521423
+        ],
+        "buySizes": [
+          1.5998246080000058
+        ]
+      },
+      {
+        "trader": "8nvP149GGw4Ep2Wmtq7T1jz4Kj1qBQixUrR7SxwKBKiD",
         "buys": 0,
-        "sells": 1,
+        "sells": 2,
         "solIn": 0,
-        "solOut": 1.4634006140000224,
+        "solOut": 1.348256291000041,
         "tokensIn": 0,
-        "tokensOut": 588578.549407,
-        "first": 1788790268,
-        "last": 1788790268,
+        "tokensOut": 550829.3021729998,
+        "first": 1788751360,
+        "last": 1788751428,
         "buyTimes": [],
         "buySizes": []
       },
       {
-        "trader": "dpyaxU61FT7p1X2krHnmuHMv5HhFjvNrtcQ1Mtt97Jy",
-        "buys": 2,
-        "sells": 0,
-        "solIn": 1.20438633699996,
-        "solOut": 0,
-        "tokensIn": 519915.49205600005,
-        "tokensOut": 0,
-        "first": 1788778531,
-        "last": 1788779803,
+        "trader": "H1w8X9ubRKcXZVMt5NVMgcavviqJNeTWTnx6GbXGEBZu",
+        "buys": 0,
+        "sells": 3,
+        "solIn": 0,
+        "solOut": 1.3089908139999409,
+        "tokensIn": 0,
+        "tokensOut": 533889.431715,
+        "first": 1788737434,
+        "last": 1788772335,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "76WoCZAGzoVSinUrsdbjJzki9z8qVs7ixbLfW2gTrMmv",
+        "buys": 1,
+        "sells": 1,
+        "solIn": 0.594364832999986,
+        "solOut": 0.6869756069999937,
+        "tokensIn": 390295.752185,
+        "tokensOut": 375271.373241,
+        "first": 1786904861,
+        "last": 1786943802,
         "buyTimes": [
-          1788779803,
-          1788778531
+          1786904861
         ],
         "buySizes": [
-          0.9408075269999756,
-          0.2635788099999843
+          0.594364832999986
         ]
+      },
+      {
+        "trader": "43ijP5TDBhU8Gn8i5Z93HSVVc6GN8MVQpx4TgM3SYhF6",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 1.203730964000016,
+        "tokensIn": 0,
+        "tokensOut": 811884.059198,
+        "first": 1785420813,
+        "last": 1785420813,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "4AuqKA8jc9o4j4vqjsY4oDgSjqyM9Q7upHwPYuxyR5zw",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 1.1625106760000108,
+        "tokensIn": 0,
+        "tokensOut": 645136.228293,
+        "first": 1787184803,
+        "last": 1787184803,
+        "buyTimes": [],
+        "buySizes": []
       },
       {
         "trader": "62HrTQstdgMvAgFpjRwke8QQZkAbXLs9x9Ga5D1ZXzAj",
@@ -1940,6 +5220,19 @@
         ]
       },
       {
+        "trader": "3X6Sa4zdPgwBoTt1n5Ga6u16kXBw67t6wH7QA1gnyAc2",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 1.0773404980000123,
+        "tokensIn": 0,
+        "tokensOut": 585547.593356,
+        "first": 1787117131,
+        "last": 1787117131,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
         "trader": "3XzWbnrDHtAXp5vxm8hrgm7gFzi3cnSDZjuxQHFGVnUS",
         "buys": 1,
         "sells": 0,
@@ -1954,6 +5247,430 @@
         ],
         "buySizes": [
           1.0681623569999772
+        ]
+      },
+      {
+        "trader": "Dkc2DnnQ92HZbQZavPWfqyWn4zrk5a2VBsAHxJQKLBwX",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.9901185759999862,
+        "solOut": 0,
+        "tokensIn": 918927.982233,
+        "tokensOut": 0,
+        "first": 1784060825,
+        "last": 1784060825,
+        "buyTimes": [
+          1784060825
+        ],
+        "buySizes": [
+          0.9901185759999862
+        ]
+      },
+      {
+        "trader": "CgmxssHPLS3xnrz8s8kd7aoTpP5TbtmCKRzSDbCfSDGg",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 0.9847654259999956,
+        "tokensIn": 0,
+        "tokensOut": 540858.645373,
+        "first": 1786896344,
+        "last": 1786896344,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "Ctr9PdTza3ycKf2t9vhb4B9oJ8MQbX127bvbrjxgWUJ6",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.9802173900000071,
+        "solOut": 0,
+        "tokensIn": 1126172.7941270005,
+        "tokensOut": 0,
+        "first": 1784355859,
+        "last": 1784355859,
+        "buyTimes": [
+          1784355859
+        ],
+        "buySizes": [
+          0.9802173900000071
+        ]
+      },
+      {
+        "trader": "FhUfDm6DbHi1tRKbW8otDGowbePqM18mnUqcmyCnhUFc",
+        "buys": 1,
+        "sells": 1,
+        "solIn": 0.4953040030000011,
+        "solOut": 0.42493752599997947,
+        "tokensIn": 283111.311883,
+        "tokensOut": 283111.311883,
+        "first": 1786936223,
+        "last": 1786964485,
+        "buyTimes": [
+          1786936223
+        ],
+        "buySizes": [
+          0.4953040030000011
+        ]
+      },
+      {
+        "trader": "AJQBDU71fwVdsG1gWyRpMhuH3C1jCrE4bnDqA2okiUZ4",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 0.8719147720000251,
+        "tokensIn": 0,
+        "tokensOut": 334149.41000000003,
+        "first": 1788718996,
+        "last": 1788718996,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "FSgm9HH28xyaFmRoDLNKgEdywvUy38BsYX2ZwXQs5Eam",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 0.8627529100000118,
+        "tokensIn": 0,
+        "tokensOut": 514293.753677,
+        "first": 1787248776,
+        "last": 1787248776,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "3AudKVvBwK5hKhWG8iAS9qnaj5USw5oZYWnj8UtUnf2j",
+        "buys": 2,
+        "sells": 1,
+        "solIn": 0.4626917540000193,
+        "solOut": 0.369588283000013,
+        "tokensIn": 208381.99718,
+        "tokensOut": 160566.39960900007,
+        "first": 1786862148,
+        "last": 1788694755,
+        "buyTimes": [
+          1786865160,
+          1786862148
+        ],
+        "buySizes": [
+          0.3387406610000028,
+          0.1239510930000165
+        ]
+      },
+      {
+        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
+        "buys": 41,
+        "sells": 64,
+        "solIn": 0.22370681300006368,
+        "solOut": 0.5485449010000139,
+        "tokensIn": 96729.72871499996,
+        "tokensOut": 224969.4401199998,
+        "first": 1787340048,
+        "last": 1788797455,
+        "buyTimes": [
+          1788797455,
+          1788797432,
+          1788797189,
+          1788789053,
+          1788783597,
+          1788780293,
+          1788779609,
+          1788775553,
+          1788775553,
+          1788775058,
+          1788774812,
+          1788774812,
+          1788774309,
+          1788771035,
+          1788756632,
+          1788756632,
+          1788753312,
+          1788753312,
+          1788727954,
+          1788722600,
+          1788720320,
+          1788718600,
+          1788706519,
+          1788703517,
+          1788702183,
+          1788699858,
+          1788552012,
+          1788546847,
+          1788545538,
+          1788470419,
+          1788408691,
+          1788328153,
+          1788196482,
+          1788193758,
+          1788111394,
+          1788096188,
+          1787922043,
+          1787866279,
+          1787722145,
+          1787361539,
+          1787340048
+        ],
+        "buySizes": [
+          0.017219175000036557,
+          0.011893174999954681,
+          0.011025580000023183,
+          0.005943648000027224,
+          0.0020707830000219474,
+          0.0016731290000109311,
+          0.001699397999999519,
+          0.0023875860000259763,
+          0.0034840909999900305,
+          0.0005658789999927194,
+          0.005242293000009113,
+          0.03671835800000167,
+          0.0015872649999835176,
+          0.002747117999973625,
+          0.0023396429999706925,
+          0.0024121140000374908,
+          0.0024038440000140326,
+          0.012468348999959744,
+          0.00594659099999717,
+          0.00433310400001119,
+          0.005451040000025387,
+          0.0021753839999973934,
+          0.0024456130000203302,
+          0.0006433100000151626,
+          0.0028945290000024215,
+          0.0010407720000102927,
+          0.0015732840000168835,
+          0.001587586999960422,
+          0.00022978700002340702,
+          0.003640671999960432,
+          0.0014328990000080921,
+          0.002365365999992264,
+          0.0043756880000387355,
+          0.01551803999996082,
+          0.0009181309999917175,
+          0.004953043000000434,
+          0.0050375719999919966,
+          0.0066148020000014185,
+          0.010283914000012828,
+          0.0054483460000085415,
+          0.01091591099998368
+        ],
+        "intervalCv": 1.7902130024657885,
+        "repeatSize": 26
+      },
+      {
+        "trader": "6Y6RKjD4WffvgUcgXLoPexdWUfYVArcAbriG2ZuGsMzu",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.6741649109999912,
+        "solOut": 0,
+        "tokensIn": 449042.2831990002,
+        "tokensOut": 0,
+        "first": 1785233361,
+        "last": 1785233361,
+        "buyTimes": [
+          1785233361
+        ],
+        "buySizes": [
+          0.6741649109999912
+        ]
+      },
+      {
+        "trader": "FBd9Q7xtgdpzyCYfHJLm25gNtdQScGL4npKxWKEZ4W6B",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 0.6246487329999582,
+        "tokensIn": 0,
+        "tokensOut": 246423.69645,
+        "first": 1788735350,
+        "last": 1788735350,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "FMa4zBwq95uyBebM6wvYaoo1XiGB7fPLdeTEwZRyhzfX",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 0.6025591620000341,
+        "tokensIn": 0,
+        "tokensOut": 238827.20166,
+        "first": 1788350316,
+        "last": 1788350316,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "3fuga4fDgNY974eJDfBgYX8pwTCW9wtWS9qoxSWdSPRu",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.5943648029999906,
+        "solOut": 0,
+        "tokensIn": 276897.803179,
+        "tokensOut": 0,
+        "first": 1787405030,
+        "last": 1787405030,
+        "buyTimes": [
+          1787405030
+        ],
+        "buySizes": [
+          0.5943648029999906
+        ]
+      },
+      {
+        "trader": "NksKamSbqsLYNbTgBNjPb3vW6niPTRytHtsuu7wDfqQ",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 0.5908111749999989,
+        "tokensIn": 0,
+        "tokensOut": 318437.464742,
+        "first": 1787613628,
+        "last": 1787613628,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "45Sn4KL1MHqwnpvcyjLnQnCtJDmw6zDeBnPevs5b4ZyG",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.5862148629999808,
+        "solOut": 0,
+        "tokensIn": 350394.605197,
+        "tokensOut": 0,
+        "first": 1786927296,
+        "last": 1786927296,
+        "buyTimes": [
+          1786927296
+        ],
+        "buySizes": [
+          0.5862148629999808
+        ]
+      },
+      {
+        "trader": "FhfKBno4vUSjjuRmzDB7P4bNBcbQrTXA2FXLNPDeBC7r",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 0.5209325390000004,
+        "tokensIn": 0,
+        "tokensOut": 244659.65187899998,
+        "first": 1787879503,
+        "last": 1787879503,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "BhsnCREr81VLeWwaBkdLw9KbTMyK6pgffCQkxpM1YRD",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.4940691689999994,
+        "solOut": 0,
+        "tokensIn": 565515.898273,
+        "tokensOut": 0,
+        "first": 1785948109,
+        "last": 1785948109,
+        "buyTimes": [
+          1785948109
+        ],
+        "buySizes": [
+          0.4940691689999994
+        ]
+      },
+      {
+        "trader": "C3MWG3iWK6VwvZSMuunTpsMwYcjXEJS4HhFruR5mb88h",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 0.4772356919999652,
+        "tokensIn": 0,
+        "tokensOut": 204100,
+        "first": 1788756359,
+        "last": 1788756359,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "CkUZV387xnoGpF7wC2moMa6mPmAgCvTT4pWgzq4M9fCD",
+        "buys": 2,
+        "sells": 0,
+        "solIn": 0.47330831899998316,
+        "solOut": 0,
+        "tokensIn": 261488.000711,
+        "tokensOut": 0,
+        "first": 1786973789,
+        "last": 1788687271,
+        "buyTimes": [
+          1788687271,
+          1786973789
+        ],
+        "buySizes": [
+          0.10054590599997937,
+          0.3727624130000038
+        ]
+      },
+      {
+        "trader": "B4tNdaY2rEWPPVFp2zpFGjF34BmCXqJ4bytEgVFoy9GB",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.45917874200000597,
+        "solOut": 0,
+        "tokensIn": 343710.189567,
+        "tokensOut": 0,
+        "first": 1786841277,
+        "last": 1786841277,
+        "buyTimes": [
+          1786841277
+        ],
+        "buySizes": [
+          0.45917874200000597
+        ]
+      },
+      {
+        "trader": "5VpKSovqMhcPVfvTcACFwkgVZ2m5euS7K9RYb97LxKmo",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.39624320199999374,
+        "solOut": 0,
+        "tokensIn": 223733.357937,
+        "tokensOut": 0,
+        "first": 1787731510,
+        "last": 1787731510,
+        "buyTimes": [
+          1787731510
+        ],
+        "buySizes": [
+          0.39624320199999374
+        ]
+      },
+      {
+        "trader": "AYyzFvBDD5fgiWvJyteoBVJofYvPHZgkjdKsPgRwoNMA",
+        "buys": 0,
+        "sells": 2,
+        "solIn": 0,
+        "solOut": 0.3826854530000219,
+        "tokensIn": 0,
+        "tokensOut": 144647.75212199998,
+        "first": 1788040510,
+        "last": 1788790973,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "APwTtKJRWc5qJo4Q4qD3Tb1vkqXLHSo64pBzrjLwzs2Y",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.3314780649999989,
+        "solOut": 0,
+        "tokensIn": 182224.47417499998,
+        "tokensOut": 0,
+        "first": 1787737457,
+        "last": 1787737457,
+        "buyTimes": [
+          1787737457
+        ],
+        "buySizes": [
+          0.3314780649999989
         ]
       },
       {
@@ -1974,51 +5691,132 @@
         ]
       },
       {
-        "trader": "HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC",
-        "buys": 7,
-        "sells": 42,
-        "solIn": 0.05152488800007404,
-        "solOut": 0.2407299579999176,
-        "tokensIn": 19318.438743000035,
-        "tokensOut": 88167.91665600002,
-        "first": 1788779609,
-        "last": 1788797455,
-        "buyTimes": [
-          1788797455,
-          1788797432,
-          1788797189,
-          1788789053,
-          1788783597,
-          1788780293,
-          1788779609
-        ],
-        "buySizes": [
-          0.017219175000036557,
-          0.011893174999954681,
-          0.011025580000023183,
-          0.005943648000027224,
-          0.0020707830000219474,
-          0.0016731290000109311,
-          0.001699397999999519
-        ],
-        "intervalCv": 1.0116724364403207,
-        "repeatSize": 3
+        "trader": "3txmkZiLVu7Scp1m4YHvdUc2jrWVsgR3HPUTWJxwWyqr",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 0.28062415499999815,
+        "tokensIn": 0,
+        "tokensOut": 143008.839699,
+        "first": 1786881486,
+        "last": 1786881486,
+        "buyTimes": [],
+        "buySizes": []
       },
       {
-        "trader": "AYyzFvBDD5fgiWvJyteoBVJofYvPHZgkjdKsPgRwoNMA",
-        "buys": 1,
+        "trader": "Ahm2g912efgQWGTujMLQnQnpCFBNyTGaatMcj195ys2v",
+        "buys": 0,
         "sells": 1,
-        "solIn": 0.029732937000005677,
-        "solOut": 0.19032619800003658,
-        "tokensIn": 11084.757599,
-        "tokensOut": 71198.25978,
-        "first": 1788790973,
-        "last": 1788790987,
+        "solIn": 0,
+        "solOut": 0.24230255799994893,
+        "tokensIn": 0,
+        "tokensOut": 96500,
+        "first": 1788724252,
+        "last": 1788724252,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "FMVHP1xw6ZHB9zLGyrJeeAvEzCBgouH8bPzdkYqq2C5W",
+        "buys": 0,
+        "sells": 3,
+        "solIn": 0,
+        "solOut": 0.22437939299999243,
+        "tokensIn": 0,
+        "tokensOut": 81543.574795,
+        "first": 1788430134,
+        "last": 1788791323,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "Fiwaaqdz8hHYYtWriB1buztk5n2z6qMJXmoy2zZow1RR",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 0.2127764319999983,
+        "tokensIn": 0,
+        "tokensOut": 84930.459754,
+        "first": 1788731086,
+        "last": 1788731086,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "6xtdKj1epMniARd7k9duwMZkPMH6rgBCUxSYbrkAe4NC",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.20967984700001807,
+        "solOut": 0,
+        "tokensIn": 120921.312852,
+        "tokensOut": 0,
+        "first": 1787457787,
+        "last": 1787457787,
         "buyTimes": [
-          1788790987
+          1787457787
         ],
         "buySizes": [
-          0.029732937000005677
+          0.20967984700001807
+        ]
+      },
+      {
+        "trader": "yEt54Tf8WDiNBdouDH5eRrvJXV5rFMQaWUPxdxvFdXP",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 0.2015495180000073,
+        "tokensIn": 0,
+        "tokensOut": 122944.05625399994,
+        "first": 1787004320,
+        "last": 1787004320,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "E6dFsHyC126YHjD9oVdQbV9L1LzK1aqZo2q2cAwNekiX",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.2008088020000116,
+        "solOut": 0,
+        "tokensIn": 154740.61832899996,
+        "tokensOut": 0,
+        "first": 1785713647,
+        "last": 1785713647,
+        "buyTimes": [
+          1785713647
+        ],
+        "buySizes": [
+          0.2008088020000116
+        ]
+      },
+      {
+        "trader": "33AHKQhNNnB3kywM8dp46vX5C2fmejWy5vu9VsziXGJJ",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 0.16969625400000155,
+        "tokensIn": 0,
+        "tokensOut": 79503.279363,
+        "first": 1787440693,
+        "last": 1787440693,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "F73QsRqXvoPBRaJEzUtdxxJyUkFjBntSGE3cSC5FedH3",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.15992365599998948,
+        "solOut": 0,
+        "tokensIn": 65906.493046,
+        "tokensOut": 0,
+        "first": 1788662928,
+        "last": 1788662928,
+        "buyTimes": [
+          1788662928
+        ],
+        "buySizes": [
+          0.15992365599998948
         ]
       },
       {
@@ -2035,33 +5833,103 @@
         "buySizes": []
       },
       {
-        "trader": "FMVHP1xw6ZHB9zLGyrJeeAvEzCBgouH8bPzdkYqq2C5W",
+        "trader": "7UFYdQre66c2Pet3HgDeh6KoPqpWv8tByZRYyYdnkWgJ",
+        "buys": 2,
+        "sells": 1,
+        "solIn": 0.02972313699999063,
+        "solOut": 0.1001244259999794,
+        "tokensIn": 14974.518136,
+        "tokensOut": 36872.740564,
+        "first": 1786997844,
+        "last": 1788791067,
+        "buyTimes": [
+          1788791067,
+          1786997844
+        ],
+        "buySizes": [
+          0.00991097799999352,
+          0.01981215899999711
+        ]
+      },
+      {
+        "trader": "DDBFu8UJJywLYcCe7v6kQgBoohSuvHWSTNJLut9ZKNF4",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.11987754600002631,
+        "solOut": 0,
+        "tokensIn": 51626.991187,
+        "tokensOut": 0,
+        "first": 1788771907,
+        "last": 1788771907,
+        "buyTimes": [
+          1788771907
+        ],
+        "buySizes": [
+          0.11987754600002631
+        ]
+      },
+      {
+        "trader": "46SXAG5yh4TJmwpXZRanTXBsGkds7LiMMqBaqj7XFufe",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.11741698900002007,
+        "solOut": 0,
+        "tokensIn": 70639.452166,
+        "tokensOut": 0,
+        "first": 1787556218,
+        "last": 1787556218,
+        "buyTimes": [
+          1787556218
+        ],
+        "buySizes": [
+          0.11741698900002007
+        ]
+      },
+      {
+        "trader": "CuTgJYbTjfYiMBM6y3zKXoiwWDHUn1PSyaP855W2v4Ky",
         "buys": 0,
         "sells": 2,
         "solIn": 0,
-        "solOut": 0.12293598999997357,
+        "solOut": 0.11125051999999869,
         "tokensIn": 0,
-        "tokensOut": 48427.159022,
-        "first": 1788789520,
-        "last": 1788791323,
+        "tokensOut": 60005.156936,
+        "first": 1786925158,
+        "last": 1787023805,
         "buyTimes": [],
         "buySizes": []
       },
       {
-        "trader": "7UFYdQre66c2Pet3HgDeh6KoPqpWv8tByZRYyYdnkWgJ",
+        "trader": "WZog2TKUBKhAYTiMPd6P41nqjxeJPhqLRSDeRtW3c3M",
         "buys": 1,
-        "sells": 1,
-        "solIn": 0.00991097799999352,
-        "solOut": 0.1001244259999794,
-        "tokensIn": 3636.52544,
-        "tokensOut": 36872.740564,
-        "first": 1788791055,
-        "last": 1788791067,
+        "sells": 0,
+        "solIn": 0.09906079999998951,
+        "solOut": 0,
+        "tokensIn": 50108.399933,
+        "tokensOut": 0,
+        "first": 1786885798,
+        "last": 1786885798,
         "buyTimes": [
-          1788791067
+          1786885798
         ],
         "buySizes": [
-          0.00991097799999352
+          0.09906079999998951
+        ]
+      },
+      {
+        "trader": "CMsSHtxyWBhUbXHk5KcC1N2w1wHAAM2EjnN4zpia9Nj3",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.09901185600000417,
+        "solOut": 0,
+        "tokensIn": 111799.17457999999,
+        "tokensOut": 0,
+        "first": 1785922373,
+        "last": 1785922373,
+        "buyTimes": [
+          1785922373
+        ],
+        "buySizes": [
+          0.09901185600000417
         ]
       },
       {
@@ -2082,27 +5950,53 @@
         ]
       },
       {
-        "trader": "EjqJgyRNUdbjJDmnFyMmrH5gG4ronAh5HCZgCmoCG1a6",
-        "buys": 0,
+        "trader": "3zp5CfK1eXVknFzKkh1bZaT6TT9jr8oLd4RPhhRVrbwM",
+        "buys": 1,
         "sells": 1,
-        "solIn": 0,
-        "solOut": 0.055665434999980334,
-        "tokensIn": 0,
-        "tokensOut": 20000,
-        "first": 1788791800,
-        "last": 1788791800,
-        "buyTimes": [],
-        "buySizes": []
+        "solIn": 0.02931994300001861,
+        "solOut": 0.02591053599999782,
+        "tokensIn": 20180.453091,
+        "tokensOut": 20180.453091,
+        "first": 1785745488,
+        "last": 1785761037,
+        "buyTimes": [
+          1785745488
+        ],
+        "buySizes": [
+          0.02931994300001861
+        ]
+      },
+      {
+        "trader": "HKCkmsdBFEoNtmEdyAFcaowbebNLXGFHXDJB2ZJSXGRK",
+        "buys": 3,
+        "sells": 0,
+        "solIn": 0.05012059499995303,
+        "solOut": 0,
+        "tokensIn": 34204.58220999998,
+        "tokensOut": 0,
+        "first": 1785184025,
+        "last": 1788735643,
+        "buyTimes": [
+          1788735643,
+          1788363376,
+          1785184025
+        ],
+        "buySizes": [
+          0.006223044999956073,
+          0.029890630000011242,
+          0.014006919999985712
+        ],
+        "repeatSize": 2
       },
       {
         "trader": "FE7xMeMgzi3cQX5SEtzE6c1sCWzcSAo5FbAZXWkpDohM",
         "buys": 1,
-        "sells": 1,
+        "sells": 2,
         "solIn": 0.019821956999976464,
-        "solOut": 0.020224517000031028,
+        "solOut": 0.029973852000040324,
         "tokensIn": 7268.553725,
-        "tokensOut": 7268.553725,
-        "first": 1788791055,
+        "tokensOut": 11945.390620999999,
+        "first": 1787382936,
         "last": 1788792307,
         "buyTimes": [
           1788791055
@@ -2110,6 +6004,83 @@
         "buySizes": [
           0.019821956999976464
         ]
+      },
+      {
+        "trader": "FwPVCdTP3mMs1QWyarqE2pkuQsvASYUQHbVcnfSCabUj",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.049530399999980546,
+        "solOut": 0,
+        "tokensIn": 25725.73345,
+        "tokensOut": 0,
+        "first": 1786861273,
+        "last": 1786861273,
+        "buyTimes": [
+          1786861273
+        ],
+        "buySizes": [
+          0.049530399999980546
+        ]
+      },
+      {
+        "trader": "7edkzBExZyDSUPXrREctsxuFiBhkVUcyFHaGWi6njfVH",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.04948086899997861,
+        "solOut": 0,
+        "tokensIn": 31865.374843999998,
+        "tokensOut": 0,
+        "first": 1786932981,
+        "last": 1786932981,
+        "buyTimes": [
+          1786932981
+        ],
+        "buySizes": [
+          0.04948086899997861
+        ]
+      },
+      {
+        "trader": "EM1WuH1ru8tbHED3ChcgjPzuBCz8xgu2hYPWhJcLchYn",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 0.04633837899999094,
+        "tokensIn": 0,
+        "tokensOut": 25602.37799,
+        "first": 1787465795,
+        "last": 1787465795,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "BrawzCH5Vk112TFhX2D1PRhTvpF5wieoCR7bhC3WdKE5",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.0459132309999859,
+        "solOut": 0,
+        "tokensIn": 26639.261842,
+        "tokensOut": 0,
+        "first": 1786927085,
+        "last": 1786927085,
+        "buyTimes": [
+          1786927085
+        ],
+        "buySizes": [
+          0.0459132309999859
+        ]
+      },
+      {
+        "trader": "317eczCRjWeCDT2F2DE13SE7UzVsTQks1igysxq7ivhm",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 0.037774089999999205,
+        "tokensIn": 0,
+        "tokensOut": 22656.444053,
+        "first": 1786951313,
+        "last": 1786951313,
+        "buyTimes": [],
+        "buySizes": []
       }
     ]
   },
@@ -2130,49 +6101,48 @@
         "symbol": "SOL"
       },
       "priceNative": "0.000002779",
-      "priceUsd": "0.0002876",
+      "priceUsd": "0.0002875",
       "txns": {
         "m5": {
-          "buys": 1,
+          "buys": 0,
           "sells": 0
         },
         "h1": {
-          "buys": 2,
-          "sells": 3
+          "buys": 4,
+          "sells": 2
         },
         "h6": {
-          "buys": 38,
+          "buys": 40,
           "sells": 54
         },
         "h24": {
-          "buys": 60,
-          "sells": 98
+          "buys": 62,
+          "sells": 97
         }
       },
       "volume": {
-        "h24": 7136.48,
-        "h6": 4030.55,
-        "h1": 539.28,
-        "m5": 1.14
+        "h24": 7086.76,
+        "h6": 4033.56,
+        "h1": 528.05,
+        "m5": 0
       },
       "priceChange": {
-        "m5": 1.53,
-        "h1": 0.53,
-        "h6": 20.33,
-        "h24": 8.08
+        "h1": 0.99,
+        "h6": 20.26,
+        "h24": 8.19
       },
       "liquidity": {
-        "usd": 57740.73,
-        "base": 100457050,
-        "quote": 278.6676
+        "usd": 57701.49,
+        "base": 100446578,
+        "quote": 278.6967
       },
-      "fdv": 287662,
-      "marketCap": 287662,
+      "fdv": 287493,
+      "marketCap": 287493,
       "pairCreatedAt": 1769781971000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/83c51f24b0c73304a038429e218dda20048dd370d9aa22cec1a701ba94f4a200?width=800&height=800&quality=95&format=auto",
         "header": "https://cdn.dexscreener.com/cms/images/f5a610907459a61685a05559bd914a9e020c0918e5af31864f65678a226477ea?width=1500&height=500&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/HHf2VfXSPUVqQth6tXypfdUX2vawCiVKfkbAX4CJpump?timestamp=1788797400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/HHf2VfXSPUVqQth6tXypfdUX2vawCiVKfkbAX4CJpump?timestamp=1788797700000",
         "websites": [
           {
             "url": "https://linktr.ee/axis_sol",
@@ -2188,73 +6158,73 @@
       }
     },
     "geckoPool": {
-      "base_token_price_usd": "0.00028753414856897043801300939226216488453026204441023929240008694",
-      "base_token_price_native_currency": "0.00000274331654015136",
-      "quote_token_price_usd": "103.450539431933649694325611752225589413602901043",
+      "base_token_price_usd": "0.000287866988257712216796719416783362284879024080702916140569940895",
+      "base_token_price_native_currency": "0.00000277966411167743",
+      "quote_token_price_usd": "103.550991319918203293495253151633503389528843255",
       "quote_token_price_native_currency": "1.0",
-      "base_token_price_quote_token": "0.00000274331654",
-      "quote_token_price_base_token": "364522.280008134",
+      "base_token_price_quote_token": "0.000002779664112",
+      "quote_token_price_base_token": "359755.697027917",
       "address": "5WgYinqANwpEXJiW59nL2dDr683QyzqKahJQxCJJ1NFv",
       "name": "MAXIS / SOL",
       "pool_created_at": "2026-01-30T14:06:11Z",
-      "token_price_usd": "0.00028753414856897043801300939226216488453026204441023929240008694",
-      "fdv_usd": "287524.228551903",
-      "market_cap_usd": "287524.228551903",
+      "token_price_usd": "0.000287866988257712216796719416783362284879024080702916140569940895",
+      "fdv_usd": "287857.056768794",
+      "market_cap_usd": "287857.056768794",
       "price_change_percentage": {
-        "m5": "0",
-        "m15": "1.64",
-        "m30": "2.84",
-        "h1": "2.84",
-        "h6": "18.49",
-        "h24": "8"
+        "m5": "0.02",
+        "m15": "0.12",
+        "m30": "1.76",
+        "h1": "2.96",
+        "h6": "18.62",
+        "h24": "8.25"
       },
       "transactions": {
         "m5": {
-          "buys": 1,
+          "buys": 2,
           "sells": 0,
-          "buyers": 1,
+          "buyers": 2,
           "sellers": 0
         },
         "m15": {
-          "buys": 1,
-          "sells": 1,
-          "buyers": 1,
-          "sellers": 1
+          "buys": 3,
+          "sells": 0,
+          "buyers": 2,
+          "sellers": 0
         },
         "m30": {
-          "buys": 2,
-          "sells": 2,
+          "buys": 3,
+          "sells": 1,
           "buyers": 2,
-          "sellers": 2
+          "sellers": 1
         },
         "h1": {
-          "buys": 2,
+          "buys": 4,
           "sells": 2,
-          "buyers": 2,
+          "buyers": 3,
           "sellers": 2
         },
         "h6": {
-          "buys": 38,
+          "buys": 40,
           "sells": 54,
           "buyers": 21,
           "sellers": 27
         },
         "h24": {
-          "buys": 60,
-          "sells": 98,
+          "buys": 62,
+          "sells": 97,
           "buyers": 33,
           "sellers": 50
         }
       },
       "volume_usd": {
-        "m5": "1.1406021985",
-        "m15": "1.6669902205",
-        "m30": "524.6881301397",
-        "h1": "524.6881301397",
-        "h6": "4029.631502435",
-        "h24": "7136.403994837"
+        "m5": "3.014546912",
+        "m15": "4.1551491105",
+        "m30": "4.6815371325",
+        "h1": "527.7026770517",
+        "h6": "4032.646049347",
+        "h24": "7086.6703032015"
       },
-      "reserve_in_usd": "57280.4332"
+      "reserve_in_usd": "57769.1824"
     }
   },
   "rugcheck": {
@@ -2306,7 +6276,7 @@
         "liquidityAAccount": {
           "mint": "HHf2VfXSPUVqQth6tXypfdUX2vawCiVKfkbAX4CJpump",
           "owner": "5WgYinqANwpEXJiW59nL2dDr683QyzqKahJQxCJJ1NFv",
-          "amount": 100457050939849,
+          "amount": 100446578251962,
           "delegate": null,
           "state": 1,
           "delegatedAmount": 0,
@@ -2315,7 +6285,7 @@
         "liquidityBAccount": {
           "mint": "So11111111111111111111111111111111111111112",
           "owner": "5WgYinqANwpEXJiW59nL2dDr683QyzqKahJQxCJJ1NFv",
-          "amount": 278667604346,
+          "amount": 278696716696,
           "delegate": null,
           "state": 1,
           "delegatedAmount": 0,
@@ -2325,14 +6295,14 @@
           "baseMint": "HHf2VfXSPUVqQth6tXypfdUX2vawCiVKfkbAX4CJpump",
           "quoteMint": "So11111111111111111111111111111111111111112",
           "lpMint": "E5QZKv8SYZXxfYRuqTWwEnzZgHam7bBgAkybuUTW6gyB",
-          "quotePrice": 103.53511490376162,
-          "basePrice": 0.00028739465807217483,
-          "base": 100457050.939849,
-          "quote": 278.667604346,
+          "quotePrice": 103.66137678551085,
+          "basePrice": 0.00027937399592200813,
+          "base": 100446578.251962,
+          "quote": 278.696716696,
           "reserveSupply": 4193388286034,
           "currentSupply": 0,
-          "quoteUSD": 28851.882435919095,
-          "baseUSD": 28870.819805796953,
+          "quoteUSD": 28890.085358308832,
+          "baseUSD": 28062.161942943305,
           "pctReserve": 0,
           "pctSupply": 0,
           "holders": null,
@@ -2341,7 +6311,7 @@
           "lpLocked": 4193388286034,
           "lpUnlocked": 0,
           "lpLockedPct": 100,
-          "lpLockedUSD": 57722.70224171605,
+          "lpLockedUSD": 56952.24730125214,
           "lpMaxSupply": 0,
           "lpCurrentSupply": 0,
           "lpTotalSupply": 4193388286034
