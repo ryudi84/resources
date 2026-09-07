@@ -563,6 +563,12 @@ async function fetchDexscreener(mint: string): Promise<Record<string, any> | nul
   return (await getJson(`https://api.dexscreener.com/latest/dex/tokens/${mint}`)) as Record<string, any> | null;
 }
 
+/** Daily candles for a pool from GeckoTerminal (keyless): [ts, o, h, l, c, volumeUsd]. */
+async function fetchOhlcv(pool: string, days = 90): Promise<Array<[number, number, number, number, number, number]>> {
+  const r = (await getJson(`https://api.geckoterminal.com/api/v2/networks/solana/pools/${pool}/ohlcv/day?aggregate=1&limit=${days}&currency=usd`)) as { data?: { attributes?: { ohlcv_list?: Array<[number, number, number, number, number, number]> } } } | null;
+  return (r?.data?.attributes?.ohlcv_list ?? []).sort((a, b) => a[0] - b[0]);
+}
+
 async function fetchGecko(mint: string): Promise<Record<string, any> | null> {
   return (await getJson(
     `https://api.geckoterminal.com/api/v2/networks/solana/tokens/${mint}?include=top_pools`,
@@ -590,18 +596,21 @@ async function fetchPoolTrades(
   pool: string,
   mint: string,
   opts: { maxSigs: number; parseTx: number; sinceDays: number },
-): Promise<{ trades: PoolTrade[]; sigTimes: number[]; sigsScanned: number; parsed: number; failed: number }> {
+): Promise<{ trades: PoolTrade[]; sigTimes: number[]; sigsScanned: number; parsed: number; failed: number; failedSigs: number; nonSwap: Record<string, number> }> {
   const since = Math.floor(Date.now() / 1000) - opts.sinceDays * 86_400;
   const sigs: SigInfo[] = [];
   let before: string | undefined;
+  let failedSigs = 0;
   while (sigs.length < opts.maxSigs) {
     const page = await rpc<Array<SigInfo & { err: unknown }>>('getSignaturesForAddress', [pool, { limit: 1000, before }], 60_000, 'history');
     if (page.length === 0) break;
-    for (const s of page) if (!s.err) sigs.push(s);
+    for (const s of page) if (!s.err) sigs.push(s); else failedSigs++;
     before = page[page.length - 1].signature;
     if ((page[page.length - 1].blockTime ?? 0) < since || page.length < 1000) break;
   }
+  console.error(`  pool sigs: ${sigs.length} ok, ${failedSigs} failed, oldest ${iso(sigs[sigs.length - 1]?.blockTime)}`);
   const sigTimes = sigs.map((s) => s.blockTime ?? 0).filter(Boolean);
+  const nonSwap = new Map<string, number>();
   // Parse the newest half of the budget plus a uniform sample of the rest of
   // the window, so a month-long staircase is covered, not just today.
   const recentN = Math.min(sigs.length, Math.ceil(opts.parseTx / 2));
@@ -640,7 +649,12 @@ async function fetchPoolTrades(
           tokens = v;
         }
       }
-      if (!trader || Math.abs(poolTok) < 1e-9) return null; // not a swap (LP op, transfer)
+      if (!trader || Math.abs(poolTok) < 1e-9) {
+        // Not a plain swap. Classify for the activity breakdown.
+        const kind = Math.abs(poolTok) < 1e-9 && Math.abs(poolSol) < 1e-9 ? 'noop' : !trader ? 'arb' : 'lp';
+        nonSwap.set(kind, (nonSwap.get(kind) ?? 0) + 1);
+        return null;
+      }
       const isBuy = poolTok < 0;
       return { signature: s.signature, slot: s.slot, time: tx.blockTime ?? s.blockTime ?? 0, trader, isBuy, tokens: Math.abs(tokens), sol: Math.abs(poolSol) };
     } catch {
@@ -648,7 +662,7 @@ async function fetchPoolTrades(
       return null;
     }
   });
-  return { trades: trades.filter((t): t is PoolTrade => t !== null), sigTimes, sigsScanned: sigs.length, parsed: targets.length, failed };
+  return { trades: trades.filter((t): t is PoolTrade => t !== null), sigTimes, sigsScanned: sigs.length, parsed: targets.length, failed, failedSigs, nonSwap: Object.fromEntries(nonSwap) };
 }
 
 export interface TraderStat {
@@ -1365,7 +1379,7 @@ async function main() {
   if (poolAddr) {
     histProbe = await selectHistoryEndpoints(poolAddr);
     try {
-      poolScan = await fetchPoolTrades(poolAddr, mint, { maxSigs: 6000, parseTx: PARSE_TX, sinceDays: DAYS });
+      poolScan = await fetchPoolTrades(poolAddr, mint, { maxSigs: 25_000, parseTx: PARSE_TX, sinceDays: DAYS });
       pa = analysePoolTrades(poolScan.trades);
       console.error(`  pool ${poolAddr}: ${poolScan.sigsScanned} sigs, ${poolScan.trades.length} swaps parsed of ${poolScan.parsed}`);
     } catch (e) {
@@ -1623,6 +1637,29 @@ async function main() {
     }
   }
 
+  // ---- price history from pool candles
+  const candles = poolAddr ? await fetchOhlcv(poolAddr, 90) : [];
+
+  // ---- deep: where did the top holders' and creator's outbound transfers end up?
+  const outRecipients = new Map<string, { from: string; amount: number }>();
+  const addOut = (from: string, list: Array<{ to: string; amount: number }> | undefined) => {
+    for (const t of list ?? []) if (t.to && t.to !== '?' && !holderSet.has(t.to)) outRecipients.set(t.to, { from, amount: (outRecipients.get(t.to)?.amount ?? 0) + t.amount });
+  };
+  if (creator && creatorProv) addOut(creator, creatorProv.transfersOut);
+  for (const h of whales.slice(0, 5)) addOut(h.owner, h.provenance?.transfersOut);
+  const recipientFate: Array<{ to: string; from: string; amount: number; prov: Provenance | null }> = [];
+  for (const [to, v] of [...outRecipients].sort((a, b) => b[1].amount - a[1].amount).slice(0, 8)) {
+    try {
+      const r = await rpc<{ value: Array<{ pubkey: string; account: { data: { parsed: { info: { tokenAmount: { uiAmount: number | null } } } } } }> }>('getTokenAccountsByOwner', [to, { mint }, { encoding: 'jsonParsed' }]);
+      const accts = r.value.map((x) => x.pubkey);
+      const bal = r.value.reduce((s2, x) => s2 + (x.account.data.parsed.info.tokenAmount.uiAmount ?? 0), 0);
+      const prov = accts.length ? await traceProvenance({ owner: to, amount: bal, pct: (bal / supply.amount) * 100, tokenAccounts: accts }, mint, poolOwners, 6, 2) : null;
+      recipientFate.push({ to, from: v.from, amount: v.amount, prov: prov ? { ...prov, txCount: prov.txCount } : null });
+      const h = holders.find((x) => x.owner === to);
+      if (!h) holders.push({ owner: to, amount: bal, pct: (bal / supply.amount) * 100, ownerProgram: SYSTEM_PROGRAM });
+    } catch { /* soft */ }
+  }
+
   // ---- deep: the project's validator and its withdraw authority
   const tokName = String((pump?.name as string) ?? rug?.tokenMeta?.name ?? '');
   const tokSymbol = String((pump?.symbol as string) ?? rug?.tokenMeta?.symbol ?? '');
@@ -1784,10 +1821,29 @@ async function main() {
   }
   L.push('');
 
+  if (candles.length) {
+    L.push('## Price history (daily candles, USD)');
+    L.push('');
+    const closes = candles.map((c) => c[4]);
+    const hi = Math.max(...closes), lo = Math.min(...closes);
+    const hiI = closes.indexOf(hi), loI = closes.indexOf(lo);
+    const last = closes[closes.length - 1];
+    const dd = hiI >= 0 ? (last / hi - 1) * 100 : 0;
+    const vol30 = candles.slice(-30).reduce((s2, c) => s2 + c[5], 0);
+    L.push(`- ${candles.length} days · high ${hi.toExponential(3)} on ${iso(candles[hiI][0]).slice(0, 10)} · low ${lo.toExponential(3)} on ${iso(candles[loI][0]).slice(0, 10)} · now ${last.toExponential(3)} (${dd.toFixed(0)}% from high) · 30-day volume ${fmtUsd(vol30)}`);
+    const big = candles.map((c, i) => ({ d: iso(c[0]).slice(0, 10), r: i ? c[4] / candles[i - 1][4] - 1 : 0, v: c[5] })).filter((x) => Math.abs(x.r) >= 0.25).sort((a, b) => Math.abs(b.r) - Math.abs(a.r)).slice(0, 8);
+    if (big.length) L.push(`- Largest daily moves: ${big.map((x) => `${x.d} ${x.r >= 0 ? '+' : ''}${(x.r * 100).toFixed(0)}% on ${fmtUsd(x.v)}`).join('; ')}`);
+    const bars = candles.slice(-45).map((c) => '▁▂▃▄▅▆▇█'[Math.min(7, Math.floor(((c[4] - lo) / Math.max(hi - lo, 1e-12)) * 7.99))]).join('');
+    L.push(`- Last 45 days: ${bars}`);
+    L.push('');
+  }
+
   if (pa && poolScan) {
     L.push(`## Recent pool activity (last ${DAYS} days, pool \`${poolAddr}\`)`);
     L.push('');
-    L.push(`- ${poolScan.sigsScanned} successful pool transactions scanned; ${poolScan.trades.length} swaps parsed from the most recent ${poolScan.parsed}${poolScan.failed ? ` (${poolScan.failed} fetch failures)` : ''}`);
+    L.push(`- ${poolScan.sigsScanned} successful pool transactions scanned (${poolScan.failedSigs} failed ones skipped); ${poolScan.trades.length} swaps parsed from ${poolScan.parsed} sampled${poolScan.failed ? ` (${poolScan.failed} fetch failures)` : ''}`);
+    const ns = poolScan.nonSwap;
+    if (Object.keys(ns).length) L.push(`- Sampled non-swap transactions: ${Object.entries(ns).map(([k, v]) => `${k === 'arb' ? 'arbitrage / zero-net-token' : k === 'lp' ? 'liquidity ops' : 'no-op'} ${v}`).join(', ')} — a burst of these means bots cycling between pools, not people trading`);
     const hist = dailyHistogram(poolScan.sigTimes, DAYS);
     const maxN = Math.max(1, ...hist.map((h) => h.n));
     L.push(`- Transactions per day: ${hist.map((h) => `${h.day}:${h.n}`).join(' ')}`);
@@ -1865,6 +1921,22 @@ async function main() {
     }
     L.push('');
     L.push('Only the newest 6 and oldest 4 transactions per token account are parsed, so a transfer can be missed; a hit is conclusive, a miss is not.');
+    L.push('');
+  }
+
+  if (recipientFate.length) {
+    L.push('## Where insider outflows went');
+    L.push('');
+    L.push('Wallets that received tokens by transfer from the creator or a top-5 holder, and what they did with them.');
+    L.push('');
+    L.push('| Recipient | From | Received | Holds now | Token-acct txs | Sold via pool | Passed on to |');
+    L.push('|---|---|---:|---:|---:|---:|---|');
+    for (const r of recipientFate) {
+      const p = r.prov;
+      const h = holders.find((x) => x.owner === r.to);
+      const sold = p ? p.parsed - p.swapsIn - p.transfersIn.length - p.transfersOut.length : 0;
+      L.push(`| \`${r.to}\` | ${r.from === creator ? 'CREATOR' : short(r.from)} | ${fmtPct((r.amount / supply.amount) * 100)} | ${h ? fmtPct(h.pct) : '?'} | ${p ? p.txCount : 'acct closed'} | ${p ? `${sold} txs` : ''} | ${p?.transfersOut.map((t) => `${fmtPct((t.amount / supply.amount) * 100)} → ${short(t.to)}`).join('; ') || '–'} |`);
+    }
     L.push('');
   }
 
@@ -2111,6 +2183,8 @@ async function main() {
         creator: { address: creator, ...creatorInfo, provenance: creatorProv },
         bundleDestinations: bundleDest,
         validator,
+        candles,
+        recipientFate,
         solFlows: { candidates, direct: directFlows, shared: sharedCpList.map(([cp, ws]) => ({ cp, wallets: [...ws] })) },
         fleet: Object.fromEntries([...fleetFp].map(([w, fp]) => [w, { ...fp, feePayers: [...fp.feePayers], programs: [...fp.programs], recipients: Object.fromEntries(fp.recipients) }])),
         sharedMintInfo: Object.fromEntries(sharedMintInfo),
