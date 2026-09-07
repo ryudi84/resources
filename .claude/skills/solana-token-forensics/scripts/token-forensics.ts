@@ -1005,6 +1005,90 @@ async function acquisitionOf(owner: string, mint: string): Promise<{ how: 'swap'
   }
 }
 
+// ------------------------------------------------ team wallets & SOL flows
+
+/** The project's validator (by name match) and its withdraw authority — a wallet the team controls. */
+async function findValidator(needles: string[]): Promise<{ name: string; identity: string; vote: string; withdrawer?: string; stake?: number } | null> {
+  const nd = needles.map((n) => n.toLowerCase()).filter((n) => n.length >= 3);
+  if (!nd.length) return null;
+  let cands: Array<{ name: string; identity: string; vote: string; stake?: number }> = [];
+  const sw = (await getJson('https://api.stakewiz.com/validators')) as Array<{ name?: string; identity: string; vote_identity: string; activated_stake?: number }> | null;
+  if (sw?.length) cands = sw.filter((v) => v.name && nd.some((n) => v.name!.toLowerCase().includes(n))).map((v) => ({ name: v.name!, identity: v.identity, vote: v.vote_identity, stake: v.activated_stake }));
+  if (!cands.length) {
+    try {
+      const cfg = await rpc<Array<{ pubkey: string; account: { data: { parsed?: { info?: { configData?: { name?: string }; keys?: Array<{ pubkey: string }> } } } } }>>(
+        'getProgramAccounts', ['Config1111111111111111111111111111111111111', { encoding: 'jsonParsed' }], 120_000);
+      const va = await rpc<{ current: Array<{ nodePubkey: string; votePubkey: string; activatedStake: number }>; delinquent: Array<{ nodePubkey: string; votePubkey: string; activatedStake: number }> }>('getVoteAccounts', []);
+      const byNode = new Map([...va.current, ...va.delinquent].map((v) => [v.nodePubkey, v]));
+      for (const a of cfg) {
+        const info = a.account.data.parsed?.info;
+        const name = info?.configData?.name;
+        const identity = info?.keys?.[1]?.pubkey;
+        if (name && identity && nd.some((n) => name.toLowerCase().includes(n))) {
+          const v = byNode.get(identity);
+          if (v) cands.push({ name, identity, vote: v.votePubkey, stake: v.activatedStake / 1e9 });
+        }
+      }
+    } catch (e) {
+      console.error(`  ! validator lookup via Config program failed: ${String(e)}`);
+    }
+  }
+  if (!cands.length) return null;
+  cands.sort((a, b) => (b.stake ?? 0) - (a.stake ?? 0));
+  const best = cands[0];
+  try {
+    const acc = await rpc<{ value: { data: { parsed: { info: { authorizedWithdrawer: string } } } } | null }>('getAccountInfo', [best.vote, { encoding: 'jsonParsed' }]);
+    return { ...best, withdrawer: acc.value?.data.parsed.info.authorizedWithdrawer };
+  } catch {
+    return best;
+  }
+}
+
+/** SOL counterparties of a wallet from its recent transactions (system transfers, tips, fees excluded). */
+async function solCounterparties(owner: string, txLimit: number, exclude: Set<string>): Promise<Map<string, { in: number; out: number; n: number }>> {
+  const out = new Map<string, { in: number; out: number; n: number }>();
+  const sigs = await rpc<Array<SigInfo & { err: unknown }>>('getSignaturesForAddress', [owner, { limit: txLimit }], 60_000, 'history');
+  for (const sg of sigs.filter((x) => !x.err)) {
+    try {
+      const tx = await rpc<{
+        transaction: { message: { accountKeys: Array<{ pubkey: string; signer: boolean; writable: boolean }>; instructions: Array<{ programId: string; parsed?: { type?: string; info?: { source?: string; destination?: string; lamports?: number } } }> } };
+        meta: { err: unknown; preBalances: number[]; postBalances: number[]; postTokenBalances: Array<{ accountIndex: number }> } | null;
+      } | null>('getTransaction', [sg.signature, { encoding: 'jsonParsed', maxSupportedTransactionVersion: 0 }], 60_000, 'history');
+      if (!tx?.meta || tx.meta.err) continue;
+      // Prefer explicit system transfers; fall back to balance deltas for non-parsed paths.
+      let found = false;
+      for (const ix of tx.transaction.message.instructions) {
+        const p = ix.parsed;
+        if (ix.programId === SYSTEM_PROGRAM && p?.type === 'transfer' && p.info?.source && p.info.destination && p.info.lamports) {
+          const sol = p.info.lamports / 1e9;
+          if (sol < 0.01) continue;
+          if (p.info.source === owner && !exclude.has(p.info.destination)) {
+            const e = out.get(p.info.destination) ?? { in: 0, out: 0, n: 0 }; e.out += sol; e.n++; out.set(p.info.destination, e); found = true;
+          } else if (p.info.destination === owner && !exclude.has(p.info.source)) {
+            const e = out.get(p.info.source) ?? { in: 0, out: 0, n: 0 }; e.in += sol; e.n++; out.set(p.info.source, e); found = true;
+          }
+        }
+      }
+      if (found) continue;
+      const keys = tx.transaction.message.accountKeys;
+      const tokenIdx = new Set(tx.meta.postTokenBalances.map((b) => b.accountIndex));
+      const myIdx = keys.findIndex((k) => k.pubkey === owner);
+      if (myIdx < 0) continue;
+      const myDelta = (tx.meta.postBalances[myIdx] - tx.meta.preBalances[myIdx]) / 1e9;
+      if (Math.abs(myDelta) < 0.05) continue;
+      keys.forEach((k, i) => {
+        if (i === myIdx || tokenIdx.has(i) || exclude.has(k.pubkey) || JITO_TIPS.has(k.pubkey) || PROGRAM_LABELS[k.pubkey] || PROGRAM_NAMES[k.pubkey]) return;
+        const dl = (tx.meta!.postBalances[i] - tx.meta!.preBalances[i]) / 1e9;
+        if (Math.abs(dl) < 0.05 || Math.sign(dl) === Math.sign(myDelta)) return;
+        const e = out.get(k.pubkey) ?? { in: 0, out: 0, n: 0 };
+        if (dl > 0) e.out += dl; else e.in += -dl;
+        e.n++; out.set(k.pubkey, e);
+      });
+    } catch { /* soft */ }
+  }
+  return out;
+}
+
 // ------------------------------------------------------------- analytics
 
 export interface TradeStats {
@@ -1539,6 +1623,47 @@ async function main() {
     }
   }
 
+  // ---- deep: the project's validator and its withdraw authority
+  const tokName = String((pump?.name as string) ?? rug?.tokenMeta?.name ?? '');
+  const tokSymbol = String((pump?.symbol as string) ?? rug?.tokenMeta?.symbol ?? '');
+  const handle = pump?.twitter ? String(pump.twitter).split('/').pop()?.split('?')[0] ?? '' : '';
+  const needles = [tokName, tokSymbol, handle].filter((x) => x && x !== '?');
+  let validator: Awaited<ReturnType<typeof findValidator>> = null;
+  try {
+    validator = await findValidator(needles);
+    if (validator) console.error(`  validator: ${validator.name} identity ${validator.identity} vote ${validator.vote} withdrawer ${validator.withdrawer}`);
+  } catch (e) {
+    console.error(`  ! validator lookup failed: ${String(e)}`);
+  }
+
+  // ---- deep: SOL counterparty overlap among insider candidates
+  const candidates = [...new Set([creator, validator?.withdrawer, validator?.identity, ...wallets.filter((h) => h.pct > 0).slice(0, 12).map((h) => h.owner)].filter(Boolean) as string[])];
+  const candSet = new Set(candidates);
+  const excludeCp = new Set([...poolOwners, ...Object.keys(KNOWN_CEX), ...JITO_TIPS]);
+  const cpMap = new Map<string, Map<string, { in: number; out: number; n: number }>>();
+  for (const w of candidates) {
+    try {
+      cpMap.set(w, await solCounterparties(w, 40, excludeCp));
+    } catch (e) {
+      console.error(`  ! counterparties for ${short(w)} failed: ${String(e)}`);
+    }
+  }
+  const directFlows: Array<{ a: string; b: string; sol: number; n: number }> = [];
+  const sharedCp = new Map<string, Set<string>>();
+  for (const [w, m] of cpMap) {
+    for (const [cp, v] of m) {
+      if (candSet.has(cp)) directFlows.push({ a: w, b: cp, sol: v.in + v.out, n: v.n });
+      else (sharedCp.get(cp) ?? sharedCp.set(cp, new Set()).get(cp)!).add(w);
+    }
+  }
+  const sharedCpList = [...sharedCp].filter(([, ws]) => ws.size >= 2).sort((a, b) => b[1].size - a[1].size);
+  for (const h of wallets) {
+    if (validator?.withdrawer && (h.owner === validator.withdrawer || h.funder === validator.withdrawer)) {
+      h.insider = true;
+      h.insiderNetwork = 'validator withdraw authority';
+    }
+  }
+
   for (const h of holders) scoreHolder(h, { holderSet, creator });
 
   // ------------------------------------------------------------ aggregates
@@ -1579,6 +1704,8 @@ async function main() {
   if (bundleDest.some((b) => b.prov?.transfersOut.some((t) => holderSet.has(t.to)))) flags.push('launch-bundle wallets transferred tokens to current top holders');
   if ([...funderHops.values()].some((x) => x.funder === creator) || whaleFunders.includes(creator ?? '')) flags.push('creator wallet funded holder wallets');
   if (pClusters.length) flags.push(`${pClusters.length} portfolio-fingerprint cluster(s) among big holders/buyers`);
+  if (directFlows.length) flags.push(`direct SOL transfers between ${new Set(directFlows.flatMap((f) => [f.a, f.b])).size} insider-candidate wallets`);
+  if (validator?.withdrawer && wallets.some((h) => h.insiderNetwork === 'validator withdraw authority')) flags.push('validator withdraw authority is a holder or funds holders');
   if (clusters.size > 0) flags.push(`${clusters.size} funder clusters covering ${[...clusters.values()].reduce((s, l) => s + l.length, 0)} holders`);
   if (rug?.graphInsidersDetected) flags.push(`Rugcheck insider graph: ${rug.graphInsidersDetected} wallets`);
   if (ts && ts.bursts.length > 0) flags.push(`${ts.bursts.length} identical-amount buy bursts (largest ${ts.bursts[0].count}× ${ts.bursts[0].sol} SOL)`);
@@ -1794,6 +1921,49 @@ async function main() {
     L.push('');
   }
 
+  if (validator || cpMap.size) {
+    L.push('## Team wallets and SOL flows');
+    L.push('');
+    if (validator) {
+      L.push(`- Validator "${validator.name}" · identity \`${validator.identity}\` · vote \`${validator.vote}\` · stake ${validator.stake ? Math.round(validator.stake).toLocaleString('en-US') + ' SOL' : '?'} · withdraw authority \`${validator.withdrawer ?? '?'}\``);
+      const wd = validator.withdrawer;
+      const hits = wd ? wallets.filter((h) => h.owner === wd || h.funder === wd || (h.provenance?.transfersIn ?? []).some((t) => t.from === wd) || (h.provenance?.transfersOut ?? []).some((t) => t.to === wd)) : [];
+      L.push(`- Withdraw authority among holders / funders / transfer counterparties: ${hits.length ? hits.map((h) => `\`${short(h.owner)}\` (${fmtPct(h.pct)})`).join(', ') + ' ← TEAM-CONTROLLED' : 'none found in the profiled set'}`);
+      if (wd && creator && wd === creator) L.push('- The withdraw authority IS the token creator wallet');
+    } else L.push(`- No validator found by name (${needles.join(', ')}); the team's validator claim could not be tied to a wallet`);
+    if (cpMap.size) {
+      L.push('');
+      L.push(`SOL transfers among ${candidates.length} insider candidates (creator, validator wallets, top-12 holders), last 40 transactions each:`);
+      L.push('');
+      if (directFlows.length) {
+        L.push('| From/With | To/With | SOL | Txs |');
+        L.push('|---|---|---:|---:|');
+        const seen = new Set<string>();
+        for (const f of directFlows.sort((a, b) => b.sol - a.sol)) {
+          const k = [f.a, f.b].sort().join('|');
+          if (seen.has(k)) continue;
+          seen.add(k);
+          const tag = (x: string) => (x === creator ? 'CREATOR' : x === validator?.withdrawer ? 'VALIDATOR WITHDRAWER' : x === validator?.identity ? 'VALIDATOR IDENTITY' : short(x));
+          L.push(`| \`${tag(f.a)}\` | \`${tag(f.b)}\` | ${f.sol.toFixed(2)} | ${f.n} |`);
+        }
+      } else L.push('- No direct SOL transfers between candidates in the sampled window');
+      L.push('');
+      if (sharedCpList.length) {
+        L.push('Shared SOL counterparties (a wallet that has transacted with ≥ 2 candidates):');
+        L.push('');
+        L.push('| Counterparty | Candidates | Note |');
+        L.push('|---|---|---|');
+        for (const [cp, ws] of sharedCpList.slice(0, 15)) {
+          const total = [...ws].reduce((s, w) => s + ((cpMap.get(w)?.get(cp)?.in ?? 0) + (cpMap.get(w)?.get(cp)?.out ?? 0)), 0);
+          L.push(`| \`${cp}\` | ${[...ws].map((w) => (w === creator ? 'CREATOR' : short(w))).join(', ')} | ${total.toFixed(2)} SOL total${holderSet.has(cp) ? '; is a holder' : ''} |`);
+        }
+      } else L.push('- No shared SOL counterparties among candidates in the sampled window');
+      L.push('');
+      L.push('Direct flows between candidates are conclusive links. Shared counterparties with thousands of transactions are usually exchanges or services; a shared low-activity counterparty is one operator\'s hub.');
+    }
+    L.push('');
+  }
+
   if (fleetFp.size) {
     L.push('## Bot fleet fingerprint');
     L.push('');
@@ -1940,6 +2110,8 @@ async function main() {
         launch,
         creator: { address: creator, ...creatorInfo, provenance: creatorProv },
         bundleDestinations: bundleDest,
+        validator,
+        solFlows: { candidates, direct: directFlows, shared: sharedCpList.map(([cp, ws]) => ({ cp, wallets: [...ws] })) },
         fleet: Object.fromEntries([...fleetFp].map(([w, fp]) => [w, { ...fp, feePayers: [...fp.feePayers], programs: [...fp.programs], recipients: Object.fromEntries(fp.recipients) }])),
         sharedMintInfo: Object.fromEntries(sharedMintInfo),
         funderHops: Object.fromEntries(funderHops),
