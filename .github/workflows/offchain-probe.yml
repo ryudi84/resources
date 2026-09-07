@@ -6,10 +6,7 @@ name: Token off-chain probe
 # Fast (< 1 min). Push trigger only so the workflow registers; dispatch by id.
 
 on:
-  push:
-    paths:
-      - '.github/workflows/offchain-probe.yml'
-      - 'tools/offchain-probe.sh'
+  # Registered; dispatch by numeric id (352647687) from any branch.
   workflow_dispatch:
     inputs:
       label:
