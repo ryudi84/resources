@@ -1,0 +1,52 @@
+name: Token market beta
+
+# Correlates a token's own price (from a forensics report's swap tape) with
+# SOL and Bitcoin daily closes. Fast (< 1 min, no RPC). Own concurrency group
+# so it does not queue behind forensics runs. Push trigger exists only so the
+# workflow registers on first use; afterwards dispatch it by numeric id.
+
+on:
+  push:
+    paths:
+      - '.github/workflows/market-beta.yml'
+      - 'tools/market-beta.ts'
+  workflow_dispatch:
+    inputs:
+      report:
+        description: 'Path to the forensics JSON report'
+        type: string
+        default: 'investigations/MAXIS-HHf2VfXS.json'
+
+concurrency:
+  group: market-beta
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+env:
+  REPORT: ${{ inputs.report || 'investigations/MAXIS-HHf2VfXS.json' }}
+
+jobs:
+  beta:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Compute beta
+        run: node --experimental-strip-types tools/market-beta.ts --report "$REPORT"
+      - name: Commit
+        run: |
+          git config user.name "token-forensics-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add investigations/
+          if git diff --cached --quiet; then echo "No changes."; else
+            git commit -m "beta: $REPORT $(date -u +'%Y-%m-%d %H:%MZ')"
+            git pull --rebase origin "${{ github.ref_name }}" || true
+            git push origin "${{ github.ref_name }}"
+          fi
