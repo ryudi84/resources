@@ -29,6 +29,10 @@ on:
         type: string
         default: '400'
 
+concurrency:
+  group: token-forensics
+  cancel-in-progress: false
+
 permissions:
   contents: write
 

@@ -92,6 +92,11 @@ export interface Holder {
   pct: number; // % of total supply
   ownerProgram?: string; // program owning the wallet account (System = normal wallet)
   label?: string; // pool / vault label
+  tokenAccounts?: string[];
+  provenance?: Provenance;
+  launchBuyer?: boolean; // bought on the bonding curve in the first slots
+  launchSol?: number;
+  portfolioCluster?: string;
   lamports?: number;
   txCount?: number; // capped
   txCountCapped?: boolean;
@@ -122,6 +127,16 @@ export interface Holder {
   score?: number;
   verdict?: 'bot' | 'suspicious' | 'organic' | 'pool' | 'unknown';
   reasons?: string[];
+}
+
+export interface Provenance {
+  txCount: number; // txs touching the holder's token account(s), capped
+  swapsIn: number;
+  swapSol: number;
+  transfersIn: Array<{ from: string; amount: number; time: number }>;
+  transfersOut: Array<{ to: string; amount: number; time: number }>;
+  firstSeen?: number;
+  parsed: number;
 }
 
 interface Trade {
@@ -337,7 +352,7 @@ async function fetchAllHolders(mint: string, supply: number): Promise<Holder[] |
   for (let attempt = 0; attempt < RPC_URLS.length; attempt++) {
     try {
       const accounts = await rpc<
-        Array<{ account: { data: { parsed: { info: { owner: string; tokenAmount: { uiAmount: number } } } } } }>
+        Array<{ pubkey: string; account: { data: { parsed: { info: { owner: string; tokenAmount: { uiAmount: number } } } } } }>
       >(
         'getProgramAccounts',
         [
@@ -355,14 +370,18 @@ async function fetchAllHolders(mint: string, supply: number): Promise<Holder[] |
         rpcIdxByKind.state++;
         continue;
       }
-      const byOwner = new Map<string, number>();
+      const byOwner = new Map<string, { amount: number; accounts: string[] }>();
       for (const a of accounts) {
         const info = a.account.data.parsed.info;
         const amt = info.tokenAmount.uiAmount ?? 0;
-        if (amt > 0) byOwner.set(info.owner, (byOwner.get(info.owner) ?? 0) + amt);
+        if (amt <= 0) continue;
+        const e = byOwner.get(info.owner) ?? { amount: 0, accounts: [] };
+        e.amount += amt;
+        e.accounts.push(a.pubkey);
+        byOwner.set(info.owner, e);
       }
       return [...byOwner]
-        .map(([owner, amount]) => ({ owner, amount, pct: (amount / supply) * 100 }))
+        .map(([owner, e]) => ({ owner, amount: e.amount, pct: (e.amount / supply) * 100, tokenAccounts: e.accounts }))
         .sort((a, b) => b.amount - a.amount);
     } catch (e) {
       console.error(`  ! getProgramAccounts failed (${String(e)}); rotating`);
@@ -399,13 +418,16 @@ async function fetchLargestHolders(mint: string, supply: number): Promise<Holder
     'getMultipleAccounts',
     [tokenAccounts.map((t) => t.address), { encoding: 'jsonParsed' }],
   );
-  const byOwner = new Map<string, number>();
+  const byOwner = new Map<string, { amount: number; accounts: string[] }>();
   tokenAccounts.forEach((t, i) => {
     const owner = infos.value[i]?.data.parsed.info.owner ?? t.address;
-    byOwner.set(owner, (byOwner.get(owner) ?? 0) + t.uiAmount);
+    const e = byOwner.get(owner) ?? { amount: 0, accounts: [] };
+    e.amount += t.uiAmount;
+    e.accounts.push(t.address);
+    byOwner.set(owner, e);
   });
   return [...byOwner]
-    .map(([owner, amount]) => ({ owner, amount, pct: (amount / supply) * 100 }))
+    .map(([owner, e]) => ({ owner, amount: e.amount, pct: (e.amount / supply) * 100, tokenAccounts: e.accounts }))
     .sort((a, b) => b.amount - a.amount);
 }
 
@@ -691,6 +713,210 @@ export function dailyHistogram(times: number[], days: number): Array<{ day: stri
   return out;
 }
 
+
+// ------------------------------------------------------------ deep modules
+
+interface TokenDelta {
+  owner: string;
+  delta: number;
+}
+
+/** Per-owner balance change of `mint` in a parsed transaction. */
+async function tokenDeltas(signature: string, mint: string): Promise<{ time: number; slot: number; deltas: TokenDelta[]; solByOwner: Map<string, number> } | null> {
+  const tx = await rpc<{
+    slot: number;
+    blockTime: number | null;
+    meta: {
+      err: unknown;
+      preTokenBalances: Array<{ mint: string; owner?: string; uiTokenAmount: { uiAmount: number | null } }>;
+      postTokenBalances: Array<{ mint: string; owner?: string; uiTokenAmount: { uiAmount: number | null } }>;
+    } | null;
+  } | null>('getTransaction', [signature, { encoding: 'jsonParsed', maxSupportedTransactionVersion: 0 }], 60_000, 'history');
+  if (!tx?.meta || tx.meta.err) return null;
+  const WSOL = 'So11111111111111111111111111111111111111112';
+  const d = new Map<string, number>();
+  const sol = new Map<string, number>();
+  for (const b of tx.meta.preTokenBalances) {
+    if (!b.owner) continue;
+    if (b.mint === mint) d.set(b.owner, (d.get(b.owner) ?? 0) - (b.uiTokenAmount.uiAmount ?? 0));
+    if (b.mint === WSOL) sol.set(b.owner, (sol.get(b.owner) ?? 0) - (b.uiTokenAmount.uiAmount ?? 0));
+  }
+  for (const b of tx.meta.postTokenBalances) {
+    if (!b.owner) continue;
+    if (b.mint === mint) d.set(b.owner, (d.get(b.owner) ?? 0) + (b.uiTokenAmount.uiAmount ?? 0));
+    if (b.mint === WSOL) sol.set(b.owner, (sol.get(b.owner) ?? 0) + (b.uiTokenAmount.uiAmount ?? 0));
+  }
+  return {
+    time: tx.blockTime ?? 0,
+    slot: tx.slot,
+    deltas: [...d].filter(([, v]) => Math.abs(v) > 1e-9).map(([owner, delta]) => ({ owner, delta })),
+    solByOwner: sol,
+  };
+}
+
+/**
+ * How a holder acquired its bag: parse the newest and oldest transactions on
+ * its token account(s) and classify each as a swap (a program-owned pool is
+ * the counterparty) or a transfer (another wallet is).
+ */
+async function traceProvenance(h: Holder, mint: string, poolOwners: Set<string>, recentN: number, oldestN: number): Promise<Provenance | null> {
+  if (!h.tokenAccounts?.length) return null;
+  const prov: Provenance = { txCount: 0, swapsIn: 0, swapSol: 0, transfersIn: [], transfersOut: [], parsed: 0 };
+  const sigs: SigInfo[] = [];
+  for (const acct of h.tokenAccounts.slice(0, 2)) {
+    let before: string | undefined;
+    for (let page = 0; page < 3; page++) {
+      const p = await rpc<Array<SigInfo & { err: unknown }>>('getSignaturesForAddress', [acct, { limit: 1000, before }], 60_000, 'history');
+      const ok = p.filter((x) => !x.err);
+      sigs.push(...ok);
+      prov.txCount += ok.length;
+      if (p.length < 1000) break;
+      before = p[p.length - 1].signature;
+    }
+  }
+  if (sigs.length === 0) return prov;
+  sigs.sort((a, b) => b.slot - a.slot);
+  prov.firstSeen = sigs[sigs.length - 1].blockTime ?? undefined;
+  const pick = new Map<string, SigInfo>();
+  for (const x of sigs.slice(0, recentN)) pick.set(x.signature, x);
+  for (const x of sigs.slice(-oldestN)) pick.set(x.signature, x);
+  const targets = [...pick.values()];
+  const results = await pmap(targets, 2, async (x) => {
+    try {
+      return await tokenDeltas(x.signature, mint);
+    } catch {
+      return null;
+    }
+  });
+  for (const r of results) {
+    if (!r) continue;
+    prov.parsed++;
+    const mine = r.deltas.find((d) => d.owner === h.owner);
+    if (!mine) continue;
+    const counter = r.deltas.filter((d) => d.owner !== h.owner && Math.sign(d.delta) === -Math.sign(mine.delta));
+    const viaPool = counter.some((c) => poolOwners.has(c.owner)) || r.solByOwner.size > 0;
+    if (mine.delta > 0) {
+      if (viaPool) {
+        prov.swapsIn++;
+        const poolSol = [...r.solByOwner].filter(([o]) => poolOwners.has(o)).reduce((s, [, v]) => s + Math.abs(v), 0);
+        prov.swapSol += poolSol;
+      } else {
+        const from = counter.sort((a, b) => a.delta - b.delta)[0]?.owner ?? '?';
+        prov.transfersIn.push({ from, amount: mine.delta, time: r.time });
+      }
+    } else if (!viaPool) {
+      const to = counter.sort((a, b) => b.delta - a.delta)[0]?.owner ?? '?';
+      prov.transfersOut.push({ to, amount: -mine.delta, time: r.time });
+    }
+  }
+  return prov;
+}
+
+export interface LaunchInfo {
+  curve: string;
+  createSlot: number;
+  createTime: number;
+  totalSigs: number;
+  parsed: number;
+  buyers: Array<{ wallet: string; slot: number; tokens: number; sol: number }>;
+  bundled: Array<{ wallet: string; slot: number; tokens: number; sol: number }>;
+  bundledTokensPct: number;
+}
+
+/** First trades on the pump.fun bonding curve: who was in the deploy bundle. */
+async function traceLaunch(curve: string, mint: string, supply: number, parseN: number): Promise<LaunchInfo | null> {
+  const sigs: SigInfo[] = [];
+  let before: string | undefined;
+  for (let page = 0; page < 8; page++) {
+    const p = await rpc<Array<SigInfo & { err: unknown }>>('getSignaturesForAddress', [curve, { limit: 1000, before }], 60_000, 'history');
+    if (p.length === 0) break;
+    sigs.push(...p.filter((x) => !x.err));
+    before = p[p.length - 1].signature;
+    if (p.length < 1000) break;
+  }
+  if (sigs.length === 0) return null;
+  sigs.sort((a, b) => a.slot - b.slot);
+  const first = sigs.slice(0, parseN);
+  const rows = await pmap(first, 2, async (x) => {
+    try {
+      const r = await tokenDeltas(x.signature, mint);
+      if (!r) return null;
+      const buyer = r.deltas.filter((d) => d.owner !== curve && d.delta > 0).sort((a, b) => b.delta - a.delta)[0];
+      if (!buyer) return null;
+      const sol = [...r.solByOwner].filter(([o]) => o === curve).reduce((s, [, v]) => s + Math.abs(v), 0);
+      return { wallet: buyer.owner, slot: r.slot, tokens: buyer.delta, sol };
+    } catch {
+      return null;
+    }
+  });
+  const buyers = rows.filter((r): r is NonNullable<typeof r> => r !== null);
+  const createSlot = sigs[0].slot;
+  const bundled = buyers.filter((b) => b.slot <= createSlot + 2);
+  return {
+    curve,
+    createSlot,
+    createTime: sigs[0].blockTime ?? 0,
+    totalSigs: sigs.length,
+    parsed: first.length,
+    buyers,
+    bundled,
+    bundledTokensPct: (bundled.reduce((s, b) => s + b.tokens, 0) / supply) * 100,
+  };
+}
+
+/** Mints (excluding majors) held by a wallet, for portfolio-fingerprint clustering. */
+async function walletMints(owner: string): Promise<Set<string>> {
+  const IGNORE = new Set([
+    'So11111111111111111111111111111111111111112',
+    'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
+    'Es9vMFrzaCERmJfrF6H2gwBydCFzT8FLo4EQ3s6xhcPP',
+  ]);
+  try {
+    const r = await rpc<{ value: Array<{ account: { data: { parsed: { info: { mint: string; tokenAmount: { uiAmount: number | null } } } } } }> }>(
+      'getTokenAccountsByOwner',
+      [owner, { programId: TOKEN_PROGRAM }, { encoding: 'jsonParsed' }],
+    );
+    const out = new Set<string>();
+    for (const a of r.value) {
+      const info = a.account.data.parsed.info;
+      if ((info.tokenAmount.uiAmount ?? 0) > 0 && !IGNORE.has(info.mint)) out.add(info.mint);
+    }
+    return out;
+  } catch {
+    return new Set();
+  }
+}
+
+/** Groups of wallets sharing ≥ minShared non-major mints (same operator / same farm). */
+export function portfolioClusters(portfolios: Map<string, Set<string>>, mint: string, minShared = 3): Array<{ wallets: string[]; shared: string[] }> {
+  const owners = [...portfolios.keys()];
+  const parent = new Map(owners.map((o) => [o, o]));
+  const find = (x: string): string => (parent.get(x) === x ? x : (parent.set(x, find(parent.get(x)!)), parent.get(x)!));
+  const sharedByPair = new Map<string, string[]>();
+  for (let i = 0; i < owners.length; i++) {
+    for (let j = i + 1; j < owners.length; j++) {
+      const a = portfolios.get(owners[i])!;
+      const b = portfolios.get(owners[j])!;
+      const shared = [...a].filter((m) => m !== mint && b.has(m));
+      if (shared.length >= minShared) {
+        parent.set(find(owners[i]), find(owners[j]));
+        sharedByPair.set(`${owners[i]}|${owners[j]}`, shared);
+      }
+    }
+  }
+  const groups = new Map<string, string[]>();
+  for (const o of owners) (groups.get(find(o)) ?? groups.set(find(o), []).get(find(o))!).push(o);
+  return [...groups.values()]
+    .filter((g) => g.length >= 2)
+    .map((wallets) => {
+      const counts = new Map<string, number>();
+      for (const w of wallets) for (const m of portfolios.get(w)!) if (m !== mint) counts.set(m, (counts.get(m) ?? 0) + 1);
+      const shared = [...counts].filter(([, c]) => c >= 2).sort((a, b) => b[1] - a[1]).map(([m]) => m);
+      return { wallets, shared };
+    })
+    .sort((a, b) => b.wallets.length - a.wallets.length);
+}
+
 // ------------------------------------------------------------- analytics
 
 export interface TradeStats {
@@ -832,6 +1058,22 @@ export function scoreHolder(h: Holder, ctx: { holderSet: Set<string>; creator?: 
   if (h.funder && ctx.holderSet.has(h.funder) && h.funder !== h.owner) {
     s += 0.15;
     reasons.push('funded directly by another holder');
+  }
+  if (h.launchBuyer && !h.bundled) {
+    s += 0.15;
+    reasons.push('bought in the first slots of the launch (sniper)');
+  }
+  const transfersFromHolders = h.provenance?.transfersIn.filter((t) => ctx.holderSet.has(t.from) || t.from === ctx.creator) ?? [];
+  if (transfersFromHolders.length) {
+    s += 0.25;
+    reasons.push(`received tokens by transfer from ${transfersFromHolders.map((t) => (t.from === ctx.creator ? 'the CREATOR' : short(t.from))).join(', ')}`);
+  } else if (h.provenance && h.provenance.transfersIn.length && h.provenance.swapsIn === 0) {
+    s += 0.1;
+    reasons.push(`bag arrived by transfer (${h.provenance.transfersIn.map((t) => short(t.from)).join(', ')}), never bought`);
+  }
+  if (h.portfolioCluster) {
+    s += 0.15;
+    reasons.push(`portfolio fingerprint matches other holders (cluster ${h.portfolioCluster})`);
   }
   if (h.insider) {
     s += 0.2;
@@ -1061,6 +1303,72 @@ async function main() {
   const clusters = funderClusters(wallets);
   for (const [, list] of clusters) for (const h of list) h.fundedBySameAs = list.length;
 
+  // ---- deep: launch bundle from the bonding curve's own history
+  const curveAddr = pump?.bonding_curve as string | undefined;
+  let launch: LaunchInfo | null = null;
+  if (curveAddr) {
+    try {
+      launch = await traceLaunch(curveAddr, mint, supply.amount, 80);
+      if (launch) {
+        const byWallet = new Map<string, { slot: number; sol: number }>();
+        for (const b of launch.bundled) byWallet.set(b.wallet, { slot: b.slot, sol: (byWallet.get(b.wallet)?.sol ?? 0) + b.sol });
+        for (const h of holders) {
+          const b = byWallet.get(h.owner);
+          if (b) {
+            h.bundled = true;
+            h.launchBuyer = true;
+            h.launchSol = b.sol;
+          } else if (launch.buyers.some((x) => x.wallet === h.owner)) h.launchBuyer = true;
+        }
+        console.error(`  launch: ${launch.totalSigs} curve sigs, ${launch.buyers.length} first buyers parsed, ${launch.bundled.length} bundled`);
+      }
+    } catch (e) {
+      console.error(`  ! launch trace failed: ${String(e)}`);
+      unavailable.push('launch bundle trace');
+    }
+  } else unavailable.push('bonding curve address (launch trace)');
+
+  // ---- deep: whale bag provenance for the largest balance holders
+  const poolOwners = new Set(holders.filter((h) => h.ownerProgram && h.ownerProgram !== SYSTEM_PROGRAM).map((h) => h.owner));
+  if (curveAddr) poolOwners.add(curveAddr);
+  const whales = wallets.filter((h) => h.pct > 0 && h.tokenAccounts?.length).slice(0, 15);
+  let provFailures = 0;
+  await pmap(whales, 1, async (h) => {
+    try {
+      h.provenance = (await traceProvenance(h, mint, poolOwners, 8, 4)) ?? undefined;
+    } catch {
+      provFailures++;
+    }
+  });
+  if (provFailures) unavailable.push(`provenance for ${provFailures} whale(s)`);
+
+  // ---- deep: second-hop funders (who funded the funders; links to creator / holders)
+  const funderHops = new Map<string, { funder?: string; cex?: string; txCount?: number; capped?: boolean; age?: number }>();
+  const interestingFunders = [...new Set(wallets.filter((h) => h.funder && !h.funderCex && (h.fundedBySameAs ?? 0) >= 2 || (h.funder && h.freshAtBuy)).map((h) => h.funder!))].slice(0, 25);
+  for (const f of interestingFunders) {
+    try {
+      const a = await walletActivity(f, 1);
+      const hop = a.first && !a.capped ? await funderOf(f, a.first.signature) : undefined;
+      funderHops.set(f, { funder: hop, cex: hop ? KNOWN_CEX[hop] : undefined, txCount: a.count, capped: a.capped, age: a.first?.blockTime ? (now - a.first.blockTime) / 86_400 : undefined });
+    } catch {
+      /* soft */
+    }
+  }
+
+  // ---- deep: portfolio fingerprint overlap across big holders and big recent buyers
+  const portfolioTargets = [...new Set([...wallets.filter((h) => h.pct > 0).slice(0, 20), ...wallets.filter((h) => (h.recentSolIn ?? 0) > 0).sort((a, b) => b.recentSolIn! - a.recentSolIn!).slice(0, 12)].map((h) => h.owner))];
+  const portfolios = new Map<string, Set<string>>();
+  await pmap(portfolioTargets, 2, async (o) => {
+    portfolios.set(o, await walletMints(o));
+  });
+  const pClusters = portfolioClusters(portfolios, mint, 3);
+  pClusters.forEach((c, i) => {
+    for (const w of c.wallets) {
+      const h = holders.find((x) => x.owner === w);
+      if (h) h.portfolioCluster = `P${i + 1}`;
+    }
+  });
+
   for (const h of holders) scoreHolder(h, { holderSet, creator });
 
   // ------------------------------------------------------------ aggregates
@@ -1094,6 +1402,10 @@ async function main() {
   const susSupply = pctOfCirc(sus);
   const flags: string[] = [];
   if (ts && ts.bundledBuyers.length > 0) flags.push(`${ts.bundledBuyers.length} wallets bought in the deploy bundle (${fmtSol(ts.bundledSolIn)})`);
+  if (launch && launch.bundled.length > 1) flags.push(`${launch.bundled.length} wallets bought in the deploy bundle for ${fmtPct(launch.bundledTokensPct)} of supply`);
+  if (launch && launch.bundled.some((b) => holderSet.has(b.wallet))) flags.push('deploy-bundle wallets are still among the top holders');
+  if (whales.some((h) => h.provenance?.transfersIn.some((t) => t.from === creator || holderSet.has(t.from)))) flags.push('top-holder bags moved between insider wallets by transfer');
+  if (pClusters.length) flags.push(`${pClusters.length} portfolio-fingerprint cluster(s) among big holders/buyers`);
   if (clusters.size > 0) flags.push(`${clusters.size} funder clusters covering ${[...clusters.values()].reduce((s, l) => s + l.length, 0)} holders`);
   if (rug?.graphInsidersDetected) flags.push(`Rugcheck insider graph: ${rug.graphInsidersDetected} wallets`);
   if (ts && ts.bursts.length > 0) flags.push(`${ts.bursts.length} identical-amount buy bursts (largest ${ts.bursts[0].count}× ${ts.bursts[0].sol} SOL)`);
@@ -1222,6 +1534,72 @@ async function main() {
     L.push('');
   }
 
+  if (launch) {
+    L.push('## Launch (pump.fun bonding curve)');
+    L.push('');
+    L.push(`- Curve \`${launch.curve}\` · first slot ${launch.createSlot} at ${iso(launch.createTime)} · ${launch.totalSigs} curve transactions in total · first ${launch.parsed} parsed`);
+    L.push(`- Bundled buyers (deploy slot +2): ${launch.bundled.length}, taking ${fmtPct(launch.bundledTokensPct)} of supply for ${fmtSol(launch.bundled.reduce((s, b) => s + b.sol, 0))}`);
+    const stillHold = launch.bundled.filter((b) => holderSet.has(b.wallet));
+    L.push(`- Bundled wallets still among top holders: ${stillHold.length}${stillHold.length ? ` — ${[...new Set(stillHold.map((b) => short(b.wallet)))].join(', ')}` : ''}`);
+    L.push('');
+    L.push('| Slot (+create) | Wallet | Tokens | % supply | SOL | Now |');
+    L.push('|---:|---|---:|---:|---:|---|');
+    for (const b of launch.buyers.slice(0, 25)) {
+      const h = holders.find((x) => x.owner === b.wallet);
+      L.push(`| +${b.slot - launch.createSlot} | \`${short(b.wallet)}\`${b.wallet === creator ? ' (CREATOR)' : ''} | ${Math.round(b.tokens).toLocaleString('en-US')} | ${fmtPct((b.tokens / supply.amount) * 100)} | ${b.sol.toFixed(2)} | ${h && h.pct > 0 ? `holds ${fmtPct(h.pct)}` : h ? 'trades today' : ''} |`);
+    }
+    L.push('');
+  }
+
+  if (whales.some((h) => h.provenance)) {
+    L.push('## How the top holders got their bags');
+    L.push('');
+    L.push('| Wallet | % supply | First seen | Token-acct txs | Swaps in (SOL) | Transfers in | Transfers out |');
+    L.push('|---|---:|---|---:|---:|---|---|');
+    for (const h of whales) {
+      const p = h.provenance;
+      if (!p) continue;
+      const tin = p.transfersIn.map((t) => `${Math.round(t.amount).toLocaleString('en-US')} from ${t.from === creator ? 'CREATOR' : short(t.from)}${holderSet.has(t.from) ? '*' : ''}`).join('; ');
+      const tout = p.transfersOut.map((t) => `${Math.round(t.amount).toLocaleString('en-US')} to ${short(t.to)}${holderSet.has(t.to) ? '*' : ''}`).join('; ');
+      L.push(`| \`${short(h.owner)}\` | ${fmtPct(h.pct)} | ${iso(p.firstSeen)} | ${p.txCount}${p.txCount >= 3000 ? '+' : ''} | ${p.swapsIn} (${p.swapSol.toFixed(2)}) | ${tin || '–'} | ${tout || '–'} |`);
+    }
+    L.push('');
+    L.push('`*` = counterparty is itself a top holder. Only the newest 8 and oldest 4 transactions per token account are parsed.');
+    L.push('');
+  }
+
+  if (funderHops.size) {
+    L.push('## Funder wallets, one hop up');
+    L.push('');
+    L.push('| Funder | Funds | Lifetime txs | Age (d) | Funded by | Link |');
+    L.push('|---|---|---:|---:|---|---|');
+    for (const [f, hop] of funderHops) {
+      const funded = wallets.filter((h) => h.funder === f).map((h) => short(h.owner)).join(', ');
+      const link = [
+        f === creator ? 'IS THE CREATOR' : '',
+        holderSet.has(f) ? 'is a holder' : '',
+        hop.funder === creator ? 'funded by the CREATOR' : '',
+        hop.funder && holderSet.has(hop.funder) ? `funded by holder ${short(hop.funder)}` : '',
+        hop.funder && funderHops.has(hop.funder) ? 'funded by another funder' : '',
+        hop.cex ? `on-ramped from ${hop.cex}` : '',
+      ].filter(Boolean).join('; ');
+      L.push(`| \`${short(f)}\` | ${funded} | ${hop.txCount ?? ''}${hop.capped ? '+' : ''} | ${hop.age?.toFixed(0) ?? ''} | ${hop.cex ?? (hop.funder ? short(hop.funder) : '')} | ${link} |`);
+    }
+    L.push('');
+  }
+
+  if (pClusters.length) {
+    L.push('## Portfolio fingerprint clusters');
+    L.push('');
+    L.push('Wallets holding ≥ 3 of the same non-major tokens. Independent buyers rarely share obscure bags; farms and one operator\'s wallets do.');
+    L.push('');
+    pClusters.forEach((c, i) => L.push(`- P${i + 1}: ${c.wallets.map(short).join(', ')} — share ${c.shared.length} mints (${c.shared.slice(0, 4).map((m) => m.slice(0, 6)).join(', ')}${c.shared.length > 4 ? ', …' : ''})`));
+    L.push('');
+  } else if (portfolios.size) {
+    L.push(`## Portfolio fingerprint: no clusters among ${portfolios.size} wallets checked`);
+    L.push('');
+  }
+
   if (clusters.size) {
     L.push('## Funding-source clusters');
     L.push('');
@@ -1299,6 +1677,9 @@ async function main() {
         unavailable,
         holders,
         trades: ts ? { ...ts, perUser: Object.fromEntries(ts.perUser) } : null,
+        launch,
+        funderHops: Object.fromEntries(funderHops),
+        portfolioClusters: pClusters,
         pool: pa && poolScan ? { address: poolAddr, sigsScanned: poolScan.sigsScanned, parsed: poolScan.parsed, swaps: poolScan.trades, buyVol: pa.buyVol, sellVol: pa.sellVol, buyers: pa.buyers, sellers: pa.sellers, topBuyerShare: pa.topBuyerShare, top3BuyerShare: pa.top3BuyerShare, regularBuyers: pa.regularBuyers, traders: pa.stats.slice(0, 100) } : null,
         market: { pair, geckoPool: gPool?.attributes ?? null },
         rugcheck: rug ? { score: rug.score_normalised ?? rug.score, risks: rug.risks, insiderNetworks: rug.insiderNetworks, graphInsidersDetected: rug.graphInsidersDetected, totalHolders: rug.totalHolders, mintAuthority: rug.mintAuthority, freezeAuthority: rug.freezeAuthority, markets: rug.markets } : null,
