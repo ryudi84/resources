@@ -1,6 +1,6 @@
 # Holder forensics: Axis ($MAXIS)
 
-Mint `HHf2VfXSPUVqQth6tXypfdUX2vawCiVKfkbAX4CJpump` · generated 2026-09-07T18:45Z · 3063 RPC calls · 2552s
+Mint `HHf2VfXSPUVqQth6tXypfdUX2vawCiVKfkbAX4CJpump` · generated 2026-09-07T20:47Z · 4471 RPC calls · 3803s
 
 ## Verdict
 
@@ -9,32 +9,32 @@ Mint `HHf2VfXSPUVqQth6tXypfdUX2vawCiVKfkbAX4CJpump` · generated 2026-09-07T18:4
 | Class | Wallets | % of profiled wallets | % of circulating supply |
 |---|---:|---:|---:|
 | Likely bot / farm | 0 | 0.00% | 0.00% |
-| Suspicious | 37 | 48.68% | 54.88% |
-| Likely organic | 39 | 51.32% | 15.49% |
+| Suspicious | 35 | 47.30% | 54.81% |
+| Likely organic | 39 | 52.70% | 15.48% |
 | Unknown (no history available) | 0 | – | 0.00% |
-| of which automated trading wallets (any class) | 31 | – | 24.50% |
-| Pools / program vaults | 1 | – | 9.60% of total |
+| of which automated trading wallets (any class) | 30 | – | 24.47% |
+| Pools / program vaults | 1 | – | 9.49% of total |
 
-Profiled wallets cover 70.37% of circulating supply.
+Profiled wallets cover 70.29% of circulating supply.
 
 Red flags:
 - 11 wallets bought in the deploy bundle for 23.18% of supply
 - top-holder bags moved between insider wallets by transfer
 - creator transferred tokens directly to a current top holder
 - 1 portfolio-fingerprint cluster(s) among big holders/buyers
-- 3 funder clusters covering 7 holders
-- top-10 wallets hold 59.37% of circulating supply
+- 2 funder clusters covering 5 holders
+- top-10 wallets hold 59.30% of circulating supply
 
 ## Token facts
 
-- Holders: 77 (largest-20 token accounts only; full list unavailable) (Rugcheck: 4372)
-- Supply: 999,965,499.583 · pools hold 9.60%
+- Holders: 75 (largest-20 token accounts only; full list unavailable) (Rugcheck: 4372)
+- Supply: 999,965,499.583 · pools hold 9.49%
 - Creator: `cCMmRDJJ811nvCn9drV2hDoiQukGJ66LY9B9DSjME7s` holds 0
 - Created: 2026-01-30 14:03Z · bonded: yes (pool 5WgYinqANwpEXJiW59nL2dDr683QyzqKahJQxCJJ1NFv)
 - pump.fun replies: 318 · socials: twitter=https://x.com/axis_pizza
 - Description: The first permissionless ETF factory on Solana. Create, trade, and earn from your own on-chain index funds. Your strategy, your ETF.
-- Market (pumpswap): price $0.0003158 · liquidity $60,672 · FDV $315,870 · 24h vol $9,291 · 24h txns 79 buys / 126 sells · pair created 2026-01-30 14:06Z
-- 24h unique actors (GeckoTerminal): 39 buyers / 65 sellers → 2.0 buys per buyer, 1.9 sells per seller
+- Market (pumpswap): price $0.0003249 · liquidity $61,612 · FDV $324,904 · 24h vol $9,301 · 24h txns 83 buys / 155 sells · pair created 2026-01-30 14:06Z
+- 24h unique actors (GeckoTerminal): 42 buyers / 68 sellers → 2.0 buys per buyer, 2.3 sells per seller
 - Rugcheck score: 22 · mint authority: revoked · freeze authority: revoked
 - Liquidity: pump_fun_amm LP locked 100%
 - Rugcheck risks:
@@ -42,44 +42,44 @@ Red flags:
 
 ## Recent pool activity (last 30 days, pool `5WgYinqANwpEXJiW59nL2dDr683QyzqKahJQxCJJ1NFv`)
 
-- 3643 successful pool transactions scanned; 210 swaps parsed from the most recent 220 (1 fetch failures)
-- Transactions per day: 08-09:11 08-10:38 08-11:21 08-12:4 08-13:2 08-14:3 08-15:17 08-16:291 08-17:351 08-18:116 08-19:80 08-20:78 08-21:55 08-22:118 08-23:106 08-24:135 08-25:144 08-26:93 08-27:80 08-28:125 08-29:62 08-30:142 08-31:103 09-01:71 09-02:213 09-03:82 09-04:181 09-05:59 09-06:241 09-07:203
-- Activity bars: ▁▁▁▁▁▁▁▇█▃▂▂▂▃▃▄▄▃▂▃▂▄▃▂▅▂▅▂▆▅
-- Parsed window: 2026-07-25 04:08Z → 2026-09-07 18:01Z
-- History served by: https://api.mainnet-beta.solana.com (probe: solana.leorpc.com 210 sigs back to 2026-09-07 13:45Z; api.mainnet-beta.solana.com 1000 sigs back to 2026-09-04 03:33Z)
-- Buys 89 (92.63 SOL) from 52 wallets · sells 121 (51.54 SOL) from 51 wallets
-- Top buyer = 17% of buy volume · top 3 = 39%
+- 3634 successful pool transactions scanned; 212 swaps parsed from the most recent 220 (1 fetch failures)
+- Transactions per day: 08-09:11 08-10:38 08-11:20 08-12:4 08-13:2 08-14:3 08-15:25 08-16:297 08-17:362 08-18:93 08-19:84 08-20:73 08-21:79 08-22:95 08-23:112 08-24:130 08-25:143 08-26:96 08-27:98 08-28:106 08-29:68 08-30:134 08-31:107 09-01:71 09-02:208 09-03:86 09-04:189 09-05:49 09-06:246 09-07:234
+- Activity bars: ▁▁▁▁▁▁▁▇█▃▂▂▂▃▃▃▄▃▃▃▂▃▃▂▅▂▅▂▆▆
+- Parsed window: 2026-07-28 01:16Z → 2026-09-07 19:39Z
+- History served by: https://api.mainnet-beta.solana.com (probe: api.mainnet-beta.solana.com 1000 sigs back to 2026-09-04 08:28Z; solana.leorpc.com 185 sigs back to 2026-09-07 14:51Z)
+- Buys 88 (68.67 SOL) from 51 wallets · sells 124 (62.32 SOL) from 46 wallets
+- Top buyer = 14% of buy volume · top 3 = 37%
 - Scheduled-cadence buyers: 0
 
 Top buyers:
 
 | Wallet | Buys | Sells | SOL in | SOL out | Share of buys | Interval CV | Same-size buys | Holds now |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| `DDrg…jMqm` | 1 | 0 | 15.83 | 0.00 | 17% |  |  | < top-20 |
-| `2d3q…mrAT` | 2 | 0 | 10.77 | 0.00 | 12% |  |  | 2.02% |
-| `8xSV…HDVN` | 1 | 1 | 9.91 | 0.47 | 11% |  |  | < top-20 |
-| `GVBq…DVry` | 5 | 2 | 7.61 | 0.14 | 8% | 0.51 | 3 | < top-20 |
-| `8i7E…GFMM` | 2 | 0 | 6.14 | 0.00 | 7% |  |  | < top-20 |
-| `2R2r…qLdc` | 1 | 0 | 5.70 | 0.00 | 6% |  |  | < top-20 |
-| `38aD…XTXe` | 1 | 0 | 3.95 | 0.00 | 4% |  |  | < top-20 |
-| `5nqX…RHQ4` | 1 | 0 | 3.63 | 0.00 | 4% |  |  | 1.27% |
-| `BbGr…jm6V` | 1 | 0 | 2.94 | 0.00 | 3% |  |  | < top-20 |
-| `EjqJ…G1a6` | 4 | 2 | 2.13 | 2.06 | 2% | 0.67 | 1 | < top-20 |
-| `BUDz…LamQ` | 3 | 2 | 2.04 | 0.99 | 2% |  | 1 | < top-20 |
-| `GJei…jdo6` | 2 | 1 | 1.99 | 0.60 | 2% |  |  | < top-20 |
+| `GVBq…DVry` | 6 | 2 | 9.51 | 0.14 | 14% | 0.56 | 3 | < top-20 |
+| `DkzU…ZAJc` | 1 | 0 | 9.43 | 0.00 | 14% |  |  | 2.03% |
+| `6PLW…VuLd` | 1 | 0 | 6.45 | 0.00 | 9% |  |  | < top-20 |
+| `8i7E…GFMM` | 2 | 0 | 6.14 | 0.00 | 9% |  |  | < top-20 |
+| `dpya…97Jy` | 4 | 0 | 4.28 | 0.00 | 6% | 0.66 | 1 | < top-20 |
+| `13VK…PVys` | 1 | 0 | 3.94 | 0.00 | 6% |  |  | < top-20 |
+| `BbGr…jm6V` | 1 | 0 | 2.94 | 0.00 | 4% |  |  | < top-20 |
+| `8QbU…ae41` | 1 | 0 | 2.13 | 0.00 | 3% |  |  | < top-20 |
+| `EjqJ…G1a6` | 5 | 1 | 1.99 | 0.83 | 3% | 0.88 | 1 | < top-20 |
+| `AVQM…i3SH` | 2 | 1 | 1.98 | 1.96 | 3% |  |  | < top-20 |
+| `AnJ7…bDZK` | 1 | 0 | 1.89 | 0.00 | 3% |  |  | < top-20 |
+| `APwT…zs2Y` | 2 | 0 | 1.77 | 0.00 | 3% |  |  | < top-20 |
 
 Top sellers:
 
 | Wallet | Sells | Buys | SOL out | SOL in | Holds now |
 |---|---:|---:|---:|---:|---:|
-| `BGqV…xFjk` | 1 | 0 | 9.62 | 0.00 | < top-20 |
-| `5Vav…Tz4B` | 1 | 0 | 8.96 | 0.00 | < top-20 |
-| `F5Ym…Td2V` | 1 | 0 | 5.06 | 0.00 | < top-20 |
+| `JCyB…aUKS` | 1 | 0 | 9.28 | 0.00 | 1.57% |
+| `Gtw5…8FHu` | 1 | 0 | 8.70 | 0.00 | < top-20 |
+| `EokU…rVFY` | 1 | 0 | 8.13 | 0.00 | < top-20 |
+| `2d3q…mrAT` | 1 | 0 | 4.80 | 0.00 | 2.02% |
+| `9s8M…Kmu9` | 1 | 0 | 3.34 | 0.00 | < top-20 |
+| `DiVG…hmKb` | 2 | 0 | 3.22 | 0.00 | < top-20 |
 | `76Py…cobC` | 1 | 0 | 3.13 | 0.00 | < top-20 |
-| `4Auq…R5zw` | 1 | 0 | 2.62 | 0.00 | < top-20 |
-| `H9LM…jjhN` | 1 | 0 | 2.60 | 0.00 | 2.47% |
-| `Emk5…N7CX` | 1 | 0 | 2.14 | 0.00 | < top-20 |
-| `EjqJ…G1a6` | 2 | 4 | 2.06 | 2.13 | < top-20 |
+| `4Auq…R5zw` | 2 | 0 | 2.56 | 0.00 | < top-20 |
 
 ## Launch (pump.fun bonding curve)
 
@@ -177,174 +177,192 @@ Only the newest 6 and oldest 4 transactions per token account are parsed, so a t
 | `34Cw…JDjY` | Bq1T…7Kbe, 2kpY…QAhE, DPvG…8L3n | 173 | 224 | b66k…Mubn |  |
 | `AsSJ…TkA8` | 2j18…ALBC | 1000+ | 248 |  |  |
 | `BrGi…ZP9G` | J36R…WmmC | 1000+ | 1 |  |  |
-| `2snH…kKuS` | 38aD…XTXe, dpya…97Jy | 1000+ | 0 |  |  |
-| `A77H…4RiR` | E8oX…5YR3, 33AH…XGJJ | 1000+ | 0 |  |  |
+| `A77H…4RiR` | E8oX…5YR3, Hfje…eyRs | 1000+ | 0 |  |  |
+
+## Team wallets and SOL flows
+
+- Validator "Axis" · identity `GHQsq6bAdgooi998uKhwdzFubsJ7R3SuhTE9gJ83gctU` · vote `Ha8d5UUJUmEVHh2mLitaihGxQJeU6GfGx5FwBenEJCxN` · stake 153,609 SOL · withdraw authority `D34QoisZhEQ2XbGPMD9RHxWqHA9WLDuNYGHuJv7fxpTt`
+- Withdraw authority among holders / funders / transfer counterparties: none found in the profiled set
+
+SOL transfers among 15 insider candidates (creator, validator wallets, top-12 holders), last 40 transactions each:
+
+- No direct SOL transfers between candidates in the sampled window
+
+Shared SOL counterparties (a wallet that has transacted with ≥ 2 candidates):
+
+| Counterparty | Candidates | Note |
+|---|---|---|
+| `HBQ2TC2gmX9qeNuCsY9gRTk9hiZLRZaKhvHGj2ZbVoWB` | H9LM…jjhN, 5nqX…RHQ4 | 0.10 SOL total |
+| `9yMwSPk9mrXSN7yDHUuZurAh1sjbJsfpUqjZ7SvVtdco` | DkzU…ZAJc, JCyB…aUKS | 0.47 SOL total |
+
+Direct flows between candidates are conclusive links. Shared counterparties with thousands of transactions are usually exchanges or services; a shared low-activity counterparty is one operator's hub.
 
 ## Bot fleet fingerprint
 
 | Wallet | Holds | Lifetime txs | Fee payer | Routed via | Pays SOL to | Funder |
 |---|---:|---:|---|---|---|---|
+| `4N2C…e7RT` | 17.29% | 600 | ? | ? | – | 3kby…JGHf |
 | `Dei1…GzCt` | 7.23% | 3852 | ? | ? | – | 3Lrh…YXJu |
-| `H9LM…jjhN` | 2.47% | 3119 | self | DF1o…7QBH, PumpSwap, pfee…ojVZ, Toke…xuEb, Raydium v4 | – | Bybit |
+| `H9LM…jjhN` | 2.47% | 3119 | ? | ? | – | Bybit |
 | `2d3q…mrAT` | 2.02% | 6000+ | self | Jupiter v6, PumpSwap, pfee…ojVZ, Toke…xuEb | – | beyond 6000 txs |
 | `mP4t…ayQP` | 6.83% | 6000+ | ? | ? | – | beyond 6000 txs |
-| `DDrg…jMqm` | < top-20 | 6000+ | self | Jupiter v6, PumpSwap, pfee…ojVZ, Toke…xuEb | – | beyond 6000 txs |
+| `6PLW…VuLd` | < top-20 | 3237 | self | s7Su…exNC, PumpSwap, pfee…ojVZ, Toke…xuEb | 69xp…bLar 0.033; HWEo…5yoY 0.001 | AYad…URrP |
 | `GVBq…DVry` | < top-20 | 2502 | self | Jupiter v6, PumpSwap, pfee…ojVZ, Toke…xuEb, whir…tyCc, Tess…GLQH, goon…RSLE, ALPH…4pHA, DRVS…rgqD, jupZ…T9Vd, jupe…3wZC | – | Binance |
-| `38aD…XTXe` | < top-20 | 1688 | self | Jupiter v6, Toke…xuEb, PumpSwap, pfee…ojVZ | – | 2snH…kKuS |
-| `BUDz…LamQ` | < top-20 | 6000+ | self | DF1o…7QBH, Toke…xuEb, CAMM…rWqK, 9H6t…q6Rp, PumpSwap, pfee…ojVZ, Jupiter v6 | – | beyond 6000 txs |
+| `13VK…PVys` | < top-20 | 6000+ | self | PumpSwap, pfee…ojVZ, Toke…xuEb | AcYW…YbE5 0.001 | beyond 6000 txs |
+| `AnJ7…bDZK` | < top-20 | 785 | self | DF1o…7QBH, Toke…xuEb, PumpSwap, pfee…ojVZ | – | Cc3b…TCu6 |
+| `APwT…zs2Y` | < top-20 | 1103 | self | Jupiter v6, PumpSwap, pfee…ojVZ, Toke…xuEb, DF1o…7QBH | – | DAJo…jJ9G |
 
 - Fee payer shared by ≥2 fleet wallets: none — each wallet signs for itself
 - Non-Jito SOL recipient shared by ≥2 fleet wallets (bot/tool fee account): none
-- Programs used: PumpSwap ×6, pfee…ojVZ ×6, Toke…xuEb ×6, Jupiter v6 ×5, DF1o…7QBH ×2, Raydium v4 ×1, whir…tyCc ×1, Tess…GLQH ×1, goon…RSLE ×1, ALPH…4pHA ×1, DRVS…rgqD ×1, jupZ…T9Vd ×1, jupe…3wZC ×1, CAMM…rWqK ×1, 9H6t…q6Rp ×1
+- Programs used: PumpSwap ×6, pfee…ojVZ ×6, Toke…xuEb ×6, Jupiter v6 ×3, DF1o…7QBH ×2, s7Su…exNC ×1, whir…tyCc ×1, Tess…GLQH ×1, goon…RSLE ×1, ALPH…4pHA ×1, DRVS…rgqD ×1, jupZ…T9Vd ×1, jupe…3wZC ×1
 - Shared funder among fleet wallets: none found
 
 Shared tokens: bought, or airdropped spam?
 
 | Mint | Name | Liquidity | Market since | Verdict |
 |---|---|---:|---|---|
-| `Es9v…wNYB` | USDT (USDT) | $62,332 | 2022-11-28 | address lookalike → spam airdrop |
-| `3SXQ…xSUR` | ethics.ltd (ETHICS) | $78,334 | 2026-08-06 | real market |
+| `Es9v…wNYB` | USDT (USDT) | $62,292 | 2022-11-28 | address lookalike → spam airdrop |
+| `EKpQ…zcjm` | dogwifhat ($WIF) | $149,279 | 2024-05-18 | real market |
+| `3SXQ…xSUR` | ethics.ltd (ETHICS) | $84,434 | 2026-08-06 | real market |
+| `JUPy…DvCN` | Jupiter (JUP) | $505,992 | 2024-01-31 | real market |
+| `DezX…B263` | Bonk (Bonk) | $312,335 | 2022-12-25 | real market |
+| `UPTx…tWQG` | UPROCK (UPT) | $50,880 | 2024-06-02 | real market |
 | `47WU…aiwd` | – | – | – | no market → airdrop/spam |
-| `GGNo…YMVc` | – | – | – | no market → airdrop/spam |
-| `UPTx…tWQG` | UPROCK (UPT) | $51,038 | 2024-06-02 | real market |
 | `8emK…rYAh` | UPONLY (ONLYUP) | $2 | 2026-01-25 | dead market |
-| `A1Ad…NzTz` | – | – | – | no market → airdrop/spam |
 | `DUuC…QnJh` | – | – | – | no market → airdrop/spam |
-| `EKpQ…zcjm` | dogwifhat ($WIF) | $148,160 | 2024-05-18 | real market |
 | `7pzT…dory` | SuzuPay (SUZU) | $12,063 | 2026-01-12 | real market |
 | `48No…3GBL` | BLACKGOLD ($OIL) | $15 | 2026-01-18 | dead market |
 | `BUAN…V5uU` | – | – | – | no market → airdrop/spam |
 | `DuFE…4Ak8` | – | – | – | no market → airdrop/spam |
-| `GH55…pump` | Retard Finder (RETARD) | $5,229 | 2026-01-15 | real market |
+| `GGNo…YMVc` | – | – | – | no market → airdrop/spam |
+| `GH55…pump` | – | – | – | no market → airdrop/spam |
+| `JD9C…fUUR` | – | – | – | no market → airdrop/spam |
+| `Aebi…8mmg` | Mysterious Money Glitch (MMG) | $1,611 | 2026-04-17 | real market |
 | `Josj…nHhg` | JuliaOS (JOS) | $39,478 | 2025-04-23 | real market |
-| `KENJ…YvEP` | test griffain.com (GRIFFAIN) | $1,635,044 | 2024-11-03 | real market |
+| `KENJ…YvEP` | test griffain.com (GRIFFAIN) | $1,643,461 | 2024-11-03 | real market |
 | `5DkL…pump` | Zen AI (ZENAI) | $23,253 | 2025-06-03 | real market |
 | `ADMi…pump` | Engrave Protocol (Engrave) | $7,645 | 2025-11-05 | real market |
-| `C7he…CLTZ` | Collaterize ($COLLAT) | $240,039 | 2025-01-30 | real market |
-| `FWAr…pump` | PVS (PVS) | $118,534 | 2025-03-13 | real market |
-| `Hax9…6gdD` | TARS AI (TAI) | $120,219 | 2024-05-02 | real market |
-| `11mM…ZmMr` | – | – | – | no market → airdrop/spam |
-| `WLFi…C16g` | World Liberty Financial (WLFI) | $12,923 | 2025-09-01 | real market |
-| `Xdr8…BAGS` | – | – | – | no market → airdrop/spam |
-| `a3W4…pump` | The White Whale (WhiteWhale) | $217,385 | 2025-10-13 | real market |
-| `aqQR…bory` | Alpie (PIE) | $62,195 | 2026-01-14 | real market |
-| `bbD9…LRcP` | Microsoft AI (MICROAI) | $724 | 2026-06-08 | dead market |
-| `fmkb…cDYH` | – | – | – | no market → airdrop/spam |
-| `v1G6…pump` | – | – | – | no market → airdrop/spam |
-| `4Xg4…BAGS` | – | – | – | no market → airdrop/spam |
+| `C7he…CLTZ` | Collaterize ($COLLAT) | $240,010 | 2025-01-30 | real market |
+| `FWAr…pump` | PVS (PVS) | $119,061 | 2025-03-13 | real market |
+| `Hax9…6gdD` | TARS AI (TAI) | $118,159 | 2024-05-02 | real market |
+| `KeKx…4ory` | Syllaby (SYLLA) | $8,345 | 2026-02-08 | real market |
+| `ZBCN…m9RU` | Zebec Network (ZBCN) | $215,949 | 2025-05-25 | real market |
+| `aqQR…bory` | Alpie (PIE) | $59,964 | 2026-01-14 | real market |
+| `mMKS…RiZz` | – | – | – | no market → airdrop/spam |
+| `oivf…pump` | – | – | – | no market → airdrop/spam |
+| `x95H…WKyp` | Hachiko ($HACHI) | $66,376 | 2025-11-27 | real market |
 
-15 of 30 shared tokens have no real market. A cluster built on spam airdrops is not evidence of one operator; one built on bought tokens is.
+12 of 30 shared tokens have no real market. A cluster built on spam airdrops is not evidence of one operator; one built on bought tokens is.
 
 How fleet wallets acquired the shared tokens that do have markets:
+- `4N2C…e7RT` ← USDT: unknown
+- `4N2C…e7RT` ← $WIF: swap
+- `4N2C…e7RT` ← ETHICS: unknown
 - `Dei1…GzCt` ← USDT: swap
+- `Dei1…GzCt` ← $WIF: swap
 - `Dei1…GzCt` ← ETHICS: swap
-- `Dei1…GzCt` ← UPT: transfer from `4itE…ds7d`
 - `H9LM…jjhN` ← USDT: transfer from `GsCY…uqSN`
+- `H9LM…jjhN` ← $WIF: unknown
 - `H9LM…jjhN` ← ETHICS: unknown
-- `H9LM…jjhN` ← UPT: unknown
-- `2d3q…mrAT` ← USDT: transfer from `Ge8d…dTRi`
-- `2d3q…mrAT` ← ETHICS: swap
-- `2d3q…mrAT` ← UPT: unknown
 
 ## Portfolio fingerprint clusters
 
 Wallets holding ≥ 3 of the same non-major tokens. Independent buyers rarely share obscure bags; farms and one operator's wallets do.
 
-- P1: Dei1…GzCt, H9LM…jjhN, 2d3q…mrAT, mP4t…ayQP, DDrg…jMqm, GVBq…DVry, 38aD…XTXe, BUDz…LamQ — share 60 mints (Es9vMF, 3SXQSM, 47WU2N, GGNoo8, …)
+- P1: 4N2C…e7RT, Dei1…GzCt, H9LM…jjhN, 2d3q…mrAT, mP4t…ayQP, 6PLW…VuLd, GVBq…DVry, 13VK…PVys, AnJ7…bDZK, APwT…zs2Y — share 50 mints (Es9vMF, EKpQGS, 3SXQSM, JUPyiw, …)
 
 ## Funding-source clusters
 
 Holders whose first SOL came from the same non-exchange wallet (one operator controlling several "holders").
 
 - `34CwK1PeyTZ5EFty5LzYAJdjhJzuvGg6fBjZKZUsJDjY` → 3 holders, 3.00% of supply: Bq1T…7Kbe, 2kpY…QAhE, DPvG…8L3n
-- `2snHHreXbpJ7UwZxPe37gnUNf7Wx7wv6UKDSR2JckKuS` → 2 holders, 0.00% of supply: 38aD…XTXe, dpya…97Jy
-- `A77HErqtfN1hLLpvZ9pCtu66FEtM8BveoaKbbMoZ4RiR` → 2 holders, 0.00% of supply: E8oX…5YR3, 33AH…XGJJ
+- `A77HErqtfN1hLLpvZ9pCtu66FEtM8BveoaKbbMoZ4RiR` → 2 holders, 0.00% of supply: E8oX…5YR3, Hfje…eyRs
 
 ## Wallet-quality summary (profiled wallets)
 
-- Profiled: 76 of 76 wallets (funding traced for top 76)
-- Funded from a known exchange: 5 (Binance 5)
+- Profiled: 74 of 74 wallets (funding traced for top 74)
+- Funded from a known exchange: 5 (Binance 3, MEXC 2)
 - Fresh at time of buy (< 24h old, < 15 txs): 0
-- Hyperactive (≥1000 txs): 31
+- Hyperactive (≥1000 txs): 30
 - Rugcheck insiders among holders: 0
 - Dust holders (< 0.001% supply): 0 of 19 (top holders only; not meaningful)
-- Top-10 wallets: 59.37% of circulating supply
-- Wallet age (days): median 213.4 · p10 27.2 · p90 559.1
+- Top-10 wallets: 59.30% of circulating supply
+- Wallet age (days): median 213.6 · p10 30.5 · p90 632.5
 
 ## Top holders
 
 | # | Wallet | % supply | Verdict | Score | Txs | Age (d) | Funder | Recent B/S | Signals |
 |---:|---|---:|---|---:|---:|---:|---|---:|---|
-| 1 | `4N2C…e7RT` | 17.29% | suspicious | 0.25 | 600 | 343 | 3kby…JGHf |  | received tokens by transfer from the CREATOR |
-| 2 | `5WgY…1NFv` | 9.60% | pool | 0.00 |  |  |  |  | PumpSwap pool |
+| 1 | `4N2C…e7RT` | 17.29% | suspicious | 0.40 | 600 | 344 | 3kby…JGHf |  | received tokens by transfer from the CREATOR; portfolio fingerprint matches other holders (cluster P1) |
+| 2 | `5WgY…1NFv` | 9.49% | pool | 0.00 |  |  |  |  | PumpSwap pool |
 | 3 | `Dei1…GzCt` | 7.23% | suspicious | 0.40 | 3000+ |  |  |  | portfolio fingerprint matches other holders (cluster P1); automated trading wallet (≥3000 lifetime txs) |
 | 4 | `2neB…G9pM` | 7.17% | suspicious | 0.30 | 32 | 64 | BACL…UhvH |  | received tokens by transfer from 4N2C…e7RT; near-zero SOL balance (disposable wallet) |
 | 5 | `mP4t…ayQP` | 6.83% | suspicious | 0.40 | 3000+ |  |  |  | portfolio fingerprint matches other holders (cluster P1); automated trading wallet (≥3000 lifetime txs) |
 | 6 | `4SuT…nfLW` | 4.98% | organic | 0.00 | 7 | 169 | iGdF…Sdwu |  |  |
-| 7 | `H9LM…jjhN` | 2.47% | suspicious | 0.40 | 3000+ |  |  | 0/1 | portfolio fingerprint matches other holders (cluster P1); automated trading wallet (≥3000 lifetime txs) |
-| 8 | `DkzU…ZAJc` | 2.03% | suspicious | 0.25 | 3000+ |  |  |  | automated trading wallet (≥3000 lifetime txs) |
-| 9 | `2d3q…mrAT` | 2.02% | suspicious | 0.40 | 3000+ |  |  | 2/0 | portfolio fingerprint matches other holders (cluster P1); automated trading wallet (≥3000 lifetime txs) |
-| 10 | `Ctr9…WUJ6` | 1.91% | organic | 0.00 | 260 | 144 | wfNB…7LGw |  |  |
+| 7 | `H9LM…jjhN` | 2.47% | suspicious | 0.40 | 3000+ |  |  |  | portfolio fingerprint matches other holders (cluster P1); automated trading wallet (≥3000 lifetime txs) |
+| 8 | `DkzU…ZAJc` | 2.03% | suspicious | 0.25 | 3000+ |  |  | 1/0 | automated trading wallet (≥3000 lifetime txs) |
+| 9 | `2d3q…mrAT` | 2.02% | suspicious | 0.40 | 3000+ |  |  | 0/1 | portfolio fingerprint matches other holders (cluster P1); automated trading wallet (≥3000 lifetime txs) |
+| 10 | `Ctr9…WUJ6` | 1.91% | organic | 0.00 | 260 | 144 | wfNB…7LGw | 1/0 |  |
 | 11 | `3Szg…BQcr` | 1.75% | organic | 0.00 | 48 | 230 | 3qiP…YHHT |  |  |
-| 12 | `JCyB…aUKS` | 1.57% | suspicious | 0.25 | 3000+ |  |  |  | automated trading wallet (≥3000 lifetime txs) |
-| 13 | `5nqX…RHQ4` | 1.27% | organic | 0.00 | 24 | 214 | J1BD…ksLy | 1/0 |  |
-| 14 | `J464…aXfC` | 1.14% | organic | 0.00 | 1687 | 987 | Binance |  | funded from Binance (exchange on-ramp → real person) |
+| 12 | `JCyB…aUKS` | 1.57% | suspicious | 0.25 | 3000+ |  |  | 0/1 | automated trading wallet (≥3000 lifetime txs) |
+| 13 | `5nqX…RHQ4` | 1.27% | organic | 0.00 | 24 | 214 | J1BD…ksLy |  |  |
+| 14 | `J464…aXfC` | 1.14% | organic | 0.00 | 1687 | 988 | Binance |  | funded from Binance (exchange on-ramp → real person) |
 | 15 | `9WpE…ArhJ` | 1.09% | organic | 0.00 | 114 | 195 | 9K9F…De5s |  |  |
 | 16 | `Bq1T…7Kbe` | 1.00% | suspicious | 0.25 | 8 | 219 | 34Cw…JDjY |  | funded by the same wallet as 2 other holders (34CwK1…) |
 | 17 | `2kpY…QAhE` | 1.00% | suspicious | 0.25 | 6 | 219 | 34Cw…JDjY |  | funded by the same wallet as 2 other holders (34CwK1…) |
 | 18 | `DPvG…8L3n` | 1.00% | suspicious | 0.25 | 7 | 219 | 34Cw…JDjY |  | funded by the same wallet as 2 other holders (34CwK1…) |
-| 19 | `2j18…ALBC` | 0.94% | organic | 0.00 | 1548 | 1510 | AsSJ…TkA8 |  |  |
-| 20 | `J36R…WmmC` | 0.93% | organic | 0.00 | 1045 | 301 | BrGi…ZP9G |  |  |
-| 21 | `DDrg…jMqm` | < top-20 | suspicious | 0.40 | 3000+ |  |  | 1/0 | portfolio fingerprint matches other holders (cluster P1); automated trading wallet (≥3000 lifetime txs) |
-| 22 | `8xSV…HDVN` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 1/1 | automated trading wallet (≥3000 lifetime txs) |
-| 23 | `BGqV…xFjk` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 0/1 | automated trading wallet (≥3000 lifetime txs) |
-| 24 | `5Vav…Tz4B` | < top-20 | organic | 0.00 | 1688 | 221 | 3TW4…2Q7j | 0/1 |  |
-| 25 | `GVBq…DVry` | < top-20 | organic | 0.05 | 2502 | 988 | Binance | 5/2 | portfolio fingerprint matches other holders (cluster P1); 3 identical-size buys; funded from Binance (exchange on-ramp → real person) |
-| 26 | `8i7E…GFMM` | < top-20 | organic | 0.00 | 225 | 18 | EWK8…DxM6 | 2/0 |  |
-| 27 | `2R2r…qLdc` | < top-20 | organic | 0.00 | 671 | 245 | HEbh…952N | 1/0 |  |
-| 28 | `F5Ym…Td2V` | < top-20 | organic | 0.05 | 19 | 217 | Biw4…PTUU | 0/1 | near-zero SOL balance (disposable wallet) |
-| 29 | `EjqJ…G1a6` | < top-20 | organic | 0.00 | 1613 | 60 | FZrF…4DCe | 4/2 |  |
-| 30 | `38aD…XTXe` | < top-20 | suspicious | 0.25 | 1688 | 491 | 2snH…kKuS | 1/0 | shares its funder with 1 other holder; portfolio fingerprint matches other holders (cluster P1) |
+| 19 | `2j18…ALBC` | 0.94% | organic | 0.00 | 1557 | 1510 | AsSJ…TkA8 |  |  |
+| 20 | `J36R…WmmC` | 0.93% | organic | 0.00 | 1045 | 301 | BrGi…ZP9G | 1/0 |  |
+| 21 | `GVBq…DVry` | < top-20 | organic | 0.05 | 2502 | 988 | Binance | 6/2 | portfolio fingerprint matches other holders (cluster P1); 3 identical-size buys; funded from Binance (exchange on-ramp → real person) |
+| 22 | `Gtw5…8FHu` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 0/1 | automated trading wallet (≥3000 lifetime txs) |
+| 23 | `EokU…rVFY` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 0/1 | automated trading wallet (≥3000 lifetime txs) |
+| 24 | `6PLW…VuLd` | < top-20 | suspicious | 0.40 | 3000+ |  |  | 1/0 | portfolio fingerprint matches other holders (cluster P1); automated trading wallet (≥3000 lifetime txs) |
+| 25 | `8i7E…GFMM` | < top-20 | organic | 0.00 | 226 | 18 | EWK8…DxM6 | 2/0 |  |
+| 26 | `dpya…97Jy` | < top-20 | organic | 0.00 | 982 | 245 | 2snH…kKuS | 4/0 |  |
+| 27 | `AVQM…i3SH` | < top-20 | organic | 0.00 | 145 | 30 | GmvK…6XvT | 2/1 |  |
+| 28 | `13VK…PVys` | < top-20 | suspicious | 0.40 | 3000+ |  |  | 1/0 | portfolio fingerprint matches other holders (cluster P1); automated trading wallet (≥3000 lifetime txs) |
+| 29 | `9s8M…Kmu9` | < top-20 | organic | 0.00 | 1653 | 58 | 6LY1…zkzF | 0/1 |  |
+| 30 | `DiVG…hmKb` | < top-20 | organic | 0.00 | 379 | 232 | MEXC | 0/2 | funded from MEXC (exchange on-ramp → real person) |
 | 31 | `76Py…cobC` | < top-20 | organic | 0.00 | 137 | 202 | A6tX…pcjP | 0/1 |  |
-| 32 | `BUDz…LamQ` | < top-20 | suspicious | 0.40 | 3000+ |  |  | 3/2 | portfolio fingerprint matches other holders (cluster P1); automated trading wallet (≥3000 lifetime txs) |
-| 33 | `BbGr…jm6V` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 1/0 | automated trading wallet (≥3000 lifetime txs) |
-| 34 | `4Auq…R5zw` | < top-20 | organic | 0.00 | 1657 | 263 | GT2z…p3A4 | 0/1 |  |
-| 35 | `GJei…jdo6` | < top-20 | organic | 0.00 | 70 | 187 | HrAf…qSmm | 2/1 |  |
-| 36 | `Emk5…N7CX` | < top-20 | organic | 0.00 | 2136 | 559 | Binance | 0/1 | funded from Binance (exchange on-ramp → real person) |
-| 37 | `DTfw…EoFL` | < top-20 | organic | 0.00 | 233 | 27 | xsWX…N4Bs | 1/0 |  |
-| 38 | `5kq2…4rEm` | < top-20 | organic | 0.00 | 1132 | 68 | Binance | 1/0 | funded from Binance (exchange on-ramp → real person) |
-| 39 | `2x9j…dWGR` | < top-20 | organic | 0.00 | 1300 | 27 | 9g6U…wZJs | 0/1 |  |
-| 40 | `APwT…zs2Y` | < top-20 | organic | 0.00 | 1103 | 325 | DAJo…jJ9G | 2/0 |  |
-| 41 | `A6tX…pcjP` | < top-20 | organic | 0.00 | 165 | 203 | 4NyK…LeFw | 0/1 |  |
-| 42 | `5spB…JXBZ` | < top-20 | organic | 0.00 | 196 | 201 | Dwdr…Eq1g | 0/1 |  |
-| 43 | `8Dua…KvVN` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 2/0 | automated trading wallet (≥3000 lifetime txs) |
+| 32 | `BbGr…jm6V` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 1/0 | automated trading wallet (≥3000 lifetime txs) |
+| 33 | `EjqJ…G1a6` | < top-20 | organic | 0.00 | 1613 | 60 | FZrF…4DCe | 5/1 |  |
+| 34 | `4Auq…R5zw` | < top-20 | organic | 0.00 | 1659 | 263 | GT2z…p3A4 | 0/2 |  |
+| 35 | `BUDz…LamQ` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 1/2 | automated trading wallet (≥3000 lifetime txs) |
+| 36 | `Emk5…N7CX` | < top-20 | organic | 0.00 | 2139 | 559 | Binance | 0/1 | funded from Binance (exchange on-ramp → real person) |
+| 37 | `8QbU…ae41` | < top-20 | organic | 0.00 | 1194 | 198 | HQKu…uD1R | 1/0 |  |
+| 38 | `AnJ7…bDZK` | < top-20 | organic | 0.20 | 785 | 325 | Cc3b…TCu6 | 1/0 | portfolio fingerprint matches other holders (cluster P1); near-zero SOL balance (disposable wallet) |
+| 39 | `APwT…zs2Y` | < top-20 | organic | 0.15 | 1103 | 325 | DAJo…jJ9G | 2/0 | portfolio fingerprint matches other holders (cluster P1) |
+| 40 | `Hdbz…QoCK` | < top-20 | organic | 0.00 | 193 | 84 | MEXC | 1/0 | funded from MEXC (exchange on-ramp → real person) |
+| 41 | `HveA…AjM8` | < top-20 | organic | 0.00 | 1376 | 161 | B2tX…Gbdd | 1/0 |  |
+| 42 | `A6tX…pcjP` | < top-20 | organic | 0.00 | 165 | 203 | 4NyK…LeFw | 0/1 |  |
+| 43 | `5spB…JXBZ` | < top-20 | organic | 0.00 | 196 | 201 | Dwdr…Eq1g | 0/1 |  |
 | 44 | `GhPz…ai9A` | < top-20 | organic | 0.00 | 1481 | 361 | 2DWU…P38n | 0/1 |  |
-| 45 | `FhUf…hUFc` | < top-20 | organic | 0.00 | 1145 | 213 | AgmL…zN51 | 1/0 |  |
-| 46 | `GATw…Nzjp` | < top-20 | organic | 0.05 | 173 | 87 | 9Whe…q3LY | 1/0 | near-zero SOL balance (disposable wallet) |
-| 47 | `Bdzg…rz4K` | < top-20 | organic | 0.00 | 1611 | 57 | 6LY1…zkzF | 1/0 |  |
-| 48 | `GH7G…1aLW` | < top-20 | organic | 0.00 | 122 | 75 | DxnD…reQS | 0/1 |  |
-| 49 | `6NAp…9cL2` | < top-20 | organic | 0.00 | 36 | 5 | DV4t…5QrS | 2/1 |  |
-| 50 | `6eQW…W9E5` | < top-20 | suspicious | 0.30 | 3000+ |  |  | 1/1 | automated trading wallet (≥3000 lifetime txs); near-zero SOL balance (disposable wallet) |
-| 51 | `AVQM…i3SH` | < top-20 | organic | 0.00 | 145 | 30 | GmvK…6XvT | 1/0 |  |
-| 52 | `J2w7…SX43` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 1/0 | automated trading wallet (≥3000 lifetime txs) |
-| 53 | `3EAL…wUYb` | < top-20 | organic | 0.00 | 1189 | 186 | Binance | 1/0 | funded from Binance (exchange on-ramp → real person) |
-| 54 | `HzUW…n2WF` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 0/1 | automated trading wallet (≥3000 lifetime txs) |
-| 55 | `E8oX…5YR3` | < top-20 | organic | 0.10 | 1026 | 108 | A77H…4RiR | 1/1 | shares its funder with 1 other holder |
-| 56 | `76Wo…rMmv` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 0/1 | automated trading wallet (≥3000 lifetime txs) |
-| 57 | `dpya…97Jy` | < top-20 | organic | 0.10 | 982 | 245 | 2snH…kKuS | 1/0 | shares its funder with 1 other holder |
-| 58 | `HLnp…TLcC` | < top-20 | suspicious | 0.35 | 3000+ |  |  | 16/67 | 7 identical-size buys; automated trading wallet (≥3000 lifetime txs) |
-| 59 | `894h…dSTt` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 1/0 | automated trading wallet (≥3000 lifetime txs) |
-| 60 | `WZog…3c3M` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 1/0 | automated trading wallet (≥3000 lifetime txs) |
-| 61 | `Bhsn…1YRD` | < top-20 | organic | 0.00 | 137 | 33 | BhBT…D1QJ | 1/0 |  |
-| 62 | `7AHs…zzLe` | < top-20 | organic | 0.05 | 280 | 220 | Em8J…ECPF | 0/1 | near-zero SOL balance (disposable wallet) |
-| 63 | `8ye8…68WP` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 1/1 | automated trading wallet (≥3000 lifetime txs) |
-| 64 | `Guy1…tQn1` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 1/1 | automated trading wallet (≥3000 lifetime txs) |
-| 65 | `gV35…krgy` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 1/0 | automated trading wallet (≥3000 lifetime txs) |
-| 66 | `CPtU…iqwr` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 0/1 | automated trading wallet (≥3000 lifetime txs) |
-| 67 | `9Hr5…4HUi` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 1/0 | automated trading wallet (≥3000 lifetime txs) |
-| 68 | `33AH…XGJJ` | < top-20 | organic | 0.10 | 307 | 315 | A77H…4RiR | 0/1 | shares its funder with 1 other holder |
-| 69 | `CuTg…v4Ky` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 2/1 | automated trading wallet (≥3000 lifetime txs) |
-| 70 | `CkUZ…9fCD` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 0/1 | automated trading wallet (≥3000 lifetime txs) |
+| 45 | `CYS3…mRKy` | < top-20 | suspicious | 0.30 | 3000+ |  |  | 0/1 | automated trading wallet (≥3000 lifetime txs); near-zero SOL balance (disposable wallet) |
+| 46 | `G1G1…Cqpm` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 0/1 | automated trading wallet (≥3000 lifetime txs) |
+| 47 | `E16A…gAbM` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 0/1 | automated trading wallet (≥3000 lifetime txs) |
+| 48 | `6NAp…9cL2` | < top-20 | organic | 0.00 | 39 | 5 | DV4t…5QrS | 2/1 |  |
+| 49 | `EKyE…wZs3` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 1/0 | automated trading wallet (≥3000 lifetime txs) |
+| 50 | `9dUd…WyNm` | < top-20 | organic | 0.00 | 130 | 29 | 5xs3…4rpJ | 1/0 |  |
+| 51 | `EBor…33e7` | < top-20 | organic | 0.00 | 2735 | 632 | 8La5…C65p | 1/0 |  |
+| 52 | `J1E1…ydss` | < top-20 | organic | 0.05 | 182 | 26 | CSrd…1XWU | 0/1 | near-zero SOL balance (disposable wallet) |
+| 53 | `E6dF…ekiX` | < top-20 | organic | 0.00 | 2545 | 232 | 5jah…YsUq | 0/1 |  |
+| 54 | `894h…dSTt` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 1/0 | automated trading wallet (≥3000 lifetime txs) |
+| 55 | `HLnp…TLcC` | < top-20 | suspicious | 0.35 | 3000+ |  |  | 19/74 | 7 identical-size buys; automated trading wallet (≥3000 lifetime txs) |
+| 56 | `HNEw…s4As` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 1/0 | automated trading wallet (≥3000 lifetime txs) |
+| 57 | `E8oX…5YR3` | < top-20 | organic | 0.10 | 1026 | 108 | A77H…4RiR | 2/0 | shares its funder with 1 other holder |
+| 58 | `C3MW…b88h` | < top-20 | organic | 0.00 | 293 | 527 | AMrW…DzrU | 1/0 |  |
+| 59 | `45Sn…4ZyG` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 0/1 | automated trading wallet (≥3000 lifetime txs) |
+| 60 | `GATw…Nzjp` | < top-20 | organic | 0.05 | 173 | 87 | 9Whe…q3LY | 0/1 | near-zero SOL balance (disposable wallet) |
+| 61 | `8ye8…68WP` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 1/1 | automated trading wallet (≥3000 lifetime txs) |
+| 62 | `Guy1…tQn1` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 1/1 | automated trading wallet (≥3000 lifetime txs) |
+| 63 | `4gCR…uDDL` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 1/0 | automated trading wallet (≥3000 lifetime txs) |
+| 64 | `WZog…3c3M` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 0/1 | automated trading wallet (≥3000 lifetime txs) |
+| 65 | `FhUf…hUFc` | < top-20 | organic | 0.00 | 1145 | 213 | AgmL…zN51 | 0/1 |  |
+| 66 | `3Aud…nf2j` | < top-20 | organic | 0.05 | 1156 | 223 | 7iVC…ECwi | 1/0 | near-zero SOL balance (disposable wallet) |
+| 67 | `8Dua…KvVN` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 1/0 | automated trading wallet (≥3000 lifetime txs) |
+| 68 | `Hu1K…7t7L` | < top-20 | suspicious | 0.25 | 3000+ |  |  | 1/0 | automated trading wallet (≥3000 lifetime txs) |
+| 69 | `Hfje…eyRs` | < top-20 | organic | 0.10 | 2111 | 905 | A77H…4RiR | 1/0 | shares its funder with 1 other holder |
+| 70 | `EUzo…jZHT` | < top-20 | organic | 0.00 | 250 | 119 | 7R6i…swDh | 1/0 |  |
 
 ## Data gaps
 
