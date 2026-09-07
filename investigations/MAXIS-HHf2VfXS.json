@@ -1,0 +1,267 @@
+{
+  "mint": "HHf2VfXSPUVqQth6tXypfdUX2vawCiVKfkbAX4CJpump",
+  "name": "Axis",
+  "symbol": "MAXIS",
+  "generatedAt": "2026-09-07T15:04:06.770Z",
+  "overall": "INCONCLUSIVE — too few wallets could be profiled.",
+  "flags": [],
+  "summary": {
+    "bots": 0,
+    "suspicious": 0,
+    "organic": 0,
+    "unknown": 0,
+    "pools": 0,
+    "botSupplyPct": 0,
+    "susSupplyPct": 0,
+    "top10Pct": 0,
+    "poolPct": 0
+  },
+  "unavailable": [
+    "pump.fun trade tape"
+  ],
+  "holders": [],
+  "trades": null,
+  "market": {
+    "pair": {
+      "chainId": "solana",
+      "dexId": "pumpswap",
+      "url": "https://dexscreener.com/solana/5wgyinqanwpexjiw59nl2ddr683qyzqkahjqxcjj1nfv",
+      "pairAddress": "5WgYinqANwpEXJiW59nL2dDr683QyzqKahJQxCJJ1NFv",
+      "baseToken": {
+        "address": "HHf2VfXSPUVqQth6tXypfdUX2vawCiVKfkbAX4CJpump",
+        "name": "Axis",
+        "symbol": "MAXIS"
+      },
+      "quoteToken": {
+        "address": "So11111111111111111111111111111111111111112",
+        "name": "Wrapped SOL",
+        "symbol": "SOL"
+      },
+      "priceNative": "0.000002755",
+      "priceUsd": "0.0002885",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 5
+        },
+        "h1": {
+          "buys": 23,
+          "sells": 45
+        },
+        "h6": {
+          "buys": 43,
+          "sells": 53
+        },
+        "h24": {
+          "buys": 61,
+          "sells": 124
+        }
+      },
+      "volume": {
+        "h24": 10239.79,
+        "h6": 3454.5,
+        "h1": 2072.11,
+        "m5": 2.76
+      },
+      "priceChange": {
+        "m5": 0.27,
+        "h1": 10.71,
+        "h6": 18.71,
+        "h24": 41.24
+      },
+      "liquidity": {
+        "usd": 58157.23,
+        "base": 100226570,
+        "quote": 279.2952
+      },
+      "fdv": 288514,
+      "marketCap": 288514,
+      "pairCreatedAt": 1769781971000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/83c51f24b0c73304a038429e218dda20048dd370d9aa22cec1a701ba94f4a200?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/f5a610907459a61685a05559bd914a9e020c0918e5af31864f65678a226477ea?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/HHf2VfXSPUVqQth6tXypfdUX2vawCiVKfkbAX4CJpump?timestamp=1788793500000",
+        "websites": [
+          {
+            "url": "https://linktr.ee/axis_sol",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/Axis_pizza",
+            "type": "twitter"
+          }
+        ]
+      }
+    },
+    "geckoPool": {
+      "base_token_price_usd": "0.000288463656453241873777215740908057979315577965672405068116224215",
+      "base_token_price_native_currency": "0.00000275604240312324",
+      "quote_token_price_usd": "104.667945147885105282236018395753458997345489849",
+      "quote_token_price_native_currency": "1.0",
+      "base_token_price_quote_token": "0.000002756042403",
+      "quote_token_price_base_token": "362839.11991585",
+      "address": "5WgYinqANwpEXJiW59nL2dDr683QyzqKahJQxCJJ1NFv",
+      "name": "MAXIS / SOL",
+      "pool_created_at": "2026-01-30T14:06:11Z",
+      "token_price_usd": "0.000288463656453241873777215740908057979315577965672405068116224215",
+      "fdv_usd": "288459.342788959",
+      "market_cap_usd": "288459.342788958",
+      "price_change_percentage": {
+        "m5": "-0.02",
+        "m15": "0.44",
+        "m30": "0.61",
+        "h1": "11.84",
+        "h6": "18.68",
+        "h24": "41.39"
+      },
+      "transactions": {
+        "m5": {
+          "buys": 0,
+          "sells": 6,
+          "buyers": 0,
+          "sellers": 4
+        },
+        "m15": {
+          "buys": 0,
+          "sells": 9,
+          "buyers": 0,
+          "sellers": 7
+        },
+        "m30": {
+          "buys": 2,
+          "sells": 20,
+          "buyers": 2,
+          "sellers": 14
+        },
+        "h1": {
+          "buys": 23,
+          "sells": 45,
+          "buyers": 10,
+          "sellers": 22
+        },
+        "h6": {
+          "buys": 43,
+          "sells": 53,
+          "buyers": 24,
+          "sellers": 27
+        },
+        "h24": {
+          "buys": 62,
+          "sells": 124,
+          "buyers": 34,
+          "sellers": 52
+        }
+      },
+      "volume_usd": {
+        "m5": "3.8529963174",
+        "m15": "8.3267426025",
+        "m30": "192.0383628765",
+        "h1": "2070.7970917477",
+        "h6": "3453.8750592192",
+        "h24": "10235.4646531671"
+      },
+      "reserve_in_usd": "58099.1932"
+    }
+  },
+  "rugcheck": {
+    "score": 22,
+    "risks": [
+      {
+        "name": "High holder concentration",
+        "value": "",
+        "description": "The top 10 users hold more than 50% token supply",
+        "score": 1019,
+        "level": "warn"
+      }
+    ],
+    "insiderNetworks": null,
+    "graphInsidersDetected": 0,
+    "totalHolders": 4369,
+    "mintAuthority": null,
+    "freezeAuthority": null,
+    "markets": [
+      {
+        "pubkey": "5WgYinqANwpEXJiW59nL2dDr683QyzqKahJQxCJJ1NFv",
+        "marketType": "pump_fun_amm",
+        "mintA": "HHf2VfXSPUVqQth6tXypfdUX2vawCiVKfkbAX4CJpump",
+        "mintB": "So11111111111111111111111111111111111111112",
+        "mintLP": "E5QZKv8SYZXxfYRuqTWwEnzZgHam7bBgAkybuUTW6gyB",
+        "liquidityA": "3i7JSLNL2EtxhCoaPs7ktUCEepFkh12vQi7FLbKGvQCm",
+        "liquidityB": "D2TZ9ELwuc3oZFDq16EVe6F6rocn9G5kUyqdc6gduiQ4",
+        "mintAAccount": {
+          "mintAuthority": null,
+          "supply": 999965499582761,
+          "decimals": 6,
+          "isInitialized": true,
+          "freezeAuthority": null
+        },
+        "mintBAccount": {
+          "mintAuthority": null,
+          "supply": 0,
+          "decimals": 9,
+          "isInitialized": true,
+          "freezeAuthority": null
+        },
+        "mintLPAccount": {
+          "mintAuthority": "5WgYinqANwpEXJiW59nL2dDr683QyzqKahJQxCJJ1NFv",
+          "supply": 0,
+          "decimals": 9,
+          "isInitialized": true,
+          "freezeAuthority": null
+        },
+        "liquidityAAccount": {
+          "mint": "HHf2VfXSPUVqQth6tXypfdUX2vawCiVKfkbAX4CJpump",
+          "owner": "5WgYinqANwpEXJiW59nL2dDr683QyzqKahJQxCJJ1NFv",
+          "amount": 100226570032239,
+          "delegate": null,
+          "state": 1,
+          "delegatedAmount": 0,
+          "closeAuthority": null
+        },
+        "liquidityBAccount": {
+          "mint": "So11111111111111111111111111111111111111112",
+          "owner": "5WgYinqANwpEXJiW59nL2dDr683QyzqKahJQxCJJ1NFv",
+          "amount": 279295268750,
+          "delegate": null,
+          "state": 1,
+          "delegatedAmount": 0,
+          "closeAuthority": null
+        },
+        "lp": {
+          "baseMint": "HHf2VfXSPUVqQth6tXypfdUX2vawCiVKfkbAX4CJpump",
+          "quoteMint": "So11111111111111111111111111111111111111112",
+          "lpMint": "E5QZKv8SYZXxfYRuqTWwEnzZgHam7bBgAkybuUTW6gyB",
+          "quotePrice": 104.52316967313834,
+          "basePrice": 0.00028853887465011836,
+          "base": 100226570.032239,
+          "quote": 279.29526875,
+          "reserveSupply": 4193388286034,
+          "currentSupply": 0,
+          "quoteUSD": 29192.82676446102,
+          "baseUSD": 28919.26172714352,
+          "pctReserve": 0,
+          "pctSupply": 0,
+          "holders": null,
+          "totalTokensUnlocked": 0,
+          "tokenSupply": 0,
+          "lpLocked": 4193388286034,
+          "lpUnlocked": 0,
+          "lpLockedPct": 100,
+          "lpLockedUSD": 58112.08849160454,
+          "lpMaxSupply": 0,
+          "lpCurrentSupply": 0,
+          "lpTotalSupply": 4193388286034
+        }
+      }
+    ]
+  },
+  "pump": {
+    "creator": "cCMmRDJJ811nvCn9drV2hDoiQukGJ66LY9B9DSjME7s",
+    "created_timestamp": 1769781825000,
+    "complete": true,
+    "reply_count": 318,
+    "twitter": "https://x.com/axis_pizza"
+  }
+}
