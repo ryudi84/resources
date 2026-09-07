@@ -195,6 +195,9 @@ const RPC_CANDIDATES = [
   'https://solana.drpc.org',
 ];
 let RPC_URLS: string[] = [...RPC_CANDIDATES];
+/** Subset of RPC_URLS with deep (archival) signature history; state calls use RPC_URLS. */
+let HIST_URLS: string[] = [];
+const rpcIdxByKind = { state: 0, history: 0 };
 
 async function selectRpcEndpoints(): Promise<void> {
   const pinned = (process.env.SOLANA_RPC_URLS || '').split(',').map((s) => s.trim()).filter(Boolean);
@@ -223,7 +226,42 @@ async function selectRpcEndpoints(): Promise<void> {
   console.error(`  using ${RPC_URLS.length} endpoint(s): ${RPC_URLS.join(', ')}`);
 }
 
-let rpcIdx = 0;
+/**
+ * Many free nodes are not archival and return only the last few hours of
+ * getSignaturesForAddress. Probe each live endpoint on a busy address and keep
+ * the ones with the deepest history for signature/transaction lookups.
+ */
+async function selectHistoryEndpoints(address: string): Promise<Array<{ url: string; count: number; oldest?: number }>> {
+  const probes = await Promise.all(
+    RPC_URLS.filter((u) => !deadRpc.has(u)).map(async (url) => {
+      try {
+        const res = await fetch(url, {
+          method: 'POST',
+          headers: { 'content-type': 'application/json', 'user-agent': UA },
+          body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'getSignaturesForAddress', params: [address, { limit: 1000 }] }),
+          signal: AbortSignal.timeout(30_000),
+        });
+        const body = (await res.json()) as { result?: SigInfo[]; error?: { message: string } };
+        if (!Array.isArray(body.result)) return { url, count: -1, why: body.error?.message ?? `HTTP ${res.status}` };
+        const oldest = body.result.length ? (body.result[body.result.length - 1].blockTime ?? undefined) : undefined;
+        return { url, count: body.result.length, oldest };
+      } catch (e) {
+        return { url, count: -1, why: String((e as Error).message ?? e) };
+      }
+    }),
+  );
+  for (const p of probes) console.error(`  history ${p.count >= 0 ? `${p.count} sigs, oldest ${iso(p.oldest)}` : 'FAIL'} ${p.url}${(p as { why?: string }).why ? ` (${(p as { why?: string }).why})` : ''}`);
+  const ok = probes.filter((p) => p.count >= 0);
+  const max = Math.max(0, ...ok.map((p) => p.count));
+  // Deepest = most signatures; ties broken by oldest blockTime.
+  const deepest = ok.filter((p) => p.count >= max * 0.95).sort((a, b) => (a.oldest ?? Infinity) - (b.oldest ?? Infinity));
+  const minOldest = deepest[0]?.oldest;
+  HIST_URLS = deepest.filter((p) => minOldest === undefined || (p.oldest ?? Infinity) <= minOldest + 3600).map((p) => p.url);
+  if (HIST_URLS.length === 0) HIST_URLS = [...RPC_URLS];
+  console.error(`  history endpoints: ${HIST_URLS.join(', ')}`);
+  return probes.filter((p) => p.count >= 0);
+}
+
 let rpcCalls = 0;
 let lastRpcAt = 0;
 const deadRpc = new Set<string>();
@@ -231,21 +269,24 @@ const deadRpc = new Set<string>();
 const RPC_MIN_GAP_MS = Number(process.env.RPC_MIN_GAP_MS || 250);
 const AUTH_ERR = /api.?key|token|plan|unauthori|forbidden|not available|not supported|disabled|upgrade|indexed requests/i;
 
-function liveRpcUrl(): string | undefined {
-  for (let i = 0; i < RPC_URLS.length; i++) {
-    const url = RPC_URLS[(rpcIdx + i) % RPC_URLS.length];
+type RpcKind = 'state' | 'history';
+
+function liveRpcUrl(kind: RpcKind): string | undefined {
+  const list = kind === 'history' && HIST_URLS.length ? HIST_URLS : RPC_URLS;
+  for (let i = 0; i < list.length; i++) {
+    const url = list[(rpcIdxByKind[kind] + i) % list.length];
     if (!deadRpc.has(url)) {
-      rpcIdx = (rpcIdx + i) % RPC_URLS.length;
+      rpcIdxByKind[kind] = (rpcIdxByKind[kind] + i) % list.length;
       return url;
     }
   }
   return undefined;
 }
 
-async function rpc<T = unknown>(method: string, params: unknown[], timeoutMs = 60_000): Promise<T> {
+async function rpc<T = unknown>(method: string, params: unknown[], timeoutMs = 60_000, kind: RpcKind = 'state'): Promise<T> {
   let lastErr: unknown = new Error(`${method}: all RPC endpoints failed`);
   for (let attempt = 0; attempt < Math.max(24, RPC_URLS.length * 6); attempt++) {
-    const url = liveRpcUrl();
+    const url = liveRpcUrl(kind);
     if (!url) break;
     const wait = lastRpcAt + RPC_MIN_GAP_MS - Date.now();
     if (wait > 0) await sleep(wait);
@@ -273,7 +314,7 @@ async function rpc<T = unknown>(method: string, params: unknown[], timeoutMs = 6
         deadRpc.add(url);
       }
       else if (attempt % 6 === 5) console.error(`  ! ${method} via ${url}: ${String((e as Error).message ?? e)} (attempt ${attempt + 1})`);
-      rpcIdx++;
+      rpcIdxByKind[kind]++;
       await sleep(Math.min(500 * (attempt + 1), 8000));
     }
   }
@@ -310,8 +351,8 @@ async function fetchAllHolders(mint: string, supply: number): Promise<Holder[] |
         120_000,
       );
       if (!Array.isArray(accounts) || accounts.length === 0) {
-        console.error(`  ! getProgramAccounts returned nothing from ${RPC_URLS[rpcIdx % RPC_URLS.length]}; rotating`);
-        rpcIdx++;
+        console.error(`  ! getProgramAccounts returned nothing from ${RPC_URLS[rpcIdxByKind.state % RPC_URLS.length]}; rotating`);
+        rpcIdxByKind.state++;
         continue;
       }
       const byOwner = new Map<string, number>();
@@ -325,7 +366,7 @@ async function fetchAllHolders(mint: string, supply: number): Promise<Holder[] |
         .sort((a, b) => b.amount - a.amount);
     } catch (e) {
       console.error(`  ! getProgramAccounts failed (${String(e)}); rotating`);
-      rpcIdx++;
+      rpcIdxByKind.state++;
     }
   }
   console.error('  ! full holder scan unavailable on every endpoint; falling back to largest accounts + Rugcheck');
@@ -409,7 +450,7 @@ async function walletActivity(owner: string, maxPages: number): Promise<{
   let first: SigInfo | undefined;
   let last: SigInfo | undefined;
   for (let page = 0; page < maxPages; page++) {
-    const sigs = await rpc<SigInfo[]>('getSignaturesForAddress', [owner, { limit: 1000, before }]);
+    const sigs = await rpc<SigInfo[]>('getSignaturesForAddress', [owner, { limit: 1000, before }], 60_000, 'history');
     if (sigs.length === 0) return { count, capped: false, first, last };
     if (!last) last = sigs[0];
     first = sigs[sigs.length - 1];
@@ -425,7 +466,7 @@ async function funderOf(owner: string, firstSig: string): Promise<string | undef
   try {
     const tx = await rpc<{
       transaction: { message: { accountKeys: Array<{ pubkey: string; signer: boolean }> } };
-    } | null>('getTransaction', [firstSig, { encoding: 'jsonParsed', maxSupportedTransactionVersion: 0 }]);
+    } | null>('getTransaction', [firstSig, { encoding: 'jsonParsed', maxSupportedTransactionVersion: 0 }], 60_000, 'history');
     const keys = tx?.transaction.message.accountKeys ?? [];
     const payer = keys[0]?.pubkey;
     if (payer && payer !== owner) return payer;
@@ -497,14 +538,20 @@ async function fetchPoolTrades(
   const sigs: SigInfo[] = [];
   let before: string | undefined;
   while (sigs.length < opts.maxSigs) {
-    const page = await rpc<Array<SigInfo & { err: unknown }>>('getSignaturesForAddress', [pool, { limit: 1000, before }]);
+    const page = await rpc<Array<SigInfo & { err: unknown }>>('getSignaturesForAddress', [pool, { limit: 1000, before }], 60_000, 'history');
     if (page.length === 0) break;
     for (const s of page) if (!s.err) sigs.push(s);
     before = page[page.length - 1].signature;
     if ((page[page.length - 1].blockTime ?? 0) < since || page.length < 1000) break;
   }
   const sigTimes = sigs.map((s) => s.blockTime ?? 0).filter(Boolean);
-  const targets = sigs.slice(0, opts.parseTx);
+  // Parse the newest half of the budget plus a uniform sample of the rest of
+  // the window, so a month-long staircase is covered, not just today.
+  const recentN = Math.min(sigs.length, Math.ceil(opts.parseTx / 2));
+  const rest = sigs.slice(recentN);
+  const sampleN = Math.min(rest.length, opts.parseTx - recentN);
+  const sampled = sampleN > 0 ? Array.from({ length: sampleN }, (_, i) => rest[Math.floor((i * rest.length) / sampleN)]) : [];
+  const targets = [...sigs.slice(0, recentN), ...sampled];
   let failed = 0;
   const trades = await pmap(targets, 3, async (s): Promise<PoolTrade | null> => {
     try {
@@ -515,7 +562,7 @@ async function fetchPoolTrades(
           preTokenBalances: Array<{ mint: string; owner?: string; uiTokenAmount: { uiAmount: number | null } }>;
           postTokenBalances: Array<{ mint: string; owner?: string; uiTokenAmount: { uiAmount: number | null } }>;
         } | null;
-      } | null>('getTransaction', [s.signature, { encoding: 'jsonParsed', maxSupportedTransactionVersion: 0 }]);
+      } | null>('getTransaction', [s.signature, { encoding: 'jsonParsed', maxSupportedTransactionVersion: 0 }], 60_000, 'history');
       if (!tx?.meta || tx.meta.err) return null;
       const delta = new Map<string, number>(); // `${owner}|${mint}` → post - pre
       for (const b of tx.meta.preTokenBalances) if (b.owner) delta.set(`${b.owner}|${b.mint}`, -(b.uiTokenAmount.uiAmount ?? 0));
@@ -811,8 +858,8 @@ export function scoreHolder(h: Holder, ctx: { holderSet: Set<string>; creator?: 
     reasons.push(`${h.repeatSize} identical-size buys`);
   }
   if (h.txCountCapped) {
-    s += 0.1;
-    reasons.push(`hyperactive wallet (≥${h.txCount} txs; trading bot or MEV)`);
+    s += 0.25;
+    reasons.push(`automated trading wallet (≥${h.txCount} lifetime txs)`);
   }
   if (h.funderCex) {
     s -= 0.2;
@@ -824,7 +871,8 @@ export function scoreHolder(h: Holder, ctx: { holderSet: Set<string>; creator?: 
   }
   if (ctx.creator && h.owner === ctx.creator) reasons.push('token creator');
   h.score = Math.max(0, Math.min(1, s));
-  h.verdict = h.score >= 0.5 ? 'bot' : h.score >= 0.25 ? 'suspicious' : h.txCount === undefined ? 'unknown' : 'organic';
+  // A holder with zero indexed signatures means the endpoint had no history for it: unknown, not organic.
+  h.verdict = h.score >= 0.5 ? 'bot' : h.score >= 0.25 ? 'suspicious' : !h.txCount ? 'unknown' : 'organic';
   h.reasons = reasons;
 }
 
@@ -899,7 +947,9 @@ async function main() {
     (pump?.pump_swap_pool as string) ?? (pump?.raydium_pool as string) ?? dex?.pairs?.[0]?.pairAddress ?? rug?.markets?.[0]?.pubkey;
   let poolScan: Awaited<ReturnType<typeof fetchPoolTrades>> | null = null;
   let pa: ReturnType<typeof analysePoolTrades> | null = null;
+  let histProbe: Array<{ url: string; count: number; oldest?: number }> = [];
   if (poolAddr) {
+    histProbe = await selectHistoryEndpoints(poolAddr);
     try {
       poolScan = await fetchPoolTrades(poolAddr, mint, { maxSigs: 6000, parseTx: PARSE_TX, sinceDays: DAYS });
       pa = analysePoolTrades(poolScan.trades);
@@ -927,6 +977,7 @@ async function main() {
       h.buyShare = pa.buyVol > 0 ? st.solIn / pa.buyVol : 0;
       h.regularBuyer = pa.regularBuyers.includes(st.trader);
       h.repeatSize = st.repeatSize;
+      if (st.buyTimes.length) h.firstBuyTime = Math.min(h.firstBuyTime ?? Infinity, ...st.buyTimes);
     }
   }
 
@@ -1023,7 +1074,9 @@ async function main() {
   const sus = bucket('suspicious');
   const org = bucket('organic');
   const unk = bucket('unknown');
-  const dust = wallets.filter((h) => h.pct < 0.001);
+  const auto = wallets.filter((h) => h.txCountCapped);
+  const balanceHolders = wallets.filter((h) => h.pct > 0);
+  const dust = balanceHolders.filter((h) => h.pct < 0.001);
   const top10 = wallets.slice(0, 10);
   const top10Pct = pctOfCirc(top10);
   const creatorHold = creator ? holders.find((h) => h.owner === creator) : undefined;
@@ -1048,7 +1101,7 @@ async function main() {
   if (pa && pa.regularBuyers.length) flags.push(`${pa.regularBuyers.length} wallet(s) buy on a scheduled cadence`);
   if (pa && pa.sellers > pa.buyers * 1.5 && pa.buyVol > pa.sellVol) flags.push(`few large buyers vs many small sellers (${pa.buyers} buyers / ${pa.sellers} sellers, buy vol ${fmtSol(pa.buyVol)} > sell vol ${fmtSol(pa.sellVol)})`);
   if (tradesPerBuyer && tradesPerBuyer > 4) flags.push(`${tradesPerBuyer.toFixed(1)} buys per unique buyer in 24h (wash-like)`);
-  if (dust.length > wallets.length * 0.3) flags.push(`${fmtPct((dust.length / wallets.length) * 100)} of holders are dust (< 0.001% supply)`);
+  if (holderSetComplete && dust.length > balanceHolders.length * 0.3) flags.push(`${fmtPct((dust.length / balanceHolders.length) * 100)} of holders are dust (< 0.001% supply)`);
   if (top10Pct > 40) flags.push(`top-10 wallets hold ${fmtPct(top10Pct)} of circulating supply`);
   if (rug?.mintAuthority) flags.push('mint authority still enabled');
   if (rug?.freezeAuthority) flags.push('freeze authority still enabled');
@@ -1079,7 +1132,8 @@ async function main() {
   row('Likely bot / farm', bots);
   row('Suspicious', sus);
   row('Likely organic', org);
-  L.push(`| Not profiled (beyond --activity cap) | ${unk.length} | – | ${fmtPct(pctOfCirc(unk))} |`);
+  L.push(`| Unknown (no history available) | ${unk.length} | – | ${fmtPct(pctOfCirc(unk))} |`);
+  L.push(`| of which automated trading wallets (any class) | ${auto.length} | – | ${fmtPct(pctOfCirc(auto))} |`);
   L.push(`| Pools / program vaults | ${pools.length} | – | ${fmtPct(poolPct)} of total |`);
   L.push('');
   L.push(`Profiled wallets cover ${fmtPct(scoredPct)} of circulating supply.`);
@@ -1128,6 +1182,7 @@ async function main() {
     L.push(`- Activity bars: ${hist.map((h) => '▁▂▃▄▅▆▇█'[Math.min(7, Math.floor((h.n / maxN) * 7.99))]).join('')}`);
     const span = poolScan.trades.length ? `${iso(Math.min(...poolScan.trades.map((t) => t.time)))} → ${iso(Math.max(...poolScan.trades.map((t) => t.time)))}` : 'n/a';
     L.push(`- Parsed window: ${span}`);
+    L.push(`- History served by: ${HIST_URLS.join(', ')}${histProbe.length ? ` (probe: ${histProbe.map((p) => `${p.url.replace(/^https?:\/\//, '').split('/')[0]} ${p.count} sigs back to ${iso(p.oldest)}`).join('; ')})` : ''}`);
     L.push(`- Buys ${pa.stats.reduce((s, x) => s + x.buys, 0)} (${fmtSol(pa.buyVol)}) from ${pa.buyers} wallets · sells ${pa.stats.reduce((s, x) => s + x.sells, 0)} (${fmtSol(pa.sellVol)}) from ${pa.sellers} wallets`);
     L.push(`- Top buyer = ${(pa.topBuyerShare * 100).toFixed(0)}% of buy volume · top 3 = ${(pa.top3BuyerShare * 100).toFixed(0)}%`);
     L.push(`- Scheduled-cadence buyers: ${pa.regularBuyers.length}${pa.regularBuyers.length ? ` — ${pa.regularBuyers.map(short).join(', ')}` : ''}`);
@@ -1138,7 +1193,7 @@ async function main() {
     L.push('|---|---:|---:|---:|---:|---:|---:|---:|---:|');
     for (const st of [...pa.stats].sort((a, b) => b.solIn - a.solIn).slice(0, 12)) {
       const h = holders.find((x) => x.owner === st.trader);
-      L.push(`| \`${short(st.trader)}\` | ${st.buys} | ${st.sells} | ${st.solIn.toFixed(2)} | ${st.solOut.toFixed(2)} | ${((st.solIn / Math.max(pa.buyVol, 1e-9)) * 100).toFixed(0)}% | ${st.intervalCv?.toFixed(2) ?? ''} | ${st.repeatSize ?? ''} | ${h ? fmtPct(h.pct) : ''} |`);
+      L.push(`| \`${short(st.trader)}\` | ${st.buys} | ${st.sells} | ${st.solIn.toFixed(2)} | ${st.solOut.toFixed(2)} | ${((st.solIn / Math.max(pa.buyVol, 1e-9)) * 100).toFixed(0)}% | ${st.intervalCv?.toFixed(2) ?? ''} | ${st.repeatSize ?? ''} | ${h && h.pct > 0 ? fmtPct(h.pct) : holderSetComplete ? '0' : '< top-20'} |`);
     }
     L.push('');
     L.push('Top sellers:');
@@ -1147,7 +1202,7 @@ async function main() {
     L.push('|---|---:|---:|---:|---:|---:|');
     for (const st of [...pa.stats].sort((a, b) => b.solOut - a.solOut).slice(0, 8)) {
       const h = holders.find((x) => x.owner === st.trader);
-      L.push(`| \`${short(st.trader)}\` | ${st.sells} | ${st.buys} | ${st.solOut.toFixed(2)} | ${st.solIn.toFixed(2)} | ${h ? fmtPct(h.pct) : ''} |`);
+      L.push(`| \`${short(st.trader)}\` | ${st.sells} | ${st.buys} | ${st.solOut.toFixed(2)} | ${st.solIn.toFixed(2)} | ${h && h.pct > 0 ? fmtPct(h.pct) : holderSetComplete ? '0' : '< top-20'} |`);
     }
     L.push('');
   }
@@ -1188,7 +1243,7 @@ async function main() {
   L.push(`- Fresh at time of buy (< 24h old, < 15 txs): ${wallets.filter((h) => h.freshAtBuy).length}`);
   L.push(`- Hyperactive (≥1000 txs): ${wallets.filter((h) => h.txCountCapped).length}`);
   L.push(`- Rugcheck insiders among holders: ${wallets.filter((h) => h.insider).length}`);
-  L.push(`- Dust holders (< 0.001% supply): ${dust.length} of ${wallets.length}`);
+  L.push(`- Dust holders (< 0.001% supply): ${dust.length} of ${balanceHolders.length}${holderSetComplete ? '' : ' (top holders only; not meaningful)'}`);
   L.push(`- Top-10 wallets: ${fmtPct(top10Pct)} of circulating supply`);
   const ages = scored.filter((h) => h.firstTxTime).map((h) => (now - h.firstTxTime!) / 86_400).sort((a, b) => a - b);
   if (ages.length) L.push(`- Wallet age (days): median ${ages[Math.floor(ages.length / 2)].toFixed(1)} · p10 ${ages[Math.floor(ages.length * 0.1)].toFixed(1)} · p90 ${ages[Math.floor(ages.length * 0.9)].toFixed(1)}`);
@@ -1203,7 +1258,7 @@ async function main() {
     const funder = h.funderCex ? h.funderCex : h.funder ? short(h.funder) : '';
     const sig = h.verdict === 'pool' ? h.label : (h.reasons ?? []).join('; ');
     const bs = h.recentBuys !== undefined ? `${h.recentBuys}/${h.recentSells}` : '';
-    L.push(`| ${i + 1} | \`${short(h.owner)}\` | ${fmtPct(h.pct)} | ${h.verdict} | ${h.score?.toFixed(2) ?? ''} | ${h.txCount !== undefined ? `${h.txCount}${h.txCountCapped ? '+' : ''}` : ''} | ${age} | ${funder} | ${bs} | ${sig ?? ''} |`);
+    L.push(`| ${i + 1} | \`${short(h.owner)}\` | ${h.pct > 0 ? fmtPct(h.pct) : holderSetComplete ? '0' : '< top-20'} | ${h.verdict} | ${h.score?.toFixed(2) ?? ''} | ${h.txCount !== undefined ? `${h.txCount}${h.txCountCapped ? '+' : ''}` : ''} | ${age} | ${funder} | ${bs} | ${sig ?? ''} |`);
   });
   L.push('');
 
@@ -1222,6 +1277,7 @@ async function main() {
   L.push('- "Fresh" is judged at the time of the wallet\'s first buy on the curve (or deploy time if never traded on the curve).');
   L.push('- Funder = fee payer of the wallet\'s first transaction. Only wallets with < 3000 lifetime txs are traced.');
   L.push('- Pool swaps are parsed from raw transactions: trader = non-pool owner whose token balance changed, SOL = pool WSOL vault delta. Interval CV = std-dev / mean of a wallet\'s buy intervals; < 0.35 is a scheduled bot.');
+  L.push('- History (signatures/transactions) is fetched only from endpoints that passed an archival-depth probe on the pool address; state calls use every responsive endpoint.');
   L.push('- Exchange list is best-effort; an unknown funder is not evidence of a bot unless shared with other holders.');
   L.push('');
 
