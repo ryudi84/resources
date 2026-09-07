@@ -2,26 +2,26 @@
   "mint": "B1rGc4HM4Q6q4nU78ADM7fGguxqiasH53fh6ViDXpump",
   "name": "BloxAPI",
   "symbol": "BLOXX",
-  "generatedAt": "2026-09-07T19:43:39.557Z",
+  "generatedAt": "2026-09-07T21:43:44.199Z",
   "overall": "MIXED — meaningful bot/insider presence alongside some organic holders. Treat as high-risk.",
   "flags": [
     "5 wallets bought in the deploy bundle for 44.64% of supply",
     "deploy-bundle wallets are still among the top holders",
     "top-holder bags moved between insider wallets by transfer",
     "creator wallet funded holder wallets",
-    "Rugcheck insider graph: 4 wallets",
-    "top-10 wallets hold 40.12% of circulating supply"
+    "direct SOL transfers between 2 insider-candidate wallets",
+    "Rugcheck insider graph: 4 wallets"
   ],
   "summary": {
     "bots": 1,
-    "suspicious": 27,
-    "organic": 42,
+    "suspicious": 29,
+    "organic": 45,
     "unknown": 0,
-    "pools": 2,
-    "botSupplyPct": 1.7080516634166183,
-    "susSupplyPct": 21.35602135812647,
-    "top10Pct": 40.12351827701356,
-    "poolPct": 24.57764284086779
+    "pools": 1,
+    "botSupplyPct": 1.6952418469153396,
+    "susSupplyPct": 21.195858336916814,
+    "top10Pct": 39.58667397466423,
+    "poolPct": 24.007726190296435
   },
   "unavailable": [
     "pump.fun trade tape"
@@ -29,8 +29,8 @@
   "holders": [
     {
       "owner": "5hUhovgEDZRLEFT7Dvqg7ctfQo221BJ5obEn3EgtBGmX",
-      "amount": 245771505.982424,
-      "pct": 24.57764284086779,
+      "amount": 240072453.619987,
+      "pct": 24.007726190296435,
       "tokenAccounts": [
         "7KWeqw8dvifTJCmM5sBF1NGYVdTdRnDyfC3S3AToqD7o"
       ],
@@ -272,15 +272,15 @@
       "recentSells": 0,
       "recentSolIn": 5.53107215899999,
       "recentSolOut": 0,
-      "buyShare": 0.13851876727984871,
+      "buyShare": 0.08722723818743998,
       "regularBuyer": false,
       "firstBuyTime": 1788724972,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 1201502195,
-      "txCount": 112,
+      "lamports": 240189126,
+      "txCount": 116,
       "txCountCapped": false,
       "firstTxTime": 1759211006,
-      "lastTxTime": 1788798303,
+      "lastTxTime": 1788813407,
       "funder": "H8sMJSCQxfKiFTCfDR3DUMLPwcRbM61LGFJ8N4dK3WjS",
       "funderCex": "Coinbase",
       "provenance": {
@@ -394,39 +394,6 @@
       ]
     },
     {
-      "owner": "F2UcFMHjPFjkwbfsFQqMMPdKPQvzhCbzb8d5WKXUn5Ci",
-      "amount": 14808479.011074001,
-      "pct": 1.4808775602192539,
-      "tokenAccounts": [
-        "59ERhkdyLkYhgCNu7zNgGzxPx96MpvjvjuzLEWZFAvPc"
-      ],
-      "recentBuys": 0,
-      "recentSells": 2,
-      "recentSolIn": 0,
-      "recentSolOut": 1.0914406759999622,
-      "buyShare": 0,
-      "regularBuyer": false,
-      "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 1955759402,
-      "txCount": 291,
-      "txCountCapped": false,
-      "firstTxTime": 1771458145,
-      "lastTxTime": 1788801354,
-      "funder": "8esnzYpor96SudUBW2TyTzQZEsSietCWSq9T4cxNCD7b",
-      "provenance": {
-        "txCount": 108,
-        "swapsIn": 3,
-        "swapSol": 3.1763400060000038,
-        "transfersIn": [],
-        "transfersOut": [],
-        "parsed": 9,
-        "firstSeen": 1778362738
-      },
-      "score": 0,
-      "verdict": "organic",
-      "reasons": []
-    },
-    {
       "owner": "3448RNASkej3usQf6Sor2dyP2YzjnVzTsZqxtYLf3rNz",
       "amount": 14122709.352391,
       "pct": 1.412299220859524,
@@ -499,7 +466,7 @@
       "recentSells": 0,
       "recentSolIn": 2.970355729000005,
       "recentSolOut": 0,
-      "buyShare": 0.07438883495566374,
+      "buyShare": 0.046843707553754735,
       "regularBuyer": false,
       "firstBuyTime": 1788611160,
       "ownerProgram": "11111111111111111111111111111111",
@@ -545,11 +512,44 @@
       "txCount": 3000,
       "txCountCapped": true,
       "lastTxTime": 1788799189,
+      "provenance": {
+        "txCount": 104,
+        "swapsIn": 6,
+        "swapSol": 18.922171954999897,
+        "transfersIn": [],
+        "transfersOut": [],
+        "parsed": 9,
+        "firstSeen": 1771516565
+      },
       "score": 0.25,
       "verdict": "suspicious",
       "reasons": [
         "automated trading wallet (≥3000 lifetime txs)"
       ]
+    },
+    {
+      "owner": "F2UcFMHjPFjkwbfsFQqMMPdKPQvzhCbzb8d5WKXUn5Ci",
+      "amount": 12794525.865569001,
+      "pct": 1.2794782120295418,
+      "tokenAccounts": [
+        "59ERhkdyLkYhgCNu7zNgGzxPx96MpvjvjuzLEWZFAvPc"
+      ],
+      "recentBuys": 0,
+      "recentSells": 4,
+      "recentSolIn": 0,
+      "recentSolOut": 2.415768854999982,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 85639342,
+      "txCount": 299,
+      "txCountCapped": false,
+      "firstTxTime": 1771458145,
+      "lastTxTime": 1788812958,
+      "funder": "8esnzYpor96SudUBW2TyTzQZEsSietCWSq9T4cxNCD7b",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": []
     },
     {
       "owner": "MzCPDSL8M4hMh9BLgpsNDPAoFi1hSyvzwP6KxahrH9K",
@@ -597,13 +597,6 @@
       "tokenAccounts": [
         "5smMaDp1sPuV3cxXo543NSf6Eed6Tf26r3HFB1cR8ETD"
       ],
-      "recentBuys": 1,
-      "recentSells": 0,
-      "recentSolIn": 0.29703557199999864,
-      "recentSolOut": 0,
-      "buyShare": 0.007438883473026957,
-      "regularBuyer": false,
-      "firstBuyTime": 1788578629,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 41779487,
       "txCount": 3000,
@@ -644,50 +637,58 @@
         "9PZ12wMnSMRmhfRCJ6WxXik5vRf1VP5LDqiu1ydFyG4V"
       ],
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 167972400,
-      "txCount": 1657,
+      "lamports": 740667896,
+      "txCount": 1659,
       "txCountCapped": false,
       "firstTxTime": 1766077739,
-      "lastTxTime": 1788220879,
+      "lastTxTime": 1788809441,
       "funder": "GT2zuHVaZQYZSyQMgJPLzvkmyztfyXg2NJunqFp4p3A4",
       "score": 0,
       "verdict": "organic",
       "reasons": []
     },
     {
-      "owner": "7fQZzPv1JMg3TY5QHujbzSnLNwErTnprpjmUHtkcnh2w",
-      "amount": 10040842.786988998,
-      "pct": 1.0041043889667474,
+      "owner": "2j18M4HWFEtX7Exv5HhgxAt8BhFeHNQ36oDv4SshALBC",
+      "amount": 10086494.585881,
+      "pct": 1.0086696602894978,
       "tokenAccounts": [
-        "AyHwaNVCC8gSeAkueMAtfGLiB8UxRcFi7Tv6QZwncGNs"
+        "DTYhXPQVWcHdqjcHmCufY8FKtqGeDwWLGHuJrKNcGYys"
       ],
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 6.528247825000022,
+      "recentSolOut": 0,
+      "buyShare": 0.1029531005216298,
+      "regularBuyer": false,
+      "firstBuyTime": 1788809684,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 22752760,
-      "txCount": 11,
+      "lamports": 892257652,
+      "txCount": 1557,
       "txCountCapped": false,
-      "firstTxTime": 1788302623,
-      "lastTxTime": 1788558802,
-      "funder": "2eS19wFTp4S6mAhGXGQPnMvniHMfd8TiC1DLcMfidy2b",
+      "firstTxTime": 1658357467,
+      "lastTxTime": 1788809867,
+      "funder": "AsSJzYgZzGHmWSQm15P8gX7bAKgnSEK7CUFPd4HXTkA8",
       "score": 0,
       "verdict": "organic",
       "reasons": []
     },
     {
-      "owner": "D8mcX3xaKW2f7itTDApxKBLbTVsfoMsQicv6nLAktuCw",
+      "owner": "2eS19wFTp4S6mAhGXGQPnMvniHMfd8TiC1DLcMfidy2b",
       "amount": 0,
       "pct": 0,
-      "recentBuys": 1,
-      "recentSells": 5,
-      "recentSolIn": 0.011439123999991807,
-      "recentSolOut": 10.28280866199998,
-      "buyShare": 0.00028647851803233004,
+      "recentBuys": 9,
+      "recentSells": 8,
+      "recentSolIn": 4.761073411999945,
+      "recentSolOut": 3.8792848969999625,
+      "buyShare": 0.07508404746820219,
       "regularBuyer": false,
-      "firstBuyTime": 1788491664,
+      "repeatSize": 2,
+      "firstBuyTime": 1787809163,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 9486293,
+      "lamports": 165633478,
       "txCount": 3000,
       "txCountCapped": true,
-      "lastTxTime": 1788796853,
+      "lastTxTime": 1788815233,
       "score": 0.25,
       "verdict": "suspicious",
       "reasons": [
@@ -716,43 +717,21 @@
       ]
     },
     {
-      "owner": "DDrgjDKWeCxMC8Po8MLfHcdzcBTH7aWSYnAy1o15jMqm",
+      "owner": "ELwAJ83pgCoR73Ewn3JzRVZ7rZGmHTfyPtzSCB6PrhNr",
       "amount": 0,
       "pct": 0,
-      "recentBuys": 0,
-      "recentSells": 1,
-      "recentSolIn": 0,
-      "recentSolOut": 7.198675976000004,
-      "buyShare": 0,
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 6.465545189000011,
+      "recentSolOut": 0,
+      "buyShare": 0.10196425466894032,
       "regularBuyer": false,
+      "firstBuyTime": 1787054511,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 626336047,
+      "lamports": 5650555657,
       "txCount": 3000,
       "txCountCapped": true,
-      "lastTxTime": 1788790571,
-      "score": 0.25,
-      "verdict": "suspicious",
-      "reasons": [
-        "automated trading wallet (≥3000 lifetime txs)"
-      ]
-    },
-    {
-      "owner": "2eS19wFTp4S6mAhGXGQPnMvniHMfd8TiC1DLcMfidy2b",
-      "amount": 0,
-      "pct": 0,
-      "recentBuys": 7,
-      "recentSells": 3,
-      "recentSolIn": 4.133848981999961,
-      "recentSolOut": 1.9465517059999797,
-      "buyShare": 0.10352706467153018,
-      "regularBuyer": false,
-      "repeatSize": 2,
-      "firstBuyTime": 1788714206,
-      "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 57989918,
-      "txCount": 3000,
-      "txCountCapped": true,
-      "lastTxTime": 1788808972,
+      "lastTxTime": 1788814143,
       "score": 0.25,
       "verdict": "suspicious",
       "reasons": [
@@ -767,7 +746,7 @@
       "recentSells": 2,
       "recentSolIn": 2.916239012999995,
       "recentSolOut": 2.903998133000016,
-      "buyShare": 0.0730335496558042,
+      "buyShare": 0.04599026512148165,
       "regularBuyer": false,
       "repeatSize": 2,
       "firstBuyTime": 1788593610,
@@ -790,14 +769,14 @@
       "recentSells": 1,
       "recentSolIn": 0.5010000019999836,
       "recentSolOut": 4.859349809000008,
-      "buyShare": 0.012546916888675434,
+      "buyShare": 0.007900972044859659,
       "regularBuyer": false,
       "firstBuyTime": 1788586750,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 5188868413,
+      "lamports": 8905319432,
       "txCount": 3000,
       "txCountCapped": true,
-      "lastTxTime": 1788806768,
+      "lastTxTime": 1788809862,
       "score": 0.25,
       "verdict": "suspicious",
       "reasons": [
@@ -808,23 +787,69 @@
       "owner": "4bxZV92qGKsVHLKJyETc2kTghUmmmHRWwBhtjUfrZvki",
       "amount": 0,
       "pct": 0,
-      "recentBuys": 3,
-      "recentSells": 3,
-      "recentSolIn": 2.190726846999979,
-      "recentSolOut": 2.119954584999988,
-      "buyShare": 0.05486400711651019,
+      "recentBuys": 4,
+      "recentSells": 4,
+      "recentSolIn": 2.448284928999982,
+      "recentSolOut": 2.415969136999962,
+      "buyShare": 0.03861044052826312,
       "regularBuyer": false,
       "repeatSize": 1,
-      "firstBuyTime": 1788617343,
+      "firstBuyTime": 1786802292,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 9398899,
+      "lamports": 4882966,
       "txCount": 3000,
       "txCountCapped": true,
-      "lastTxTime": 1788804437,
-      "score": 0.25,
+      "lastTxTime": 1788811355,
+      "score": 0.3,
       "verdict": "suspicious",
       "reasons": [
-        "automated trading wallet (≥3000 lifetime txs)"
+        "automated trading wallet (≥3000 lifetime txs)",
+        "near-zero SOL balance (disposable wallet)"
+      ]
+    },
+    {
+      "owner": "3hCuEhR3sT3riCktRsH93p3WAoyYkNS6duvvWML5s9hG",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 4.737290956999999,
+      "recentSolOut": 0,
+      "buyShare": 0.07470898856328682,
+      "regularBuyer": false,
+      "firstBuyTime": 1786992465,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 31366124,
+      "txCount": 1277,
+      "txCountCapped": false,
+      "firstTxTime": 1732731623,
+      "lastTxTime": 1787909249,
+      "funder": "jgJtDpx8Vvd7BdXapHMamygH9wJANXtmPHWkAvnnRJc",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": []
+    },
+    {
+      "owner": "HieuaZvTdgAR53k9CWWVpwevugQwJFh2CYuFbzLhG7xp",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 1,
+      "recentSolIn": 0,
+      "recentSolOut": 4.577154022000002,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 51628092,
+      "txCount": 232,
+      "txCountCapped": false,
+      "firstTxTime": 1727972156,
+      "lastTxTime": 1788103140,
+      "funder": "2DNtb9tXJmDVmCFV49F9S84dkTjGkjYxgnc45Cz3XpXd",
+      "score": 0.15,
+      "verdict": "organic",
+      "reasons": [
+        "funded directly by another holder"
       ]
     },
     {
@@ -856,7 +881,7 @@
       "recentSells": 0,
       "recentSolIn": 3.936711462000005,
       "recentSolOut": 0,
-      "buyShare": 0.09859000265714897,
+      "buyShare": 0.062083527117314574,
       "regularBuyer": false,
       "firstBuyTime": 1788692271,
       "ownerProgram": "11111111111111111111111111111111",
@@ -866,6 +891,28 @@
       "firstTxTime": 1746837070,
       "lastTxTime": 1788694529,
       "funder": "9Y8X6YE3C97xiCBBq7RY5SqaLLUjs6Q9N5ovs9mzD9ux",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": []
+    },
+    {
+      "owner": "7GVZ1PMdpoYXqRNAUGhQzbtM1V7siz77jt3yhNyLydFB",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 3.871993640999989,
+      "recentSolOut": 0,
+      "buyShare": 0.06106290098461173,
+      "regularBuyer": false,
+      "firstBuyTime": 1787363962,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 7800721,
+      "txCount": 1490,
+      "txCountCapped": false,
+      "firstTxTime": 1777267782,
+      "lastTxTime": 1787803505,
+      "funder": "4KXxiKLFE2UBQpQ58BMe7RMjvVyg39Xm9kJ73syPh6Zs",
       "score": 0,
       "verdict": "organic",
       "reasons": []
@@ -901,7 +948,7 @@
       "recentSells": 0,
       "recentSolIn": 3.448087942000001,
       "recentSolOut": 0,
-      "buyShare": 0.08635303924234185,
+      "buyShare": 0.0543777371840421,
       "regularBuyer": false,
       "firstBuyTime": 1788691654,
       "ownerProgram": "11111111111111111111111111111111",
@@ -947,15 +994,15 @@
       "recentSells": 1,
       "recentSolIn": 2.3300252589999957,
       "recentSolOut": 0.9494897240000171,
-      "buyShare": 0.05835256119058529,
+      "buyShare": 0.0367454378476758,
       "regularBuyer": false,
       "repeatSize": 2,
       "firstBuyTime": 1788581041,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 81316034,
+      "lamports": 79123089,
       "txCount": 3000,
       "txCountCapped": true,
-      "lastTxTime": 1788808535,
+      "lastTxTime": 1788814710,
       "score": 0.25,
       "verdict": "suspicious",
       "reasons": [
@@ -991,7 +1038,7 @@
       "recentSells": 2,
       "recentSolIn": 0.9220169490000103,
       "recentSolOut": 1.9084527059999914,
-      "buyShare": 0.02309075844884648,
+      "buyShare": 0.014540579061586737,
       "regularBuyer": false,
       "firstBuyTime": 1788696046,
       "ownerProgram": "11111111111111111111111111111111",
@@ -1006,28 +1053,6 @@
       ]
     },
     {
-      "owner": "FsVJMsQubWCYpx79jfUJo5Uf6aszzUuK43rPcEekRdGJ",
-      "amount": 0,
-      "pct": 0,
-      "recentBuys": 2,
-      "recentSells": 3,
-      "recentSolIn": 1.2270606320000184,
-      "recentSolOut": 1.1907768549999957,
-      "buyShare": 0.030730195021177433,
-      "regularBuyer": false,
-      "firstBuyTime": 1788608500,
-      "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 11228254,
-      "txCount": 3000,
-      "txCountCapped": true,
-      "lastTxTime": 1788806162,
-      "score": 0.25,
-      "verdict": "suspicious",
-      "reasons": [
-        "automated trading wallet (≥3000 lifetime txs)"
-      ]
-    },
-    {
       "owner": "CafeawmMxZPA8gUdVYeEBcQnNJawFM6yEiypaGWJSdsb",
       "amount": 0,
       "pct": 0,
@@ -1035,7 +1060,7 @@
       "recentSells": 1,
       "recentSolIn": 0.9901185760000146,
       "recentSolOut": 1.0252928710000049,
-      "buyShare": 0.024796278310206993,
+      "buyShare": 0.015614569179328316,
       "regularBuyer": false,
       "firstBuyTime": 1788611142,
       "ownerProgram": "11111111111111111111111111111111",
@@ -1048,6 +1073,28 @@
       "score": 0,
       "verdict": "organic",
       "reasons": []
+    },
+    {
+      "owner": "FsVJMsQubWCYpx79jfUJo5Uf6aszzUuK43rPcEekRdGJ",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 1,
+      "recentSells": 3,
+      "recentSolIn": 0.48279902699999866,
+      "recentSolOut": 1.1907768549999957,
+      "buyShare": 0.007613935330109156,
+      "regularBuyer": false,
+      "firstBuyTime": 1788608500,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 11228254,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "lastTxTime": 1788806162,
+      "score": 0.25,
+      "verdict": "suspicious",
+      "reasons": [
+        "automated trading wallet (≥3000 lifetime txs)"
+      ]
     },
     {
       "owner": "Dq1i7JqR9D7M8zVcSjjHMGxmm4xGJzUenag8WwidwRUf",
@@ -1081,7 +1128,7 @@
       "recentSells": 0,
       "recentSolIn": 0.9967739219999885,
       "recentSolOut": 0,
-      "buyShare": 0.02496295310620241,
+      "buyShare": 0.015719526669317835,
       "regularBuyer": false,
       "firstBuyTime": 1788645049,
       "ownerProgram": "11111111111111111111111111111111",
@@ -1103,15 +1150,15 @@
       "recentSells": 1,
       "recentSolIn": 0.4743586760000085,
       "recentSolOut": 0.5034022950000008,
-      "buyShare": 0.011879718282305354,
+      "buyShare": 0.007480827591519311,
       "regularBuyer": false,
       "firstBuyTime": 1788592388,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 16148192,
-      "txCount": 791,
+      "txCount": 795,
       "txCountCapped": false,
       "firstTxTime": 1785225867,
-      "lastTxTime": 1788805318,
+      "lastTxTime": 1788809856,
       "funder": "ABNL41SwMLVRaCq6okEWsWyvLwm56nazUNwMrTHgmuyf",
       "score": 0,
       "verdict": "organic",
@@ -1125,7 +1172,7 @@
       "recentSells": 0,
       "recentSolIn": 0.9724197119999758,
       "recentSolOut": 0,
-      "buyShare": 0.0243530324524306,
+      "buyShare": 0.01533545095750826,
       "regularBuyer": false,
       "firstBuyTime": 1788638841,
       "ownerProgram": "11111111111111111111111111111111",
@@ -1149,7 +1196,7 @@
       "recentSells": 0,
       "recentSolIn": 0.9576242920000198,
       "recentSolOut": 0,
-      "buyShare": 0.023982499709254083,
+      "buyShare": 0.015102121218296774,
       "regularBuyer": false,
       "firstBuyTime": 1788795689,
       "ownerProgram": "11111111111111111111111111111111",
@@ -1171,14 +1218,14 @@
       "recentSells": 2,
       "recentSolIn": 0.290560021999994,
       "recentSolOut": 0.6129300970000031,
-      "buyShare": 0.0072767114424198125,
+      "buyShare": 0.004582248706609456,
       "regularBuyer": false,
       "firstBuyTime": 1788591645,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 47512821,
+      "lamports": 47402821,
       "txCount": 3000,
       "txCountCapped": true,
-      "lastTxTime": 1788799803,
+      "lastTxTime": 1788812510,
       "score": 0.25,
       "verdict": "suspicious",
       "reasons": [
@@ -1193,15 +1240,15 @@
       "recentSells": 0,
       "recentSolIn": 0.865882049000021,
       "recentSolOut": 0,
-      "buyShare": 0.021684930261137218,
+      "buyShare": 0.013655309053861421,
       "regularBuyer": false,
       "repeatSize": 1,
       "firstBuyTime": 1788588221,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 207970537,
+      "lamports": 204601401,
       "txCount": 3000,
       "txCountCapped": true,
-      "lastTxTime": 1788794243,
+      "lastTxTime": 1788812562,
       "score": 0.25,
       "verdict": "suspicious",
       "reasons": [
@@ -1237,7 +1284,7 @@
       "recentSells": 2,
       "recentSolIn": 0.19634051299999555,
       "recentSolOut": 0.5089980809999872,
-      "buyShare": 0.004917101973366705,
+      "buyShare": 0.003096369058470423,
       "regularBuyer": false,
       "firstBuyTime": 1788686360,
       "ownerProgram": "11111111111111111111111111111111",
@@ -1280,7 +1327,7 @@
       "recentSells": 0,
       "recentSolIn": 0.6683767709999984,
       "recentSolOut": 0,
-      "buyShare": 0.01673865820874489,
+      "buyShare": 0.010540571181683799,
       "regularBuyer": false,
       "firstBuyTime": 1788643017,
       "ownerProgram": "11111111111111111111111111111111",
@@ -1295,6 +1342,49 @@
       "reasons": []
     },
     {
+      "owner": "64YiWfr8ChwpRny95toctZS3t6pAVs148DWNLq9mVzdk",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 1,
+      "recentSolIn": 0,
+      "recentSolOut": 0.6245618969999782,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 19375379,
+      "txCount": 146,
+      "txCountCapped": false,
+      "firstTxTime": 1784553444,
+      "lastTxTime": 1788713123,
+      "funder": "EjwCPGLnZHaUidn7KEDJksmnksbDHLnGp7N2cvJxvaNT",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": []
+    },
+    {
+      "owner": "BPqLWSVE3orPiMEPp1gLp29VoDJ7Tw18pTobjeJ33pGf",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 0.6186339070000031,
+      "recentSolOut": 0,
+      "buyShare": 0.00975610615907641,
+      "regularBuyer": false,
+      "firstBuyTime": 1786541744,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 80062256335,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "lastTxTime": 1788812312,
+      "score": 0.25,
+      "verdict": "suspicious",
+      "reasons": [
+        "automated trading wallet (≥3000 lifetime txs)"
+      ]
+    },
+    {
       "owner": "C9Qy5tGiVrSx5pX2VYctJgYgCUxPru71m561USh64h1c",
       "amount": 0,
       "pct": 0,
@@ -1302,14 +1392,14 @@
       "recentSells": 0,
       "recentSolIn": 0.5928830029999972,
       "recentSolOut": 0,
-      "buyShare": 0.01484801144441815,
+      "buyShare": 0.009350004019711713,
       "regularBuyer": false,
       "firstBuyTime": 1788600006,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 14547566350,
       "txCount": 3000,
       "txCountCapped": true,
-      "lastTxTime": 1788791734,
+      "lastTxTime": 1788815303,
       "score": 0.25,
       "verdict": "suspicious",
       "reasons": [
@@ -1324,7 +1414,7 @@
       "recentSells": 0,
       "recentSolIn": 0.5539119350000021,
       "recentSolOut": 0,
-      "buyShare": 0.013872029908875415,
+      "buyShare": 0.008735414563430043,
       "regularBuyer": false,
       "firstBuyTime": 1788667979,
       "ownerProgram": "11111111111111111111111111111111",
@@ -1339,6 +1429,71 @@
       "reasons": []
     },
     {
+      "owner": "3fuga4fDgNY974eJDfBgYX8pwTCW9wtWS9qoxSWdSPRu",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 1,
+      "recentSolIn": 0,
+      "recentSolOut": 0.5310277529999894,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 112801447308,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "lastTxTime": 1788815343,
+      "score": 0.25,
+      "verdict": "suspicious",
+      "reasons": [
+        "automated trading wallet (≥3000 lifetime txs)"
+      ]
+    },
+    {
+      "owner": "D8mcX3xaKW2f7itTDApxKBLbTVsfoMsQicv6nLAktuCw",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 0.48180186600001207,
+      "recentSolOut": 0,
+      "buyShare": 0.007598209699063912,
+      "regularBuyer": false,
+      "firstBuyTime": 1788144259,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 9486293,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "lastTxTime": 1788796853,
+      "score": 0.25,
+      "verdict": "suspicious",
+      "reasons": [
+        "automated trading wallet (≥3000 lifetime txs)"
+      ]
+    },
+    {
+      "owner": "7AcEuzT5PGsqtV8VwxdCLpsCQm6JE4eN6WoDrUBvEpEm",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 0.44944985400002224,
+      "recentSolOut": 0,
+      "buyShare": 0.007088005424839393,
+      "regularBuyer": false,
+      "firstBuyTime": 1787139926,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 31475978,
+      "txCount": 91,
+      "txCountCapped": false,
+      "firstTxTime": 1786102408,
+      "lastTxTime": 1788550433,
+      "funder": "7WtQSMo8mmWzasQXcLh4gNppFRNowi48xgZPnAJuh2et",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": []
+    },
+    {
       "owner": "5renP6uUA4AtoTqJMgfGgTC5W1rUirj5JuRuJ2qws9vZ",
       "amount": 0,
       "pct": 0,
@@ -1346,15 +1501,15 @@
       "recentSells": 0,
       "recentSolIn": 0.44466225200000054,
       "recentSolOut": 0,
-      "buyShare": 0.011136008577052742,
+      "buyShare": 0.007012503010841225,
       "regularBuyer": false,
       "firstBuyTime": 1788778577,
       "ownerProgram": "11111111111111111111111111111111",
       "lamports": 360992631,
-      "txCount": 2503,
+      "txCount": 2505,
       "txCountCapped": false,
       "firstTxTime": 1739560502,
-      "lastTxTime": 1788784861,
+      "lastTxTime": 1788815601,
       "funder": "5BCgqYg51CANe8qUMPYWJsqRA4Y8HnyfmvkoJxcEmQfY",
       "score": 0,
       "verdict": "organic",
@@ -1368,7 +1523,7 @@
       "recentSells": 0,
       "recentSolIn": 0.43437310000001617,
       "recentSolOut": 0,
-      "buyShare": 0.010878329665908232,
+      "buyShare": 0.006850238935007567,
       "regularBuyer": false,
       "firstBuyTime": 1788644562,
       "ownerProgram": "11111111111111111111111111111111",
@@ -1414,7 +1569,7 @@
       "recentSells": 0,
       "recentSolIn": 0.31652110499999253,
       "recentSolOut": 0,
-      "buyShare": 0.007926874215754486,
+      "buyShare": 0.004991665453552456,
       "regularBuyer": false,
       "firstBuyTime": 1788757794,
       "ownerProgram": "11111111111111111111111111111111",
@@ -1427,6 +1582,31 @@
       "score": 0,
       "verdict": "organic",
       "reasons": []
+    },
+    {
+      "owner": "DGZD8TCEiyRGFbZwn9cet1ZmNeGovGLTpsK8YTkjodJh",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 0.30491393400001243,
+      "recentSolOut": 0,
+      "buyShare": 0.004808615686636983,
+      "regularBuyer": false,
+      "firstBuyTime": 1787499006,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 4411920,
+      "txCount": 284,
+      "txCountCapped": false,
+      "firstTxTime": 1778951500,
+      "lastTxTime": 1788789688,
+      "funder": "5tzFkiKscXHK5ZXCGbXZxdw7gTjjD1mBwuoFbhUvuAi9",
+      "funderCex": "Binance",
+      "score": 0,
+      "verdict": "organic",
+      "reasons": [
+        "funded from Binance (exchange on-ramp → real person)"
+      ]
     },
     {
       "owner": "HsTFCEfULZrrjKpL3pXcdVHEoPgMQzNr4xZdb1aiiLoi",
@@ -1478,7 +1658,7 @@
       "recentSells": 0,
       "recentSolIn": 0.25960339099998464,
       "recentSolOut": 0,
-      "buyShare": 0.006501441432918848,
+      "buyShare": 0.004094050153400433,
       "regularBuyer": false,
       "repeatSize": 1,
       "firstBuyTime": 1788613536,
@@ -1496,6 +1676,51 @@
       ]
     },
     {
+      "owner": "9vasynM13ZZ4A19airAfQ96qRNgVN1MR8qM7k3Tp5pQ5",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 1,
+      "recentSolIn": 0,
+      "recentSolOut": 0.23450495200000887,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 2239504,
+      "txCount": 144,
+      "txCountCapped": false,
+      "firstTxTime": 1785858192,
+      "lastTxTime": 1788007600,
+      "funder": "CdcVvn23Bzxj14ibBe7xRcK3g8QbrcXKYYQpqkTrW1KG",
+      "score": 0.05,
+      "verdict": "organic",
+      "reasons": [
+        "near-zero SOL balance (disposable wallet)"
+      ]
+    },
+    {
+      "owner": "HzUWCGMfLFo3dmus5VYA5oFemEzg59YzSpcsE3y7n2WF",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 1,
+      "recentSells": 0,
+      "recentSolIn": 0.16439161700000682,
+      "recentSolOut": 0,
+      "buyShare": 0.002592522086110435,
+      "regularBuyer": false,
+      "firstBuyTime": 1787770823,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 25395871884,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "lastTxTime": 1788736527,
+      "score": 0.25,
+      "verdict": "suspicious",
+      "reasons": [
+        "automated trading wallet (≥3000 lifetime txs)"
+      ]
+    },
+    {
       "owner": "7f2cy1Ymv1wDnFU43i9aWcvsGXHiPqKd7RQyDUV2QwcX",
       "amount": 0,
       "pct": 0,
@@ -1503,7 +1728,7 @@
       "recentSells": 1,
       "recentSolIn": 0.049505928000002086,
       "recentSolOut": 0.04645861500000592,
-      "buyShare": 0.0012398138954753865,
+      "buyShare": 0.0007807284463501146,
       "regularBuyer": false,
       "firstBuyTime": 1788601041,
       "ownerProgram": "11111111111111111111111111111111",
@@ -1528,15 +1753,15 @@
       "recentSells": 0,
       "recentSolIn": 0.09343376300000727,
       "recentSolOut": 0,
-      "buyShare": 0.002339931445663602,
+      "buyShare": 0.001473488116890515,
       "regularBuyer": false,
       "firstBuyTime": 1788671337,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 2294344,
-      "txCount": 529,
+      "lamports": 4316443,
+      "txCount": 533,
       "txCountCapped": false,
       "firstTxTime": 1784835348,
-      "lastTxTime": 1788775310,
+      "lastTxTime": 1788814259,
       "funder": "is6MTRHEgyFLNTfYcuV4QBWLjrZBfmhVNYR6ccgr8KV",
       "score": 0.05,
       "verdict": "organic",
@@ -1552,7 +1777,7 @@
       "recentSells": 0,
       "recentSolIn": 0.0907785340000089,
       "recentSolOut": 0,
-      "buyShare": 0.0022734345645251037,
+      "buyShare": 0.0014316140849185781,
       "regularBuyer": false,
       "firstBuyTime": 1788700550,
       "ownerProgram": "11111111111111111111111111111111",
@@ -1576,7 +1801,7 @@
       "recentSells": 0,
       "recentSolIn": 0.08449578299999416,
       "recentSolOut": 0,
-      "buyShare": 0.0021160909431383913,
+      "buyShare": 0.0013325325683162445,
       "regularBuyer": false,
       "firstBuyTime": 1788611200,
       "ownerProgram": "11111111111111111111111111111111",
@@ -1612,26 +1837,6 @@
       ]
     },
     {
-      "owner": "CnAkBGpdNnETcghJGbFdt1ku7XcHCi2pmTk1B6dCDFJV",
-      "amount": 0,
-      "pct": 0,
-      "recentBuys": 2,
-      "recentSells": 0,
-      "recentSolIn": 0.054551843999973926,
-      "recentSolOut": 0,
-      "buyShare": 0.0013661825350485385,
-      "regularBuyer": false,
-      "firstBuyTime": 1788578805,
-      "ownerProgram": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
-      "lamports": 7182720,
-      "label": "Meteora DLMM",
-      "verdict": "pool",
-      "score": 0,
-      "reasons": [
-        "Meteora DLMM"
-      ]
-    },
-    {
       "owner": "5nDSyKeYZmv3k53HLUmASACwYoqHijniiAfWhMCSRBGu",
       "amount": 0,
       "pct": 0,
@@ -1639,18 +1844,40 @@
       "recentSells": 0,
       "recentSolIn": 0.04947067500000912,
       "recentSolOut": 0,
-      "buyShare": 0.0012389310282913098,
+      "buyShare": 0.0007801724923255039,
       "regularBuyer": false,
       "firstBuyTime": 1788647248,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 122706790,
+      "lamports": 125962615,
       "txCount": 3000,
       "txCountCapped": true,
-      "lastTxTime": 1788807300,
+      "lastTxTime": 1788809822,
       "score": 0.25,
       "verdict": "suspicious",
       "reasons": [
         "automated trading wallet (≥3000 lifetime txs)"
+      ]
+    },
+    {
+      "owner": "hnu5iBK8UoHb51UFsH1RYTUAYdrhjHvV5YMTf9T1CYN",
+      "amount": 0,
+      "pct": 0,
+      "recentBuys": 0,
+      "recentSells": 1,
+      "recentSolIn": 0,
+      "recentSolOut": 0.0479891819999807,
+      "buyShare": 0,
+      "regularBuyer": false,
+      "ownerProgram": "11111111111111111111111111111111",
+      "lamports": 1570900,
+      "txCount": 3000,
+      "txCountCapped": true,
+      "lastTxTime": 1788795670,
+      "score": 0.3,
+      "verdict": "suspicious",
+      "reasons": [
+        "automated trading wallet (≥3000 lifetime txs)",
+        "near-zero SOL balance (disposable wallet)"
       ]
     },
     {
@@ -1675,27 +1902,6 @@
       ]
     },
     {
-      "owner": "Diae5wKW4Wt8MEvT2Dv4AQjxQGfaffCMzpE1Ykoy12F4",
-      "amount": 0,
-      "pct": 0,
-      "recentBuys": 0,
-      "recentSells": 1,
-      "recentSolIn": 0,
-      "recentSolOut": 0.03478085300000089,
-      "buyShare": 0,
-      "regularBuyer": false,
-      "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 233176412,
-      "txCount": 792,
-      "txCountCapped": false,
-      "firstTxTime": 1788305671,
-      "lastTxTime": 1788807045,
-      "funder": "FTDsCw2S65xZAusTq4aDRJn98Lvi1gXnceWookSTyQjq",
-      "score": 0,
-      "verdict": "organic",
-      "reasons": []
-    },
-    {
       "owner": "4YMwtCkHZCfBuxvHrQVm9vzMfBC2SGXK8vvHLhENV4Rt",
       "amount": 0,
       "pct": 0,
@@ -1703,7 +1909,7 @@
       "recentSells": 0,
       "recentSolIn": 0.030086417000006804,
       "recentSolOut": 0,
-      "buyShare": 0.0007534765909584355,
+      "buyShare": 0.0004744749275411219,
       "regularBuyer": false,
       "firstBuyTime": 1788589267,
       "ownerProgram": "11111111111111111111111111111111",
@@ -1718,119 +1924,58 @@
       "reasons": []
     },
     {
-      "owner": "9nDmTeKEpDKYmJaN9VYFVjm9V1DzwTJ5m5ndsUeaEAR9",
+      "owner": "DX9xcBiDWwfUR2LMhovCkeCdZ36tcV2wjxyafTFhBFWW",
       "amount": 0,
       "pct": 0,
-      "recentBuys": 1,
-      "recentSells": 0,
-      "recentSolIn": 0.027881886000017175,
-      "recentSolOut": 0,
-      "buyShare": 0.0006982668761381563,
-      "regularBuyer": false,
-      "firstBuyTime": 1788806115,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 0,
-      "txCount": 1803,
-      "txCountCapped": false,
-      "firstTxTime": 1730037335,
-      "lastTxTime": 1788806115,
-      "funder": "Gtxw7kgcXb6hcPXX17Nw64eUvrGmkfcGAuFfKACkiizw",
-      "score": 0.05,
-      "verdict": "organic",
-      "reasons": [
-        "near-zero SOL balance (disposable wallet)"
-      ]
-    },
-    {
-      "owner": "78fDNrhbEAKARKpV2EHVd7excb4Eb1aoWkkcdM5P55U4",
-      "amount": 0,
-      "pct": 0,
-      "recentBuys": 1,
-      "recentSells": 0,
-      "recentSolIn": 0.018814018999989912,
-      "recentSolOut": 0,
-      "buyShare": 0.00047117351655188544,
-      "regularBuyer": false,
-      "firstBuyTime": 1788794646,
-      "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 2757776,
-      "txCount": 1110,
-      "txCountCapped": false,
-      "firstTxTime": 1778354313,
-      "lastTxTime": 1788804605,
-      "funder": "iGdFcQoyR2MwbXMHQskhmNsqddZ6rinsipHc4TNSdwu",
-      "score": 0.05,
-      "verdict": "organic",
-      "reasons": [
-        "near-zero SOL balance (disposable wallet)"
-      ]
-    },
-    {
-      "owner": "5myK7MYEdaDVkWyuS3wgfzBz6JQeHpQ8pZtqMyT4K4eG",
-      "amount": 0,
-      "pct": 0,
-      "recentBuys": 1,
-      "recentSells": 0,
-      "recentSolIn": 0.001080529000006436,
-      "recentSolOut": 0,
-      "buyShare": 0.0000270604940214846,
-      "regularBuyer": false,
-      "firstBuyTime": 1788749730,
-      "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 153105855,
-      "txCount": 54,
-      "txCountCapped": false,
-      "firstTxTime": 1788435529,
-      "lastTxTime": 1788774379,
-      "funder": "5tzFkiKscXHK5ZXCGbXZxdw7gTjjD1mBwuoFbhUvuAi9",
-      "funderCex": "Binance",
       "score": 0,
-      "verdict": "organic",
-      "reasons": [
-        "funded from Binance (exchange on-ramp → real person)"
-      ]
+      "verdict": "unknown",
+      "reasons": []
     },
     {
-      "owner": "63WDVqonCfXGdcKqmD6bPGFKbdkQyr32s72gEQkxytrN",
+      "owner": "9NHBZ1rKSSMWfpPERQzqEooWqmVTGFLQ6FGvtz7hPP2G",
       "amount": 0,
       "pct": 0,
-      "recentBuys": 0,
-      "recentSells": 1,
-      "recentSolIn": 0,
-      "recentSolOut": 0.000858179000005066,
-      "buyShare": 0,
-      "regularBuyer": false,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 687210561,
-      "txCount": 3000,
-      "txCountCapped": true,
-      "lastTxTime": 1788802517,
-      "score": 0.25,
-      "verdict": "suspicious",
-      "reasons": [
-        "automated trading wallet (≥3000 lifetime txs)"
-      ]
+      "score": 0,
+      "verdict": "unknown",
+      "reasons": []
     },
     {
-      "owner": "7fbrW6eiGKYz6j8zrEBkFKh7U6peURLvbKN96YzS42Ki",
-      "amount": 0,
-      "pct": 0,
-      "recentBuys": 0,
-      "recentSells": 1,
-      "recentSolIn": 0,
-      "recentSolOut": 0.0008368750000045111,
-      "buyShare": 0,
-      "regularBuyer": false,
+      "owner": "58t5XKxnGoH7WYcuFj6hzAfqKskGrbNVd7qAYrHU86ND",
+      "amount": 594504.850621,
+      "pct": 0.059451675764119374,
       "ownerProgram": "11111111111111111111111111111111",
-      "lamports": 439520048,
-      "txCount": 3000,
-      "txCountCapped": true,
-      "lastTxTime": 1788808420,
-      "score": 0.25,
-      "verdict": "suspicious",
-      "reasons": [
-        "automated trading wallet (≥3000 lifetime txs)"
-      ]
+      "score": 0,
+      "verdict": "unknown",
+      "reasons": []
+    },
+    {
+      "owner": "E7tnEjjPzTacSUY2VCY7aVmcTsufwhRNDqnNa5nzpXzA",
+      "amount": 37537.449096,
+      "pct": 0.0037538200913523334,
+      "ownerProgram": "11111111111111111111111111111111",
+      "score": 0,
+      "verdict": "unknown",
+      "reasons": []
+    },
+    {
+      "owner": "2FuKzBPJB8LoEDM2ZT9SjX9ggwK4oP8Uhyb7VhVkdyP7",
+      "amount": 544159.985926,
+      "pct": 0.054417088461578236,
+      "ownerProgram": "11111111111111111111111111111111",
+      "score": 0,
+      "verdict": "unknown",
+      "reasons": []
+    },
+    {
+      "owner": "Cz4NGRiyvUMtK7qkExoUMGWRRPUQisLn1jiaK7pnX7WY",
+      "amount": 2000,
+      "pct": 0.00020000400569320209,
+      "ownerProgram": "11111111111111111111111111111111",
+      "score": 0,
+      "verdict": "unknown",
+      "reasons": []
     }
   ],
   "trades": null,
@@ -2268,6 +2413,953 @@
       "prov": null
     }
   ],
+  "validator": null,
+  "candles": [
+    [
+      1781049600,
+      0.0005015977573127881,
+      0.0006687383315483112,
+      0.00045762588645232563,
+      0.0005467511386802231,
+      42580.05040150893
+    ],
+    [
+      1781136000,
+      0.0005467511386802231,
+      0.0008205929343663795,
+      0.0005164859407756041,
+      0.0006517710281039298,
+      62693.921284849035
+    ],
+    [
+      1781222400,
+      0.0006517710281039298,
+      0.0007646051734263058,
+      0.0006511559207475322,
+      0.0006820125480831115,
+      19771.92216657896
+    ],
+    [
+      1781308800,
+      0.0006820125480831115,
+      0.0007345889138017576,
+      0.0005940434602953118,
+      0.0006865429464511085,
+      19982.916028330663
+    ],
+    [
+      1781395200,
+      0.0006865429464511085,
+      0.0007199805157800482,
+      0.0006325616185094471,
+      0.000676417666910151,
+      13417.63113552256
+    ],
+    [
+      1781481600,
+      0.000676417666910151,
+      0.0006995157052442407,
+      0.0004227078995180884,
+      0.0006579033190525922,
+      62070.01697914315
+    ],
+    [
+      1781568000,
+      0.0006579033190525922,
+      0.0006579033190525922,
+      0.0004795080957065822,
+      0.0005207309541863116,
+      38888.46053449649
+    ],
+    [
+      1781654400,
+      0.0005207309541863116,
+      0.0005709619293402268,
+      0.0003438831424161694,
+      0.00046583534805662226,
+      98125.10325337143
+    ],
+    [
+      1781740800,
+      0.00046583534805662226,
+      0.0005053344209473348,
+      0.00042781018000638646,
+      0.0004466301798502573,
+      19551.238378853443
+    ],
+    [
+      1781827200,
+      0.0004466301798502573,
+      0.0005455921019596644,
+      0.00042971558448108885,
+      0.0005310432558465292,
+      14130.536336778203
+    ],
+    [
+      1781913600,
+      0.0005310432558465292,
+      0.0005599241962665014,
+      0.0004918960854666144,
+      0.0005353105753073017,
+      5007.7221055826
+    ],
+    [
+      1782000000,
+      0.0005353105753073017,
+      0.0005353105753073017,
+      0.0004458431544925272,
+      0.0004926662931743988,
+      8986.524120085647
+    ],
+    [
+      1782086400,
+      0.0004926662931743988,
+      0.0006070224947949971,
+      0.0004569963978883509,
+      0.000462230522867476,
+      25059.93550296201
+    ],
+    [
+      1782172800,
+      0.000462230522867476,
+      0.0005066970416750739,
+      0.000462230522867476,
+      0.0004823138975271725,
+      8889.465746705384
+    ],
+    [
+      1782259200,
+      0.0004823138975271725,
+      0.000540894692993317,
+      0.0003245723086765311,
+      0.0004083958508774158,
+      48321.40076576872
+    ],
+    [
+      1782345600,
+      0.0004083958508774158,
+      0.0004984873626689184,
+      0.0003808541769017444,
+      0.00042496308577756164,
+      23063.10252417372
+    ],
+    [
+      1782432000,
+      0.00042496308577756164,
+      0.0005260276580041067,
+      0.00036561373526806153,
+      0.0004902490853743929,
+      41178.88447457521
+    ],
+    [
+      1782518400,
+      0.0004902490853743929,
+      0.0006261546281555853,
+      0.0004758349831100638,
+      0.0005820118309401494,
+      17275.1883388885
+    ],
+    [
+      1782604800,
+      0.0005820118309401494,
+      0.0005863963998829674,
+      0.0003206746481239564,
+      0.00046390900104575445,
+      51896.98646428019
+    ],
+    [
+      1782691200,
+      0.00046390900104575445,
+      0.0005766886522425397,
+      0.0004537242901866168,
+      0.000506875986849407,
+      37021.90110480754
+    ],
+    [
+      1782777600,
+      0.000506875986849407,
+      0.0005560188658810936,
+      0.00038212884687260343,
+      0.0003885211570393598,
+      38395.9872323403
+    ],
+    [
+      1782864000,
+      0.0003885211570393598,
+      0.00040828677873633404,
+      0.00031559969318169977,
+      0.00032515377827191757,
+      51251.30791195731
+    ],
+    [
+      1782950400,
+      0.00032515377827191757,
+      0.00043772523771134673,
+      0.000319143724913974,
+      0.0003860193187170568,
+      30324.859955214986
+    ],
+    [
+      1783036800,
+      0.0003860193187170568,
+      0.00046205649954951446,
+      0.00033215208723869885,
+      0.00035602232880615933,
+      31404.882469770808
+    ],
+    [
+      1783123200,
+      0.00035602232880615933,
+      0.00043031491144956177,
+      0.0003349105513080353,
+      0.0003688261508380472,
+      31259.141844104473
+    ],
+    [
+      1783209600,
+      0.0003688261508380472,
+      0.00037847599295895066,
+      0.00033316670241395087,
+      0.0003465586195750586,
+      14560.618438448822
+    ],
+    [
+      1783296000,
+      0.0003465586195750586,
+      0.00038508346830516254,
+      0.0003180779483443731,
+      0.000350543115263718,
+      18421.7840884639
+    ],
+    [
+      1783382400,
+      0.000350543115263718,
+      0.00036883842415029954,
+      0.0003131467863069763,
+      0.00034879924507152466,
+      15901.674245847444
+    ],
+    [
+      1783468800,
+      0.00034879924507152466,
+      0.00034879924507152466,
+      0.0002571787258109348,
+      0.00029055737820046497,
+      28185.95148289501
+    ],
+    [
+      1783555200,
+      0.00029055737820046497,
+      0.0003668222502603691,
+      0.00028524452286100556,
+      0.0003432116045364697,
+      13653.632370584652
+    ],
+    [
+      1783641600,
+      0.0003432116045364697,
+      0.0003967104837083964,
+      0.0002773421441732912,
+      0.0003899235320042363,
+      22981.532517675958
+    ],
+    [
+      1783728000,
+      0.0003899235320042363,
+      0.0003899235320042363,
+      0.0002999761817116693,
+      0.0002999761817116693,
+      11325.030620768697
+    ],
+    [
+      1783814400,
+      0.0002999761817116693,
+      0.0003526111564796478,
+      0.00029374126070574923,
+      0.00030770314135316804,
+      13474.710947959225
+    ],
+    [
+      1783900800,
+      0.00030770314135316804,
+      0.00036119200727297154,
+      0.00029126685609761076,
+      0.00032756488993734243,
+      14687.499490605918
+    ],
+    [
+      1783987200,
+      0.00032756488993734243,
+      0.0003824944577645784,
+      0.00031702169835385604,
+      0.0003507941724678618,
+      13395.370470192123
+    ],
+    [
+      1784073600,
+      0.0003507941724678618,
+      0.0005462671492291044,
+      0.0003507941724678618,
+      0.0004641892195746622,
+      48857.92469900702
+    ],
+    [
+      1784160000,
+      0.0004641892195746622,
+      0.00048078263386104554,
+      0.00040262054523812236,
+      0.0004098431802556847,
+      17404.445964427858
+    ],
+    [
+      1784246400,
+      0.0004098431802556847,
+      0.0004555949879401773,
+      0.00032715605675731423,
+      0.00034737491324583465,
+      25439.057081607192
+    ],
+    [
+      1784332800,
+      0.00034737491324583465,
+      0.00039427064980477103,
+      0.00033229455553893486,
+      0.00036029492927052066,
+      9893.015959935841
+    ],
+    [
+      1784419200,
+      0.00036029492927052066,
+      0.00039277485055648427,
+      0.0003601883354242692,
+      0.00037585623035660834,
+      3705.565771844792
+    ],
+    [
+      1784505600,
+      0.00037585623035660834,
+      0.00038524226459400523,
+      0.0003603149944489949,
+      0.00037717204792137477,
+      3695.8083529621053
+    ],
+    [
+      1784592000,
+      0.00037717204792137477,
+      0.00041721482500024976,
+      0.00036599846958974326,
+      0.0003724038108099178,
+      8921.65553164505
+    ],
+    [
+      1784678400,
+      0.0003724038108099178,
+      0.0003724038108099178,
+      0.00033516240918851663,
+      0.0003432063669006722,
+      6890.664135026175
+    ],
+    [
+      1784764800,
+      0.0003432063669006722,
+      0.00041792216665231504,
+      0.0003240166886469006,
+      0.0003240166886469006,
+      11544.884565802187
+    ],
+    [
+      1784851200,
+      0.0003240166886469006,
+      0.00033767874702121886,
+      0.0002846106143496476,
+      0.00030092538800573557,
+      11356.155435059927
+    ],
+    [
+      1784937600,
+      0.00030092538800573557,
+      0.00030160781658389676,
+      0.00028564045874297366,
+      0.00029559652112455173,
+      2206.0985289310784
+    ],
+    [
+      1785024000,
+      0.00029559652112455173,
+      0.0003269192912998432,
+      0.0002805248982004488,
+      0.0003076855645983439,
+      7049.248918782041
+    ],
+    [
+      1785110400,
+      0.0003076855645983439,
+      0.00033194536372626714,
+      0.0002530892026057934,
+      0.00026716193404259145,
+      18435.97184974256
+    ],
+    [
+      1785196800,
+      0.00026716193404259145,
+      0.00027489773668239913,
+      0.00017244924751979047,
+      0.00021145873844654773,
+      41930.44023876997
+    ],
+    [
+      1785283200,
+      0.00021145873844654773,
+      0.00022275648860857502,
+      0.00017215319540009352,
+      0.0002092405113960173,
+      27221.717161136872
+    ],
+    [
+      1785369600,
+      0.0002092405113960173,
+      0.0002168761904953127,
+      0.00018020917488948795,
+      0.0002075053459670069,
+      6196.195869972784
+    ],
+    [
+      1785456000,
+      0.0002075053459670069,
+      0.00023026870227141284,
+      0.00019015921235187094,
+      0.00019283511755449764,
+      7070.536417044601
+    ],
+    [
+      1785542400,
+      0.00019283511755449764,
+      0.00022047152794011976,
+      0.00018262762358216015,
+      0.00021557976084078567,
+      4395.165685283872
+    ],
+    [
+      1785628800,
+      0.00021557976084078567,
+      0.0002186126932605206,
+      0.0001830995298396818,
+      0.00019942442545124354,
+      4909.989417269337
+    ],
+    [
+      1785715200,
+      0.00019942442545124354,
+      0.00020136982226998812,
+      0.00018415833463027558,
+      0.0001845619250976659,
+      2327.496735819334
+    ],
+    [
+      1785801600,
+      0.0001845619250976659,
+      0.0001995490357799756,
+      0.00017821465594035905,
+      0.000179272798604428,
+      7237.921484831566
+    ],
+    [
+      1785888000,
+      0.000179272798604428,
+      0.00020614748028649154,
+      0.0001373638673943857,
+      0.00015201440375191746,
+      31390.538057299655
+    ],
+    [
+      1785974400,
+      0.00015201440375191746,
+      0.0001622903578363473,
+      0.00013668284138307175,
+      0.00015126501992329558,
+      8442.41248566995
+    ],
+    [
+      1786060800,
+      0.00015126501992329558,
+      0.00018570747520493502,
+      0.00014487893599794292,
+      0.00018570747520493502,
+      13996.221538537407
+    ],
+    [
+      1786147200,
+      0.00018570747520493502,
+      0.0001861493197084577,
+      0.00015108143418877232,
+      0.0001542414854405827,
+      8914.23572298363
+    ],
+    [
+      1786233600,
+      0.0001542414854405827,
+      0.00016162979707679407,
+      0.00014706268072020955,
+      0.00015519355804679847,
+      4074.3739181733963
+    ],
+    [
+      1786320000,
+      0.00015519355804679847,
+      0.0002400482178161974,
+      0.00015293176629380828,
+      0.00018073958959447122,
+      24259.391395109258
+    ],
+    [
+      1786406400,
+      0.00018073958959447122,
+      0.00018621573201443647,
+      0.00015484069287467157,
+      0.00015589142743809882,
+      7676.381476070185
+    ],
+    [
+      1786492800,
+      0.00015589142743809882,
+      0.0001615452016552412,
+      0.00013811109644448798,
+      0.0001391832242799021,
+      4403.618384639291
+    ],
+    [
+      1786579200,
+      0.0001391832242799021,
+      0.00017987422341804725,
+      0.0001391832242799021,
+      0.0001561913283523028,
+      9279.906187155093
+    ],
+    [
+      1786665600,
+      0.0001561913283523028,
+      0.0001561913283523028,
+      0.00012600861688667427,
+      0.00013769247687315183,
+      8518.102155240378
+    ],
+    [
+      1786752000,
+      0.00013769247687315183,
+      0.00014463327037052853,
+      0.00013095882930431294,
+      0.00014036884446222224,
+      3639.240472466486
+    ],
+    [
+      1786838400,
+      0.00014036884446222224,
+      0.00014036884446222224,
+      0.00012034927992339713,
+      0.00012034927992339713,
+      2360.2187588514207
+    ],
+    [
+      1786924800,
+      0.00012034927992339713,
+      0.00012566685322091943,
+      0.00008721219647982428,
+      0.00009107231168436048,
+      14730.441379403865
+    ],
+    [
+      1787011200,
+      0.00009107231168436048,
+      0.00012143503872540918,
+      0.00006740252703023582,
+      0.00010651756472607227,
+      24408.263150233674
+    ],
+    [
+      1787097600,
+      0.00010651756472607227,
+      0.00014870090915708372,
+      0.00010490159128730649,
+      0.0001402420793379922,
+      9228.080141155024
+    ],
+    [
+      1787184000,
+      0.0001402420793379922,
+      0.0001632209269833806,
+      0.00013564330411294114,
+      0.0001479252036119524,
+      9140.965282164547
+    ],
+    [
+      1787270400,
+      0.0001479252036119524,
+      0.0001699819995320811,
+      0.0001387149060834211,
+      0.0001600675045486436,
+      5271.074688323809
+    ],
+    [
+      1787356800,
+      0.0001600675045486436,
+      0.00016804494220133855,
+      0.0001377327235139148,
+      0.00015755943518398858,
+      3876.817134282772
+    ],
+    [
+      1787443200,
+      0.00015755943518398858,
+      0.00016460137570029228,
+      0.00012796520884672386,
+      0.00014069831056658048,
+      6136.225484088959
+    ],
+    [
+      1787529600,
+      0.00014069831056658048,
+      0.00017542943988888457,
+      0.00013835294899392934,
+      0.00017295796555789897,
+      4800.878334104056
+    ],
+    [
+      1787616000,
+      0.00017295796555789897,
+      0.00018109732842787695,
+      0.0001621959699499591,
+      0.00016401946903461925,
+      3775.2812851483486
+    ],
+    [
+      1787702400,
+      0.00016401946903461925,
+      0.00016768939493757445,
+      0.00012098322010808645,
+      0.00013942359539502832,
+      12244.614734018372
+    ],
+    [
+      1787788800,
+      0.00013942359539502832,
+      0.0001442891560076945,
+      0.0001208190766827263,
+      0.0001208190766827263,
+      9490.608575928849
+    ],
+    [
+      1787875200,
+      0.0001208190766827263,
+      0.0001231439418902022,
+      0.00008449712652579548,
+      0.0001036007198494095,
+      17842.3341563916
+    ],
+    [
+      1787961600,
+      0.0001036007198494095,
+      0.00010782529103036152,
+      0.00009842837358713134,
+      0.00010020293878650939,
+      2502.4805092217493
+    ],
+    [
+      1788048000,
+      0.00010020293878650939,
+      0.00010220050656433756,
+      0.0000947940060097706,
+      0.0000981212987974559,
+      2198.9549574691027
+    ],
+    [
+      1788134400,
+      0.0000981212987974559,
+      0.0001031317743686618,
+      0.00008477288435090867,
+      0.0001031317743686618,
+      5645.301742130661
+    ],
+    [
+      1788220800,
+      0.0001031317743686618,
+      0.00011164466606568174,
+      0.00009998088165853373,
+      0.00011164466606568174,
+      3249.873284779471
+    ],
+    [
+      1788307200,
+      0.00011164466606568174,
+      0.00011164466606568174,
+      0.00009922966396123725,
+      0.00009922966396123725,
+      2188.5886538068216
+    ],
+    [
+      1788393600,
+      0.00009922966396123725,
+      0.00010021360674945108,
+      0.00009041249024390076,
+      0.00009161075418449877,
+      1495.482946861317
+    ],
+    [
+      1788480000,
+      0.00009161075418449877,
+      0.00009269186101869732,
+      0.00007035509427216439,
+      0.0000774603195544582,
+      7095.595372610817
+    ],
+    [
+      1788566400,
+      0.0000774603195544582,
+      0.0000774603195544582,
+      0.00006724780923591785,
+      0.00006812133190190855,
+      4307.1783167981275
+    ],
+    [
+      1788652800,
+      0.00006812133190190855,
+      0.00007874633347403466,
+      0.00006769739882345073,
+      0.00007755095986258995,
+      2478.011916959886
+    ],
+    [
+      1788739200,
+      0.00007755095986258995,
+      0.00007866723492233618,
+      0.0000637165749460277,
+      0.00006874003971606623,
+      4365.411457064326
+    ]
+  ],
+  "recipientFate": [
+    {
+      "to": "DX9xcBiDWwfUR2LMhovCkeCdZ36tcV2wjxyafTFhBFWW",
+      "from": "3ev3eXFo1TJFUTX9DcfMdes8NzjgGKxQvnFm7S9sGbXU",
+      "amount": 19300000,
+      "prov": {
+        "txCount": 132,
+        "swapsIn": 2,
+        "swapSol": 19.041429053,
+        "transfersIn": [
+          {
+            "from": "3ev3eXFo1TJFUTX9DcfMdes8NzjgGKxQvnFm7S9sGbXU",
+            "amount": 19300000,
+            "time": 1782792212
+          },
+          {
+            "from": "DQxWaGHBeypcCaeY39zp52jMpAghREywnbkSczhNqC7d",
+            "amount": 500000,
+            "time": 1779740043
+          }
+        ],
+        "transfersOut": [
+          {
+            "to": "DQxWaGHBeypcCaeY39zp52jMpAghREywnbkSczhNqC7d",
+            "amount": 19000000,
+            "time": 1782793428
+          },
+          {
+            "to": "2k6utkHrMMeX4JPer5AGaaRi6fAxv668ktjvv34YS4NG",
+            "amount": 300000,
+            "time": 1782793078
+          }
+        ],
+        "parsed": 8,
+        "firstSeen": 1767614022
+      }
+    },
+    {
+      "to": "9NHBZ1rKSSMWfpPERQzqEooWqmVTGFLQ6FGvtz7hPP2G",
+      "from": "BYPEtaEMvJy8q3Ggw36a41eKmzq2aX2KWKEFgjNco57X",
+      "amount": 5000000,
+      "prov": {
+        "txCount": 4,
+        "swapsIn": 0,
+        "swapSol": 0,
+        "transfersIn": [
+          {
+            "from": "BYPEtaEMvJy8q3Ggw36a41eKmzq2aX2KWKEFgjNco57X",
+            "amount": 5000000,
+            "time": 1787055166
+          },
+          {
+            "from": "BYPEtaEMvJy8q3Ggw36a41eKmzq2aX2KWKEFgjNco57X",
+            "amount": 5000000,
+            "time": 1784232443
+          }
+        ],
+        "transfersOut": [
+          {
+            "to": "BYPEtaEMvJy8q3Ggw36a41eKmzq2aX2KWKEFgjNco57X",
+            "amount": 5000000,
+            "time": 1787939525
+          },
+          {
+            "to": "BYPEtaEMvJy8q3Ggw36a41eKmzq2aX2KWKEFgjNco57X",
+            "amount": 5000000,
+            "time": 1784232632
+          }
+        ],
+        "parsed": 4,
+        "firstSeen": 1784232443
+      }
+    },
+    {
+      "to": "58t5XKxnGoH7WYcuFj6hzAfqKskGrbNVd7qAYrHU86ND",
+      "from": "DKNCRNUKEb8BzmeuJaqN52PFKgD2pRRxH2w3N4364XWL",
+      "amount": 300000,
+      "prov": {
+        "txCount": 5,
+        "swapsIn": 3,
+        "swapSol": 2.24963823600001,
+        "transfersIn": [
+          {
+            "from": "DKNCRNUKEb8BzmeuJaqN52PFKgD2pRRxH2w3N4364XWL",
+            "amount": 300000,
+            "time": 1780076633
+          },
+          {
+            "from": "6kwDCDDDJ63y4pbdqvxQEYfp8BNvrtrM6ZFLFQF3jScp",
+            "amount": 50000,
+            "time": 1780054405
+          }
+        ],
+        "transfersOut": [],
+        "parsed": 5,
+        "firstSeen": 1780054405
+      }
+    },
+    {
+      "to": "E7tnEjjPzTacSUY2VCY7aVmcTsufwhRNDqnNa5nzpXzA",
+      "from": "GJyPtgukRWQNkjLrox9jDQKH2rmRKsNYc2F4oMfsFsat",
+      "amount": 37537.44909600029,
+      "prov": {
+        "txCount": 1,
+        "swapsIn": 0,
+        "swapSol": 0,
+        "transfersIn": [
+          {
+            "from": "GJyPtgukRWQNkjLrox9jDQKH2rmRKsNYc2F4oMfsFsat",
+            "amount": 37537.449096,
+            "time": 1783489114
+          }
+        ],
+        "transfersOut": [],
+        "parsed": 1,
+        "firstSeen": 1783489114
+      }
+    },
+    {
+      "to": "2FuKzBPJB8LoEDM2ZT9SjX9ggwK4oP8Uhyb7VhVkdyP7",
+      "from": "GJyPtgukRWQNkjLrox9jDQKH2rmRKsNYc2F4oMfsFsat",
+      "amount": 13449.516076999716,
+      "prov": {
+        "txCount": 41,
+        "swapsIn": 0,
+        "swapSol": 0,
+        "transfersIn": [
+          {
+            "from": "GJyPtgukRWQNkjLrox9jDQKH2rmRKsNYc2F4oMfsFsat",
+            "amount": 13449.516077000066,
+            "time": 1783455780
+          },
+          {
+            "from": "GJyPtgukRWQNkjLrox9jDQKH2rmRKsNYc2F4oMfsFsat",
+            "amount": 45010.48944799998,
+            "time": 1782442073
+          },
+          {
+            "from": "Eh8XUuJt9G6F987YZBLarkSE2wx3ycXEhnJiqNLwU7q5",
+            "amount": 6904.67824899999,
+            "time": 1778811535
+          },
+          {
+            "from": "Eh8XUuJt9G6F987YZBLarkSE2wx3ycXEhnJiqNLwU7q5",
+            "amount": 6904.67824899999,
+            "time": 1778811518
+          },
+          {
+            "from": "Eh8XUuJt9G6F987YZBLarkSE2wx3ycXEhnJiqNLwU7q5",
+            "amount": 6904.678249000048,
+            "time": 1778811250
+          },
+          {
+            "from": "Eh8XUuJt9G6F987YZBLarkSE2wx3ycXEhnJiqNLwU7q5",
+            "amount": 6904.67824899999,
+            "time": 1778811233
+          },
+          {
+            "from": "Eh8XUuJt9G6F987YZBLarkSE2wx3ycXEhnJiqNLwU7q5",
+            "amount": 7707.595810000001,
+            "time": 1778116514
+          },
+          {
+            "from": "Eh8XUuJt9G6F987YZBLarkSE2wx3ycXEhnJiqNLwU7q5",
+            "amount": 1000,
+            "time": 1778114594
+          }
+        ],
+        "transfersOut": [],
+        "parsed": 8,
+        "firstSeen": 1778114594
+      }
+    },
+    {
+      "to": "Cz4NGRiyvUMtK7qkExoUMGWRRPUQisLn1jiaK7pnX7WY",
+      "from": "3ev3eXFo1TJFUTX9DcfMdes8NzjgGKxQvnFm7S9sGbXU",
+      "amount": 2000,
+      "prov": {
+        "txCount": 2,
+        "swapsIn": 0,
+        "swapSol": 0,
+        "transfersIn": [
+          {
+            "from": "3ev3eXFo1TJFUTX9DcfMdes8NzjgGKxQvnFm7S9sGbXU",
+            "amount": 1000,
+            "time": 1786487910
+          },
+          {
+            "from": "3ev3eXFo1TJFUTX9DcfMdes8NzjgGKxQvnFm7S9sGbXU",
+            "amount": 1000,
+            "time": 1780681371
+          }
+        ],
+        "transfersOut": [],
+        "parsed": 2,
+        "firstSeen": 1780681371
+      }
+    }
+  ],
+  "solFlows": {
+    "candidates": [
+      "GJyPtgukRWQNkjLrox9jDQKH2rmRKsNYc2F4oMfsFsat",
+      "3ev3eXFo1TJFUTX9DcfMdes8NzjgGKxQvnFm7S9sGbXU",
+      "8HV1A9d7mRPFV7TZ85LWj1gQGbeE8NhiFNzgwKEjVsi4",
+      "DKNCRNUKEb8BzmeuJaqN52PFKgD2pRRxH2w3N4364XWL",
+      "BYPEtaEMvJy8q3Ggw36a41eKmzq2aX2KWKEFgjNco57X",
+      "5B4vja274T4WGchaPwExpQHQvcm8NR7dtsWgt3Lf7pL8",
+      "FQseVhbCgqBtKDpRLxFvNfNREa9vexTef6SLz25W2cau",
+      "3njGz8Xo92cKsvWPaxQpxPHQv7waQq7KKVqbUgjwjTfB",
+      "aG6JvBGKZeWU2vBhTCNviMz4kaJ4Z1CnxkJuzBPjg5g",
+      "3448RNASkej3usQf6Sor2dyP2YzjnVzTsZqxtYLf3rNz",
+      "DBTy4zUaGdgov8JW3yedaKrA9c4nkpK9cmVn9293BzHX",
+      "2DNtb9tXJmDVmCFV49F9S84dkTjGkjYxgnc45Cz3XpXd"
+    ],
+    "direct": [
+      {
+        "a": "3ev3eXFo1TJFUTX9DcfMdes8NzjgGKxQvnFm7S9sGbXU",
+        "b": "GJyPtgukRWQNkjLrox9jDQKH2rmRKsNYc2F4oMfsFsat",
+        "sol": 10,
+        "n": 1
+      }
+    ],
+    "shared": []
+  },
   "fleet": {},
   "sharedMintInfo": {},
   "funderHops": {
@@ -2275,75 +3367,174 @@
       "funder": "DsBhxkh6EVd8bL8edAZnAiJZaPhxYgjjatBDE2Niqt77",
       "txCount": 409,
       "capped": false,
-      "age": 140.6690162037037
+      "age": 140.74314814814815
     },
     "892Ctbz32k3ikTkhf8KyDxWc6NtKxbhWmZaVXHGx5gjm": {
       "funder": "AVvF1322LNpup3jAeCybwESPfnHUmguw8iKLTxXFUDLS",
       "txCount": 358,
       "capped": false,
-      "age": 486.82836805555553
+      "age": 486.9025
     },
     "HFWv1riXSRJ3nVnnLZ9xi1K4r3zppRvcfVuiAGqAA8Y6": {
       "txCount": 1000,
       "capped": true,
-      "age": 3.072141203703704
+      "age": 3.146238425925926
     },
     "9eopQbZdGDnTyXdEDeDbFqfcVYJ4CyAfS3anEr2JAjHo": {
       "txCount": 1000,
       "capped": true,
-      "age": 1.174849537037037
+      "age": 1.2229166666666667
     },
     "AS6jhauDFMmUvs7KnTThU4CzGP1cTJxVQXhU6h8eTYaY": {
       "funder": "6A82v66WVk47TVuZywPXJRvvayrheanGCFFkGTqZeVnY",
       "txCount": 68,
       "capped": false,
-      "age": 34.96001157407407
+      "age": 35.03414351851852
     },
     "AEnLqi8QDwTgjaKhSrcv6YBYfBs8Y5BioVT75gcW122b": {
       "funder": "ErVDN1XarMbMXXzuWtGNtDxfrwFyybN6fR9vRZVMTyCV",
       "txCount": 315,
       "capped": false,
-      "age": 193.25737268518517
+      "age": 193.33150462962962
+    },
+    "2GGiFt8quTXEU2CXk6aAaPfL7eZdM6iqG9NyfYKjGYes": {
+      "txCount": 1000,
+      "capped": true,
+      "age": 592.8270601851851
+    },
+    "GJyPtgukRWQNkjLrox9jDQKH2rmRKsNYc2F4oMfsFsat": {
+      "txCount": 1000,
+      "capped": true,
+      "age": 70.97631944444444
     },
     "8esnzYpor96SudUBW2TyTzQZEsSietCWSq9T4cxNCD7b": {
       "funder": "DPqsobysNf5iA9w7zrQM8HLzCKZEDMkZsWbiidsAt1xo",
       "txCount": 200,
       "capped": false,
-      "age": 416.9520949074074
-    },
-    "2GGiFt8quTXEU2CXk6aAaPfL7eZdM6iqG9NyfYKjGYes": {
-      "txCount": 1000,
-      "capped": true,
-      "age": 592.7529282407407
-    },
-    "GJyPtgukRWQNkjLrox9jDQKH2rmRKsNYc2F4oMfsFsat": {
-      "txCount": 1000,
-      "capped": true,
-      "age": 70.9021875
+      "age": 417.02622685185185
     },
     "7u43aU3ydt2yBaMK14mtQ1CHrgZbAo1XaLXkba9HQf8": {
       "funder": "BVj6EefM73LKm7PHXfX7A8GbiZZqQwnM6vhMzXzxQ3av",
       "txCount": 212,
       "capped": false,
-      "age": 910.9124537037037
+      "age": 910.9865856481481
     },
     "GT2zuHVaZQYZSyQMgJPLzvkmyztfyXg2NJunqFp4p3A4": {
       "txCount": 1000,
       "capped": true,
-      "age": 16.723055555555554
+      "age": 16.75267361111111
     },
-    "2eS19wFTp4S6mAhGXGQPnMvniHMfd8TiC1DLcMfidy2b": {
+    "AsSJzYgZzGHmWSQm15P8gX7bAKgnSEK7CUFPd4HXTkA8": {
       "txCount": 1000,
       "capped": true,
-      "age": 4.852280092592593
+      "age": 247.7851736111111
     }
   },
   "portfolioClusters": [],
   "pool": {
     "address": "5hUhovgEDZRLEFT7Dvqg7ctfQo221BJ5obEn3EgtBGmX",
-    "sigsScanned": 6616,
+    "sigsScanned": 16478,
     "parsed": 220,
     "swaps": [
+      {
+        "signature": "37U2yXDQsiQj6qFJQyNQZgmGAWLHBjsCjNRWjwetTpy6eYqTVYHY5jsFP4azsvgGcLE1yh2HAfVJ3HYZEvqQkPY2",
+        "slot": 445157385,
+        "time": 1788813277,
+        "trader": "2eS19wFTp4S6mAhGXGQPnMvniHMfd8TiC1DLcMfidy2b",
+        "isBuy": false,
+        "tokens": 753655.826207,
+        "sol": 0.4898797919999822
+      },
+      {
+        "signature": "4Zpr7JA3oiQyPZxdSqUdraWN2ixTvnXZY6KXNKH3eCtAsdrRsuXW8AB87gopyvx1e2tqbPbj4sFq2d9hwHyXHk84",
+        "slot": 445156308,
+        "time": 1788812937,
+        "trader": "F2UcFMHjPFjkwbfsFQqMMPdKPQvzhCbzb8d5WKXUn5Ci",
+        "isBuy": false,
+        "tokens": 533105.2443980016,
+        "sol": 0.34838665400002355
+      },
+      {
+        "signature": "3h3CwnomjXqHE4nJMFbnxTpujyUr3eSUZgWhW2AtHUmoYwagxosw7KPPb5C5oKrUc2wR3Y3iMh83tj4pD5rm8jMb",
+        "slot": 445156227,
+        "time": 1788812912,
+        "trader": "F2UcFMHjPFjkwbfsFQqMMPdKPQvzhCbzb8d5WKXUn5Ci",
+        "isBuy": false,
+        "tokens": 1480847.9011069983,
+        "sol": 0.9759415249999961
+      },
+      {
+        "signature": "gJinBucUv7VfMHn6UD29JnHPfKScaPZ4AphcpS4vF9D74oaByc1pBQerSZXUgEMqGdgiXXgVCJjb5fT5uqH4iyT",
+        "slot": 445155417,
+        "time": 1788812653,
+        "trader": "2eS19wFTp4S6mAhGXGQPnMvniHMfd8TiC1DLcMfidy2b",
+        "isBuy": false,
+        "tokens": 500000,
+        "sol": 0.33227619599998093
+      },
+      {
+        "signature": "3LVb7cJsyxHCiUoRfhzQ8NY8jAqJ8pp15x1tDnzq8RztbX2KURoJa2EqrPf2zi3dA8CDPG3QXSZocyknv5CHpxM9",
+        "slot": 445151912,
+        "time": 1788811547,
+        "trader": "2eS19wFTp4S6mAhGXGQPnMvniHMfd8TiC1DLcMfidy2b",
+        "isBuy": false,
+        "tokens": 1000000.0000000002,
+        "sol": 0.6687740680000047
+      },
+      {
+        "signature": "2RY19F8SWJLXzkB888aCWeMMaLYpLxTSBBHPwrmvWUEd76YixHrcbGxVT5NM6F6pAqvMs2ZPeZz26AP2wFKThUtL",
+        "slot": 445151020,
+        "time": 1788811265,
+        "trader": "2eS19wFTp4S6mAhGXGQPnMvniHMfd8TiC1DLcMfidy2b",
+        "isBuy": false,
+        "tokens": 590000,
+        "sol": 0.39724195700000564
+      },
+      {
+        "signature": "F8hy7njgYTjVMawW2rtN3KZY4WQb98z3mYB5JuH8A3RAtoAZZKdmHhTUaHjeovmratYyszCp4AWd5cJNU2crTCg",
+        "slot": 445150667,
+        "time": 1788811152,
+        "trader": "2eS19wFTp4S6mAhGXGQPnMvniHMfd8TiC1DLcMfidy2b",
+        "isBuy": false,
+        "tokens": 66000,
+        "sol": 0.04456117800000925
+      },
+      {
+        "signature": "2xWR5G32wpWoWKUgcPDrwHg6CBJXLZstLdimbBY41bysvQP8cReVLs83E8Suot83TYXhrjcjkM7HwSE3YYr6YUUG",
+        "slot": 445146756,
+        "time": 1788809908,
+        "trader": "Gvp1PXk4qgoUzoaTRbZmx3WdY7taPrqV6j2fbBVxdd4R",
+        "isBuy": true,
+        "tokens": 7520.1102109998465,
+        "sol": 0.005098967000009225
+      },
+      {
+        "signature": "Sa95GvhCGuv7UEsUQpuh36XDduG4fq9QYnP7x6f7GCGCJUg8RzrDov3xK7fsFCcP3JjZxpPFSDDZxypVwVH9J2g",
+        "slot": 445146627,
+        "time": 1788809867,
+        "trader": "Gvp1PXk4qgoUzoaTRbZmx3WdY7taPrqV6j2fbBVxdd4R",
+        "isBuy": true,
+        "tokens": 36438.31713300012,
+        "sol": 0.02470215700000722
+      },
+      {
+        "signature": "4shQqMGmza9sWLDZdzqzTAQDHZ1DfxdaUznnhvVZFbUFmSJM8iGhzQrvBokCuCthYSWSfsvyyDth7e5MPNWfE16Q",
+        "slot": 445146158,
+        "time": 1788809718,
+        "trader": "2eS19wFTp4S6mAhGXGQPnMvniHMfd8TiC1DLcMfidy2b",
+        "isBuy": true,
+        "tokens": 492208.32092400035,
+        "sol": 0.33292658399997777
+      },
+      {
+        "signature": "5DAhZSCyQPCDsPugqwVZ2eBRpHLoyYC2FBmZRbJZceS8hJJTEwv8371Nv33Ve1C9NoPyBx4so6jUUGRD1enyDgfk",
+        "slot": 445146051,
+        "time": 1788809684,
+        "trader": "2j18M4HWFEtX7Exv5HhgxAt8BhFeHNQ36oDv4SshALBC",
+        "isBuy": true,
+        "tokens": 10086494.585881,
+        "sol": 6.528247825000022
+      },
       {
         "signature": "3u4o41Z2aqZ6oawTr14zdyvNixSFphauKstd7ZUjrpWRujUMxKFoYXEF2or4aNVyBzJ5pVgRmxwpgbWMP6s7RVBv",
         "slot": 445137511,
@@ -2730,15 +3921,6 @@
         "isBuy": false,
         "tokens": 1547081.076689,
         "sol": 1.1414387850000196
-      },
-      {
-        "signature": "4TmjwbWC1Kpbh74C8LTSkiqBV2mW2WvK9ZvsKLDNXttzTa6Rt3yS6TKsKsUNysg25fFF8SV6gzGaSTBvDpy76Ayj",
-        "slot": 444847084,
-        "time": 1788714944,
-        "trader": "FsVJMsQubWCYpx79jfUJo5Uf6aszzUuK43rPcEekRdGJ",
-        "isBuy": true,
-        "tokens": 1002312.545817,
-        "sol": 0.7442616050000197
       },
       {
         "signature": "4FJuWYBfHPYb2DN1MEAwPmiapaFdyMXAp2Md24hXsWkUTWNqhUy7vXaETaKjZY8isKzjy3a5W7ML3qfqdSCjHEc8",
@@ -3245,138 +4427,219 @@
         "sol": 0.8866511850000052
       },
       {
-        "signature": "2jBmFWfri6CBjS1Y3tmKsyvH1MRH35wqs4VQjbqfiQbxkgAes68d2CvGYqqKvkvgN5w252KsAF4BSLKGH3UZu7b1",
-        "slot": 444421946,
-        "time": 1788580649,
+        "signature": "3uomEuHHCLeVsk7XRxWGupp5uuWQPYdPGebgFsjVYVV6a48TPh8oxqQC1AvhfqbZW35EZfzYnmFDNmmyWukVNW3W",
+        "slot": 443040901,
+        "time": 1788144259,
         "trader": "D8mcX3xaKW2f7itTDApxKBLbTVsfoMsQicv6nLAktuCw",
-        "isBuy": false,
-        "tokens": 3694660.1999999997,
-        "sol": 2.522133077999996
-      },
-      {
-        "signature": "SVvAgH87ehYT5cGatQ11qSbZ4tUBi5Jct9wdCQZpVL9VfctWULFs7XnxBGujX5TgjsEAEkr1bR1AMax7qTyFxdn",
-        "slot": 444421828,
-        "time": 1788580612,
-        "trader": "CnAkBGpdNnETcghJGbFdt1ku7XcHCi2pmTk1B6dCDFJV",
         "isBuy": true,
-        "tokens": 52372.70106900006,
-        "sol": 0.036495234999989634
+        "tokens": 566544.2122230008,
+        "sol": 0.48180186600001207
       },
       {
-        "signature": "i5kKPSs3vnWzYZMZFJN9VCyXVycPTKLakgVKSGEPxcNuqvX6xdegSwh6WF1Fwkz1YurU7Upurn7whd4skVwwiFG",
-        "slot": 444421828,
-        "time": 1788580612,
-        "trader": "D8mcX3xaKW2f7itTDApxKBLbTVsfoMsQicv6nLAktuCw",
+        "signature": "5J5XqxyNTft5Q7j9T5UDB5xqjLBEbUKKJcriBY2gQPbqHQi9DABmDgM8GSPb4CthM5YrMnkF12BiYBZs4oETZPPz",
+        "slot": 442328454,
+        "time": 1787916193,
+        "trader": "3fuga4fDgNY974eJDfBgYX8pwTCW9wtWS9qoxSWdSPRu",
+        "isBuy": false,
+        "tokens": 564388.033154,
+        "sol": 0.5310277529999894
+      },
+      {
+        "signature": "4awbecQDph4EQAUeRp5rz3DEaJ6CqWjGxEAJTqtFtpuyNnQSYmXruWKqqFeHqJsY5qiSAJ9ioobiUXkePGA942RU",
+        "slot": 442035891,
+        "time": 1787809163,
+        "trader": "2eS19wFTp4S6mAhGXGQPnMvniHMfd8TiC1DLcMfidy2b",
+        "isBuy": true,
+        "tokens": 235121.90616200003,
+        "sol": 0.2942978460000063
+      },
+      {
+        "signature": "4EJseSZFQ72GStvb2keKqNimurxzM3Tgf1VviA27hcPozBn2jCC8N7FpVsvsQ6sV5k7b2PKFDhh1tjTNHNcZqGL5",
+        "slot": 441931172,
+        "time": 1787770823,
+        "trader": "HzUWCGMfLFo3dmus5VYA5oFemEzg59YzSpcsE3y7n2WF",
+        "isBuy": true,
+        "tokens": 110436.316618,
+        "sol": 0.16439161700000682
+      },
+      {
+        "signature": "4hA8aAx1f5sy3m4CCvyYJXuFDe57cmbiEgiqNJ5pYHr2YdopcDB9S5BqK422LNuiJTzrXJ9BaKzj31j5Q67HRy4y",
+        "slot": 441187472,
+        "time": 1787499006,
+        "trader": "DGZD8TCEiyRGFbZwn9cet1ZmNeGovGLTpsK8YTkjodJh",
+        "isBuy": true,
+        "tokens": 208230.85171699998,
+        "sol": 0.30491393400001243
+      },
+      {
+        "signature": "2ckXbBjfptmmXB7nUbWsn5PhanLosmcw5zGDeWh16iwdvNuPr7h7cVbJTc6XhuDaRfKNNE87vfMQtWEiEMK9DeMe",
+        "slot": 440819084,
+        "time": 1787363962,
+        "trader": "7GVZ1PMdpoYXqRNAUGhQzbtM1V7siz77jt3yhNyLydFB",
+        "isBuy": true,
+        "tokens": 2227176.956927,
+        "sol": 3.871993640999989
+      },
+      {
+        "signature": "5ENPZ7vX5q2eFht7ZjrqVwAEH64pFwDFctBX5SvC4pWYQhUA6LcPSgqadSmC7SFXdWhtC3QfHV7MaxB5Pn7kMFdX",
+        "slot": 440317866,
+        "time": 1787164390,
+        "trader": "4bxZV92qGKsVHLKJyETc2kTghUmmmHRWwBhtjUfrZvki",
+        "isBuy": false,
+        "tokens": 167000,
+        "sol": 0.2960145519999742
+      },
+      {
+        "signature": "4wwHV6dcBx4dZhxkXtnc42v18sFfioqMTcGwP9oCkTCY8fRPAc3X324bc4tdEwC5T64uHUp9B4wgEXwgodhognti",
+        "slot": 440259249,
+        "time": 1787139926,
+        "trader": "7AcEuzT5PGsqtV8VwxdCLpsCQm6JE4eN6WoDrUBvEpEm",
+        "isBuy": true,
+        "tokens": 252299.226442,
+        "sol": 0.44944985400002224
+      },
+      {
+        "signature": "3n5rDLUS3yZhbEtxPizSBdqTE5dJTpzAxTZXPQK15PUwhhRF5a3BVrTdvGaTzhpbMbQGDdmg9Jazx4MzZPzzfVR6",
+        "slot": 440053802,
+        "time": 1787054511,
+        "trader": "ELwAJ83pgCoR73Ewn3JzRVZ7rZGmHTfyPtzSCB6PrhNr",
+        "isBuy": true,
+        "tokens": 4864449.652326,
+        "sol": 6.465545189000011
+      },
+      {
+        "signature": "2TSxTn6dEJ65zn1qdPDeaTsQoAVn91sTupeWv39w6vHrSykymT6bbwFfxbzJA7M3G9NUyVQAoFucrGtVKTisYiEs",
+        "slot": 439977252,
+        "time": 1787022761,
+        "trader": "hnu5iBK8UoHb51UFsH1RYTUAYdrhjHvV5YMTf9T1CYN",
+        "isBuy": false,
+        "tokens": 47973.58225900002,
+        "sol": 0.0479891819999807
+      },
+      {
+        "signature": "4CsBWhV6YKgKXt6mUghiBV2tmecx4u2TRVEbVpuE5Adm98DBK5HiuLgQbFaiiQ9uL4xc4hhMGT295BCrSapRT2Ab",
+        "slot": 439962090,
+        "time": 1787016482,
+        "trader": "FYX5JQ2kP7TD8gWb9WP1tjmwWWUAzi8edEZTr5Z8F1ck",
+        "isBuy": false,
+        "tokens": 26425.23626,
+        "sol": 0.025271705000022848
+      },
+      {
+        "signature": "47hjkidafeLJkeVpSMjyptm2mSq94NRx2K2RgrvQZhC66PeDJNcnJ2DJXDrziWX8A2rCBgzE6t4rcRUJjjUykkBU",
+        "slot": 439904219,
+        "time": 1786992465,
+        "trader": "3hCuEhR3sT3riCktRsH93p3WAoyYkNS6duvvWML5s9hG",
+        "isBuy": true,
+        "tokens": 3299463.5842609997,
+        "sol": 4.737290956999999
+      },
+      {
+        "signature": "EmHoTTqkHGpjz6hQNAyXd9HW6MHM4Fj5dVdoG55jpzBGhFXV2JBqdFtxEnrWEZdTvqy6hAoroRM274nyzrXgqo9",
+        "slot": 439446712,
+        "time": 1786802292,
+        "trader": "4bxZV92qGKsVHLKJyETc2kTghUmmmHRWwBhtjUfrZvki",
+        "isBuy": true,
+        "tokens": 136980.327813,
+        "sol": 0.25755808200000274
+      },
+      {
+        "signature": "LQdPdYLWJdQqVZsmxXDS7eJ1toesiZKqaR1ED8QV7kgQppPm5ckaQKFZkxzVgiaHFSPRATzEQpRrqdcWfKhUrUH",
+        "slot": 439121343,
+        "time": 1786667107,
+        "trader": "6Qt8a3Y6B4nekSRQ1p2e5yqP5bSCbE6HzUTdWwdfYXmR",
+        "isBuy": true,
+        "tokens": 13642.330354,
+        "sol": 0.025635292999993453
+      },
+      {
+        "signature": "5kFe6rsXjWwyx4egPbKby5eFSvdTrHm62TLaj61uCgCPk1uS4BSGuczPMrRJpBHFfmCUXvm9HxgtCu432E3UNzY6",
+        "slot": 438821398,
+        "time": 1786541744,
+        "trader": "BPqLWSVE3orPiMEPp1gLp29VoDJ7Tw18pTobjeJ33pGf",
+        "isBuy": true,
+        "tokens": 332483.896053,
+        "sol": 0.6186339070000031
+      },
+      {
+        "signature": "3F1iee49gG8ssuzMgkyBs9dxzb1bmbdWKaohWixZhQPaf6fCZ6XqFFkF4b2z5bcLFWKxNbjuVR2gi61QNZY93bRe",
+        "slot": 438468780,
+        "time": 1786393302,
+        "trader": "64YiWfr8ChwpRny95toctZS3t6pAVs148DWNLq9mVzdk",
+        "isBuy": false,
+        "tokens": 250000,
+        "sol": 0.6245618969999782
+      },
+      {
+        "signature": "4JFnumiPcT8yX88pShLPoP7BcDW2rxj4j6qiJuLt6BqkbW8p9MM6joexMbTu4mSahJ9743E1BV7ta68Ts1GM5c9G",
+        "slot": 438409688,
+        "time": 1786368334,
+        "trader": "Fm3PMXV9hEWNEq2yrYmDaijSnc91aHEcKei8StzjRM89",
+        "isBuy": true,
+        "tokens": 8645.668989,
+        "sol": 0.024591641000029085
+      },
+      {
+        "signature": "5sNB3VM9kxmVzNYBgAA3TkAAKvgxQqXbnodKYznSYXJxfjuGrJswHBH8GDQpuSz68ZNRwprNPuhyoVp8rMFB83yN",
+        "slot": 437996258,
+        "time": 1786193542,
+        "trader": "HieuaZvTdgAR53k9CWWVpwevugQwJFh2CYuFbzLhG7xp",
         "isBuy": false,
         "tokens": 2000000,
-        "sol": 1.3984421509999834
+        "sol": 4.577154022000002
       },
       {
-        "signature": "5d2rFHEGx3aWAH5ZuJVHXPMK3azRk7wvwNTLd5Hsc1gUqU4jtx2zwb8nVjdtMRkknw9A7dUDx9VRYXLxKbo22yWP",
-        "slot": 444416072,
-        "time": 1788578805,
-        "trader": "CnAkBGpdNnETcghJGbFdt1ku7XcHCi2pmTk1B6dCDFJV",
-        "isBuy": true,
-        "tokens": 25501.86700899992,
-        "sol": 0.01805660899998429
-      },
-      {
-        "signature": "4i6sZD512NnFtuScM4sW7EXJwDrzzDewsoRT5hRrj7jQr8dFM8FPhHjv119KqTu5WukE3xV3mwH6Q9MB6CRRcxzh",
-        "slot": 444416071,
-        "time": 1788578805,
-        "trader": "D8mcX3xaKW2f7itTDApxKBLbTVsfoMsQicv6nLAktuCw",
+        "signature": "5b6D5M4vja2PAWYyVVGFmzmLkd2UKCDgXEDxUtBCX6rF1wgY4S9z9X1TrKe3DUGwDZKCELcFNSTBWooiMy6Ec69M",
+        "slot": 437607484,
+        "time": 1786029489,
+        "trader": "9vasynM13ZZ4A19airAfQ96qRNgVN1MR8qM7k3Tp5pQ5",
         "isBuy": false,
-        "tokens": 3000000.000000001,
-        "sol": 2.143338927000002
-      },
-      {
-        "signature": "4dooxeycEU9GLBV4wtiDo98SXkrGoLDB7Poa1hY9Q4soXrbYZadGeSC6LzRsSBvJGGv3f8WJ4nWAXomtit6YtMqH",
-        "slot": 444415960,
-        "time": 1788578771,
-        "trader": "63WDVqonCfXGdcKqmD6bPGFKbdkQyr32s72gEQkxytrN",
-        "isBuy": false,
-        "tokens": 1185.506878,
-        "sol": 0.000858179000005066
-      },
-      {
-        "signature": "3hQ7VaT8DacwLUfftYnng8PwMF5ePpk9nEdHGJVN2wKaU5mNE9kQV8knZKnwG6vQ7bTwCmn8K7Zs78dhrwDWe439",
-        "slot": 444415955,
-        "time": 1788578770,
-        "trader": "D8mcX3xaKW2f7itTDApxKBLbTVsfoMsQicv6nLAktuCw",
-        "isBuy": false,
-        "tokens": 3000000,
-        "sol": 2.2007166719999987
-      },
-      {
-        "signature": "2n4wd8nRXX2YpsFcKQtdUQw5JmEobzftw9fWkLD1T9h8khG2UQ9URyE7CCBZPRkJabWoiJH1ZostBLQ6BY4tYiGw",
-        "slot": 444415507,
-        "time": 1788578629,
-        "trader": "GcWLBhZdaJxNAbCzzUnWyPQQ6ZDHF7saZQA8vhL6yXVn",
-        "isBuy": true,
-        "tokens": 398679.70007300004,
-        "sol": 0.29703557199999864
-      },
-      {
-        "signature": "K9ACGHi6acyGMN5GUEi65Kx5YAaaR8kiHh99HZQLmzbxchz65eCsBzyGnD2Ykf9873pQojnerxsXF822ukJuY1M",
-        "slot": 444410770,
-        "time": 1788577130,
-        "trader": "Diae5wKW4Wt8MEvT2Dv4AQjxQGfaffCMzpE1Ykoy12F4",
-        "isBuy": false,
-        "tokens": 46943.419911,
-        "sol": 0.03478085300000089
-      },
-      {
-        "signature": "2VtBybpuNDU3BB1NiZLB3MUkvDSwd2QEz5yndu9P5fwNbcRvbCsS2UYyTd1DkYJAHP9QJ8UX6vM1WE9LiWtRhB22",
-        "slot": 444410766,
-        "time": 1788577129,
-        "trader": "D8mcX3xaKW2f7itTDApxKBLbTVsfoMsQicv6nLAktuCw",
-        "isBuy": false,
-        "tokens": 2690748.6999999993,
-        "sol": 2.0181778339999994
-      },
-      {
-        "signature": "4ihWGoDZ3qvTYc5pATDetUqhA4u7Qnx4wkXRCJrb671gEgD9V75HBwvJVdV2S3Fx5Fp1iE9mJSCGyyZNDFGPcF71",
-        "slot": 444241051,
-        "time": 1788523582,
-        "trader": "DDrgjDKWeCxMC8Po8MLfHcdzcBTH7aWSYnAy1o15jMqm",
-        "isBuy": false,
-        "tokens": 9905212.188044,
-        "sol": 7.198675976000004
-      },
-      {
-        "signature": "8dwapm5x34z2qdL8JkfdksHtJUbay78KE1YEGZFpZJtqPRznm7bYwiunbuET5tpkeL3p3W8Wg5igsodAfuXxcme",
-        "slot": 444139723,
-        "time": 1788491664,
-        "trader": "D8mcX3xaKW2f7itTDApxKBLbTVsfoMsQicv6nLAktuCw",
-        "isBuy": true,
-        "tokens": 12646.579996999353,
-        "sol": 0.011439123999991807
+        "tokens": 117439.783898,
+        "sol": 0.23450495200000887
       }
     ],
-    "buyVol": 39.93012836899996,
-    "sellVol": 63.48210214299999,
-    "buyers": 38,
-    "sellers": 31,
-    "topBuyerShare": 0.13851876727984871,
-    "top3BuyerShare": 0.34063583460852787,
+    "buyVol": 63.40991958400008,
+    "sellVol": 55.55856390599996,
+    "buyers": 47,
+    "sellers": 33,
+    "topBuyerShare": 0.1029531005216298,
+    "top3BuyerShare": 0.29214459337801013,
     "regularBuyers": [],
     "traders": [
       {
-        "trader": "D8mcX3xaKW2f7itTDApxKBLbTVsfoMsQicv6nLAktuCw",
-        "buys": 1,
-        "sells": 5,
-        "solIn": 0.011439123999991807,
-        "solOut": 10.28280866199998,
-        "tokensIn": 12646.579996999353,
-        "tokensOut": 14385408.899999999,
-        "first": 1788491664,
-        "last": 1788580649,
+        "trader": "2eS19wFTp4S6mAhGXGQPnMvniHMfd8TiC1DLcMfidy2b",
+        "buys": 9,
+        "sells": 8,
+        "solIn": 4.761073411999945,
+        "solOut": 3.8792848969999625,
+        "tokensIn": 6888433.558576001,
+        "tokensOut": 5899655.826207,
+        "first": 1787809163,
+        "last": 1788813277,
         "buyTimes": [
-          1788491664
+          1788809718,
+          1788806979,
+          1788806788,
+          1788802427,
+          1788800077,
+          1788799280,
+          1788795218,
+          1788714206,
+          1787809163
         ],
         "buySizes": [
-          0.011439123999991807
-        ]
+          0.33292658399997777,
+          0.0952905499999872,
+          0.6100969800000087,
+          0.6659137229999885,
+          0.6682094100000029,
+          0.1240510929999914,
+          0.47731792799999084,
+          1.4929692979999913,
+          0.2942978460000063
+        ],
+        "intervalCv": 2.3660924906485192,
+        "repeatSize": 2
       },
       {
         "trader": "CUtsTCmhMvorVbHXKevdLPhSjoQJgnhyjBeHkY6W5iwj",
@@ -3392,48 +4655,38 @@
         "buySizes": []
       },
       {
-        "trader": "DDrgjDKWeCxMC8Po8MLfHcdzcBTH7aWSYnAy1o15jMqm",
-        "buys": 0,
-        "sells": 1,
-        "solIn": 0,
-        "solOut": 7.198675976000004,
-        "tokensIn": 0,
-        "tokensOut": 9905212.188044,
-        "first": 1788523582,
-        "last": 1788523582,
-        "buyTimes": [],
-        "buySizes": []
-      },
-      {
-        "trader": "2eS19wFTp4S6mAhGXGQPnMvniHMfd8TiC1DLcMfidy2b",
-        "buys": 7,
-        "sells": 3,
-        "solIn": 4.133848981999961,
-        "solOut": 1.9465517059999797,
-        "tokensIn": 6161103.33149,
-        "tokensOut": 2990000,
-        "first": 1788714206,
-        "last": 1788806979,
+        "trader": "2j18M4HWFEtX7Exv5HhgxAt8BhFeHNQ36oDv4SshALBC",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 6.528247825000022,
+        "solOut": 0,
+        "tokensIn": 10086494.585881,
+        "tokensOut": 0,
+        "first": 1788809684,
+        "last": 1788809684,
         "buyTimes": [
-          1788806979,
-          1788806788,
-          1788802427,
-          1788800077,
-          1788799280,
-          1788795218,
-          1788714206
+          1788809684
         ],
         "buySizes": [
-          0.0952905499999872,
-          0.6100969800000087,
-          0.6659137229999885,
-          0.6682094100000029,
-          0.1240510929999914,
-          0.47731792799999084,
-          1.4929692979999913
+          6.528247825000022
+        ]
+      },
+      {
+        "trader": "ELwAJ83pgCoR73Ewn3JzRVZ7rZGmHTfyPtzSCB6PrhNr",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 6.465545189000011,
+        "solOut": 0,
+        "tokensIn": 4864449.652326,
+        "tokensOut": 0,
+        "first": 1787054511,
+        "last": 1787054511,
+        "buyTimes": [
+          1787054511
         ],
-        "intervalCv": 1.8984845296278072,
-        "repeatSize": 2
+        "buySizes": [
+          6.465545189000011
+        ]
       },
       {
         "trader": "FbCbuwYCb6ugUCydBAMZWPW1nQgpmqJhcvieHPckXg4N",
@@ -3498,25 +4751,58 @@
       },
       {
         "trader": "4bxZV92qGKsVHLKJyETc2kTghUmmmHRWwBhtjUfrZvki",
-        "buys": 3,
-        "sells": 3,
-        "solIn": 2.190726846999979,
-        "solOut": 2.119954584999988,
-        "tokensIn": 3140723.5145340003,
-        "tokensOut": 3140723.5145340003,
-        "first": 1788617343,
+        "buys": 4,
+        "sells": 4,
+        "solIn": 2.448284928999982,
+        "solOut": 2.415969136999962,
+        "tokensIn": 3277703.8423470003,
+        "tokensOut": 3307723.5145340003,
+        "first": 1786802292,
         "last": 1788788450,
         "buyTimes": [
           1788787033,
           1788617382,
-          1788617343
+          1788617343,
+          1786802292
         ],
         "buySizes": [
           0.9940882269999918,
           0.7229640879999977,
-          0.47367453199998977
+          0.47367453199998977,
+          0.25755808200000274
         ],
+        "intervalCv": 1.2372812306820573,
         "repeatSize": 1
+      },
+      {
+        "trader": "3hCuEhR3sT3riCktRsH93p3WAoyYkNS6duvvWML5s9hG",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 4.737290956999999,
+        "solOut": 0,
+        "tokensIn": 3299463.5842609997,
+        "tokensOut": 0,
+        "first": 1786992465,
+        "last": 1786992465,
+        "buyTimes": [
+          1786992465
+        ],
+        "buySizes": [
+          4.737290956999999
+        ]
+      },
+      {
+        "trader": "HieuaZvTdgAR53k9CWWVpwevugQwJFh2CYuFbzLhG7xp",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 4.577154022000002,
+        "tokensIn": 0,
+        "tokensOut": 2000000,
+        "first": 1786193542,
+        "last": 1786193542,
+        "buyTimes": [],
+        "buySizes": []
       },
       {
         "trader": "AdqacXunTLqzRZ8DfKe266mCGrpvdtUV2N6CndRd8zRG",
@@ -3546,6 +4832,23 @@
         ],
         "buySizes": [
           3.936711462000005
+        ]
+      },
+      {
+        "trader": "7GVZ1PMdpoYXqRNAUGhQzbtM1V7siz77jt3yhNyLydFB",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 3.871993640999989,
+        "solOut": 0,
+        "tokensIn": 2227176.956927,
+        "tokensOut": 0,
+        "first": 1787363962,
+        "last": 1787363962,
+        "buyTimes": [
+          1787363962
+        ],
+        "buySizes": [
+          3.871993640999989
         ]
       },
       {
@@ -3666,23 +4969,17 @@
         ]
       },
       {
-        "trader": "FsVJMsQubWCYpx79jfUJo5Uf6aszzUuK43rPcEekRdGJ",
-        "buys": 2,
-        "sells": 3,
-        "solIn": 1.2270606320000184,
-        "solOut": 1.1907768549999957,
-        "tokensIn": 1696092.684117,
-        "tokensOut": 1696092.684117,
-        "first": 1788608500,
-        "last": 1788726643,
-        "buyTimes": [
-          1788714944,
-          1788608500
-        ],
-        "buySizes": [
-          0.7442616050000197,
-          0.48279902699999866
-        ]
+        "trader": "F2UcFMHjPFjkwbfsFQqMMPdKPQvzhCbzb8d5WKXUn5Ci",
+        "buys": 0,
+        "sells": 4,
+        "solIn": 0,
+        "solOut": 2.415768854999982,
+        "tokensIn": 0,
+        "tokensOut": 3613761.127309,
+        "first": 1788628369,
+        "last": 1788812937,
+        "buyTimes": [],
+        "buySizes": []
       },
       {
         "trader": "CafeawmMxZPA8gUdVYeEBcQnNJawFM6yEiypaGWJSdsb",
@@ -3702,6 +4999,23 @@
         ]
       },
       {
+        "trader": "FsVJMsQubWCYpx79jfUJo5Uf6aszzUuK43rPcEekRdGJ",
+        "buys": 1,
+        "sells": 3,
+        "solIn": 0.48279902699999866,
+        "solOut": 1.1907768549999957,
+        "tokensIn": 693780.1383,
+        "tokensOut": 1696092.684117,
+        "first": 1788608500,
+        "last": 1788726643,
+        "buyTimes": [
+          1788608500
+        ],
+        "buySizes": [
+          0.48279902699999866
+        ]
+      },
+      {
         "trader": "Dq1i7JqR9D7M8zVcSjjHMGxmm4xGJzUenag8WwidwRUf",
         "buys": 0,
         "sells": 1,
@@ -3711,19 +5025,6 @@
         "tokensOut": 1547081.076689,
         "first": 1788717879,
         "last": 1788717879,
-        "buyTimes": [],
-        "buySizes": []
-      },
-      {
-        "trader": "F2UcFMHjPFjkwbfsFQqMMPdKPQvzhCbzb8d5WKXUn5Ci",
-        "buys": 0,
-        "sells": 2,
-        "solIn": 0,
-        "solOut": 1.0914406759999622,
-        "tokensIn": 0,
-        "tokensOut": 1599807.9818040002,
-        "first": 1788628369,
-        "last": 1788782991,
         "buyTimes": [],
         "buySizes": []
       },
@@ -3899,6 +5200,36 @@
         ]
       },
       {
+        "trader": "64YiWfr8ChwpRny95toctZS3t6pAVs148DWNLq9mVzdk",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 0.6245618969999782,
+        "tokensIn": 0,
+        "tokensOut": 250000,
+        "first": 1786393302,
+        "last": 1786393302,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "BPqLWSVE3orPiMEPp1gLp29VoDJ7Tw18pTobjeJ33pGf",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.6186339070000031,
+        "solOut": 0,
+        "tokensIn": 332483.896053,
+        "tokensOut": 0,
+        "first": 1786541744,
+        "last": 1786541744,
+        "buyTimes": [
+          1786541744
+        ],
+        "buySizes": [
+          0.6186339070000031
+        ]
+      },
+      {
         "trader": "C9Qy5tGiVrSx5pX2VYctJgYgCUxPru71m561USh64h1c",
         "buys": 1,
         "sells": 0,
@@ -3930,6 +5261,53 @@
         ],
         "buySizes": [
           0.5539119350000021
+        ]
+      },
+      {
+        "trader": "3fuga4fDgNY974eJDfBgYX8pwTCW9wtWS9qoxSWdSPRu",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 0.5310277529999894,
+        "tokensIn": 0,
+        "tokensOut": 564388.033154,
+        "first": 1787916193,
+        "last": 1787916193,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "D8mcX3xaKW2f7itTDApxKBLbTVsfoMsQicv6nLAktuCw",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.48180186600001207,
+        "solOut": 0,
+        "tokensIn": 566544.2122230008,
+        "tokensOut": 0,
+        "first": 1788144259,
+        "last": 1788144259,
+        "buyTimes": [
+          1788144259
+        ],
+        "buySizes": [
+          0.48180186600001207
+        ]
+      },
+      {
+        "trader": "7AcEuzT5PGsqtV8VwxdCLpsCQm6JE4eN6WoDrUBvEpEm",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.44944985400002224,
+        "solOut": 0,
+        "tokensIn": 252299.226442,
+        "tokensOut": 0,
+        "first": 1787139926,
+        "last": 1787139926,
+        "buyTimes": [
+          1787139926
+        ],
+        "buySizes": [
+          0.44944985400002224
         ]
       },
       {
@@ -3999,20 +5377,20 @@
         ]
       },
       {
-        "trader": "GcWLBhZdaJxNAbCzzUnWyPQQ6ZDHF7saZQA8vhL6yXVn",
+        "trader": "DGZD8TCEiyRGFbZwn9cet1ZmNeGovGLTpsK8YTkjodJh",
         "buys": 1,
         "sells": 0,
-        "solIn": 0.29703557199999864,
+        "solIn": 0.30491393400001243,
         "solOut": 0,
-        "tokensIn": 398679.70007300004,
+        "tokensIn": 208230.85171699998,
         "tokensOut": 0,
-        "first": 1788578629,
-        "last": 1788578629,
+        "first": 1787499006,
+        "last": 1787499006,
         "buyTimes": [
-          1788578629
+          1787499006
         ],
         "buySizes": [
-          0.29703557199999864
+          0.30491393400001243
         ]
       },
       {
@@ -4062,6 +5440,36 @@
           0.06265754000000356
         ],
         "repeatSize": 1
+      },
+      {
+        "trader": "9vasynM13ZZ4A19airAfQ96qRNgVN1MR8qM7k3Tp5pQ5",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 0.23450495200000887,
+        "tokensIn": 0,
+        "tokensOut": 117439.783898,
+        "first": 1786029489,
+        "last": 1786029489,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "HzUWCGMfLFo3dmus5VYA5oFemEzg59YzSpcsE3y7n2WF",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.16439161700000682,
+        "solOut": 0,
+        "tokensIn": 110436.316618,
+        "tokensOut": 0,
+        "first": 1787770823,
+        "last": 1787770823,
+        "buyTimes": [
+          1787770823
+        ],
+        "buySizes": [
+          0.16439161700000682
+        ]
       },
       {
         "trader": "7f2cy1Ymv1wDnFU43i9aWcvsGXHiPqKd7RQyDUV2QwcX",
@@ -4145,25 +5553,6 @@
         "buySizes": []
       },
       {
-        "trader": "CnAkBGpdNnETcghJGbFdt1ku7XcHCi2pmTk1B6dCDFJV",
-        "buys": 2,
-        "sells": 0,
-        "solIn": 0.054551843999973926,
-        "solOut": 0,
-        "tokensIn": 77874.56807799998,
-        "tokensOut": 0,
-        "first": 1788578805,
-        "last": 1788580612,
-        "buyTimes": [
-          1788580612,
-          1788578805
-        ],
-        "buySizes": [
-          0.036495234999989634,
-          0.01805660899998429
-        ]
-      },
-      {
         "trader": "5nDSyKeYZmv3k53HLUmASACwYoqHijniiAfWhMCSRBGu",
         "buys": 1,
         "sells": 0,
@@ -4181,6 +5570,19 @@
         ]
       },
       {
+        "trader": "hnu5iBK8UoHb51UFsH1RYTUAYdrhjHvV5YMTf9T1CYN",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 0.0479891819999807,
+        "tokensIn": 0,
+        "tokensOut": 47973.58225900002,
+        "first": 1787022761,
+        "last": 1787022761,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
         "trader": "7VgLRqSy4gN24UnYpwKihRcL6m6c77X74dNn1r13gURx",
         "buys": 0,
         "sells": 1,
@@ -4190,19 +5592,6 @@
         "tokensOut": 56944.978741,
         "first": 1788759743,
         "last": 1788759743,
-        "buyTimes": [],
-        "buySizes": []
-      },
-      {
-        "trader": "Diae5wKW4Wt8MEvT2Dv4AQjxQGfaffCMzpE1Ykoy12F4",
-        "buys": 0,
-        "sells": 1,
-        "solIn": 0,
-        "solOut": 0.03478085300000089,
-        "tokensIn": 0,
-        "tokensOut": 46943.419911,
-        "first": 1788577130,
-        "last": 1788577130,
         "buyTimes": [],
         "buySizes": []
       },
@@ -4226,6 +5615,25 @@
         ]
       },
       {
+        "trader": "Gvp1PXk4qgoUzoaTRbZmx3WdY7taPrqV6j2fbBVxdd4R",
+        "buys": 2,
+        "sells": 0,
+        "solIn": 0.029801124000016443,
+        "solOut": 0,
+        "tokensIn": 43958.42734399997,
+        "tokensOut": 0,
+        "first": 1788809867,
+        "last": 1788809908,
+        "buyTimes": [
+          1788809908,
+          1788809867
+        ],
+        "buySizes": [
+          0.005098967000009225,
+          0.02470215700000722
+        ]
+      },
+      {
         "trader": "9nDmTeKEpDKYmJaN9VYFVjm9V1DzwTJ5m5ndsUeaEAR9",
         "buys": 1,
         "sells": 0,
@@ -4240,6 +5648,53 @@
         ],
         "buySizes": [
           0.027881886000017175
+        ]
+      },
+      {
+        "trader": "6Qt8a3Y6B4nekSRQ1p2e5yqP5bSCbE6HzUTdWwdfYXmR",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.025635292999993453,
+        "solOut": 0,
+        "tokensIn": 13642.330354,
+        "tokensOut": 0,
+        "first": 1786667107,
+        "last": 1786667107,
+        "buyTimes": [
+          1786667107
+        ],
+        "buySizes": [
+          0.025635292999993453
+        ]
+      },
+      {
+        "trader": "FYX5JQ2kP7TD8gWb9WP1tjmwWWUAzi8edEZTr5Z8F1ck",
+        "buys": 0,
+        "sells": 1,
+        "solIn": 0,
+        "solOut": 0.025271705000022848,
+        "tokensIn": 0,
+        "tokensOut": 26425.23626,
+        "first": 1787016482,
+        "last": 1787016482,
+        "buyTimes": [],
+        "buySizes": []
+      },
+      {
+        "trader": "Fm3PMXV9hEWNEq2yrYmDaijSnc91aHEcKei8StzjRM89",
+        "buys": 1,
+        "sells": 0,
+        "solIn": 0.024591641000029085,
+        "solOut": 0,
+        "tokensIn": 8645.668989,
+        "tokensOut": 0,
+        "first": 1786368334,
+        "last": 1786368334,
+        "buyTimes": [
+          1786368334
+        ],
+        "buySizes": [
+          0.024591641000029085
         ]
       },
       {
@@ -4277,19 +5732,6 @@
         ]
       },
       {
-        "trader": "63WDVqonCfXGdcKqmD6bPGFKbdkQyr32s72gEQkxytrN",
-        "buys": 0,
-        "sells": 1,
-        "solIn": 0,
-        "solOut": 0.000858179000005066,
-        "tokensIn": 0,
-        "tokensOut": 1185.506878,
-        "first": 1788578771,
-        "last": 1788578771,
-        "buyTimes": [],
-        "buySizes": []
-      },
-      {
         "trader": "7fbrW6eiGKYz6j8zrEBkFKh7U6peURLvbKN96YzS42Ki",
         "buys": 0,
         "sells": 1,
@@ -4320,49 +5762,49 @@
         "name": "Wrapped SOL",
         "symbol": "SOL"
       },
-      "priceNative": "0.0000006202",
-      "priceUsd": "0.00006440",
+      "priceNative": "0.0000006434",
+      "priceUsd": "0.00006688",
       "txns": {
         "m5": {
           "buys": 0,
           "sells": 0
         },
         "h1": {
-          "buys": 6,
-          "sells": 2
+          "buys": 0,
+          "sells": 7
         },
         "h6": {
-          "buys": 18,
-          "sells": 10
+          "buys": 20,
+          "sells": 15
         },
         "h24": {
-          "buys": 22,
-          "sells": 18
+          "buys": 25,
+          "sells": 24
         }
       },
       "volume": {
-        "h24": 3730.91,
-        "h6": 2546.31,
-        "h1": 711.78,
+        "h24": 4246.13,
+        "h6": 3375.85,
+        "h1": 335.54,
         "m5": 0
       },
       "priceChange": {
-        "h1": -5.06,
-        "h6": -11.64,
-        "h24": -16.02
+        "h1": -5.43,
+        "h6": -8.72,
+        "h24": -13.74
       },
       "liquidity": {
-        "usd": 31638.31,
-        "base": 245771505,
-        "quote": 152.2371
+        "usd": 32258.36,
+        "base": 240072453,
+        "quote": 155.871
       },
-      "fdv": 64408,
-      "marketCap": 64408,
+      "fdv": 66883,
+      "marketCap": 66883,
       "pairCreatedAt": 1766296906000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/u19WDO1KlPbTuubD?width=800&height=800&quality=95&format=auto",
         "header": "https://cdn.dexscreener.com/cms/images/N4Fhxg9zesHNr9kP?width=1500&height=500&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/B1rGc4HM4Q6q4nU78ADM7fGguxqiasH53fh6ViDXpump?timestamp=1788807600000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/solana/B1rGc4HM4Q6q4nU78ADM7fGguxqiasH53fh6ViDXpump?timestamp=1788813900000",
         "websites": [
           {
             "url": "https://bloxx.gg",
@@ -4390,25 +5832,25 @@
       }
     },
     "geckoPool": {
-      "base_token_price_usd": "0.0000643984297558862608711875208626064847955939283890891266582596188",
-      "base_token_price_native_currency": "0.000000617955612369499",
-      "quote_token_price_usd": "103.822239106445498387752719254105564101799855209",
+      "base_token_price_usd": "0.00006697771039178637351517631595930542065085512260061228759351061",
+      "base_token_price_native_currency": "0.000000646956316082517",
+      "quote_token_price_usd": "104.084828461588663628327736734468922878209454341",
       "quote_token_price_native_currency": "1.0",
-      "base_token_price_quote_token": "0.0000006179556124",
-      "quote_token_price_base_token": "1618239.20680255",
+      "base_token_price_quote_token": "0.0000006469563161",
+      "quote_token_price_base_token": "1545699.41608307",
       "address": "5hUhovgEDZRLEFT7Dvqg7ctfQo221BJ5obEn3EgtBGmX",
       "name": "BLOXX / SOL",
       "pool_created_at": "2025-12-21T06:01:47Z",
-      "token_price_usd": "0.0000643984297558862608711875208626064847955939283890891266582596188",
-      "fdv_usd": "64397.1399840707",
-      "market_cap_usd": "64397.1399840707",
+      "token_price_usd": "0.00006697771039178637351517631595930542065085512260061228759351061",
+      "fdv_usd": "66976.3689560709",
+      "market_cap_usd": "66976.3689560709",
       "price_change_percentage": {
         "m5": "0",
-        "m15": "-0.23",
-        "m30": "-4.51",
-        "h1": "-3.66",
-        "h6": "-13.38",
-        "h24": "-15.98"
+        "m15": "0",
+        "m30": "-2.08",
+        "h1": "-3.9",
+        "h6": "-6.87",
+        "h24": "-13.63"
       },
       "transactions": {
         "m5": {
@@ -4418,45 +5860,45 @@
           "sellers": 0
         },
         "m15": {
-          "buys": 3,
-          "sells": 1,
-          "buyers": 2,
-          "sellers": 1
+          "buys": 0,
+          "sells": 0,
+          "buyers": 0,
+          "sellers": 0
         },
         "m30": {
-          "buys": 4,
-          "sells": 1,
-          "buyers": 3,
-          "sellers": 1
+          "buys": 0,
+          "sells": 4,
+          "buyers": 0,
+          "sellers": 2
         },
         "h1": {
-          "buys": 6,
-          "sells": 2,
-          "buyers": 4,
+          "buys": 0,
+          "sells": 7,
+          "buyers": 0,
           "sellers": 2
         },
         "h6": {
-          "buys": 18,
-          "sells": 10,
+          "buys": 20,
+          "sells": 15,
           "buyers": 10,
           "sellers": 7
         },
         "h24": {
-          "buys": 22,
-          "sells": 18,
-          "buyers": 12,
-          "sellers": 14
+          "buys": 25,
+          "sells": 24,
+          "buyers": 14,
+          "sellers": 13
         }
       },
       "volume_usd": {
         "m5": "0.0",
-        "m15": "621.7675585915",
-        "m30": "624.656220731",
-        "h1": "711.9629918747",
-        "h6": "2546.2495132589",
-        "h24": "3730.2229174317"
+        "m15": "0.0",
+        "m30": "220.9569819924",
+        "h1": "335.5166936486",
+        "h6": "3377.207897733",
+        "h24": "4247.2966789458"
       },
-      "reserve_in_usd": "31576.5678"
+      "reserve_in_usd": "32360.214"
     }
   },
   "rugcheck": {
@@ -4508,7 +5950,7 @@
         "liquidityAAccount": {
           "mint": "B1rGc4HM4Q6q4nU78ADM7fGguxqiasH53fh6ViDXpump",
           "owner": "5hUhovgEDZRLEFT7Dvqg7ctfQo221BJ5obEn3EgtBGmX",
-          "amount": 245771505982424,
+          "amount": 240072453619987,
           "delegate": null,
           "state": 1,
           "delegatedAmount": 0,
@@ -4517,7 +5959,7 @@
         "liquidityBAccount": {
           "mint": "So11111111111111111111111111111111111111112",
           "owner": "5hUhovgEDZRLEFT7Dvqg7ctfQo221BJ5obEn3EgtBGmX",
-          "amount": 152237139623,
+          "amount": 155871053786,
           "delegate": null,
           "state": 1,
           "delegatedAmount": 0,
@@ -4527,14 +5969,14 @@
           "baseMint": "B1rGc4HM4Q6q4nU78ADM7fGguxqiasH53fh6ViDXpump",
           "quoteMint": "So11111111111111111111111111111111111111112",
           "lpMint": "DcfNKNQ8tHF6t1nrUkVP7AgtyeaTYAgow6Spu9TK12vy",
-          "quotePrice": 103.92308429649991,
-          "basePrice": 0.00006446370793528526,
-          "base": 245771505.982424,
-          "quote": 152.237139623,
+          "quotePrice": 104.18012143679947,
+          "basePrice": 0.00006707060856492745,
+          "base": 240072453.619987,
+          "quote": 155.871053786,
           "reserveSupply": 4193388318500,
           "currentSupply": 0,
-          "quoteUSD": 15820.953094099053,
-          "baseUSD": 15843.342580466195,
+          "quoteUSD": 16238.665311907382,
+          "baseUSD": 16101.805563967848,
           "pctReserve": 0,
           "pctSupply": 0,
           "holders": null,
@@ -4543,7 +5985,7 @@
           "lpLocked": 4193388318500,
           "lpUnlocked": 0,
           "lpLockedPct": 100,
-          "lpLockedUSD": 31664.29567456525,
+          "lpLockedUSD": 32340.47087587523,
           "lpMaxSupply": 0,
           "lpCurrentSupply": 0,
           "lpTotalSupply": 4193388318500
@@ -4600,14 +6042,14 @@
           "baseMint": "B1rGc4HM4Q6q4nU78ADM7fGguxqiasH53fh6ViDXpump",
           "quoteMint": "So11111111111111111111111111111111111111112",
           "lpMint": "11111111111111111111111111111111",
-          "quotePrice": 103.92308429649991,
-          "basePrice": 0.00006446370793528526,
+          "quotePrice": 104.18012143679947,
+          "basePrice": 0.00006707060856492745,
           "base": 686617.884755,
           "quote": 0.023901648,
           "reserveSupply": 0,
           "currentSupply": 0,
-          "quoteUSD": 2.4839329799292686,
-          "baseUSD": 44.26193478598967,
+          "quoteUSD": 2.490076591179635,
+          "baseUSD": 46.05187938208107,
           "pctReserve": 0,
           "pctSupply": 0,
           "holders": null,
@@ -4673,14 +6115,14 @@
           "baseMint": "B1rGc4HM4Q6q4nU78ADM7fGguxqiasH53fh6ViDXpump",
           "quoteMint": "So11111111111111111111111111111111111111112",
           "lpMint": "11111111111111111111111111111111",
-          "quotePrice": 103.92308429649991,
-          "basePrice": 0.00006446370793528526,
+          "quotePrice": 104.18012143679947,
+          "basePrice": 0.00006707060856492745,
           "base": 333465.363338,
           "quote": 0.157211351,
           "reserveSupply": 0,
           "currentSupply": 0,
-          "quoteUSD": 16.337888482339636,
-          "baseUSD": 21.496413788754616,
+          "quoteUSD": 16.378297638423305,
+          "baseUSD": 22.36572485440431,
           "pctReserve": 0,
           "pctSupply": 0,
           "holders": null,
@@ -4746,14 +6188,14 @@
           "baseMint": "B1rGc4HM4Q6q4nU78ADM7fGguxqiasH53fh6ViDXpump",
           "quoteMint": "So11111111111111111111111111111111111111112",
           "lpMint": "11111111111111111111111111111111",
-          "quotePrice": 103.92308429649991,
-          "basePrice": 0.00006446370793528526,
+          "quotePrice": 104.18012143679947,
+          "basePrice": 0.00006707060856492745,
           "base": 12651.44465,
           "quote": 0.120031731,
           "reserveSupply": 0,
           "currentSupply": 0,
-          "quoteUSD": 12.4740676989678,
-          "baseUSD": 0.8155590328770272,
+          "quoteUSD": 12.504920311849247,
+          "baseUSD": 0.8485400919009956,
           "pctReserve": 0,
           "pctSupply": 0,
           "holders": null,
@@ -4820,13 +6262,13 @@
           "quoteMint": "BaWyD9P8ctkZ6if2umqj7htV91YuuouzUrMFsJh9BAGS",
           "lpMint": "11111111111111111111111111111111",
           "quotePrice": 0.0000020678391572142074,
-          "basePrice": 0.00006446370793528526,
+          "basePrice": 0.00006707060856492745,
           "base": 3676.919773,
           "quote": 100399.606567459,
           "reserveSupply": 0,
           "currentSupply": 0,
           "quoteUSD": 0.20761023782909244,
-          "baseUSD": 0.23702788234814737,
+          "baseUSD": 0.2466132468195249,
           "pctReserve": 0,
           "pctSupply": 0,
           "holders": null,
@@ -4892,14 +6334,14 @@
           "baseMint": "B1rGc4HM4Q6q4nU78ADM7fGguxqiasH53fh6ViDXpump",
           "quoteMint": "So11111111111111111111111111111111111111112",
           "lpMint": "11111111111111111111111111111111",
-          "quotePrice": 103.92308429649991,
-          "basePrice": 0.00006446370793528526,
+          "quotePrice": 104.18012143679947,
+          "basePrice": 0.00006707060856492745,
           "base": 78.83765,
           "quote": 0.000607736,
           "reserveSupply": 0,
           "currentSupply": 0,
-          "quoteUSD": 0.06315779955801767,
-          "baseUSD": 0.005082167243904242,
+          "quoteUSD": 0.06331401028151476,
+          "baseUSD": 0.005287689163328752,
           "pctReserve": 0,
           "pctSupply": 0,
           "holders": null,
@@ -4965,14 +6407,14 @@
           "baseMint": "B1fULjbpF5YLDQv47Cvu4VpU5akjauR9R52u1Rpxk6UL",
           "quoteMint": "B1rGc4HM4Q6q4nU78ADM7fGguxqiasH53fh6ViDXpump",
           "lpMint": "11111111111111111111111111111111",
-          "quotePrice": 0.00006446370793528526,
-          "basePrice": 0.000009114026477817934,
+          "quotePrice": 0.00006707060856492745,
+          "basePrice": 0.000008404543256460556,
           "base": 8.3e-7,
           "quote": 890.30977,
           "reserveSupply": 0,
           "currentSupply": 0,
-          "quoteUSD": 0.05739266898521099,
-          "baseUSD": 7.564641976588884e-12,
+          "quoteUSD": 0.059713618085200586,
+          "baseUSD": 6.975770902862262e-12,
           "pctReserve": 0,
           "pctSupply": 0,
           "holders": null,
@@ -5038,14 +6480,14 @@
           "baseMint": "So11111111111111111111111111111111111111112",
           "quoteMint": "B1rGc4HM4Q6q4nU78ADM7fGguxqiasH53fh6ViDXpump",
           "lpMint": "11111111111111111111111111111111",
-          "quotePrice": 0.00006446370793528526,
-          "basePrice": 103.92308429649991,
+          "quotePrice": 0.00006707060856492745,
+          "basePrice": 104.18012143679947,
           "base": 0.000259792,
           "quote": 190.929218,
           "reserveSupply": 0,
           "currentSupply": 0,
-          "quoteUSD": 0.01230800534546441,
-          "baseUSD": 0.026998385915556304,
+          "quoteUSD": 0.0128057388440857,
+          "baseUSD": 0.027065162108309008,
           "pctReserve": 0,
           "pctSupply": 0,
           "holders": null,
@@ -5111,14 +6553,14 @@
           "baseMint": "B1rGc4HM4Q6q4nU78ADM7fGguxqiasH53fh6ViDXpump",
           "quoteMint": "So11111111111111111111111111111111111111112",
           "lpMint": "11111111111111111111111111111111",
-          "quotePrice": 103.92308429649991,
-          "basePrice": 0.00006446370793528526,
+          "quotePrice": 104.18012143679947,
+          "basePrice": 0.00006707060856492745,
           "base": 0.000001,
           "quote": 0.000275008,
           "reserveSupply": 0,
           "currentSupply": 0,
-          "quoteUSD": 0.028579679566211845,
-          "baseUSD": 6.446370793528525e-11,
+          "quoteUSD": 0.028650366836091345,
+          "baseUSD": 6.707060856492744e-11,
           "pctReserve": 0,
           "pctSupply": 0,
           "holders": null,
@@ -5184,14 +6626,14 @@
           "baseMint": "B1rGc4HM4Q6q4nU78ADM7fGguxqiasH53fh6ViDXpump",
           "quoteMint": "So11111111111111111111111111111111111111112",
           "lpMint": "11111111111111111111111111111111",
-          "quotePrice": 103.92308429649991,
-          "basePrice": 0.00006446370793528526,
+          "quotePrice": 104.18012143679947,
+          "basePrice": 0.00006707060856492745,
           "base": 0.000001,
           "quote": 0.000265461,
           "reserveSupply": 0,
           "currentSupply": 0,
-          "quoteUSD": 0.027587525880433162,
-          "baseUSD": 6.446370793528525e-11,
+          "quoteUSD": 0.027655759216734223,
+          "baseUSD": 6.707060856492744e-11,
           "pctReserve": 0,
           "pctSupply": 0,
           "holders": null,
@@ -5257,14 +6699,14 @@
           "baseMint": "B1rGc4HM4Q6q4nU78ADM7fGguxqiasH53fh6ViDXpump",
           "quoteMint": "So11111111111111111111111111111111111111112",
           "lpMint": "11111111111111111111111111111111",
-          "quotePrice": 103.92308429649991,
-          "basePrice": 0.00006446370793528526,
+          "quotePrice": 104.18012143679947,
+          "basePrice": 0.00006707060856492745,
           "base": 0.000001,
           "quote": 0.000048783,
           "reserveSupply": 0,
           "currentSupply": 0,
-          "quoteUSD": 0.005069679821236155,
-          "baseUSD": 6.446370793528525e-11,
+          "quoteUSD": 0.005082218864051388,
+          "baseUSD": 6.707060856492744e-11,
           "pctReserve": 0,
           "pctSupply": 0,
           "holders": null,
@@ -5296,7 +6738,7 @@
         },
         "mintBAccount": {
           "mintAuthority": "BJE5MMbqXjVwjAF7oxwPYXnTXDyspzZyt4vwenNw5ruG",
-          "supply": 8193452754257474,
+          "supply": 8190475463982934,
           "decimals": 6,
           "isInitialized": true,
           "freezeAuthority": "7dGbd2QZcCKcTndnHcTL8q7SMVXAkp688NTQYwrRCrar"
@@ -5331,13 +6773,13 @@
           "quoteMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
           "lpMint": "11111111111111111111111111111111",
           "quotePrice": 1,
-          "basePrice": 0.00006446370793528526,
+          "basePrice": 0.00006707060856492745,
           "base": 0.000001,
           "quote": 0.000001,
           "reserveSupply": 0,
           "currentSupply": 0,
           "quoteUSD": 0.000001,
-          "baseUSD": 6.446370793528525e-11,
+          "baseUSD": 6.707060856492744e-11,
           "pctReserve": 0,
           "pctSupply": 0,
           "holders": null,
