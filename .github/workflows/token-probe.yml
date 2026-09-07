@@ -1,0 +1,67 @@
+name: Token holder forensics
+
+# Runs tools/token-forensics.ts against a Solana mint. Like probe.yml this
+# exists because the dev sandbox has no network access to Solana RPCs or DEX
+# APIs; the Actions runner does. The markdown report is printed to the job log
+# and committed under investigations/ on the branch that ran it.
+
+on:
+  workflow_dispatch:
+    inputs:
+      mint:
+        description: 'SPL token mint address'
+        type: string
+        required: true
+        default: 'HHf2VfXSPUVqQth6tXypfdUX2vawCiVKfkbAX4CJpump'
+      top:
+        description: 'Holders to trace funding for (expensive: ~4 RPC calls each)'
+        type: string
+        default: '150'
+      activity:
+        description: 'Holders to profile activity for (~1 RPC call each)'
+        type: string
+        default: '400'
+
+permissions:
+  contents: write
+
+jobs:
+  forensics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Analyse holders
+        env:
+          # Optional: comma-separated private RPC URLs (Helius, QuickNode…)
+          # as a repository secret for faster, un-throttled runs.
+          SOLANA_RPC_URLS: ${{ secrets.SOLANA_RPC_URLS }}
+        run: |
+          node --experimental-strip-types tools/token-forensics.ts \
+            --mint "${{ inputs.mint }}" --top "${{ inputs.top }}" --activity "${{ inputs.activity }}" \
+            --out investigations
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: forensics-${{ inputs.mint }}
+          path: investigations/
+
+      - name: Commit report
+        run: |
+          git config user.name "token-forensics-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add investigations/
+          if git diff --cached --quiet; then
+            echo "No report changes."
+          else
+            git commit -m "forensics: ${{ inputs.mint }} $(date -u +'%Y-%m-%d %H:%MZ')"
+            git pull --rebase origin "${{ github.ref_name }}" || true
+            git push origin "${{ github.ref_name }}"
+          fi
