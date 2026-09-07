@@ -56,6 +56,30 @@ holder-count campaign, not money. Thousands of holders sharing 30% of supply are
 **Bonded in under three minutes = bundled launch.** Pump.fun graduation needs ~85 SOL of buys;
 that speed only happens pre-arranged.
 
+**Purpose-built wallets.** The strongest insider tell that no link test catches. From the
+JSON: `firstTxTime` (wallet birth) vs `provenance.firstSeen` (first token activity) vs
+`txCount`. A wallet born an hour before spending 111 SOL on a token with a few hundred dollars
+of daily volume, then idle forever, knew what it was buying. Three or four such wallets in a
+top-12 move the "team-linked" share materially. Creation times cluster in the team's
+timezone. Report them as a table: holds, created, first buy, lifetime txs.
+
+**Validator withdraw authority.** If the project runs a validator, the vote account's
+authorized withdrawer is a wallet the team demonstrably controls. Any holder that is, was
+funded by, or transacted with it is team. This is identity, not inference.
+
+**SOL flows between candidates.** First-tx funders miss later relationships. Parsing the last
+40 transactions of each insider candidate for SOL transfers finds direct flows between them
+and shared low-activity counterparties (a hub). Shared 1000+-tx counterparties are exchanges.
+
+**Candles before the tape.** Trackers' market caps are stale snapshots; the pool's daily
+candles show the real path, the drawdown from high, and which day the big moves happened.
+Cross-check a burst day in the transaction histogram against the candle: thousands of
+non-swap transactions on a red day are arbitrage bots cycling between pools after a dump.
+
+**Market beta.** Correlation of token/SOL returns with SOL and BTC on trade days. Below 0.2 is
+noise. Decompose the USD move: the SOL leg is what the token inherits from the market; the
+rest is the token's own story. Users see the SOL leg and read it as "following Bitcoin."
+
 ## Things that looked like findings and were not
 
 **Portfolio-fingerprint clusters.** Seven busy wallets sharing 38 obscure tokens looked like

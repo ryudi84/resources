@@ -25,6 +25,15 @@ pulls, for one mint:
 - funder hops, funder clusters, portfolio-fingerprint clusters
 - a "bot fleet fingerprint" for any portfolio cluster: fee payer, routing program, tip/fee
   recipients, and whether the shared tokens were bought or airdropped spam
+- 90 days of daily candles for the pool (high, drawdown, largest daily moves, volume)
+- the project's validator (by name) and its withdraw authority, checked against holders
+- SOL flows among insider candidates: direct transfers and shared counterparties
+- where the creator's and top holders' outbound token transfers ended up
+
+`scripts/market-beta.ts` (own fast workflow, `assets/market-beta.yml`) then answers "is it
+following SOL / Bitcoin": USD-move decomposition into the SOL leg and the token-specific
+leg, correlation and beta on trade days, lagged correlation, and what Bitcoin did on the
+token's step days. Run it on any report JSON; it takes under a minute.
 
 It writes `investigations/<SYMBOL>-<mint8>.md` (human report) and `.json` (everything, for
 follow-up analysis with a few lines of Python). `references/method.md` explains each signal
@@ -76,6 +85,10 @@ turned out to be artifacts. The core discipline:
 - **Distrust portfolio clusters until checked.** Active wallets all receive the same spam
   airdrops. The fleet fingerprint (shared fee payer, shared tool fee account, shared funder)
   is what proves one operator; if those are absent, say so and retract.
+- **"Independent" means "no link found," not "not the team."** A careful insider funds each
+  wallet from an exchange and no link test fires. What they cannot hide is behaviour: run the
+  purpose-built test (wallet born within hours of its first buy, tiny lifetime activity,
+  large buy of an illiquid token) before calling any whale independent.
 - **Retract out loud.** When a later run overturns an earlier claim, say "I was wrong about X
   and here is why" before anything else. Trust depends on it.
 

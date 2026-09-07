@@ -59,6 +59,13 @@ commits its report back to the branch. This mirrors the repo's existing `probe.y
 If a new failure appears: read the job log (stderr diagnostics are prefixed `!`), fix the
 tool, push, and re-dispatch. Keep every phase soft-failing so a partial report still lands.
 
+## Second tool: market-beta
+
+`tools/market-beta.ts --report investigations/<file>.json` reads the report's swap tape,
+fetches SOL and BTC daily closes (Binance, CoinGecko fallback) and writes `<file>-beta.md`.
+Its workflow `market-beta.yml` has its own concurrency group and finishes in under a minute;
+dispatch it by id with input `report`. The first run of a new workflow needs its push trigger.
+
 ## Reading results without a commit
 
 The workflow uploads `investigations/` as an artifact and prints the full markdown to the
