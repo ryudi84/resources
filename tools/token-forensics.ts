@@ -174,14 +174,54 @@ async function pmap<T, R>(items: T[], limit: number, fn: (t: T, i: number) => Pr
 
 // --------------------------------------------------------------------- RPC
 
-// `||` not `??`: an unset Actions secret arrives as an empty string.
-const RPC_URLS = (
-  process.env.SOLANA_RPC_URLS ||
-  'https://api.mainnet-beta.solana.com,https://solana.api.onfinality.io/public,https://rpc.ankr.com/solana'
-)
-  .split(',')
-  .map((s) => s.trim())
-  .filter(Boolean);
+/**
+ * Keyless public endpoints. They are probed at startup (getSlot) and only the
+ * responsive ones are kept, fastest first; SOLANA_RPC_URLS (comma-separated,
+ * e.g. a Helius/QuickNode key URL) is prepended and always preferred.
+ * `||` not `??`: an unset Actions secret arrives as an empty string.
+ */
+const RPC_CANDIDATES = [
+  ...(process.env.SOLANA_RPC_URLS || '').split(',').map((s) => s.trim()).filter(Boolean),
+  'https://solana.api.onfinality.io/public',
+  'https://solana.blockpi.network/v1/rpc/public',
+  'https://endpoints.omniatech.io/v1/sol/mainnet/public',
+  'https://solana-mainnet.g.alchemy.com/v2/demo',
+  'https://solana.leorpc.com/?api_key=FREE',
+  'https://solana.public-rpc.com',
+  'https://mainnet.rpcpool.com',
+  'https://api.mainnet-beta.solana.com',
+  'https://rpc.ankr.com/solana',
+  'https://solana-rpc.publicnode.com',
+  'https://solana.drpc.org',
+];
+let RPC_URLS: string[] = [...RPC_CANDIDATES];
+
+async function selectRpcEndpoints(): Promise<void> {
+  const pinned = (process.env.SOLANA_RPC_URLS || '').split(',').map((s) => s.trim()).filter(Boolean);
+  const results = await Promise.all(
+    RPC_CANDIDATES.map(async (url) => {
+      const t0 = Date.now();
+      try {
+        const res = await fetch(url, {
+          method: 'POST',
+          headers: { 'content-type': 'application/json', 'user-agent': UA },
+          body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'getSlot', params: [] }),
+          signal: AbortSignal.timeout(8000),
+        });
+        const body = (await res.json()) as { result?: number; error?: { message: string } };
+        if (!res.ok || typeof body.result !== 'number') return { url, ms: Infinity, why: body.error?.message ?? `HTTP ${res.status}` };
+        return { url, ms: Date.now() - t0 };
+      } catch (e) {
+        return { url, ms: Infinity, why: String((e as Error).message ?? e) };
+      }
+    }),
+  );
+  const ok = results.filter((r) => r.ms < Infinity).sort((a, b) => a.ms - b.ms);
+  for (const r of results) console.error(`  rpc ${r.ms < Infinity ? `${r.ms}ms` : 'FAIL'} ${r.url}${r.why ? ` (${r.why})` : ''}`);
+  RPC_URLS = [...pinned.filter((u) => ok.some((r) => r.url === u)), ...ok.map((r) => r.url).filter((u) => !pinned.includes(u))];
+  if (RPC_URLS.length === 0) RPC_URLS = [...RPC_CANDIDATES];
+  console.error(`  using ${RPC_URLS.length} endpoint(s): ${RPC_URLS.join(', ')}`);
+}
 
 let rpcIdx = 0;
 let rpcCalls = 0;
@@ -204,7 +244,7 @@ function liveRpcUrl(): string | undefined {
 
 async function rpc<T = unknown>(method: string, params: unknown[], timeoutMs = 60_000): Promise<T> {
   let lastErr: unknown = new Error(`${method}: all RPC endpoints failed`);
-  for (let attempt = 0; attempt < RPC_URLS.length * 4; attempt++) {
+  for (let attempt = 0; attempt < Math.max(24, RPC_URLS.length * 6); attempt++) {
     const url = liveRpcUrl();
     if (!url) break;
     const wait = lastRpcAt + RPC_MIN_GAP_MS - Date.now();
@@ -232,8 +272,9 @@ async function rpc<T = unknown>(method: string, params: unknown[], timeoutMs = 6
         console.error(`  ! ${url} rejected (${String((e as Error).message)}); dropping endpoint`);
         deadRpc.add(url);
       }
+      else if (attempt % 6 === 5) console.error(`  ! ${method} via ${url}: ${String((e as Error).message ?? e)} (attempt ${attempt + 1})`);
       rpcIdx++;
-      await sleep(300 * Math.min(attempt + 1, 10));
+      await sleep(Math.min(500 * (attempt + 1), 8000));
     }
   }
   throw lastErr;
@@ -305,7 +346,13 @@ function mergeRugcheckHolders(holders: Holder[], rug: Record<string, any> | null
 }
 
 async function fetchLargestHolders(mint: string, supply: number): Promise<Holder[]> {
-  const r = await rpc<{ value: Array<{ address: string; uiAmount: number }> }>('getTokenLargestAccounts', [mint]);
+  let r: { value: Array<{ address: string; uiAmount: number }> };
+  try {
+    r = await rpc<{ value: Array<{ address: string; uiAmount: number }> }>('getTokenLargestAccounts', [mint]);
+  } catch (e) {
+    console.error(`  ! getTokenLargestAccounts failed (${String(e)}); using Rugcheck top holders only`);
+    return [];
+  }
   const tokenAccounts = r.value.filter((v) => v.uiAmount > 0);
   const infos = await rpc<{ value: Array<{ data: { parsed: { info: { owner: string } } } } | null> }>(
     'getMultipleAccounts',
@@ -325,10 +372,16 @@ async function fetchLargestHolders(mint: string, supply: number): Promise<Holder
 async function annotateAccounts(holders: Holder[]): Promise<void> {
   for (let i = 0; i < holders.length; i += 100) {
     const batch = holders.slice(i, i + 100);
-    const r = await rpc<{ value: Array<{ owner: string; lamports: number } | null> }>('getMultipleAccounts', [
-      batch.map((h) => h.owner),
-      { encoding: 'base64', dataSlice: { offset: 0, length: 0 } },
-    ]);
+    let r: { value: Array<{ owner: string; lamports: number } | null> };
+    try {
+      r = await rpc('getMultipleAccounts', [batch.map((h) => h.owner), { encoding: 'base64', dataSlice: { offset: 0, length: 0 } }]);
+    } catch (e) {
+      console.error(`  ! getMultipleAccounts failed (${String(e)}); assuming system wallets`);
+      batch.forEach((h) => {
+        h.ownerProgram = h.ownerProgram ?? (PROGRAM_LABELS[h.owner] ? h.owner : SYSTEM_PROGRAM);
+      });
+      continue;
+    }
     batch.forEach((h, j) => {
       const acc = r.value[j];
       h.ownerProgram = acc?.owner ?? SYSTEM_PROGRAM; // missing account = never-funded system wallet
@@ -809,14 +862,23 @@ async function main() {
 
   console.error(`== token-forensics ${mint}`);
 
-  // Off-chain sources in parallel with the holder pull.
-  const [pump, rug, dex, gecko, supply] = await Promise.all([
+  // Off-chain sources in parallel with the RPC endpoint probe.
+  const [pump, rug, dex, gecko] = await Promise.all([
     fetchPumpCoin(mint),
     fetchRugcheck(mint),
     fetchDexscreener(mint),
     fetchGecko(mint),
-    fetchSupply(mint),
+    selectRpcEndpoints(),
   ]);
+  let supply: { amount: number; decimals: number };
+  try {
+    supply = await fetchSupply(mint);
+  } catch (e) {
+    const m = rug?.markets?.[0]?.mintAAccount;
+    if (!m) throw e;
+    supply = { amount: Number(m.supply) / 10 ** Number(m.decimals), decimals: Number(m.decimals) };
+    console.error(`  ! getTokenSupply failed (${String(e)}); using Rugcheck supply`);
+  }
   if (!pump) unavailable.push('pump.fun coin API');
   if (!rug) unavailable.push('Rugcheck');
   if (!dex) unavailable.push('DexScreener');
@@ -922,9 +984,16 @@ async function main() {
   // for the top TOP wallets.
   const activityTargets = wallets.slice(0, ACTIVITY);
   console.error(`  activity lookups: ${activityTargets.length}, funding lookups: ${Math.min(TOP, wallets.length)}`);
+  let activityFailures = 0;
   await pmap(activityTargets, 3, async (h, i) => {
     const deep = i < TOP;
-    const a = await walletActivity(h.owner, deep ? 3 : 1);
+    let a: Awaited<ReturnType<typeof walletActivity>>;
+    try {
+      a = await walletActivity(h.owner, deep ? 3 : 1);
+    } catch {
+      activityFailures++;
+      return;
+    }
     h.txCount = a.count;
     h.txCountCapped = a.capped;
     h.firstTxTime = a.first?.blockTime ?? undefined;
@@ -1138,6 +1207,7 @@ async function main() {
   });
   L.push('');
 
+  if (activityFailures) unavailable.push(`wallet activity for ${activityFailures} wallet(s) (RPC errors)`);
   if (unavailable.length) {
     L.push('## Data gaps');
     L.push('');
