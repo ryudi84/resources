@@ -177,7 +177,7 @@ async function pmap<T, R>(items: T[], limit: number, fn: (t: T, i: number) => Pr
 // `||` not `??`: an unset Actions secret arrives as an empty string.
 const RPC_URLS = (
   process.env.SOLANA_RPC_URLS ||
-  'https://api.mainnet-beta.solana.com,https://solana-rpc.publicnode.com,https://solana.drpc.org'
+  'https://api.mainnet-beta.solana.com,https://solana.api.onfinality.io/public,https://rpc.ankr.com/solana'
 )
   .split(',')
   .map((s) => s.trim())
@@ -186,13 +186,27 @@ const RPC_URLS = (
 let rpcIdx = 0;
 let rpcCalls = 0;
 let lastRpcAt = 0;
-const RPC_MIN_GAP_MS = Number(process.env.RPC_MIN_GAP_MS || 110);
+const deadRpc = new Set<string>();
+// api.mainnet-beta.solana.com allows ~40 calls of one method per 10 s.
+const RPC_MIN_GAP_MS = Number(process.env.RPC_MIN_GAP_MS || 250);
+const AUTH_ERR = /api.?key|token|plan|unauthori|forbidden|not available|not supported|disabled|upgrade|indexed requests/i;
+
+function liveRpcUrl(): string | undefined {
+  for (let i = 0; i < RPC_URLS.length; i++) {
+    const url = RPC_URLS[(rpcIdx + i) % RPC_URLS.length];
+    if (!deadRpc.has(url)) {
+      rpcIdx = (rpcIdx + i) % RPC_URLS.length;
+      return url;
+    }
+  }
+  return undefined;
+}
 
 async function rpc<T = unknown>(method: string, params: unknown[], timeoutMs = 60_000): Promise<T> {
-  if (RPC_URLS.length === 0) throw new Error('no RPC endpoints configured');
   let lastErr: unknown = new Error(`${method}: all RPC endpoints failed`);
-  for (let attempt = 0; attempt < RPC_URLS.length * 3; attempt++) {
-    const url = RPC_URLS[rpcIdx % RPC_URLS.length];
+  for (let attempt = 0; attempt < RPC_URLS.length * 4; attempt++) {
+    const url = liveRpcUrl();
+    if (!url) break;
     const wait = lastRpcAt + RPC_MIN_GAP_MS - Date.now();
     if (wait > 0) await sleep(wait);
     lastRpcAt = Date.now();
@@ -204,21 +218,22 @@ async function rpc<T = unknown>(method: string, params: unknown[], timeoutMs = 6
         body: JSON.stringify({ jsonrpc: '2.0', id: 1, method, params }),
         signal: AbortSignal.timeout(timeoutMs),
       });
+      if (res.status === 401 || res.status === 403) throw Object.assign(new Error(`HTTP ${res.status}`), { auth: true });
       if (res.status === 429 || res.status >= 500) throw new Error(`HTTP ${res.status}`);
       const body = (await res.json()) as { result?: T; error?: { code: number; message: string } };
       if (body.error) {
-        // -32429 = rate limited on some providers; rotate. Others: bubble up.
-        if (body.error.code === -32429 || /rate|limit|too many/i.test(body.error.message)) {
-          throw new Error(body.error.message);
-        }
-        throw Object.assign(new Error(body.error.message), { fatal: true });
+        const msg = body.error.message ?? String(body.error.code);
+        throw Object.assign(new Error(msg), { auth: AUTH_ERR.test(msg) });
       }
       return body.result as T;
     } catch (e) {
       lastErr = e;
-      if ((e as { fatal?: boolean }).fatal) throw e;
+      if ((e as { auth?: boolean }).auth) {
+        console.error(`  ! ${url} rejected (${String((e as Error).message)}); dropping endpoint`);
+        deadRpc.add(url);
+      }
       rpcIdx++;
-      await sleep(400 * Math.min(attempt + 1, 8));
+      await sleep(300 * Math.min(attempt + 1, 10));
     }
   }
   throw lastErr;
