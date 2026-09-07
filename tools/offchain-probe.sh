@@ -111,6 +111,10 @@ for SITE in $SITE; do
     say "- outbound links: $(grep -oE 'href="https?://[^"]+' /tmp/site.html | sed 's/href="//' | grep -vE "$SITE" | sort -u | head -15 | tr '\n' ' ')"
     say "- scripts/bundles: $(grep -oE '(src|href)="[^"]+\.(js|json)' /tmp/site.html | sed 's/^[a-z]*="//' | head -6 | tr '\n' ' ')"
     say "- text sample: $(sed -e 's/<script[^>]*>.*<\/script>//g' -e 's/<[^>]*>/ /g' /tmp/site.html | tr -s ' \n' ' ' | cut -c1-700)"
+    # Hidden crawler blocks and sitemaps often carry the product text an SPA hides.
+    say "- crawler/static block: $(sed -n '/Static block/,/<\/div>/p' /tmp/site.html | sed -e 's/<[^>]*>/ /g' | tr -s ' \n' ' ' | cut -c1-2500)"
+    SM=$(curl -sSL -m 20 -A "$UA" "https://$SITE/sitemap.xml" 2>/dev/null | grep -oE '<loc>[^<]+' | sed 's/<loc>//' | head -40 | tr '\n' ' ')
+    [ -n "$SM" ] && say "- sitemap routes: $SM"
     # Single-page apps carry their real content in the JS bundle: pull the first bundles and mine them.
     BASE=$(echo "$H" | awk '{print $2}' | sed -E 's#(https?://[^/]+).*#\1#')
     for B in $(grep -oE '(src|href)="[^"]+\.js[^"]*' /tmp/site.html | sed 's/^[a-z]*="//' | head -3); do
@@ -119,7 +123,9 @@ for SITE in $SITE; do
       SZ=$(wc -c < /tmp/bundle.js)
       say "  - bundle $BU (${SZ}B): domains $(grep -oE 'https?://[A-Za-z0-9.-]+\.[a-z]{2,}' /tmp/bundle.js | sed -E 's#https?://##' | grep -vE 'w3\.org|schema\.org|reactjs|github\.com/facebook|fb\.me|unpkg|jsdelivr|googleapis|gstatic' | sort | uniq -c | sort -rn | head -12 | awk '{printf "%s(%s) ", $2, $1}')"
       say "  - keywords: $(grep -oiE 'solana|phantom|pump\.fun|bloxx|bloxapi|soulseed|token|wallet|stripe|supabase|firebase|openai|anthropic|elevenlabs|twitch|kick\.com|youtube|discord|roblox|announce|podcast|radio|stream' /tmp/bundle.js | tr 'A-Z' 'a-z' | sort | uniq -c | sort -rn | head -14 | awk '{printf "%s(%s) ", $2, $1}')"
-      say "  - visible strings: $(grep -oE '"[A-Z][A-Za-z ,.!?'"'"'-]{25,120}"' /tmp/bundle.js | head -8 | tr '\n' ' ' | cut -c1-600)"
+      say "  - endpoints: $(grep -oE 'https?://[A-Za-z0-9.-]+\.[a-z]{2,}(/[A-Za-z0-9._/-]*)?' /tmp/bundle.js | grep -iE 'api|supabase|firebase|vercel|railway|render|fly\.dev|workers\.dev|amazonaws|announcr|bloxx|soulseed|helius|quicknode|jup\.ag|dexscreener' | sort -u | head -15 | tr '\n' ' ')"
+      say "  - around token/BLOXX mentions: $(grep -oiE '.{0,90}(\$?bloxx|token[- ]?gat|hold(er|ing)? (at least|[0-9])|tier[s]?|premium|pro plan|price[sd]?:|per month|/month|SOL\b).{0,90}' /tmp/bundle.js | grep -viE 'tokenizer|jsonwebtoken|csrf|refresh.?token|access.?token|token.?type|tokens?\[' | head -14 | tr '\n' ' ' | tr -s ' ' | cut -c1-1800)"
+      say "  - visible strings: $(grep -oE '"[A-Z][A-Za-z ,.!?'"'"'-]{25,120}"' /tmp/bundle.js | grep -viE 'react|route|history|hook|render|component|element|listener|QueryClient|Expected|Unexpected' | head -12 | tr '\n' ' ' | cut -c1-900)"
     done
     for P in sitemap.xml docs changelog blog api; do
       CODE=$(curl -s -o /dev/null -m 15 -A "$UA" -w '%{http_code}' "https://$SITE/$P" 2>/dev/null); say "  - /$P → $CODE"
