@@ -112,6 +112,13 @@ export interface Holder {
   churn?: boolean;
   burstBuyer?: boolean; // part of an identical-amount buy burst
   freshAtBuy?: boolean;
+  recentBuys?: number;
+  recentSells?: number;
+  recentSolIn?: number;
+  recentSolOut?: number;
+  buyShare?: number; // share of recent pool buy volume
+  regularBuyer?: boolean; // scheduled-looking buy cadence
+  repeatSize?: number;
   score?: number;
   verdict?: 'bot' | 'suspicious' | 'organic' | 'pool' | 'unknown';
   reasons?: string[];
@@ -179,7 +186,7 @@ const RPC_URLS = (
 let rpcIdx = 0;
 let rpcCalls = 0;
 let lastRpcAt = 0;
-const RPC_MIN_GAP_MS = Number(process.env.RPC_MIN_GAP_MS ?? 90);
+const RPC_MIN_GAP_MS = Number(process.env.RPC_MIN_GAP_MS || 110);
 
 async function rpc<T = unknown>(method: string, params: unknown[], timeoutMs = 60_000): Promise<T> {
   if (RPC_URLS.length === 0) throw new Error('no RPC endpoints configured');
@@ -224,36 +231,62 @@ async function fetchSupply(mint: string): Promise<{ amount: number; decimals: nu
   return { amount: r.value.uiAmount, decimals: r.value.decimals };
 }
 
-/** Every token account for the mint via getProgramAccounts (mint memcmp filter). */
+/**
+ * Every token account for the mint via getProgramAccounts (mint memcmp
+ * filter). Some public endpoints silently return [] for token-program scans,
+ * so an empty result rotates to the next endpoint before giving up.
+ */
 async function fetchAllHolders(mint: string, supply: number): Promise<Holder[] | null> {
-  try {
-    const accounts = await rpc<
-      Array<{ account: { data: { parsed: { info: { owner: string; tokenAmount: { uiAmount: number } } } } } }>
-    >(
-      'getProgramAccounts',
-      [
-        TOKEN_PROGRAM,
-        {
-          encoding: 'jsonParsed',
-          commitment: 'confirmed',
-          filters: [{ dataSize: 165 }, { memcmp: { offset: 0, bytes: mint } }],
-        },
-      ],
-      120_000,
-    );
-    const byOwner = new Map<string, number>();
-    for (const a of accounts) {
-      const info = a.account.data.parsed.info;
-      const amt = info.tokenAmount.uiAmount ?? 0;
-      if (amt > 0) byOwner.set(info.owner, (byOwner.get(info.owner) ?? 0) + amt);
+  for (let attempt = 0; attempt < RPC_URLS.length; attempt++) {
+    try {
+      const accounts = await rpc<
+        Array<{ account: { data: { parsed: { info: { owner: string; tokenAmount: { uiAmount: number } } } } } }>
+      >(
+        'getProgramAccounts',
+        [
+          TOKEN_PROGRAM,
+          {
+            encoding: 'jsonParsed',
+            commitment: 'confirmed',
+            filters: [{ dataSize: 165 }, { memcmp: { offset: 0, bytes: mint } }],
+          },
+        ],
+        120_000,
+      );
+      if (!Array.isArray(accounts) || accounts.length === 0) {
+        console.error(`  ! getProgramAccounts returned nothing from ${RPC_URLS[rpcIdx % RPC_URLS.length]}; rotating`);
+        rpcIdx++;
+        continue;
+      }
+      const byOwner = new Map<string, number>();
+      for (const a of accounts) {
+        const info = a.account.data.parsed.info;
+        const amt = info.tokenAmount.uiAmount ?? 0;
+        if (amt > 0) byOwner.set(info.owner, (byOwner.get(info.owner) ?? 0) + amt);
+      }
+      return [...byOwner]
+        .map(([owner, amount]) => ({ owner, amount, pct: (amount / supply) * 100 }))
+        .sort((a, b) => b.amount - a.amount);
+    } catch (e) {
+      console.error(`  ! getProgramAccounts failed (${String(e)}); rotating`);
+      rpcIdx++;
     }
-    return [...byOwner]
-      .map(([owner, amount]) => ({ owner, amount, pct: (amount / supply) * 100 }))
-      .sort((a, b) => b.amount - a.amount);
-  } catch (e) {
-    console.error(`  ! getProgramAccounts unavailable (${String(e)}); falling back to largest accounts`);
-    return null;
   }
+  console.error('  ! full holder scan unavailable on every endpoint; falling back to largest accounts + Rugcheck');
+  return null;
+}
+
+/** Merge Rugcheck's top-holder list (owner + pct) into a partial holder set. */
+function mergeRugcheckHolders(holders: Holder[], rug: Record<string, any> | null, supply: number): Holder[] {
+  const byOwner = new Map(holders.map((h) => [h.owner, h]));
+  for (const th of (rug?.topHolders ?? []) as Array<{ owner?: string; address?: string; pct?: number; uiAmount?: number }>) {
+    const owner = th.owner ?? th.address;
+    if (!owner || byOwner.has(owner)) continue;
+    const pct = th.pct ?? ((th.uiAmount ?? 0) / supply) * 100;
+    if (pct <= 0) continue;
+    byOwner.set(owner, { owner, amount: (pct / 100) * supply, pct });
+  }
+  return [...byOwner.values()].sort((a, b) => b.amount - a.amount);
 }
 
 async function fetchLargestHolders(mint: string, supply: number): Promise<Holder[]> {
@@ -368,6 +401,179 @@ async function fetchGecko(mint: string): Promise<Record<string, any> | null> {
   return (await getJson(
     `https://api.geckoterminal.com/api/v2/networks/solana/tokens/${mint}?include=top_pools`,
   )) as Record<string, any> | null;
+}
+
+
+// ------------------------------------------------------ pool trade parsing
+
+export interface PoolTrade {
+  signature: string;
+  slot: number;
+  time: number;
+  trader: string;
+  isBuy: boolean;
+  tokens: number;
+  sol: number;
+}
+
+/**
+ * Recent swaps on the AMM pool, parsed from raw transactions: the trader is the
+ * non-pool owner whose token balance moved; SOL is the pool's WSOL vault delta.
+ */
+async function fetchPoolTrades(
+  pool: string,
+  mint: string,
+  opts: { maxSigs: number; parseTx: number; sinceDays: number },
+): Promise<{ trades: PoolTrade[]; sigTimes: number[]; sigsScanned: number; parsed: number; failed: number }> {
+  const since = Math.floor(Date.now() / 1000) - opts.sinceDays * 86_400;
+  const sigs: SigInfo[] = [];
+  let before: string | undefined;
+  while (sigs.length < opts.maxSigs) {
+    const page = await rpc<Array<SigInfo & { err: unknown }>>('getSignaturesForAddress', [pool, { limit: 1000, before }]);
+    if (page.length === 0) break;
+    for (const s of page) if (!s.err) sigs.push(s);
+    before = page[page.length - 1].signature;
+    if ((page[page.length - 1].blockTime ?? 0) < since || page.length < 1000) break;
+  }
+  const sigTimes = sigs.map((s) => s.blockTime ?? 0).filter(Boolean);
+  const targets = sigs.slice(0, opts.parseTx);
+  let failed = 0;
+  const trades = await pmap(targets, 3, async (s): Promise<PoolTrade | null> => {
+    try {
+      const tx = await rpc<{
+        blockTime: number | null;
+        meta: {
+          err: unknown;
+          preTokenBalances: Array<{ mint: string; owner?: string; uiTokenAmount: { uiAmount: number | null } }>;
+          postTokenBalances: Array<{ mint: string; owner?: string; uiTokenAmount: { uiAmount: number | null } }>;
+        } | null;
+      } | null>('getTransaction', [s.signature, { encoding: 'jsonParsed', maxSupportedTransactionVersion: 0 }]);
+      if (!tx?.meta || tx.meta.err) return null;
+      const delta = new Map<string, number>(); // `${owner}|${mint}` → post - pre
+      for (const b of tx.meta.preTokenBalances) if (b.owner) delta.set(`${b.owner}|${b.mint}`, -(b.uiTokenAmount.uiAmount ?? 0));
+      for (const b of tx.meta.postTokenBalances) if (b.owner) {
+        const k = `${b.owner}|${b.mint}`;
+        delta.set(k, (delta.get(k) ?? 0) + (b.uiTokenAmount.uiAmount ?? 0));
+      }
+      const WSOL = 'So11111111111111111111111111111111111111112';
+      const poolSol = delta.get(`${pool}|${WSOL}`) ?? 0;
+      const poolTok = delta.get(`${pool}|${mint}`) ?? 0;
+      let trader: string | undefined;
+      let tokens = 0;
+      for (const [k, v] of delta) {
+        const [owner, m] = k.split('|');
+        if (m !== mint || owner === pool || Math.abs(v) < 1e-9) continue;
+        if (!trader || Math.abs(v) > Math.abs(tokens)) {
+          trader = owner;
+          tokens = v;
+        }
+      }
+      if (!trader || Math.abs(poolTok) < 1e-9) return null; // not a swap (LP op, transfer)
+      const isBuy = poolTok < 0;
+      return { signature: s.signature, slot: s.slot, time: tx.blockTime ?? s.blockTime ?? 0, trader, isBuy, tokens: Math.abs(tokens), sol: Math.abs(poolSol) };
+    } catch {
+      failed++;
+      return null;
+    }
+  });
+  return { trades: trades.filter((t): t is PoolTrade => t !== null), sigTimes, sigsScanned: sigs.length, parsed: targets.length, failed };
+}
+
+export interface TraderStat {
+  trader: string;
+  buys: number;
+  sells: number;
+  solIn: number;
+  solOut: number;
+  tokensIn: number;
+  tokensOut: number;
+  first: number;
+  last: number;
+  buyTimes: number[];
+  buySizes: number[];
+  intervalCv?: number; // coefficient of variation of buy intervals (low = scheduled)
+  repeatSize?: number; // largest count of identical-size buys
+}
+
+export function analysePoolTrades(trades: PoolTrade[]): {
+  stats: TraderStat[];
+  buyVol: number;
+  sellVol: number;
+  buyers: number;
+  sellers: number;
+  topBuyerShare: number;
+  top3BuyerShare: number;
+  regularBuyers: string[];
+} {
+  const m = new Map<string, TraderStat>();
+  let buyVol = 0;
+  let sellVol = 0;
+  for (const t of trades) {
+    const st = m.get(t.trader) ?? { trader: t.trader, buys: 0, sells: 0, solIn: 0, solOut: 0, tokensIn: 0, tokensOut: 0, first: t.time, last: t.time, buyTimes: [], buySizes: [] };
+    if (t.isBuy) {
+      st.buys++;
+      st.solIn += t.sol;
+      st.tokensIn += t.tokens;
+      st.buyTimes.push(t.time);
+      st.buySizes.push(t.sol);
+      buyVol += t.sol;
+    } else {
+      st.sells++;
+      st.solOut += t.sol;
+      st.tokensOut += t.tokens;
+      sellVol += t.sol;
+    }
+    st.first = Math.min(st.first, t.time);
+    st.last = Math.max(st.last, t.time);
+    m.set(t.trader, st);
+  }
+  const regular: string[] = [];
+  for (const st of m.values()) {
+    if (st.buyTimes.length >= 4) {
+      const ts = [...st.buyTimes].sort((a, b) => a - b);
+      const iv = ts.slice(1).map((t, i) => t - ts[i]).filter((x) => x > 0);
+      if (iv.length >= 3) {
+        const mean = iv.reduce((a, b) => a + b, 0) / iv.length;
+        const sd = Math.sqrt(iv.reduce((a, b) => a + (b - mean) ** 2, 0) / iv.length);
+        st.intervalCv = mean > 0 ? sd / mean : undefined;
+        if (st.intervalCv !== undefined && st.intervalCv < 0.35) regular.push(st.trader);
+      }
+    }
+    if (st.buySizes.length >= 3) {
+      const counts = new Map<string, number>();
+      for (const sz of st.buySizes) {
+        const k = sz.toFixed(2);
+        counts.set(k, (counts.get(k) ?? 0) + 1);
+      }
+      st.repeatSize = Math.max(...counts.values());
+    }
+  }
+  const stats = [...m.values()].sort((a, b) => b.solIn + b.solOut - (a.solIn + a.solOut));
+  const byBuy = [...stats].sort((a, b) => b.solIn - a.solIn);
+  const topBuyerShare = buyVol > 0 ? (byBuy[0]?.solIn ?? 0) / buyVol : 0;
+  const top3BuyerShare = buyVol > 0 ? byBuy.slice(0, 3).reduce((s, x) => s + x.solIn, 0) / buyVol : 0;
+  return {
+    stats,
+    buyVol,
+    sellVol,
+    buyers: stats.filter((s) => s.buys > 0).length,
+    sellers: stats.filter((s) => s.sells > 0).length,
+    topBuyerShare,
+    top3BuyerShare,
+    regularBuyers: regular,
+  };
+}
+
+/** Trades per UTC day from signature block times (cheap activity histogram). */
+export function dailyHistogram(times: number[], days: number): Array<{ day: string; n: number }> {
+  const now = Math.floor(Date.now() / 1000);
+  const out: Array<{ day: string; n: number }> = [];
+  for (let d = days - 1; d >= 0; d--) {
+    const start = now - (d + 1) * 86_400;
+    const end = now - d * 86_400;
+    out.push({ day: new Date(end * 1000).toISOString().slice(5, 10), n: times.filter((t) => t >= start && t < end).length });
+  }
+  return out;
 }
 
 // ------------------------------------------------------------- analytics
@@ -524,6 +730,18 @@ export function scoreHolder(h: Holder, ctx: { holderSet: Set<string>; creator?: 
     s += 0.15;
     reasons.push('part of an identical-amount buy burst');
   }
+  if (h.buyShare !== undefined && h.buyShare >= 0.2) {
+    s += 0.2;
+    reasons.push(`drives ${(h.buyShare * 100).toFixed(0)}% of recent buy volume`);
+  }
+  if (h.regularBuyer) {
+    s += 0.25;
+    reasons.push('buys on a regular cadence (scheduled bot)');
+  }
+  if (h.repeatSize && h.repeatSize >= 3) {
+    s += 0.1;
+    reasons.push(`${h.repeatSize} identical-size buys`);
+  }
   if (h.txCountCapped) {
     s += 0.1;
     reasons.push(`hyperactive wallet (≥${h.txCount} txs; trading bot or MEV)`);
@@ -557,6 +775,8 @@ async function main() {
       out: { type: 'string', default: 'investigations' },
       top: { type: 'string', default: '150' },
       activity: { type: 'string', default: '400' },
+      'parse-tx': { type: 'string', default: '350' },
+      days: { type: 'string', default: '30' },
     },
   });
   const mint = values.mint;
@@ -566,6 +786,8 @@ async function main() {
   }
   const TOP = Number(values.top);
   const ACTIVITY = Number(values.activity);
+  const PARSE_TX = Number(values['parse-tx']);
+  const DAYS = Number(values.days);
   const startedAt = Date.now();
   const now = Math.floor(startedAt / 1000);
   const unavailable: string[] = [];
@@ -590,12 +812,48 @@ async function main() {
   let holderSetComplete = true;
   if (!holders) {
     holderSetComplete = false;
-    holders = await fetchLargestHolders(mint, supply.amount);
+    holders = mergeRugcheckHolders(await fetchLargestHolders(mint, supply.amount), rug, supply.amount);
   }
-  console.error(`  holders: ${holders.length}${holderSetComplete ? '' : ' (top-20 token accounts only)'}`);
+  console.error(`  holders: ${holders.length}${holderSetComplete ? '' : ' (largest accounts + Rugcheck top holders only)'}`);
+  const creator = (pump?.creator as string | undefined) ?? (rug?.creator as string | undefined);
+
+  // Recent swaps on the main AMM pool, parsed from chain.
+  const poolAddr: string | undefined =
+    (pump?.pump_swap_pool as string) ?? (pump?.raydium_pool as string) ?? dex?.pairs?.[0]?.pairAddress ?? rug?.markets?.[0]?.pubkey;
+  let poolScan: Awaited<ReturnType<typeof fetchPoolTrades>> | null = null;
+  let pa: ReturnType<typeof analysePoolTrades> | null = null;
+  if (poolAddr) {
+    try {
+      poolScan = await fetchPoolTrades(poolAddr, mint, { maxSigs: 6000, parseTx: PARSE_TX, sinceDays: DAYS });
+      pa = analysePoolTrades(poolScan.trades);
+      console.error(`  pool ${poolAddr}: ${poolScan.sigsScanned} sigs, ${poolScan.trades.length} swaps parsed of ${poolScan.parsed}`);
+    } catch (e) {
+      console.error(`  ! pool scan failed: ${String(e)}`);
+      unavailable.push('pool transaction scan');
+    }
+  } else unavailable.push('pool address (no market found)');
+
+  // Recent traders join the profiling set so the price-drivers get funding/age checks.
+  if (pa) {
+    const known = new Set(holders.map((h) => h.owner));
+    for (const st of pa.stats.slice(0, 60)) {
+      if (!known.has(st.trader)) holders.push({ owner: st.trader, amount: 0, pct: 0 });
+    }
+    const byOwner = new Map(holders.map((h) => [h.owner, h]));
+    for (const st of pa.stats) {
+      const h = byOwner.get(st.trader);
+      if (!h) continue;
+      h.recentBuys = st.buys;
+      h.recentSells = st.sells;
+      h.recentSolIn = st.solIn;
+      h.recentSolOut = st.solOut;
+      h.buyShare = pa.buyVol > 0 ? st.solIn / pa.buyVol : 0;
+      h.regularBuyer = pa.regularBuyers.includes(st.trader);
+      h.repeatSize = st.repeatSize;
+    }
+  }
 
   await annotateAccounts(holders);
-  const creator = (pump?.creator as string | undefined) ?? (rug?.creator as string | undefined);
 
   // Trade tape.
   const trades = pump ? await fetchPumpTrades(mint) : [];
@@ -604,7 +862,7 @@ async function main() {
   console.error(`  trades: ${trades.length}`);
 
   const wallets = holders.filter((h) => h.ownerProgram === SYSTEM_PROGRAM);
-  const holderSet = new Set(holders.map((h) => h.owner));
+  const holderSet = new Set(holders.filter((h) => h.pct > 0).map((h) => h.owner));
 
   // Rugcheck insiders.
   if (rug) {
@@ -702,6 +960,9 @@ async function main() {
   if (clusters.size > 0) flags.push(`${clusters.size} funder clusters covering ${[...clusters.values()].reduce((s, l) => s + l.length, 0)} holders`);
   if (rug?.graphInsidersDetected) flags.push(`Rugcheck insider graph: ${rug.graphInsidersDetected} wallets`);
   if (ts && ts.bursts.length > 0) flags.push(`${ts.bursts.length} identical-amount buy bursts (largest ${ts.bursts[0].count}× ${ts.bursts[0].sol} SOL)`);
+  if (pa && pa.topBuyerShare >= 0.3) flags.push(`one wallet is ${(pa.topBuyerShare * 100).toFixed(0)}% of recent buy volume (top 3: ${(pa.top3BuyerShare * 100).toFixed(0)}%)`);
+  if (pa && pa.regularBuyers.length) flags.push(`${pa.regularBuyers.length} wallet(s) buy on a scheduled cadence`);
+  if (pa && pa.sellers > pa.buyers * 1.5 && pa.buyVol > pa.sellVol) flags.push(`few large buyers vs many small sellers (${pa.buyers} buyers / ${pa.sellers} sellers, buy vol ${fmtSol(pa.buyVol)} > sell vol ${fmtSol(pa.sellVol)})`);
   if (tradesPerBuyer && tradesPerBuyer > 4) flags.push(`${tradesPerBuyer.toFixed(1)} buys per unique buyer in 24h (wash-like)`);
   if (dust.length > wallets.length * 0.3) flags.push(`${fmtPct((dust.length / wallets.length) * 100)} of holders are dust (< 0.001% supply)`);
   if (top10Pct > 40) flags.push(`top-10 wallets hold ${fmtPct(top10Pct)} of circulating supply`);
@@ -709,7 +970,8 @@ async function main() {
   if (rug?.freezeAuthority) flags.push('freeze authority still enabled');
 
   let overall: string;
-  if (botSupply >= 40 || (ts && ts.bundledBuyers.length >= 5 && botSupply + susSupply >= 40)) overall = 'MOSTLY BOTS / COORDINATED — the holder base is dominated by scripted or insider wallets.';
+  const priceDriverBots = pa ? pa.stats.filter((st) => st.solIn / Math.max(pa!.buyVol, 1e-9) >= 0.2 && wallets.find((w) => w.owner === st.trader)?.verdict === 'bot').length : 0;
+  if (priceDriverBots > 0 || botSupply >= 40 || (ts && ts.bundledBuyers.length >= 5 && botSupply + susSupply >= 40)) overall = 'MOSTLY BOTS / COORDINATED — the holder base is dominated by scripted or insider wallets.';
   else if (botSupply + susSupply >= 30 || flags.length >= 3) overall = 'MIXED — meaningful bot/insider presence alongside some organic holders. Treat as high-risk.';
   else if (scored.length >= 20) overall = 'MOSTLY ORGANIC — holder behaviour looks like real, independently-funded wallets.';
   else overall = 'INCONCLUSIVE — too few wallets could be profiled.';
@@ -772,6 +1034,40 @@ async function main() {
   }
   L.push('');
 
+  if (pa && poolScan) {
+    L.push(`## Recent pool activity (last ${DAYS} days, pool \`${poolAddr}\`)`);
+    L.push('');
+    L.push(`- ${poolScan.sigsScanned} successful pool transactions scanned; ${poolScan.trades.length} swaps parsed from the most recent ${poolScan.parsed}${poolScan.failed ? ` (${poolScan.failed} fetch failures)` : ''}`);
+    const hist = dailyHistogram(poolScan.sigTimes, DAYS);
+    const maxN = Math.max(1, ...hist.map((h) => h.n));
+    L.push(`- Transactions per day: ${hist.map((h) => `${h.day}:${h.n}`).join(' ')}`);
+    L.push(`- Activity bars: ${hist.map((h) => '▁▂▃▄▅▆▇█'[Math.min(7, Math.floor((h.n / maxN) * 7.99))]).join('')}`);
+    const span = poolScan.trades.length ? `${iso(Math.min(...poolScan.trades.map((t) => t.time)))} → ${iso(Math.max(...poolScan.trades.map((t) => t.time)))}` : 'n/a';
+    L.push(`- Parsed window: ${span}`);
+    L.push(`- Buys ${pa.stats.reduce((s, x) => s + x.buys, 0)} (${fmtSol(pa.buyVol)}) from ${pa.buyers} wallets · sells ${pa.stats.reduce((s, x) => s + x.sells, 0)} (${fmtSol(pa.sellVol)}) from ${pa.sellers} wallets`);
+    L.push(`- Top buyer = ${(pa.topBuyerShare * 100).toFixed(0)}% of buy volume · top 3 = ${(pa.top3BuyerShare * 100).toFixed(0)}%`);
+    L.push(`- Scheduled-cadence buyers: ${pa.regularBuyers.length}${pa.regularBuyers.length ? ` — ${pa.regularBuyers.map(short).join(', ')}` : ''}`);
+    L.push('');
+    L.push('Top buyers:');
+    L.push('');
+    L.push('| Wallet | Buys | Sells | SOL in | SOL out | Share of buys | Interval CV | Same-size buys | Holds now |');
+    L.push('|---|---:|---:|---:|---:|---:|---:|---:|---:|');
+    for (const st of [...pa.stats].sort((a, b) => b.solIn - a.solIn).slice(0, 12)) {
+      const h = holders.find((x) => x.owner === st.trader);
+      L.push(`| \`${short(st.trader)}\` | ${st.buys} | ${st.sells} | ${st.solIn.toFixed(2)} | ${st.solOut.toFixed(2)} | ${((st.solIn / Math.max(pa.buyVol, 1e-9)) * 100).toFixed(0)}% | ${st.intervalCv?.toFixed(2) ?? ''} | ${st.repeatSize ?? ''} | ${h ? fmtPct(h.pct) : ''} |`);
+    }
+    L.push('');
+    L.push('Top sellers:');
+    L.push('');
+    L.push('| Wallet | Sells | Buys | SOL out | SOL in | Holds now |');
+    L.push('|---|---:|---:|---:|---:|---:|');
+    for (const st of [...pa.stats].sort((a, b) => b.solOut - a.solOut).slice(0, 8)) {
+      const h = holders.find((x) => x.owner === st.trader);
+      L.push(`| \`${short(st.trader)}\` | ${st.sells} | ${st.buys} | ${st.solOut.toFixed(2)} | ${st.solIn.toFixed(2)} | ${h ? fmtPct(h.pct) : ''} |`);
+    }
+    L.push('');
+  }
+
   if (ts) {
     L.push('## Bonding-curve trade tape (pump.fun)');
     L.push('');
@@ -816,13 +1112,14 @@ async function main() {
 
   L.push('## Top holders');
   L.push('');
-  L.push('| # | Wallet | % supply | Verdict | Score | Txs | Age (d) | Funder | Signals |');
-  L.push('|---:|---|---:|---|---:|---:|---:|---|---|');
-  holders.slice(0, 60).forEach((h, i) => {
+  L.push('| # | Wallet | % supply | Verdict | Score | Txs | Age (d) | Funder | Recent B/S | Signals |');
+  L.push('|---:|---|---:|---|---:|---:|---:|---|---:|---|');
+  holders.slice(0, 70).forEach((h, i) => {
     const age = h.firstTxTime ? ((now - h.firstTxTime) / 86_400).toFixed(0) : '';
     const funder = h.funderCex ? h.funderCex : h.funder ? short(h.funder) : '';
     const sig = h.verdict === 'pool' ? h.label : (h.reasons ?? []).join('; ');
-    L.push(`| ${i + 1} | \`${short(h.owner)}\` | ${fmtPct(h.pct)} | ${h.verdict} | ${h.score?.toFixed(2) ?? ''} | ${h.txCount !== undefined ? `${h.txCount}${h.txCountCapped ? '+' : ''}` : ''} | ${age} | ${funder} | ${sig ?? ''} |`);
+    const bs = h.recentBuys !== undefined ? `${h.recentBuys}/${h.recentSells}` : '';
+    L.push(`| ${i + 1} | \`${short(h.owner)}\` | ${fmtPct(h.pct)} | ${h.verdict} | ${h.score?.toFixed(2) ?? ''} | ${h.txCount !== undefined ? `${h.txCount}${h.txCountCapped ? '+' : ''}` : ''} | ${age} | ${funder} | ${bs} | ${sig ?? ''} |`);
   });
   L.push('');
 
@@ -830,15 +1127,16 @@ async function main() {
     L.push('## Data gaps');
     L.push('');
     for (const u of unavailable) L.push(`- ${u} unavailable`);
-    if (!holderSetComplete) L.push('- Full holder list unavailable: only the 20 largest token accounts were profiled');
+    if (!holderSetComplete) L.push('- Full holder list unavailable: only the largest token accounts, Rugcheck top holders and recent traders were profiled');
     L.push('');
   }
 
   L.push('## Method notes');
   L.push('');
-  L.push('- Score = bundle 0.40 + fresh 0.25 + funder-cluster 0.25 + funded-by-holder 0.15 + insider 0.20 + churn 0.15 + burst 0.15 + hyperactive 0.10 + dust-SOL 0.05 − CEX-funded 0.20, clamped to [0,1]. ≥0.50 bot, ≥0.25 suspicious.');
+  L.push('- Score = bundle 0.40 + fresh 0.25 + funder-cluster 0.25 + funded-by-holder 0.15 + insider 0.20 + churn 0.15 + burst 0.15 + buy-volume-driver 0.20 + scheduled-cadence 0.25 + same-size-buys 0.10 + hyperactive 0.10 + dust-SOL 0.05 − CEX-funded 0.20, clamped to [0,1]. ≥0.50 bot, ≥0.25 suspicious.');
   L.push('- "Fresh" is judged at the time of the wallet\'s first buy on the curve (or deploy time if never traded on the curve).');
   L.push('- Funder = fee payer of the wallet\'s first transaction. Only wallets with < 3000 lifetime txs are traced.');
+  L.push('- Pool swaps are parsed from raw transactions: trader = non-pool owner whose token balance changed, SOL = pool WSOL vault delta. Interval CV = std-dev / mean of a wallet\'s buy intervals; < 0.35 is a scheduled bot.');
   L.push('- Exchange list is best-effort; an unknown funder is not evidence of a bot unless shared with other holders.');
   L.push('');
 
@@ -860,6 +1158,7 @@ async function main() {
         unavailable,
         holders,
         trades: ts ? { ...ts, perUser: Object.fromEntries(ts.perUser) } : null,
+        pool: pa && poolScan ? { address: poolAddr, sigsScanned: poolScan.sigsScanned, parsed: poolScan.parsed, swaps: poolScan.trades, buyVol: pa.buyVol, sellVol: pa.sellVol, buyers: pa.buyers, sellers: pa.sellers, topBuyerShare: pa.topBuyerShare, top3BuyerShare: pa.top3BuyerShare, regularBuyers: pa.regularBuyers, traders: pa.stats.slice(0, 100) } : null,
         market: { pair, geckoPool: gPool?.attributes ?? null },
         rugcheck: rug ? { score: rug.score_normalised ?? rug.score, risks: rug.risks, insiderNetworks: rug.insiderNetworks, graphInsidersDetected: rug.graphInsidersDetected, totalHolders: rug.totalHolders, mintAuthority: rug.mintAuthority, freezeAuthority: rug.freezeAuthority, markets: rug.markets } : null,
         pump: pump ? { creator: pump.creator, created_timestamp: pump.created_timestamp, complete: pump.complete, reply_count: pump.reply_count, twitter: pump.twitter, telegram: pump.telegram, website: pump.website } : null,
