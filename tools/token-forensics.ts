@@ -84,6 +84,38 @@ const KNOWN_CEX: Record<string, string> = {
 
 const UA = 'token-forensics/1.0 (+https://github.com/ryudi84/resources)';
 
+const PROGRAM_NAMES: Record<string, string> = {
+  JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4: 'Jupiter v6',
+  JUP4Fb2cqiRUcaTHdrPC8h2gNsA2ETXiPDD33WcGuJB: 'Jupiter v4',
+  jupoNjAxXgZ4rjzxzPMP4oxduvQsQtZzyknqvzYNrNu: 'Jupiter limit',
+  '675kPX9MHTjS2zt1qfr1NYHuzeLXfQM9H24wFSUt1Mp8': 'Raydium v4',
+  CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C: 'Raydium CPMM',
+  pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA: 'PumpSwap',
+  '6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P': 'pump.fun',
+  ComputeBudget111111111111111111111111111111: 'ComputeBudget',
+  '11111111111111111111111111111111': 'System',
+  TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA: 'Token',
+  ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL: 'ATA',
+  MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr: 'Memo',
+  '6m2CDdhRgxpH4WjvdzxAYbGxwdGUz5MziiL5jek2kBma': 'OKX DEX router',
+  '4fnzGqwdF4jmVJvbcsHxLbPYQZBqzVhBsK4ynJzdFtFB': 'Photon router',
+  BSfD6SHZigAfDWSjzD5Q41jw8LmKwtmjskPH9XW1mrRW: 'Photon fee',
+  '9RYJ3qr5eU5xAooqVcbmdeusjcViL5Nkiq7Gske3tiKq': 'Trojan router',
+  BB5dnY55FXS1e1NXqZDwCzgdYJdMCj3B92PU6Q5Fb6DT: 'Bloom fee',
+  AxiomfHaWDemCFBLBayqnEnNwE6b7B2Qz3UmzMpgbMG6: 'Axiom fee',
+  GMGNwu9dqbMBfHfg8CLEeA7T5TM8g5G5XC8XkfRYkV3M: 'GMGN',
+};
+const JITO_TIPS = new Set([
+  '96gYZGLnJYVFmbjzopPSU6QiEV5fGqZNyN9nmNhvrZU5',
+  'HFqU5x63VTqvQss8hp11i4wVV8bD44PvwucfZ2bU7gRe',
+  'Cw8CFyi9ba1Vbs9bg2R3JyRq6SQnWAQcpjp6FiWCSBPy',
+  'ADaUMid9yfUytqMBgopwjb2DTLSokTSzL1zt6iGPaS49',
+  'DfXygSm4jCyNCybVYYK6DwvWqjKee8pbDmJGcLWNDXjh',
+  'ADuUkR4vqLUMWXxW9gh6D6L8pMSawimctcNZ5pGwDcEt',
+  'DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL',
+  '3AVi9Tg9Uo68tJfuvoKvqKNWKkC5wPdSSdeBnizKZ6jT',
+]);
+
 // ------------------------------------------------------------------- types
 
 export interface Holder {
@@ -928,6 +960,48 @@ export function portfolioClusters(portfolios: Map<string, Set<string>>, mint: st
     .sort((a, b) => b.wallets.length - a.wallets.length);
 }
 
+/** Fee payer, programs and SOL recipients of one transaction: a tooling fingerprint. */
+async function txFingerprint(signature: string, self: string, pool: string): Promise<{ feePayer: string; programs: string[]; recipients: Array<{ to: string; sol: number }> } | null> {
+  const tx = await rpc<{
+    transaction: { message: { accountKeys: Array<{ pubkey: string }>; instructions: Array<{ programId: string }> } };
+    meta: { err: unknown; preBalances: number[]; postBalances: number[]; postTokenBalances: Array<{ accountIndex: number }>; innerInstructions?: Array<{ instructions: Array<{ programId: string }> }> } | null;
+  } | null>('getTransaction', [signature, { encoding: 'jsonParsed', maxSupportedTransactionVersion: 0 }], 60_000, 'history');
+  if (!tx?.meta || tx.meta.err) return null;
+  const keys = tx.transaction.message.accountKeys.map((k) => k.pubkey);
+  const tokenIdx = new Set(tx.meta.postTokenBalances.map((b) => b.accountIndex));
+  const programs = new Set<string>();
+  for (const ix of tx.transaction.message.instructions) programs.add(ix.programId);
+  for (const inner of tx.meta.innerInstructions ?? []) for (const ix of inner.instructions) programs.add(ix.programId);
+  const recipients: Array<{ to: string; sol: number }> = [];
+  keys.forEach((k, i) => {
+    const dl = (tx.meta!.postBalances[i] ?? 0) - (tx.meta!.preBalances[i] ?? 0);
+    if (dl >= 50_000 && k !== self && k !== pool && !tokenIdx.has(i) && !programs.has(k)) recipients.push({ to: k, sol: dl / 1e9 });
+  });
+  return { feePayer: keys[0], programs: [...programs].filter((p) => !['ComputeBudget111111111111111111111111111111', '11111111111111111111111111111111', 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA', 'ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL'].includes(p)), recipients };
+}
+
+/** How a wallet came to hold `mint`: oldest tx on its token account → swap or transfer-in. */
+async function acquisitionOf(owner: string, mint: string): Promise<{ how: 'swap' | 'transfer' | 'unknown'; from?: string; time?: number }> {
+  try {
+    const r = await rpc<{ value: Array<{ pubkey: string }> }>('getTokenAccountsByOwner', [owner, { mint }, { encoding: 'jsonParsed' }]);
+    const acct = r.value[0]?.pubkey;
+    if (!acct) return { how: 'unknown' };
+    let sigs = await rpc<Array<SigInfo & { err: unknown }>>('getSignaturesForAddress', [acct, { limit: 1000 }], 60_000, 'history');
+    if (sigs.length === 0) return { how: 'unknown' };
+    const oldest = sigs[sigs.length - 1];
+    const d = await tokenDeltas(oldest.signature, mint);
+    if (!d) return { how: 'unknown' };
+    const mine = d.deltas.find((x) => x.owner === owner);
+    if (!mine || mine.delta <= 0) return { how: 'unknown', time: d.time };
+    const counter = d.deltas.filter((x) => x.owner !== owner && x.delta < 0);
+    const viaPool = d.solByOwner.size > 0 || d.lamportsByAccount.size > 3;
+    if (counter.length && !d.solByOwner.size) return { how: 'transfer', from: counter[0].owner, time: d.time };
+    return { how: viaPool ? 'swap' : 'unknown', time: d.time };
+  } catch {
+    return { how: 'unknown' };
+  }
+}
+
 // ------------------------------------------------------------- analytics
 
 export interface TradeStats {
@@ -1421,6 +1495,47 @@ async function main() {
     }
   });
 
+  // ---- deep: bot-fleet fingerprint (tooling, fee payer, tips, funding, shared-mint nature)
+  interface FleetFp { feePayers: Set<string>; programs: Set<string>; recipients: Map<string, number>; funder?: string; funderCex?: string; txCount?: number; firstTime?: number; acquisitions: Array<{ mint: string; how: string; from?: string }> }
+  const fleet = pClusters[0]?.wallets ?? [];
+  const fleetFp = new Map<string, FleetFp>();
+  const sharedMints = pClusters[0]?.shared ?? [];
+  const sharedMintInfo = new Map<string, { name: string; symbol: string; liquidity: number; created?: number; fdv?: number }>();
+  if (fleet.length) {
+    const dexInfo = (await getJson(`https://api.dexscreener.com/tokens/v1/solana/${sharedMints.slice(0, 30).join(',')}`)) as Array<any> | null;
+    for (const p of dexInfo ?? []) {
+      const m = p.baseToken?.address;
+      if (!m) continue;
+      const prev = sharedMintInfo.get(m);
+      if (!prev || (p.liquidity?.usd ?? 0) > prev.liquidity) sharedMintInfo.set(m, { name: p.baseToken.name, symbol: p.baseToken.symbol, liquidity: p.liquidity?.usd ?? 0, created: p.pairCreatedAt ? p.pairCreatedAt / 1000 : undefined, fdv: p.fdv });
+    }
+    const marketMints = sharedMints.filter((m) => (sharedMintInfo.get(m)?.liquidity ?? 0) > 1000).slice(0, 3);
+    for (const w of fleet) {
+      const fp: FleetFp = { feePayers: new Set(), programs: new Set(), recipients: new Map(), acquisitions: [] };
+      const sigs = poolScan?.trades.filter((t) => t.trader === w).slice(0, 3).map((t) => t.signature) ?? [];
+      for (const sig of sigs) {
+        try {
+          const f = await txFingerprint(sig, w, poolAddr!);
+          if (!f) continue;
+          fp.feePayers.add(f.feePayer);
+          for (const p of f.programs) fp.programs.add(p);
+          for (const r of f.recipients) fp.recipients.set(r.to, (fp.recipients.get(r.to) ?? 0) + r.sol);
+        } catch { /* soft */ }
+      }
+      try {
+        const a = await walletActivity(w, 6);
+        fp.txCount = a.count;
+        if (!a.capped && a.first) {
+          fp.firstTime = a.first.blockTime ?? undefined;
+          fp.funder = await funderOf(w, a.first.signature);
+          fp.funderCex = fp.funder ? KNOWN_CEX[fp.funder] : undefined;
+        }
+      } catch { /* soft */ }
+      if (fleet.indexOf(w) < 3) for (const m of marketMints) fp.acquisitions.push({ mint: m, ...(await acquisitionOf(w, m)) });
+      fleetFp.set(w, fp);
+    }
+  }
+
   for (const h of holders) scoreHolder(h, { holderSet, creator });
 
   // ------------------------------------------------------------ aggregates
@@ -1676,6 +1791,60 @@ async function main() {
     L.push('');
   }
 
+  if (fleetFp.size) {
+    L.push('## Bot fleet fingerprint');
+    L.push('');
+    const allFeePayers = new Map<string, number>();
+    const allRecipients = new Map<string, number>();
+    const allPrograms = new Map<string, number>();
+    for (const fp of fleetFp.values()) {
+      for (const f of fp.feePayers) allFeePayers.set(f, (allFeePayers.get(f) ?? 0) + 1);
+      for (const r of fp.recipients.keys()) allRecipients.set(r, (allRecipients.get(r) ?? 0) + 1);
+      for (const p of fp.programs) allPrograms.set(p, (allPrograms.get(p) ?? 0) + 1);
+    }
+    const label = (a: string) => PROGRAM_NAMES[a] ?? (JITO_TIPS.has(a) ? 'Jito tip' : short(a));
+    L.push('| Wallet | Holds | Lifetime txs | Fee payer | Routed via | Pays SOL to | Funder |');
+    L.push('|---|---:|---:|---|---|---|---|');
+    for (const [w, fp] of fleetFp) {
+      const h = holders.find((x) => x.owner === w);
+      const payers = [...fp.feePayers].map((f) => (f === w ? 'self' : `\`${short(f)}\``)).join(', ') || '?';
+      const progs = [...fp.programs].map(label).join(', ') || '?';
+      const recs = [...fp.recipients].map(([r, v]) => `${label(r)} ${v.toFixed(3)}`).join('; ') || '–';
+      L.push(`| \`${short(w)}\` | ${h && h.pct > 0 ? fmtPct(h.pct) : '< top-20'} | ${fp.txCount ?? '?'}${fp.txCount && fp.txCount >= 6000 ? '+' : ''} | ${payers} | ${progs} | ${recs} | ${fp.funderCex ?? (fp.funder ? short(fp.funder) : fp.firstTime ? '?' : 'beyond 6000 txs')} |`);
+    }
+    L.push('');
+    const sharedPayers = [...allFeePayers].filter(([f, n]) => n >= 2 && !fleet.includes(f));
+    const sharedRecs = [...allRecipients].filter(([r, n]) => n >= 2 && !JITO_TIPS.has(r));
+    L.push(`- Fee payer shared by ≥2 fleet wallets: ${sharedPayers.length ? sharedPayers.map(([f, n]) => `\`${f}\` (${n})`).join(', ') : 'none — each wallet signs for itself'}`);
+    L.push(`- Non-Jito SOL recipient shared by ≥2 fleet wallets (bot/tool fee account): ${sharedRecs.length ? sharedRecs.map(([r, n]) => `${label(r)} \`${r}\` (${n} wallets)`).join(', ') : 'none'}`);
+    L.push(`- Programs used: ${[...allPrograms].sort((a, b) => b[1] - a[1]).map(([p, n]) => `${label(p)} ×${n}`).join(', ')}`);
+    const funders = [...fleetFp.values()].map((f) => f.funder).filter(Boolean) as string[];
+    const dupF = funders.filter((f, i) => funders.indexOf(f) !== i);
+    L.push(`- Shared funder among fleet wallets: ${dupF.length ? [...new Set(dupF)].map(short).join(', ') : 'none found'}`);
+    L.push('');
+    L.push('Shared tokens: bought, or airdropped spam?');
+    L.push('');
+    L.push('| Mint | Name | Liquidity | Market since | Verdict |');
+    L.push('|---|---|---:|---|---|');
+    let spam = 0;
+    for (const m of sharedMints.slice(0, 30)) {
+      const i = sharedMintInfo.get(m);
+      const lookalike = /^Es9vMFrz|^EPjFWdd5|^So1111/.test(m) && !['Es9vMFrzaCERmJfrF6H2gwBydCFzT8FLo4EQ3s6xhcPP', 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v'].includes(m);
+      const v = lookalike ? 'address lookalike → spam airdrop' : !i ? 'no market → airdrop/spam' : i.liquidity < 1000 ? 'dead market' : 'real market';
+      if (v !== 'real market') spam++;
+      L.push(`| \`${short(m)}\` | ${i ? `${i.name} (${i.symbol})` : '–'} | ${i ? fmtUsd(i.liquidity) : '–'} | ${i?.created ? iso(i.created).slice(0, 10) : '–'} | ${v} |`);
+    }
+    L.push('');
+    L.push(`${spam} of ${Math.min(30, sharedMints.length)} shared tokens have no real market. A cluster built on spam airdrops is not evidence of one operator; one built on bought tokens is.`);
+    const acqs = [...fleetFp].flatMap(([w, fp]) => fp.acquisitions.map((a) => ({ w, ...a })));
+    if (acqs.length) {
+      L.push('');
+      L.push('How fleet wallets acquired the shared tokens that do have markets:');
+      for (const a of acqs) L.push(`- \`${short(a.w)}\` ← ${sharedMintInfo.get(a.mint)?.symbol ?? short(a.mint)}: ${a.how}${a.from ? ` from \`${short(a.from)}\`` : ''}`);
+    }
+    L.push('');
+  }
+
   if (pClusters.length) {
     L.push('## Portfolio fingerprint clusters');
     L.push('');
@@ -1768,6 +1937,8 @@ async function main() {
         launch,
         creator: { address: creator, ...creatorInfo, provenance: creatorProv },
         bundleDestinations: bundleDest,
+        fleet: Object.fromEntries([...fleetFp].map(([w, fp]) => [w, { ...fp, feePayers: [...fp.feePayers], programs: [...fp.programs], recipients: Object.fromEntries(fp.recipients) }])),
+        sharedMintInfo: Object.fromEntries(sharedMintInfo),
         funderHops: Object.fromEntries(funderHops),
         portfolioClusters: pClusters,
         pool: pa && poolScan ? { address: poolAddr, sigsScanned: poolScan.sigsScanned, parsed: poolScan.parsed, swaps: poolScan.trades, buyVol: pa.buyVol, sellVol: pa.sellVol, buyers: pa.buyers, sellers: pa.sellers, topBuyerShare: pa.topBuyerShare, top3BuyerShare: pa.top3BuyerShare, regularBuyers: pa.regularBuyers, traders: pa.stats.slice(0, 100) } : null,
