@@ -6,6 +6,13 @@ name: Token holder forensics
 # and committed under investigations/ on the branch that ran it.
 
 on:
+  # Push trigger mirrors probe.yml: workflow_dispatch by name only works once
+  # the file is on the default branch, so editing this file (or the tool)
+  # runs the analysis on the branch with the default inputs below.
+  push:
+    paths:
+      - '.github/workflows/token-probe.yml'
+      - 'tools/token-forensics.ts'
   workflow_dispatch:
     inputs:
       mint:
@@ -24,6 +31,11 @@ on:
 
 permissions:
   contents: write
+
+env:
+  MINT: ${{ inputs.mint || 'HHf2VfXSPUVqQth6tXypfdUX2vawCiVKfkbAX4CJpump' }}
+  TOP: ${{ inputs.top || '150' }}
+  ACTIVITY: ${{ inputs.activity || '400' }}
 
 jobs:
   forensics:
@@ -45,12 +57,12 @@ jobs:
           SOLANA_RPC_URLS: ${{ secrets.SOLANA_RPC_URLS }}
         run: |
           node --experimental-strip-types tools/token-forensics.ts \
-            --mint "${{ inputs.mint }}" --top "${{ inputs.top }}" --activity "${{ inputs.activity }}" \
+            --mint "$MINT" --top "$TOP" --activity "$ACTIVITY" \
             --out investigations
 
       - uses: actions/upload-artifact@v4
         with:
-          name: forensics-${{ inputs.mint }}
+          name: forensics-${{ env.MINT }}
           path: investigations/
 
       - name: Commit report
@@ -61,7 +73,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No report changes."
           else
-            git commit -m "forensics: ${{ inputs.mint }} $(date -u +'%Y-%m-%d %H:%MZ')"
+            git commit -m "forensics: $MINT $(date -u +'%Y-%m-%d %H:%MZ')"
             git pull --rebase origin "${{ github.ref_name }}" || true
             git push origin "${{ github.ref_name }}"
           fi
