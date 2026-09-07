@@ -1343,9 +1343,27 @@ async function main() {
   });
   if (provFailures) unavailable.push(`provenance for ${provFailures} whale(s)`);
 
+  // ---- deep: creator's own token account history (allocation transfers to whom?)
+  let creatorProv: Provenance | null = null;
+  let creatorInfo: { txCount?: number; capped?: boolean; funder?: string; cex?: string; age?: number } = {};
+  if (creator) {
+    try {
+      const r = await rpc<{ value: Array<{ pubkey: string }> }>('getTokenAccountsByOwner', [creator, { mint }, { encoding: 'jsonParsed' }]);
+      const accts = r.value.map((v) => v.pubkey);
+      if (accts.length) creatorProv = await traceProvenance({ owner: creator, amount: 0, pct: 0, tokenAccounts: accts }, mint, poolOwners, 10, 10);
+      const a = await walletActivity(creator, 1);
+      const f = a.first && !a.capped ? await funderOf(creator, a.first.signature) : undefined;
+      creatorInfo = { txCount: a.count, capped: a.capped, funder: f, cex: f ? KNOWN_CEX[f] : undefined, age: a.first?.blockTime && !a.capped ? (now - a.first.blockTime) / 86_400 : undefined };
+    } catch (e) {
+      console.error(`  ! creator trace failed: ${String(e)}`);
+      unavailable.push('creator token history');
+    }
+  }
+
   // ---- deep: second-hop funders (who funded the funders; links to creator / holders)
   const funderHops = new Map<string, { funder?: string; cex?: string; txCount?: number; capped?: boolean; age?: number }>();
-  const interestingFunders = [...new Set(wallets.filter((h) => h.funder && !h.funderCex && (h.fundedBySameAs ?? 0) >= 2 || (h.funder && h.freshAtBuy)).map((h) => h.funder!))].slice(0, 25);
+  const whaleFunders = wallets.filter((h) => h.pct > 0 && h.funder && !h.funderCex).slice(0, 12).map((h) => h.funder!);
+  const interestingFunders = [...new Set([...whaleFunders, ...wallets.filter((h) => (h.funder && !h.funderCex && (h.fundedBySameAs ?? 0) >= 2) || (h.funder && h.freshAtBuy)).map((h) => h.funder!)])].slice(0, 30);
   for (const f of interestingFunders) {
     try {
       const a = await walletActivity(f, 1);
@@ -1406,6 +1424,8 @@ async function main() {
   if (launch && launch.bundled.length > 1) flags.push(`${launch.bundled.length} wallets bought in the deploy bundle for ${fmtPct(launch.bundledTokensPct)} of supply`);
   if (launch && launch.bundled.some((b) => holderSet.has(b.wallet))) flags.push('deploy-bundle wallets are still among the top holders');
   if (whales.some((h) => h.provenance?.transfersIn.some((t) => t.from === creator || holderSet.has(t.from)))) flags.push('top-holder bags moved between insider wallets by transfer');
+  if (creatorProv?.transfersOut.some((t) => holderSet.has(t.to))) flags.push('creator transferred tokens directly to a current top holder');
+  if ([...funderHops.values()].some((x) => x.funder === creator) || whaleFunders.includes(creator ?? '')) flags.push('creator wallet funded holder wallets');
   if (pClusters.length) flags.push(`${pClusters.length} portfolio-fingerprint cluster(s) among big holders/buyers`);
   if (clusters.size > 0) flags.push(`${clusters.size} funder clusters covering ${[...clusters.values()].reduce((s, l) => s + l.length, 0)} holders`);
   if (rug?.graphInsidersDetected) flags.push(`Rugcheck insider graph: ${rug.graphInsidersDetected} wallets`);
@@ -1569,6 +1589,21 @@ async function main() {
     L.push('');
   }
 
+  if (creator) {
+    L.push('## Creator wallet');
+    L.push('');
+    L.push(`- \`${creator}\` · lifetime txs ${creatorInfo.txCount ?? '?'}${creatorInfo.capped ? '+' : ''} · age ${creatorInfo.age?.toFixed(0) ?? '?'} d · funded by ${creatorInfo.cex ?? (creatorInfo.funder ? short(creatorInfo.funder) : '?')}${creatorInfo.funder && holderSet.has(creatorInfo.funder) ? ' (a current top holder)' : ''}`);
+    if (creatorProv) {
+      L.push(`- Token account: ${creatorProv.txCount} txs · swaps in ${creatorProv.swapsIn} · first seen ${iso(creatorProv.firstSeen)}`);
+      if (creatorProv.transfersOut.length) {
+        L.push('- Tokens sent out by transfer:');
+        for (const t of creatorProv.transfersOut) L.push(`  - ${Math.round(t.amount).toLocaleString('en-US')} (${fmtPct((t.amount / supply.amount) * 100)}) to \`${t.to}\`${holderSet.has(t.to) ? ' ← CURRENT TOP HOLDER' : ''} at ${iso(t.time)}`);
+      } else L.push('- No outbound token transfers found in the parsed window (creator sold on-curve or holds nothing)');
+      if (creatorProv.transfersIn.length) L.push(`- Tokens received by transfer: ${creatorProv.transfersIn.map((t) => `${Math.round(t.amount).toLocaleString('en-US')} from ${short(t.from)}`).join('; ')}`);
+    } else L.push('- No token account for this mint exists on the creator wallet any more (closed after selling/transferring out)');
+    L.push('');
+  }
+
   if (funderHops.size) {
     L.push('## Funder wallets, one hop up');
     L.push('');
@@ -1582,6 +1617,7 @@ async function main() {
         hop.funder === creator ? 'funded by the CREATOR' : '',
         hop.funder && holderSet.has(hop.funder) ? `funded by holder ${short(hop.funder)}` : '',
         hop.funder && funderHops.has(hop.funder) ? 'funded by another funder' : '',
+        hop.funder && [...funderHops].some(([g, x]) => g !== f && x.funder === hop.funder) ? `shares its own funder (${short(hop.funder)}) with another funder` : '',
         hop.cex ? `on-ramped from ${hop.cex}` : '',
       ].filter(Boolean).join('; ');
       L.push(`| \`${short(f)}\` | ${funded} | ${hop.txCount ?? ''}${hop.capped ? '+' : ''} | ${hop.age?.toFixed(0) ?? ''} | ${hop.cex ?? (hop.funder ? short(hop.funder) : '')} | ${link} |`);
@@ -1679,6 +1715,7 @@ async function main() {
         holders,
         trades: ts ? { ...ts, perUser: Object.fromEntries(ts.perUser) } : null,
         launch,
+        creator: { address: creator, ...creatorInfo, provenance: creatorProv },
         funderHops: Object.fromEntries(funderHops),
         portfolioClusters: pClusters,
         pool: pa && poolScan ? { address: poolAddr, sigsScanned: poolScan.sigsScanned, parsed: poolScan.parsed, swaps: poolScan.trades, buyVol: pa.buyVol, sellVol: pa.sellVol, buyers: pa.buyers, sellers: pa.sellers, topBuyerShare: pa.topBuyerShare, top3BuyerShare: pa.top3BuyerShare, regularBuyers: pa.regularBuyers, traders: pa.stats.slice(0, 100) } : null,
