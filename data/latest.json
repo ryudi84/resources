@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T13:18:08.698Z",
+  "generatedAt": "2026-09-12T16:19:27.039Z",
   "retailers": [
     {
       "id": "tosho",
@@ -7,7 +7,7 @@
       "url": "https://toshoknifearts.com",
       "ok": true,
       "products": 1756,
-      "ms": 7303
+      "ms": 1203
     },
     {
       "id": "knives-and-stones-au",
@@ -15,7 +15,7 @@
       "url": "https://knivesandstones.com.au",
       "ok": true,
       "products": 1727,
-      "ms": 11242
+      "ms": 2601
     },
     {
       "id": "carbon-knife-co",
@@ -23,7 +23,7 @@
       "url": "https://carbonknifeco.com",
       "ok": true,
       "products": 3166,
-      "ms": 13908
+      "ms": 1918
     },
     {
       "id": "strata",
@@ -31,7 +31,7 @@
       "url": "https://strataportland.com",
       "ok": true,
       "products": 3697,
-      "ms": 18999
+      "ms": 2372
     },
     {
       "id": "bernal",
@@ -39,15 +39,15 @@
       "url": "https://bernalcutlery.com",
       "ok": true,
       "products": 4879,
-      "ms": 32221
+      "ms": 7349
     },
     {
       "id": "sugi",
       "name": "Sugi Cutlery",
       "url": "https://sugicutlery.com",
       "ok": true,
-      "products": 2529,
-      "ms": 10091
+      "products": 2530,
+      "ms": 2997
     },
     {
       "id": "tokushu",
@@ -55,7 +55,7 @@
       "url": "https://tokushuknife.com",
       "ok": true,
       "products": 899,
-      "ms": 4956
+      "ms": 1433
     },
     {
       "id": "sharp-knife-shop",
@@ -63,7 +63,7 @@
       "url": "https://sharpknifeshop.com",
       "ok": true,
       "products": 373,
-      "ms": 1512
+      "ms": 475
     },
     {
       "id": "knifewear",
@@ -71,7 +71,7 @@
       "url": "https://knifewear.com",
       "ok": true,
       "products": 749,
-      "ms": 3894
+      "ms": 1641
     },
     {
       "id": "district-cutlery",
@@ -79,7 +79,7 @@
       "url": "https://www.districtcutlery.com",
       "ok": true,
       "products": 410,
-      "ms": 3156
+      "ms": 882
     },
     {
       "id": "coutelier",
@@ -87,7 +87,7 @@
       "url": "https://couteliernola.com",
       "ok": true,
       "products": 821,
-      "ms": 5241
+      "ms": 2144
     },
     {
       "id": "eating-tools",
@@ -95,7 +95,7 @@
       "url": "https://www.eatingtools.com",
       "ok": true,
       "products": 1101,
-      "ms": 12027
+      "ms": 4449
     },
     {
       "id": "modern-cooking",
@@ -103,7 +103,7 @@
       "url": "https://www.moderncooking.com",
       "ok": true,
       "products": 501,
-      "ms": 3537
+      "ms": 1764
     },
     {
       "id": "tetogi",
@@ -111,7 +111,7 @@
       "url": "https://tetogi.com",
       "ok": true,
       "products": 2080,
-      "ms": 3350
+      "ms": 3184
     },
     {
       "id": "oishya",
@@ -119,7 +119,7 @@
       "url": "https://oishya.com",
       "ok": true,
       "products": 53,
-      "ms": 5350
+      "ms": 5204
     },
     {
       "id": "ai-and-om",
@@ -127,7 +127,7 @@
       "url": "https://aiandomknives.com",
       "ok": true,
       "products": 954,
-      "ms": 11577
+      "ms": 1002
     },
     {
       "id": "town-cutler",
@@ -135,7 +135,7 @@
       "url": "https://www.towncutler.com",
       "ok": true,
       "products": 203,
-      "ms": 2999
+      "ms": 971
     },
     {
       "id": "homebutcher",
@@ -143,7 +143,7 @@
       "url": "https://homebutcher.com",
       "ok": true,
       "products": 1142,
-      "ms": 3273
+      "ms": 2152
     },
     {
       "id": "kitchen-provisions",
@@ -151,7 +151,7 @@
       "url": "https://www.kitchenprovisions.co.uk",
       "ok": true,
       "products": 247,
-      "ms": 1499
+      "ms": 1366
     },
     {
       "id": "bryan-raquin-direct",
@@ -159,15 +159,15 @@
       "url": "https://www.bryanraquin.com",
       "ok": true,
       "products": 76,
-      "ms": 699
+      "ms": 1153
     },
     {
       "id": "jns",
       "name": "Japanese Natural Stones (JNS)",
       "url": "https://www.japanesenaturalstones.com",
       "ok": true,
-      "products": 6573,
-      "ms": 47370
+      "products": 6574,
+      "ms": 49274
     },
     {
       "id": "hitohira-japan-com",
@@ -175,7 +175,7 @@
       "url": "https://hitohira-japan.com",
       "ok": true,
       "products": 5937,
-      "ms": 20851
+      "ms": 15894
     },
     {
       "id": "shirasagistore-com",
@@ -183,7 +183,7 @@
       "url": "https://shirasagistore.com",
       "ok": true,
       "products": 1543,
-      "ms": 54950
+      "ms": 49225
     },
     {
       "id": "staysharpmtl-com",
@@ -191,7 +191,7 @@
       "url": "https://staysharpmtl.com",
       "ok": true,
       "products": 1971,
-      "ms": 8837
+      "ms": 3223
     },
     {
       "id": "bernalcutleryshop-com",
@@ -199,7 +199,7 @@
       "url": "https://www.bernalcutleryshop.com",
       "ok": true,
       "products": 0,
-      "ms": 355
+      "ms": 501
     }
   ],
   "hits": [
@@ -233,12 +233,12 @@
         "retailerName": "Japanese Natural Stones (JNS)",
         "region": "DK",
         "currency": "USD",
-        "title": "JNS Raquin Collab Gyuto 260mm 145sc",
+        "title": "JNS Raquin Collab Sujihiki 260mm 145sc",
         "vendor": "",
         "productType": "",
         "tags": [],
-        "handle": "/jns-raquin-collab-gyuto-260mm-145sc/",
-        "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-gyuto-260mm-145sc/",
+        "handle": "/jns-raquin-collab-sujihiki-260mm-145sc/",
+        "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-sujihiki-260mm-145sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7729/81205/P1001697__29600.1787412308.jpg",
         "priceMin": 1086.4,
         "priceMax": 1086.4,
@@ -2373,6 +2373,28 @@
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7552/79660/P1000025__43446.1778080888.jpg",
         "priceMin": 1241.6,
         "priceMax": 1241.6,
+        "available": false,
+        "variantsAvailable": 0,
+        "variantsTotal": 1
+      }
+    },
+    {
+      "grailId": "bryan-raquin-any-knife",
+      "grailName": "Bryan Raquin (any knife)",
+      "listing": {
+        "retailerId": "jns",
+        "retailerName": "Japanese Natural Stones (JNS)",
+        "region": "DK",
+        "currency": "USD",
+        "title": "JNS Raquin Collab Meat saber 275mm 145sc",
+        "vendor": "",
+        "productType": "",
+        "tags": [],
+        "handle": "/jns-raquin-collab-meat-saber-275mm-145sc/",
+        "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-meat-saber-275mm-145sc/",
+        "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7784/81640/P1002281__18354.1789226468.jpg",
+        "priceMin": 1396.8,
+        "priceMax": 1396.8,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
