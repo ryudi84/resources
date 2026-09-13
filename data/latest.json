@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T23:04:58.044Z",
+  "generatedAt": "2026-09-13T01:04:22.740Z",
   "retailers": [
     {
       "id": "tosho",
@@ -7,7 +7,7 @@
       "url": "https://toshoknifearts.com",
       "ok": true,
       "products": 1756,
-      "ms": 1318
+      "ms": 4673
     },
     {
       "id": "knives-and-stones-au",
@@ -15,7 +15,7 @@
       "url": "https://knivesandstones.com.au",
       "ok": true,
       "products": 1727,
-      "ms": 3277
+      "ms": 6798
     },
     {
       "id": "carbon-knife-co",
@@ -23,7 +23,7 @@
       "url": "https://carbonknifeco.com",
       "ok": true,
       "products": 3171,
-      "ms": 1933
+      "ms": 6930
     },
     {
       "id": "strata",
@@ -31,7 +31,7 @@
       "url": "https://strataportland.com",
       "ok": true,
       "products": 3716,
-      "ms": 2381
+      "ms": 3404
     },
     {
       "id": "bernal",
@@ -39,7 +39,7 @@
       "url": "https://bernalcutlery.com",
       "ok": true,
       "products": 4880,
-      "ms": 2985
+      "ms": 5222
     },
     {
       "id": "sugi",
@@ -47,7 +47,7 @@
       "url": "https://sugicutlery.com",
       "ok": true,
       "products": 2530,
-      "ms": 4553
+      "ms": 9184
     },
     {
       "id": "tokushu",
@@ -55,7 +55,7 @@
       "url": "https://tokushuknife.com",
       "ok": true,
       "products": 899,
-      "ms": 561
+      "ms": 1364
     },
     {
       "id": "sharp-knife-shop",
@@ -63,7 +63,7 @@
       "url": "https://sharpknifeshop.com",
       "ok": true,
       "products": 373,
-      "ms": 367
+      "ms": 571
     },
     {
       "id": "knifewear",
@@ -71,7 +71,7 @@
       "url": "https://knifewear.com",
       "ok": true,
       "products": 749,
-      "ms": 457
+      "ms": 2240
     },
     {
       "id": "district-cutlery",
@@ -79,7 +79,7 @@
       "url": "https://www.districtcutlery.com",
       "ok": true,
       "products": 410,
-      "ms": 1076
+      "ms": 623
     },
     {
       "id": "coutelier",
@@ -87,7 +87,7 @@
       "url": "https://couteliernola.com",
       "ok": true,
       "products": 821,
-      "ms": 2303
+      "ms": 592
     },
     {
       "id": "eating-tools",
@@ -95,7 +95,7 @@
       "url": "https://www.eatingtools.com",
       "ok": true,
       "products": 1101,
-      "ms": 4644
+      "ms": 6051
     },
     {
       "id": "modern-cooking",
@@ -103,7 +103,7 @@
       "url": "https://www.moderncooking.com",
       "ok": true,
       "products": 501,
-      "ms": 2565
+      "ms": 2729
     },
     {
       "id": "tetogi",
@@ -111,7 +111,7 @@
       "url": "https://tetogi.com",
       "ok": true,
       "products": 2080,
-      "ms": 4097
+      "ms": 1375
     },
     {
       "id": "oishya",
@@ -119,7 +119,7 @@
       "url": "https://oishya.com",
       "ok": true,
       "products": 53,
-      "ms": 1230
+      "ms": 821
     },
     {
       "id": "ai-and-om",
@@ -127,7 +127,7 @@
       "url": "https://aiandomknives.com",
       "ok": true,
       "products": 955,
-      "ms": 1027
+      "ms": 1361
     },
     {
       "id": "town-cutler",
@@ -135,7 +135,7 @@
       "url": "https://www.towncutler.com",
       "ok": true,
       "products": 203,
-      "ms": 612
+      "ms": 355
     },
     {
       "id": "homebutcher",
@@ -143,7 +143,7 @@
       "url": "https://homebutcher.com",
       "ok": true,
       "products": 1142,
-      "ms": 2112
+      "ms": 952
     },
     {
       "id": "kitchen-provisions",
@@ -151,7 +151,7 @@
       "url": "https://www.kitchenprovisions.co.uk",
       "ok": true,
       "products": 247,
-      "ms": 1342
+      "ms": 123
     },
     {
       "id": "bryan-raquin-direct",
@@ -159,7 +159,7 @@
       "url": "https://www.bryanraquin.com",
       "ok": true,
       "products": 76,
-      "ms": 718
+      "ms": 757
     },
     {
       "id": "jns",
@@ -167,7 +167,7 @@
       "url": "https://www.japanesenaturalstones.com",
       "ok": true,
       "products": 6574,
-      "ms": 47703
+      "ms": 42913
     },
     {
       "id": "hitohira-japan-com",
@@ -175,7 +175,7 @@
       "url": "https://hitohira-japan.com",
       "ok": true,
       "products": 5937,
-      "ms": 7470
+      "ms": 15650
     },
     {
       "id": "shirasagistore-com",
@@ -183,7 +183,7 @@
       "url": "https://shirasagistore.com",
       "ok": true,
       "products": 1543,
-      "ms": 48466
+      "ms": 69054
     },
     {
       "id": "staysharpmtl-com",
@@ -191,7 +191,7 @@
       "url": "https://staysharpmtl.com",
       "ok": true,
       "products": 1974,
-      "ms": 2317
+      "ms": 7578
     },
     {
       "id": "bernalcutleryshop-com",
@@ -199,7 +199,7 @@
       "url": "https://www.bernalcutleryshop.com",
       "ok": true,
       "products": 0,
-      "ms": 425
+      "ms": 338
     }
   ],
   "hits": [
@@ -10455,8 +10455,8 @@
         "handle": "takada-no-hamono-shirogami-2-suiboku-petty-135mm-ho-wood",
         "url": "https://staysharpmtl.com/products/takada-no-hamono-shirogami-2-suiboku-petty-135mm-ho-wood",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0622/8600/4398/products/B4EAD525-D9E9-4B0B-BD91-F576C00A4793.jpg?v=1667855516",
-        "priceMin": 250,
-        "priceMax": 250,
+        "priceMin": 251,
+        "priceMax": 251,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -10501,8 +10501,8 @@
         "handle": "takada-no-hamono-mizu-honyaki-shirogami-2-kiritsuke-gyuto-180mm-ebene",
         "url": "https://staysharpmtl.com/products/takada-no-hamono-mizu-honyaki-shirogami-2-kiritsuke-gyuto-180mm-ebene",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0622/8600/4398/products/4A8792DD-1635-40E9-8E14-6D425BF0A346.jpg?v=1666798940",
-        "priceMin": 1103,
-        "priceMax": 1103,
+        "priceMin": 1104,
+        "priceMax": 1104,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -10731,8 +10731,8 @@
         "handle": "takada-no-hamono-aogami-1-suiboku-petty-135mm-bois-de-rose",
         "url": "https://staysharpmtl.com/products/takada-no-hamono-aogami-1-suiboku-petty-135mm-bois-de-rose",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0622/8600/4398/products/240D246B-87D2-4A6D-A291-58ADE3209700.jpg?v=1666796508",
-        "priceMin": 272,
-        "priceMax": 272,
+        "priceMin": 273,
+        "priceMax": 273,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -10846,8 +10846,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-nakiri-180mm-bois-de-ho",
         "url": "https://staysharpmtl.com/products/takada-no-hamono-silver-3-suiboku-nakiri-180mm-bois-de-ho",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0622/8600/4398/products/DSC_0960-scaled.jpg?v=1666793606",
-        "priceMin": 386,
-        "priceMax": 386,
+        "priceMin": 387,
+        "priceMax": 387,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
