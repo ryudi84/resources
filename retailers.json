@@ -195,6 +195,13 @@
       "url": "https://www.bernalcutleryshop.com",
       "adapter": "woocommerce",
       "currency": "USD"
+    },
+    {
+      "id": "curacook-com",
+      "name": "curacook.com",
+      "url": "https://curacook.com",
+      "adapter": "woocommerce",
+      "currency": "USD"
     }
   ]
 }
