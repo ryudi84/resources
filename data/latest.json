@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T20:32:57.059Z",
+  "generatedAt": "2026-10-07T00:05:08.833Z",
   "retailers": [
     {
       "id": "tosho",
@@ -7,7 +7,7 @@
       "url": "https://toshoknifearts.com",
       "ok": true,
       "products": 1781,
-      "ms": 6931
+      "ms": 4980
     },
     {
       "id": "knives-and-stones-au",
@@ -15,7 +15,7 @@
       "url": "https://knivesandstones.com.au",
       "ok": true,
       "products": 244,
-      "ms": 793
+      "ms": 1003
     },
     {
       "id": "carbon-knife-co",
@@ -23,7 +23,7 @@
       "url": "https://carbonknifeco.com",
       "ok": true,
       "products": 3213,
-      "ms": 7806
+      "ms": 13611
     },
     {
       "id": "strata",
@@ -31,15 +31,15 @@
       "url": "https://strataportland.com",
       "ok": true,
       "products": 3734,
-      "ms": 15487
+      "ms": 2894
     },
     {
       "id": "bernal",
       "name": "Bernal Cutlery",
       "url": "https://bernalcutlery.com",
       "ok": true,
-      "products": 4933,
-      "ms": 19206
+      "products": 4934,
+      "ms": 14790
     },
     {
       "id": "sugi",
@@ -47,7 +47,7 @@
       "url": "https://sugicutlery.com",
       "ok": true,
       "products": 2536,
-      "ms": 11625
+      "ms": 10139
     },
     {
       "id": "tokushu",
@@ -55,7 +55,7 @@
       "url": "https://tokushuknife.com",
       "ok": true,
       "products": 899,
-      "ms": 4698
+      "ms": 677
     },
     {
       "id": "sharp-knife-shop",
@@ -63,7 +63,7 @@
       "url": "https://sharpknifeshop.com",
       "ok": true,
       "products": 328,
-      "ms": 1627
+      "ms": 688
     },
     {
       "id": "knifewear",
@@ -71,7 +71,7 @@
       "url": "https://knifewear.com",
       "ok": true,
       "products": 749,
-      "ms": 2603
+      "ms": 2298
     },
     {
       "id": "district-cutlery",
@@ -79,7 +79,7 @@
       "url": "https://www.districtcutlery.com",
       "ok": true,
       "products": 358,
-      "ms": 2195
+      "ms": 624
     },
     {
       "id": "coutelier",
@@ -87,7 +87,7 @@
       "url": "https://couteliernola.com",
       "ok": true,
       "products": 822,
-      "ms": 3405
+      "ms": 597
     },
     {
       "id": "eating-tools",
@@ -95,7 +95,7 @@
       "url": "https://www.eatingtools.com",
       "ok": true,
       "products": 1043,
-      "ms": 11295
+      "ms": 7677
     },
     {
       "id": "modern-cooking",
@@ -103,7 +103,7 @@
       "url": "https://www.moderncooking.com",
       "ok": true,
       "products": 503,
-      "ms": 2113
+      "ms": 4550
     },
     {
       "id": "tetogi",
@@ -111,7 +111,7 @@
       "url": "https://tetogi.com",
       "ok": true,
       "products": 2119,
-      "ms": 4949
+      "ms": 3406
     },
     {
       "id": "oishya",
@@ -119,15 +119,15 @@
       "url": "https://oishya.com",
       "ok": true,
       "products": 53,
-      "ms": 5793
+      "ms": 792
     },
     {
       "id": "ai-and-om",
       "name": "Ai and Om Knives",
       "url": "https://aiandomknives.com",
       "ok": true,
-      "products": 964,
-      "ms": 5580
+      "products": 965,
+      "ms": 2840
     },
     {
       "id": "town-cutler",
@@ -135,15 +135,15 @@
       "url": "https://www.towncutler.com",
       "ok": true,
       "products": 203,
-      "ms": 1000
+      "ms": 836
     },
     {
       "id": "homebutcher",
       "name": "Homebutcher",
       "url": "https://homebutcher.com",
       "ok": true,
-      "products": 1137,
-      "ms": 1936
+      "products": 1136,
+      "ms": 730
     },
     {
       "id": "kitchen-provisions",
@@ -151,7 +151,7 @@
       "url": "https://www.kitchenprovisions.co.uk",
       "ok": true,
       "products": 249,
-      "ms": 1528
+      "ms": 331
     },
     {
       "id": "bryan-raquin-direct",
@@ -159,7 +159,7 @@
       "url": "https://www.bryanraquin.com",
       "ok": true,
       "products": 79,
-      "ms": 287
+      "ms": 652
     },
     {
       "id": "jns",
@@ -167,7 +167,7 @@
       "url": "https://www.japanesenaturalstones.com",
       "ok": true,
       "products": 6618,
-      "ms": 48430
+      "ms": 48805
     },
     {
       "id": "hitohira-japan-com",
@@ -175,7 +175,7 @@
       "url": "https://hitohira-japan.com",
       "ok": true,
       "products": 5966,
-      "ms": 16252
+      "ms": 23704
     },
     {
       "id": "shirasagistore-com",
@@ -183,7 +183,7 @@
       "url": "https://shirasagistore.com",
       "ok": true,
       "products": 100,
-      "ms": 4871
+      "ms": 5038
     },
     {
       "id": "staysharpmtl-com",
@@ -191,7 +191,7 @@
       "url": "https://staysharpmtl.com",
       "ok": true,
       "products": 1990,
-      "ms": 5356
+      "ms": 10334
     },
     {
       "id": "bernalcutleryshop-com",
@@ -199,7 +199,7 @@
       "url": "https://www.bernalcutleryshop.com",
       "ok": true,
       "products": 0,
-      "ms": 511
+      "ms": 475
     },
     {
       "id": "curacook-com",
@@ -207,7 +207,7 @@
       "url": "https://curacook.com",
       "ok": true,
       "products": 2293,
-      "ms": 42689
+      "ms": 44272
     }
   ],
   "hits": [
@@ -6764,8 +6764,8 @@
         "handle": "takada-no-hamono-white-1-suiboku-santoku-180mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-white-1-suiboku-santoku-180mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-white-1-suiboku-santoku-180mm-ho-wood-handle-814589.jpg?v=1763585085",
-        "priceMin": 382,
-        "priceMax": 382,
+        "priceMin": 381,
+        "priceMax": 381,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6955,8 +6955,8 @@
         "handle": "takada-no-hamono-blue-1-suiboku-santoku-180mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-suiboku-santoku-180mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-suiboku-santoku-180mm-ho-wood-handle-653939.jpg?v=1763585023",
-        "priceMin": 382,
-        "priceMax": 382,
+        "priceMin": 381,
+        "priceMax": 381,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7410,8 +7410,8 @@
         "handle": "bca-s3hh-05-fa210",
         "url": "https://hitohira-japan.com/products/bca-s3hh-05-fa210",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC04421_1d4a0b70-2cba-43a0-8018-6c2eee548a92.jpg?v=1653552694",
-        "priceMin": 339,
-        "priceMax": 339,
+        "priceMin": 338,
+        "priceMax": 338,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7947,8 +7947,8 @@
         "handle": "bca-sbb2-05-da",
         "url": "https://hitohira-japan.com/products/bca-sbb2-05-da",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC07050_25a77092-876d-4e16-b810-e9ca8a163498.jpg?v=1680519421",
-        "priceMin": 482,
-        "priceMax": 482,
+        "priceMin": 481,
+        "priceMax": 481,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8882,8 +8882,8 @@
         "handle": "bca-s3su-05-ca180",
         "url": "https://hitohira-japan.com/products/bca-s3su-05-ca180",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC01311_3b124bea-7153-4de1-93a3-c5469fcb0407.jpg?v=1647027402",
-        "priceMin": 469,
-        "priceMax": 469,
+        "priceMin": 468,
+        "priceMax": 468,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -9062,8 +9062,8 @@
         "handle": "bca-s3su-thin-06-ba135",
         "url": "https://hitohira-japan.com/products/bca-s3su-thin-06-ba135",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC05497_4ec3f6a5-3e44-4d91-a0af-62afe674ac93.jpg?v=1647032972",
-        "priceMin": 391,
-        "priceMax": 391,
+        "priceMin": 390,
+        "priceMax": 390,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
