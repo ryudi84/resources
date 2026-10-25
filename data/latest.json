@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T22:49:27.858Z",
+  "generatedAt": "2026-10-25T00:44:15.284Z",
   "retailers": [
     {
       "id": "tosho",
@@ -7,7 +7,7 @@
       "url": "https://toshoknifearts.com",
       "ok": true,
       "products": 1808,
-      "ms": 6857
+      "ms": 5360
     },
     {
       "id": "knives-and-stones-au",
@@ -15,7 +15,7 @@
       "url": "https://knivesandstones.com.au",
       "ok": true,
       "products": 244,
-      "ms": 1665
+      "ms": 1108
     },
     {
       "id": "carbon-knife-co",
@@ -23,7 +23,7 @@
       "url": "https://carbonknifeco.com",
       "ok": true,
       "products": 3221,
-      "ms": 9492
+      "ms": 8198
     },
     {
       "id": "strata",
@@ -31,7 +31,7 @@
       "url": "https://strataportland.com",
       "ok": true,
       "products": 3771,
-      "ms": 13916
+      "ms": 12759
     },
     {
       "id": "bernal",
@@ -39,7 +39,7 @@
       "url": "https://bernalcutlery.com",
       "ok": true,
       "products": 4977,
-      "ms": 25821
+      "ms": 18049
     },
     {
       "id": "sugi",
@@ -47,7 +47,7 @@
       "url": "https://sugicutlery.com",
       "ok": true,
       "products": 2546,
-      "ms": 12405
+      "ms": 12768
     },
     {
       "id": "tokushu",
@@ -55,7 +55,7 @@
       "url": "https://tokushuknife.com",
       "ok": true,
       "products": 920,
-      "ms": 4489
+      "ms": 4134
     },
     {
       "id": "sharp-knife-shop",
@@ -63,7 +63,7 @@
       "url": "https://sharpknifeshop.com",
       "ok": true,
       "products": 348,
-      "ms": 628
+      "ms": 1770
     },
     {
       "id": "knifewear",
@@ -71,7 +71,7 @@
       "url": "https://knifewear.com",
       "ok": true,
       "products": 749,
-      "ms": 2296
+      "ms": 2282
     },
     {
       "id": "district-cutlery",
@@ -79,7 +79,7 @@
       "url": "https://www.districtcutlery.com",
       "ok": true,
       "products": 374,
-      "ms": 2259
+      "ms": 2322
     },
     {
       "id": "coutelier",
@@ -87,7 +87,7 @@
       "url": "https://couteliernola.com",
       "ok": true,
       "products": 839,
-      "ms": 3430
+      "ms": 3833
     },
     {
       "id": "eating-tools",
@@ -95,7 +95,7 @@
       "url": "https://www.eatingtools.com",
       "ok": true,
       "products": 1060,
-      "ms": 5738
+      "ms": 5733
     },
     {
       "id": "modern-cooking",
@@ -103,7 +103,7 @@
       "url": "https://www.moderncooking.com",
       "ok": true,
       "products": 503,
-      "ms": 1995
+      "ms": 2031
     },
     {
       "id": "tetogi",
@@ -111,7 +111,7 @@
       "url": "https://tetogi.com",
       "ok": true,
       "products": 2129,
-      "ms": 7200
+      "ms": 7411
     },
     {
       "id": "oishya",
@@ -119,7 +119,7 @@
       "url": "https://oishya.com",
       "ok": true,
       "products": 53,
-      "ms": 6295
+      "ms": 896
     },
     {
       "id": "ai-and-om",
@@ -127,7 +127,7 @@
       "url": "https://aiandomknives.com",
       "ok": true,
       "products": 983,
-      "ms": 9841
+      "ms": 1434
     },
     {
       "id": "town-cutler",
@@ -135,7 +135,7 @@
       "url": "https://www.towncutler.com",
       "ok": true,
       "products": 203,
-      "ms": 1088
+      "ms": 856
     },
     {
       "id": "homebutcher",
@@ -143,7 +143,7 @@
       "url": "https://homebutcher.com",
       "ok": true,
       "products": 1134,
-      "ms": 2104
+      "ms": 2028
     },
     {
       "id": "kitchen-provisions",
@@ -151,7 +151,7 @@
       "url": "https://www.kitchenprovisions.co.uk",
       "ok": true,
       "products": 249,
-      "ms": 1585
+      "ms": 1738
     },
     {
       "id": "bryan-raquin-direct",
@@ -159,7 +159,7 @@
       "url": "https://www.bryanraquin.com",
       "ok": true,
       "products": 78,
-      "ms": 623
+      "ms": 571
     },
     {
       "id": "jns",
@@ -167,7 +167,7 @@
       "url": "https://www.japanesenaturalstones.com",
       "ok": true,
       "products": 6648,
-      "ms": 48971
+      "ms": 46368
     },
     {
       "id": "hitohira-japan-com",
@@ -175,7 +175,7 @@
       "url": "https://hitohira-japan.com",
       "ok": true,
       "products": 6037,
-      "ms": 13862
+      "ms": 19587
     },
     {
       "id": "shirasagistore-com",
@@ -183,7 +183,7 @@
       "url": "https://shirasagistore.com",
       "ok": true,
       "products": 100,
-      "ms": 3132
+      "ms": 3074
     },
     {
       "id": "staysharpmtl-com",
@@ -191,7 +191,7 @@
       "url": "https://staysharpmtl.com",
       "ok": true,
       "products": 2006,
-      "ms": 5379
+      "ms": 6127
     },
     {
       "id": "bernalcutleryshop-com",
@@ -200,7 +200,7 @@
       "ok": false,
       "error": "fetch failed",
       "products": 0,
-      "ms": 4637
+      "ms": 4626
     },
     {
       "id": "curacook-com",
@@ -208,7 +208,7 @@
       "url": "https://curacook.com",
       "ok": true,
       "products": 2293,
-      "ms": 45328
+      "ms": 48827
     }
   ],
   "hits": [
@@ -7712,8 +7712,8 @@
         "handle": "bca-w2hon-04-fa210",
         "url": "https://hitohira-japan.com/products/bca-w2hon-04-fa210",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC02524_a37a6ac4-e3f9-4d20-966a-d93918bba824.jpg?v=1647499608",
-        "priceMin": 1464,
-        "priceMax": 1464,
+        "priceMin": 1465,
+        "priceMax": 1465,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7782,8 +7782,8 @@
         "handle": "bca-w2hon-05-fa240",
         "url": "https://hitohira-japan.com/products/bca-w2hon-05-fa240",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC02541_deb3d1c5-891b-49c1-ae04-f0aac948907c.jpg?v=1647499695",
-        "priceMin": 1615,
-        "priceMax": 1615,
+        "priceMin": 1616,
+        "priceMax": 1616,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8466,8 +8466,8 @@
         "handle": "bca-s3su-05-fa210",
         "url": "https://hitohira-japan.com/products/bca-s3su-05-fa210",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC07109_05a1e4bb-f8ce-448c-ad48-38f20969b740.jpg?v=1647021460",
-        "priceMin": 521,
-        "priceMax": 521,
+        "priceMin": 522,
+        "priceMax": 522,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
