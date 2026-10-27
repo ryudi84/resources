@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T18:43:48.249Z",
+  "generatedAt": "2026-10-27T22:48:41.350Z",
   "retailers": [
     {
       "id": "tosho",
@@ -7,7 +7,7 @@
       "url": "https://toshoknifearts.com",
       "ok": true,
       "products": 1809,
-      "ms": 1263
+      "ms": 4672
     },
     {
       "id": "knives-and-stones-au",
@@ -15,7 +15,7 @@
       "url": "https://knivesandstones.com.au",
       "ok": true,
       "products": 244,
-      "ms": 597
+      "ms": 1693
     },
     {
       "id": "carbon-knife-co",
@@ -23,7 +23,7 @@
       "url": "https://carbonknifeco.com",
       "ok": true,
       "products": 3217,
-      "ms": 2188
+      "ms": 7476
     },
     {
       "id": "strata",
@@ -31,7 +31,7 @@
       "url": "https://strataportland.com",
       "ok": true,
       "products": 3771,
-      "ms": 2679
+      "ms": 2612
     },
     {
       "id": "bernal",
@@ -39,7 +39,7 @@
       "url": "https://bernalcutlery.com",
       "ok": true,
       "products": 4981,
-      "ms": 6294
+      "ms": 15845
     },
     {
       "id": "sugi",
@@ -47,7 +47,7 @@
       "url": "https://sugicutlery.com",
       "ok": true,
       "products": 2556,
-      "ms": 4102
+      "ms": 7519
     },
     {
       "id": "tokushu",
@@ -55,7 +55,7 @@
       "url": "https://tokushuknife.com",
       "ok": true,
       "products": 921,
-      "ms": 657
+      "ms": 3565
     },
     {
       "id": "sharp-knife-shop",
@@ -63,7 +63,7 @@
       "url": "https://sharpknifeshop.com",
       "ok": true,
       "products": 348,
-      "ms": 802
+      "ms": 459
     },
     {
       "id": "knifewear",
@@ -71,7 +71,7 @@
       "url": "https://knifewear.com",
       "ok": true,
       "products": 749,
-      "ms": 1484
+      "ms": 1810
     },
     {
       "id": "district-cutlery",
@@ -79,7 +79,7 @@
       "url": "https://www.districtcutlery.com",
       "ok": true,
       "products": 375,
-      "ms": 616
+      "ms": 1220
     },
     {
       "id": "coutelier",
@@ -87,7 +87,7 @@
       "url": "https://couteliernola.com",
       "ok": true,
       "products": 839,
-      "ms": 883
+      "ms": 556
     },
     {
       "id": "eating-tools",
@@ -95,7 +95,7 @@
       "url": "https://www.eatingtools.com",
       "ok": true,
       "products": 1061,
-      "ms": 1437
+      "ms": 9837
     },
     {
       "id": "modern-cooking",
@@ -103,7 +103,7 @@
       "url": "https://www.moderncooking.com",
       "ok": true,
       "products": 503,
-      "ms": 1618
+      "ms": 3963
     },
     {
       "id": "tetogi",
@@ -111,7 +111,7 @@
       "url": "https://tetogi.com",
       "ok": true,
       "products": 2129,
-      "ms": 3384
+      "ms": 2723
     },
     {
       "id": "oishya",
@@ -119,7 +119,7 @@
       "url": "https://oishya.com",
       "ok": true,
       "products": 53,
-      "ms": 1203
+      "ms": 6010
     },
     {
       "id": "ai-and-om",
@@ -127,7 +127,7 @@
       "url": "https://aiandomknives.com",
       "ok": true,
       "products": 989,
-      "ms": 1679
+      "ms": 2994
     },
     {
       "id": "town-cutler",
@@ -135,7 +135,7 @@
       "url": "https://www.towncutler.com",
       "ok": true,
       "products": 203,
-      "ms": 480
+      "ms": 925
     },
     {
       "id": "homebutcher",
@@ -143,7 +143,7 @@
       "url": "https://homebutcher.com",
       "ok": true,
       "products": 1134,
-      "ms": 1294
+      "ms": 1620
     },
     {
       "id": "kitchen-provisions",
@@ -151,7 +151,7 @@
       "url": "https://www.kitchenprovisions.co.uk",
       "ok": true,
       "products": 249,
-      "ms": 1800
+      "ms": 1210
     },
     {
       "id": "bryan-raquin-direct",
@@ -159,7 +159,7 @@
       "url": "https://www.bryanraquin.com",
       "ok": true,
       "products": 78,
-      "ms": 826
+      "ms": 491
     },
     {
       "id": "jns",
@@ -167,7 +167,7 @@
       "url": "https://www.japanesenaturalstones.com",
       "ok": true,
       "products": 6652,
-      "ms": 55117
+      "ms": 46636
     },
     {
       "id": "hitohira-japan-com",
@@ -175,7 +175,7 @@
       "url": "https://hitohira-japan.com",
       "ok": true,
       "products": 6039,
-      "ms": 8466
+      "ms": 24890
     },
     {
       "id": "shirasagistore-com",
@@ -183,7 +183,7 @@
       "url": "https://shirasagistore.com",
       "ok": true,
       "products": 1572,
-      "ms": 35451
+      "ms": 38958
     },
     {
       "id": "staysharpmtl-com",
@@ -191,7 +191,7 @@
       "url": "https://staysharpmtl.com",
       "ok": true,
       "products": 2007,
-      "ms": 2728
+      "ms": 8594
     },
     {
       "id": "bernalcutleryshop-com",
@@ -200,7 +200,7 @@
       "ok": false,
       "error": "fetch failed",
       "products": 0,
-      "ms": 4683
+      "ms": 4600
     },
     {
       "id": "curacook-com",
@@ -208,7 +208,7 @@
       "url": "https://curacook.com",
       "ok": true,
       "products": 2293,
-      "ms": 48240
+      "ms": 48397
     }
   ],
   "hits": [
@@ -6493,8 +6493,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-sujihiki-270mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-sujihiki-270mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-sujihiki-270mm-wood-handle-884472.jpg?v=1763743175",
-        "priceMin": 560,
-        "priceMax": 560,
+        "priceMin": 559,
+        "priceMax": 559,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6555,8 +6555,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-sujihiki-300mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-sujihiki-300mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-sujihiki-300mm-wood-handle-494170.jpg?v=1763742276",
-        "priceMin": 639,
-        "priceMax": 639,
+        "priceMin": 638,
+        "priceMax": 638,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6586,8 +6586,8 @@
         "handle": "takada-no-hamono-silver-3-hh-gyuto-210mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-hh-gyuto-210mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-hh-gyuto-210mm-ho-wood-handle-116179.jpg?v=1763742269",
-        "priceMin": 317,
-        "priceMax": 317,
+        "priceMin": 316,
+        "priceMax": 316,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6648,8 +6648,8 @@
         "handle": "takada-no-hamono-silver-3-hh-sujihiki-270mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-hh-sujihiki-270mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-hh-sujihiki-270mm-ho-wood-handle-386075.jpg?v=1763741464",
-        "priceMin": 317,
-        "priceMax": 317,
+        "priceMin": 316,
+        "priceMax": 316,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6711,8 +6711,8 @@
         "handle": "takada-no-hamono-white-2-hh-santoku-180mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-white-2-hh-santoku-180mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-white-2-hh-santoku-180mm-ho-wood-handle-503546.jpg?v=1763585098",
-        "priceMin": 244,
-        "priceMax": 244,
+        "priceMin": 243,
+        "priceMax": 243,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6838,8 +6838,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-santoku-180mm-wood-act-extra-thin",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-santoku-180mm-wood-act-extra-thin",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-santoku-180mm-wood-handle-extra-thin-504161.jpg?v=1763585058",
-        "priceMin": 390,
-        "priceMax": 390,
+        "priceMin": 389,
+        "priceMax": 389,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6966,8 +6966,8 @@
         "handle": "takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-handle-654832.jpg?v=1763584947",
-        "priceMin": 475,
-        "priceMax": 475,
+        "priceMin": 474,
+        "priceMax": 474,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7569,8 +7569,8 @@
         "handle": "bca-b1su-45-ga210",
         "url": "https://hitohira-japan.com/products/bca-b1su-45-ga210",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC03563_d2274875-dba9-455b-8ff5-598a12677755.jpg?v=1649746983",
-        "priceMin": 499,
-        "priceMax": 499,
+        "priceMin": 498,
+        "priceMax": 498,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8178,8 +8178,8 @@
         "handle": "bca-w2hh-05-aa90",
         "url": "https://hitohira-japan.com/products/bca-w2hh-05-aa90",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC02374_b5ad2669-4f36-4786-a193-85e0a60c786b.jpg?v=1647015218",
-        "priceMin": 264,
-        "priceMax": 264,
+        "priceMin": 263,
+        "priceMax": 263,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -10750,8 +10750,8 @@
         "handle": "takada-no-hamono-ginsan-suiboku-nakiri-180-mm-bois-rose",
         "url": "https://staysharpmtl.com/products/takada-no-hamono-ginsan-suiboku-nakiri-180-mm-bois-rose",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0622/8600/4398/files/TakadanoHamonoGinsanSuibokuNakiri180mmBoisRose_1.jpg?v=1690401116",
-        "priceMin": 472,
-        "priceMax": 472,
+        "priceMin": 473,
+        "priceMax": 473,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -10842,8 +10842,8 @@
         "handle": "takada-no-hamono-mizu-honyaki-shirogami-2-kiritsuke-gyuto-180mm-ebene",
         "url": "https://staysharpmtl.com/products/takada-no-hamono-mizu-honyaki-shirogami-2-kiritsuke-gyuto-180mm-ebene",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0622/8600/4398/products/4A8792DD-1635-40E9-8E14-6D425BF0A346.jpg?v=1666798940",
-        "priceMin": 1089,
-        "priceMax": 1089,
+        "priceMin": 1090,
+        "priceMax": 1090,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -11003,8 +11003,8 @@
         "handle": "takada-no-hamono-aogami-1-suiboku-petty-135mm-ho",
         "url": "https://staysharpmtl.com/products/takada-no-hamono-aogami-1-suiboku-petty-135mm-ho",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0622/8600/4398/products/1D4421C3-3089-48B4-A492-C3C0D11BF36F.jpg?v=1666797110",
-        "priceMin": 265,
-        "priceMax": 265,
+        "priceMin": 266,
+        "priceMax": 266,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -11619,8 +11619,8 @@
         "handle": "takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-handle-654832.jpg?v=1763584947",
-        "priceMin": 475,
-        "priceMax": 475,
+        "priceMin": 474,
+        "priceMax": 474,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
