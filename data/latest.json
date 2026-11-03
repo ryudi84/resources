@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T22:13:03.814Z",
+  "generatedAt": "2026-11-03T01:57:24.314Z",
   "retailers": [
     {
       "id": "tosho",
@@ -7,7 +7,7 @@
       "url": "https://toshoknifearts.com",
       "ok": true,
       "products": 1808,
-      "ms": 2480
+      "ms": 5918
     },
     {
       "id": "knives-and-stones-au",
@@ -15,15 +15,15 @@
       "url": "https://knivesandstones.com.au",
       "ok": true,
       "products": 244,
-      "ms": 544
+      "ms": 753
     },
     {
       "id": "carbon-knife-co",
       "name": "Carbon Knife Co",
       "url": "https://carbonknifeco.com",
       "ok": true,
-      "products": 3180,
-      "ms": 4412
+      "products": 3179,
+      "ms": 6963
     },
     {
       "id": "strata",
@@ -31,15 +31,15 @@
       "url": "https://strataportland.com",
       "ok": true,
       "products": 3777,
-      "ms": 6889
+      "ms": 10592
     },
     {
       "id": "bernal",
       "name": "Bernal Cutlery",
       "url": "https://bernalcutlery.com",
       "ok": true,
-      "products": 4995,
-      "ms": 8949
+      "products": 5001,
+      "ms": 21403
     },
     {
       "id": "sugi",
@@ -47,7 +47,7 @@
       "url": "https://sugicutlery.com",
       "ok": true,
       "products": 2560,
-      "ms": 5602
+      "ms": 9648
     },
     {
       "id": "tokushu",
@@ -55,7 +55,7 @@
       "url": "https://tokushuknife.com",
       "ok": true,
       "products": 941,
-      "ms": 1859
+      "ms": 5762
     },
     {
       "id": "sharp-knife-shop",
@@ -63,7 +63,7 @@
       "url": "https://sharpknifeshop.com",
       "ok": true,
       "products": 337,
-      "ms": 915
+      "ms": 1446
     },
     {
       "id": "knifewear",
@@ -71,7 +71,7 @@
       "url": "https://knifewear.com",
       "ok": true,
       "products": 749,
-      "ms": 1384
+      "ms": 1823
     },
     {
       "id": "district-cutlery",
@@ -79,7 +79,7 @@
       "url": "https://www.districtcutlery.com",
       "ok": true,
       "products": 387,
-      "ms": 500
+      "ms": 1789
     },
     {
       "id": "coutelier",
@@ -87,7 +87,7 @@
       "url": "https://couteliernola.com",
       "ok": true,
       "products": 842,
-      "ms": 625
+      "ms": 3661
     },
     {
       "id": "eating-tools",
@@ -95,7 +95,7 @@
       "url": "https://www.eatingtools.com",
       "ok": true,
       "products": 1039,
-      "ms": 7604
+      "ms": 5672
     },
     {
       "id": "modern-cooking",
@@ -103,7 +103,7 @@
       "url": "https://www.moderncooking.com",
       "ok": true,
       "products": 503,
-      "ms": 2581
+      "ms": 3183
     },
     {
       "id": "tetogi",
@@ -111,7 +111,7 @@
       "url": "https://tetogi.com",
       "ok": true,
       "products": 2129,
-      "ms": 4699
+      "ms": 7733
     },
     {
       "id": "oishya",
@@ -119,7 +119,7 @@
       "url": "https://oishya.com",
       "ok": true,
       "products": 53,
-      "ms": 762
+      "ms": 883
     },
     {
       "id": "ai-and-om",
@@ -127,7 +127,7 @@
       "url": "https://aiandomknives.com",
       "ok": true,
       "products": 990,
-      "ms": 938
+      "ms": 4880
     },
     {
       "id": "town-cutler",
@@ -135,7 +135,7 @@
       "url": "https://www.towncutler.com",
       "ok": true,
       "products": 203,
-      "ms": 521
+      "ms": 949
     },
     {
       "id": "homebutcher",
@@ -143,7 +143,7 @@
       "url": "https://homebutcher.com",
       "ok": true,
       "products": 1134,
-      "ms": 828
+      "ms": 2521
     },
     {
       "id": "kitchen-provisions",
@@ -151,7 +151,7 @@
       "url": "https://www.kitchenprovisions.co.uk",
       "ok": true,
       "products": 248,
-      "ms": 241
+      "ms": 1753
     },
     {
       "id": "bryan-raquin-direct",
@@ -159,7 +159,7 @@
       "url": "https://www.bryanraquin.com",
       "ok": true,
       "products": 78,
-      "ms": 347
+      "ms": 1093
     },
     {
       "id": "jns",
@@ -167,7 +167,7 @@
       "url": "https://www.japanesenaturalstones.com",
       "ok": true,
       "products": 6655,
-      "ms": 46989
+      "ms": 53600
     },
     {
       "id": "hitohira-japan-com",
@@ -175,7 +175,7 @@
       "url": "https://hitohira-japan.com",
       "ok": true,
       "products": 6040,
-      "ms": 13560
+      "ms": 15760
     },
     {
       "id": "shirasagistore-com",
@@ -183,7 +183,7 @@
       "url": "https://shirasagistore.com",
       "ok": true,
       "products": 1583,
-      "ms": 39785
+      "ms": 36395
     },
     {
       "id": "staysharpmtl-com",
@@ -191,7 +191,7 @@
       "url": "https://staysharpmtl.com",
       "ok": true,
       "products": 2017,
-      "ms": 6136
+      "ms": 6488
     },
     {
       "id": "bernalcutleryshop-com",
@@ -200,7 +200,7 @@
       "ok": false,
       "error": "fetch failed",
       "products": 0,
-      "ms": 4586
+      "ms": 4615
     },
     {
       "id": "curacook-com",
@@ -208,7 +208,7 @@
       "url": "https://curacook.com",
       "ok": true,
       "products": 2293,
-      "ms": 44422
+      "ms": 44513
     }
   ],
   "hits": [
@@ -227,8 +227,8 @@
         "handle": "/jns-raquin-collab-bunka-190mm-sc125/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-bunka-190mm-sc125/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7547/79604/P1420438__16309.1777817606.jpg",
-        "priceMin": 1045.1,
-        "priceMax": 1045.1,
+        "priceMin": 1047.9,
+        "priceMax": 1047.9,
         "available": true,
         "variantsAvailable": 1,
         "variantsTotal": 1
@@ -2391,8 +2391,8 @@
         "handle": "/jns-raquin-collab-gyuto-220mm-145sc/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-gyuto-220mm-145sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7103/75896/P1370985__11973.1760173403.jpg",
-        "priceMin": 895.8,
-        "priceMax": 895.8,
+        "priceMin": 898.2,
+        "priceMax": 898.2,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2413,8 +2413,8 @@
         "handle": "/jns-raquin-collab-nakiri-155mm-145sc/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-nakiri-155mm-145sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7105/75916/P1380004__60356.1760173406.jpg",
-        "priceMin": 746.5,
-        "priceMax": 746.5,
+        "priceMin": 748.5,
+        "priceMax": 748.5,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2435,8 +2435,8 @@
         "handle": "/jns-raquin-collab-gyuto-220mm-white-1/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-gyuto-220mm-white-1/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7187/76591/P1380809__94259.1760792889.jpg",
-        "priceMin": 1045.1,
-        "priceMax": 1045.1,
+        "priceMin": 1047.9,
+        "priceMax": 1047.9,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2457,8 +2457,8 @@
         "handle": "/jns-raquin-collab-nakiri-210mm-white-1/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-nakiri-210mm-white-1/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7188/76598/P1380818__77406.1760793046.jpg",
-        "priceMin": 1194.4,
-        "priceMax": 1194.4,
+        "priceMin": 1197.6,
+        "priceMax": 1197.6,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2479,8 +2479,8 @@
         "handle": "/jns-raquin-collab-gyuto-230mm-145sc/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-gyuto-230mm-145sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7314/77672/P1400063__26964.1765986886.jpg",
-        "priceMin": 1194.4,
-        "priceMax": 1194.4,
+        "priceMin": 1197.6,
+        "priceMax": 1197.6,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2501,8 +2501,8 @@
         "handle": "/jns-raquin-collab-gyuto-265mm-145sc/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-gyuto-265mm-145sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7394/78332/P1400895__02391.1770822023.jpg",
-        "priceMin": 2090.2,
-        "priceMax": 2090.2,
+        "priceMin": 2095.8,
+        "priceMax": 2095.8,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2523,8 +2523,8 @@
         "handle": "/jns-raquin-collab-butcher-200mm-white-1/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-butcher-200mm-white-1/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7395/78349/P1400907__32151.1770911452.jpg",
-        "priceMin": 1045.1,
-        "priceMax": 1045.1,
+        "priceMin": 1047.9,
+        "priceMax": 1047.9,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2545,8 +2545,8 @@
         "handle": "/jns-raquin-collab-slicer-225mm-145sc/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-slicer-225mm-145sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7398/78382/P1400942__36280.1771086156.jpg",
-        "priceMin": 970.45,
-        "priceMax": 970.45,
+        "priceMin": 973.05,
+        "priceMax": 973.05,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2567,8 +2567,8 @@
         "handle": "/jns-raquin-collab-gyuto-235mm-125sc/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-gyuto-235mm-125sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7489/79075/P1410847__81343.1774022451.jpg",
-        "priceMin": 1194.4,
-        "priceMax": 1194.4,
+        "priceMin": 1197.6,
+        "priceMax": 1197.6,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2589,8 +2589,8 @@
         "handle": "/jns-raquin-collab-gyuto-205mm-145sc/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-gyuto-205mm-145sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7492/79109/P1410904__46700.1774191053.jpg",
-        "priceMin": 970.45,
-        "priceMax": 970.45,
+        "priceMin": 973.05,
+        "priceMax": 973.05,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2611,8 +2611,8 @@
         "handle": "/jns-raquin-collab-gyuto-230mm-white-1/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-gyuto-230mm-white-1/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7494/79137/P1410935__21298.1774362035.jpg",
-        "priceMin": 1194.4,
-        "priceMax": 1194.4,
+        "priceMin": 1197.6,
+        "priceMax": 1197.6,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2633,8 +2633,8 @@
         "handle": "/jns-raquin-collab-sujihiki-280mm-125sc/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-sujihiki-280mm-125sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7497/79171/P1410968__27691.1774542475.jpg",
-        "priceMin": 1343.7,
-        "priceMax": 1343.7,
+        "priceMin": 1347.3,
+        "priceMax": 1347.3,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2655,8 +2655,8 @@
         "handle": "/jns-raquin-collab-gyuto-250mm-145sc-laser/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-gyuto-250mm-145sc-laser/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7552/79660/P1000025__43446.1778080888.jpg",
-        "priceMin": 1194.4,
-        "priceMax": 1194.4,
+        "priceMin": 1197.6,
+        "priceMax": 1197.6,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2677,8 +2677,8 @@
         "handle": "/jns-raquin-collab-sujihiki-260mm-145sc/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-sujihiki-260mm-145sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7729/81205/P1001697__29600.1787412308.jpg",
-        "priceMin": 1045.1,
-        "priceMax": 1045.1,
+        "priceMin": 1047.9,
+        "priceMax": 1047.9,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2699,8 +2699,8 @@
         "handle": "/jns-raquin-collab-meat-saber-275mm-145sc/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-meat-saber-275mm-145sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7784/81640/P1002281__18354.1789226468.jpg",
-        "priceMin": 1343.7,
-        "priceMax": 1343.7,
+        "priceMin": 1347.3,
+        "priceMax": 1347.3,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -7075,8 +7075,8 @@
         "handle": "bca-s3hh-05-ga240",
         "url": "https://hitohira-japan.com/products/bca-s3hh-05-ga240",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/files/DSC03850_ed159c8c-8cda-424e-bba8-065f6dad0a0e.jpg?v=1684722734",
-        "priceMin": 323,
-        "priceMax": 323,
+        "priceMin": 324,
+        "priceMax": 324,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7327,8 +7327,8 @@
         "handle": "bca-b1hh-05-ga270",
         "url": "https://hitohira-japan.com/products/bca-b1hh-05-ga270",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC05859_bcec626d-06ee-4f57-985b-6cf5b43994ba.jpg?v=1657344798",
-        "priceMin": 382,
-        "priceMax": 382,
+        "priceMin": 383,
+        "priceMax": 383,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7471,8 +7471,8 @@
         "handle": "bca-b1su-05-fa270",
         "url": "https://hitohira-japan.com/products/bca-b1su-05-fa270",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC04390_dc3809c9-9369-4d35-845e-4b07fce7c781.jpg?v=1653552609",
-        "priceMin": 749,
-        "priceMax": 749,
+        "priceMin": 750,
+        "priceMax": 750,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7579,8 +7579,8 @@
         "handle": "bca-b1su-45-ga210",
         "url": "https://hitohira-japan.com/products/bca-b1su-45-ga210",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC03563_d2274875-dba9-455b-8ff5-598a12677755.jpg?v=1649746983",
-        "priceMin": 498,
-        "priceMax": 498,
+        "priceMin": 499,
+        "priceMax": 499,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7615,8 +7615,8 @@
         "handle": "bca-s3hh-05-ga270",
         "url": "https://hitohira-japan.com/products/bca-s3hh-05-ga270",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC03551_950756f9-42cd-495e-9fe9-8b5863808662.jpg?v=1649746936",
-        "priceMin": 386,
-        "priceMax": 386,
+        "priceMin": 387,
+        "priceMax": 387,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7687,8 +7687,8 @@
         "handle": "bca-w2su-05-ca180",
         "url": "https://hitohira-japan.com/products/bca-w2su-05-ca180",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC03525_cab6760d-589e-4bf3-b21f-cb345086f38f.jpg?v=1649746807",
-        "priceMin": 403,
-        "priceMax": 403,
+        "priceMin": 404,
+        "priceMax": 404,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7828,8 +7828,8 @@
         "handle": "bca-hhw2-05-fa240",
         "url": "https://hitohira-japan.com/products/bca-hhw2-05-fa240",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC05255_617f6c8c-7f09-46b8-8b04-6737246bc418.jpg?v=1680516475",
-        "priceMin": 316,
-        "priceMax": 316,
+        "priceMin": 317,
+        "priceMax": 317,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7900,8 +7900,8 @@
         "handle": "bca-sbb2-05-fa240",
         "url": "https://hitohira-japan.com/products/bca-sbb2-05-fa240",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC07163_53e3e26a-697b-483f-aea8-c2a12678527c.jpg?v=1647009821",
-        "priceMin": 583,
-        "priceMax": 583,
+        "priceMin": 584,
+        "priceMax": 584,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8116,8 +8116,8 @@
         "handle": "bca-w2hhh-05-ga210",
         "url": "https://hitohira-japan.com/products/bca-w2hhh-05-ga210",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC02385_35dfc5fb-e4d7-4f86-ba17-e1c802687b6b.jpg?v=1647015204",
-        "priceMin": 312,
-        "priceMax": 312,
+        "priceMin": 313,
+        "priceMax": 313,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8188,8 +8188,8 @@
         "handle": "bca-w2hh-05-aa90",
         "url": "https://hitohira-japan.com/products/bca-w2hh-05-aa90",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC02374_b5ad2669-4f36-4786-a193-85e0a60c786b.jpg?v=1647015218",
-        "priceMin": 263,
-        "priceMax": 263,
+        "priceMin": 264,
+        "priceMax": 264,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8368,8 +8368,8 @@
         "handle": "bca-w2hhh-05-ca135",
         "url": "https://hitohira-japan.com/products/bca-w2hhh-05-ca135",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC03159_614a437f-1db1-4386-9b24-6c5d69835a8b.jpg?v=1647016445",
-        "priceMin": 405,
-        "priceMax": 405,
+        "priceMin": 406,
+        "priceMax": 406,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8691,8 +8691,8 @@
         "handle": "bca-w2hon-04-fa270",
         "url": "https://hitohira-japan.com/products/bca-w2hon-04-fa270",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC08095_a4bc9ca5-c7e6-4797-9cb3-99ad22683766.jpg?v=1647022874",
-        "priceMin": 1814,
-        "priceMax": 1814,
+        "priceMin": 1815,
+        "priceMax": 1815,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8727,8 +8727,8 @@
         "handle": "bca-sbb2-05-fa270",
         "url": "https://hitohira-japan.com/products/bca-sbb2-05-fa270",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC08083_7dec0d63-eb27-48ab-9012-c92c2271b6c9.jpg?v=1647022853",
-        "priceMin": 670,
-        "priceMax": 670,
+        "priceMin": 671,
+        "priceMax": 671,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8763,8 +8763,8 @@
         "handle": "bca-s3su-06-da180",
         "url": "https://hitohira-japan.com/products/bca-s3su-06-da180",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC08071_9f686f6d-a835-4570-b3fc-7fcdc79b706e.jpg?v=1647022819",
-        "priceMin": 509,
-        "priceMax": 509,
+        "priceMin": 510,
+        "priceMax": 510,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8799,8 +8799,8 @@
         "handle": "bca-sbb2-05-fa210",
         "url": "https://hitohira-japan.com/products/bca-sbb2-05-fa210",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC09152_9d58f686-25df-4546-9574-7e0ca3227e68.jpg?v=1647024545",
-        "priceMin": 511,
-        "priceMax": 511,
+        "priceMin": 512,
+        "priceMax": 512,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8835,8 +8835,8 @@
         "handle": "bca-sbb2-05-ca180",
         "url": "https://hitohira-japan.com/products/bca-sbb2-05-ca180",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC09518_8daec171-3dbd-4bc7-8fe3-a9a1c0314206.jpg?v=1647025028",
-        "priceMin": 461,
-        "priceMax": 461,
+        "priceMin": 462,
+        "priceMax": 462,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8943,8 +8943,8 @@
         "handle": "bca-w2hh-05-ga270",
         "url": "https://hitohira-japan.com/products/bca-w2hh-05-ga270",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC02389_0ce8c12e-84bd-41b1-a631-2462170a9921.jpg?v=1647028914",
-        "priceMin": 299,
-        "priceMax": 299,
+        "priceMin": 300,
+        "priceMax": 300,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -9015,8 +9015,8 @@
         "handle": "bca-w2hh-05-cb170",
         "url": "https://hitohira-japan.com/products/bca-w2hh-05-cb170",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC03609_6372eead-56f5-4e67-8c4b-6834e8bdbb74.jpg?v=1647030621",
-        "priceMin": 405,
-        "priceMax": 405,
+        "priceMin": 406,
+        "priceMax": 406,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -9159,8 +9159,8 @@
         "handle": "bca-s3su-thin-06-fa210",
         "url": "https://hitohira-japan.com/products/bca-s3su-thin-06-fa210",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC05534_1ea71be0-0b3c-4c74-bb5a-8c03c52ade2d.jpg?v=1647033022",
-        "priceMin": 675,
-        "priceMax": 675,
+        "priceMin": 676,
+        "priceMax": 676,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -9267,8 +9267,8 @@
         "handle": "bca-b1su-04-ga300",
         "url": "https://hitohira-japan.com/products/bca-b1su-04-ga300",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC06802_72885620-62b5-4158-beaa-5d941c36dbe7.jpg?v=1647034728",
-        "priceMin": 783,
-        "priceMax": 783,
+        "priceMin": 784,
+        "priceMax": 784,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -9339,8 +9339,8 @@
         "handle": "bca-w1su-06-ca180",
         "url": "https://hitohira-japan.com/products/bca-w1su-06-ca180",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC06868_0283e754-731c-4f89-aaa9-c6da7d6e3ae1.jpg?v=1647034805",
-        "priceMin": 504,
-        "priceMax": 504,
+        "priceMin": 505,
+        "priceMax": 505,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -9483,8 +9483,8 @@
         "handle": "bca-w1su-05-fa270",
         "url": "https://hitohira-japan.com/products/bca-w1su-05-fa270",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC08127_749fa4ba-ea8c-49f1-a073-87d37d6d4927.jpg?v=1647036103",
-        "priceMin": 749,
-        "priceMax": 749,
+        "priceMin": 750,
+        "priceMax": 750,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -9951,8 +9951,8 @@
         "handle": "bca-b1su-06-ca180",
         "url": "https://hitohira-japan.com/products/bca-b1su-06-ca180",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC00117_3891aa06-332c-47f9-ba0d-cf64a057fc1b.jpg?v=1647038312",
-        "priceMin": 504,
-        "priceMax": 504,
+        "priceMin": 505,
+        "priceMax": 505,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -10760,8 +10760,8 @@
         "handle": "takada-no-hamono-ginsan-suiboku-nakiri-180-mm-bois-rose",
         "url": "https://staysharpmtl.com/products/takada-no-hamono-ginsan-suiboku-nakiri-180-mm-bois-rose",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0622/8600/4398/files/TakadanoHamonoGinsanSuibokuNakiri180mmBoisRose_1.jpg?v=1690401116",
-        "priceMin": 475,
-        "priceMax": 475,
+        "priceMin": 474,
+        "priceMax": 474,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -11666,8 +11666,8 @@
         "handle": "bca-sbb2-05-fa240",
         "url": "https://hitohira-japan.com/products/bca-sbb2-05-fa240",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC07163_53e3e26a-697b-483f-aea8-c2a12678527c.jpg?v=1647009821",
-        "priceMin": 583,
-        "priceMax": 583,
+        "priceMin": 584,
+        "priceMax": 584,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
