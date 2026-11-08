@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T03:58:24.735Z",
+  "generatedAt": "2026-11-08T11:04:19.602Z",
   "retailers": [
     {
       "id": "tosho",
@@ -7,15 +7,15 @@
       "url": "https://toshoknifearts.com",
       "ok": true,
       "products": 1811,
-      "ms": 885
+      "ms": 869
     },
     {
       "id": "knives-and-stones-au",
       "name": "Knives and Stones (AU)",
       "url": "https://knivesandstones.com.au",
       "ok": true,
-      "products": 247,
-      "ms": 487
+      "products": 242,
+      "ms": 380
     },
     {
       "id": "carbon-knife-co",
@@ -23,7 +23,7 @@
       "url": "https://carbonknifeco.com",
       "ok": true,
       "products": 3216,
-      "ms": 1404
+      "ms": 3152
     },
     {
       "id": "strata",
@@ -31,7 +31,7 @@
       "url": "https://strataportland.com",
       "ok": true,
       "products": 3777,
-      "ms": 1924
+      "ms": 2771
     },
     {
       "id": "bernal",
@@ -39,7 +39,7 @@
       "url": "https://bernalcutlery.com",
       "ok": true,
       "products": 5013,
-      "ms": 2424
+      "ms": 3851
     },
     {
       "id": "sugi",
@@ -47,23 +47,23 @@
       "url": "https://sugicutlery.com",
       "ok": true,
       "products": 2562,
-      "ms": 4296
+      "ms": 2747
     },
     {
       "id": "tokushu",
       "name": "Tokushu Knife",
       "url": "https://tokushuknife.com",
       "ok": true,
-      "products": 945,
-      "ms": 516
+      "products": 948,
+      "ms": 826
     },
     {
       "id": "sharp-knife-shop",
       "name": "Sharp Knife Shop",
       "url": "https://sharpknifeshop.com",
       "ok": true,
-      "products": 351,
-      "ms": 513
+      "products": 350,
+      "ms": 535
     },
     {
       "id": "knifewear",
@@ -71,7 +71,7 @@
       "url": "https://knifewear.com",
       "ok": true,
       "products": 749,
-      "ms": 376
+      "ms": 380
     },
     {
       "id": "district-cutlery",
@@ -79,7 +79,7 @@
       "url": "https://www.districtcutlery.com",
       "ok": true,
       "products": 406,
-      "ms": 1167
+      "ms": 1092
     },
     {
       "id": "coutelier",
@@ -87,7 +87,7 @@
       "url": "https://couteliernola.com",
       "ok": true,
       "products": 857,
-      "ms": 1510
+      "ms": 1436
     },
     {
       "id": "eating-tools",
@@ -95,7 +95,7 @@
       "url": "https://www.eatingtools.com",
       "ok": true,
       "products": 1032,
-      "ms": 3076
+      "ms": 3518
     },
     {
       "id": "modern-cooking",
@@ -103,7 +103,7 @@
       "url": "https://www.moderncooking.com",
       "ok": true,
       "products": 503,
-      "ms": 997
+      "ms": 2088
     },
     {
       "id": "tetogi",
@@ -111,7 +111,7 @@
       "url": "https://tetogi.com",
       "ok": true,
       "products": 2130,
-      "ms": 6561
+      "ms": 4512
     },
     {
       "id": "oishya",
@@ -119,7 +119,7 @@
       "url": "https://oishya.com",
       "ok": true,
       "products": 53,
-      "ms": 6858
+      "ms": 6674
     },
     {
       "id": "ai-and-om",
@@ -127,7 +127,7 @@
       "url": "https://aiandomknives.com",
       "ok": true,
       "products": 996,
-      "ms": 1319
+      "ms": 2767
     },
     {
       "id": "town-cutler",
@@ -135,7 +135,7 @@
       "url": "https://www.towncutler.com",
       "ok": true,
       "products": 203,
-      "ms": 443
+      "ms": 405
     },
     {
       "id": "homebutcher",
@@ -143,7 +143,7 @@
       "url": "https://homebutcher.com",
       "ok": true,
       "products": 1134,
-      "ms": 1362
+      "ms": 1369
     },
     {
       "id": "kitchen-provisions",
@@ -151,7 +151,7 @@
       "url": "https://www.kitchenprovisions.co.uk",
       "ok": true,
       "products": 249,
-      "ms": 866
+      "ms": 1031
     },
     {
       "id": "bryan-raquin-direct",
@@ -159,7 +159,7 @@
       "url": "https://www.bryanraquin.com",
       "ok": true,
       "products": 78,
-      "ms": 716
+      "ms": 957
     },
     {
       "id": "jns",
@@ -167,7 +167,7 @@
       "url": "https://www.japanesenaturalstones.com",
       "ok": true,
       "products": 6664,
-      "ms": 46409
+      "ms": 43999
     },
     {
       "id": "hitohira-japan-com",
@@ -175,7 +175,7 @@
       "url": "https://hitohira-japan.com",
       "ok": true,
       "products": 6040,
-      "ms": 6894
+      "ms": 5443
     },
     {
       "id": "shirasagistore-com",
@@ -183,7 +183,7 @@
       "url": "https://shirasagistore.com",
       "ok": true,
       "products": 1583,
-      "ms": 32352
+      "ms": 37585
     },
     {
       "id": "staysharpmtl-com",
@@ -191,7 +191,7 @@
       "url": "https://staysharpmtl.com",
       "ok": true,
       "products": 2036,
-      "ms": 1647
+      "ms": 1684
     },
     {
       "id": "bernalcutleryshop-com",
@@ -200,7 +200,7 @@
       "ok": false,
       "error": "fetch failed",
       "products": 0,
-      "ms": 4639
+      "ms": 4677
     },
     {
       "id": "curacook-com",
@@ -208,7 +208,7 @@
       "url": "https://curacook.com",
       "ok": true,
       "products": 2293,
-      "ms": 41177
+      "ms": 45339
     }
   ],
   "hits": [
@@ -10895,8 +10895,8 @@
         "handle": "takada-no-hamono-mizu-honyaki-shirogami-2-kiritsuke-gyuto-180mm-ebene",
         "url": "https://staysharpmtl.com/products/takada-no-hamono-mizu-honyaki-shirogami-2-kiritsuke-gyuto-180mm-ebene",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0622/8600/4398/products/4A8792DD-1635-40E9-8E14-6D425BF0A346.jpg?v=1666798940",
-        "priceMin": 1084,
-        "priceMax": 1084,
+        "priceMin": 1083,
+        "priceMax": 1083,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
