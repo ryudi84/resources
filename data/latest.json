@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-12T20:43:10.867Z",
+  "generatedAt": "2026-11-13T00:56:51.349Z",
   "retailers": [
     {
       "id": "tosho",
       "name": "Tosho Knife Arts",
       "url": "https://toshoknifearts.com",
       "ok": true,
-      "products": 1812,
-      "ms": 1649
+      "products": 1810,
+      "ms": 1529
     },
     {
       "id": "knives-and-stones-au",
@@ -15,39 +15,39 @@
       "url": "https://knivesandstones.com.au",
       "ok": true,
       "products": 242,
-      "ms": 484
+      "ms": 495
     },
     {
       "id": "carbon-knife-co",
       "name": "Carbon Knife Co",
       "url": "https://carbonknifeco.com",
       "ok": true,
-      "products": 3220,
-      "ms": 2816
+      "products": 3221,
+      "ms": 2376
     },
     {
       "id": "strata",
       "name": "Strata Portland",
       "url": "https://strataportland.com",
       "ok": true,
-      "products": 3775,
-      "ms": 5643
+      "products": 3774,
+      "ms": 7301
     },
     {
       "id": "bernal",
       "name": "Bernal Cutlery",
       "url": "https://bernalcutlery.com",
       "ok": true,
-      "products": 5016,
-      "ms": 8745
+      "products": 5029,
+      "ms": 8219
     },
     {
       "id": "sugi",
       "name": "Sugi Cutlery",
       "url": "https://sugicutlery.com",
       "ok": true,
-      "products": 2586,
-      "ms": 5529
+      "products": 2590,
+      "ms": 4950
     },
     {
       "id": "tokushu",
@@ -55,15 +55,15 @@
       "url": "https://tokushuknife.com",
       "ok": true,
       "products": 950,
-      "ms": 2858
+      "ms": 1898
     },
     {
       "id": "sharp-knife-shop",
       "name": "Sharp Knife Shop",
       "url": "https://sharpknifeshop.com",
       "ok": true,
-      "products": 365,
-      "ms": 510
+      "products": 364,
+      "ms": 595
     },
     {
       "id": "knifewear",
@@ -71,7 +71,7 @@
       "url": "https://knifewear.com",
       "ok": true,
       "products": 749,
-      "ms": 1403
+      "ms": 706
     },
     {
       "id": "district-cutlery",
@@ -79,7 +79,7 @@
       "url": "https://www.districtcutlery.com",
       "ok": true,
       "products": 408,
-      "ms": 745
+      "ms": 667
     },
     {
       "id": "coutelier",
@@ -87,7 +87,7 @@
       "url": "https://couteliernola.com",
       "ok": true,
       "products": 860,
-      "ms": 642
+      "ms": 1514
     },
     {
       "id": "eating-tools",
@@ -95,7 +95,7 @@
       "url": "https://www.eatingtools.com",
       "ok": true,
       "products": 1030,
-      "ms": 3240
+      "ms": 3992
     },
     {
       "id": "modern-cooking",
@@ -103,7 +103,7 @@
       "url": "https://www.moderncooking.com",
       "ok": true,
       "products": 507,
-      "ms": 1625
+      "ms": 2870
     },
     {
       "id": "tetogi",
@@ -111,7 +111,7 @@
       "url": "https://tetogi.com",
       "ok": true,
       "products": 2137,
-      "ms": 8433
+      "ms": 1911
     },
     {
       "id": "oishya",
@@ -119,7 +119,7 @@
       "url": "https://oishya.com",
       "ok": true,
       "products": 53,
-      "ms": 7401
+      "ms": 6905
     },
     {
       "id": "ai-and-om",
@@ -127,7 +127,7 @@
       "url": "https://aiandomknives.com",
       "ok": true,
       "products": 996,
-      "ms": 911
+      "ms": 874
     },
     {
       "id": "town-cutler",
@@ -135,7 +135,7 @@
       "url": "https://www.towncutler.com",
       "ok": true,
       "products": 203,
-      "ms": 491
+      "ms": 481
     },
     {
       "id": "homebutcher",
@@ -143,7 +143,7 @@
       "url": "https://homebutcher.com",
       "ok": true,
       "products": 1134,
-      "ms": 952
+      "ms": 984
     },
     {
       "id": "kitchen-provisions",
@@ -151,7 +151,7 @@
       "url": "https://www.kitchenprovisions.co.uk",
       "ok": true,
       "products": 249,
-      "ms": 402
+      "ms": 230
     },
     {
       "id": "bryan-raquin-direct",
@@ -159,7 +159,7 @@
       "url": "https://www.bryanraquin.com",
       "ok": true,
       "products": 78,
-      "ms": 911
+      "ms": 898
     },
     {
       "id": "jns",
@@ -167,7 +167,7 @@
       "url": "https://www.japanesenaturalstones.com",
       "ok": true,
       "products": 6673,
-      "ms": 37859
+      "ms": 42296
     },
     {
       "id": "hitohira-japan-com",
@@ -175,7 +175,7 @@
       "url": "https://hitohira-japan.com",
       "ok": true,
       "products": 6125,
-      "ms": 10731
+      "ms": 10597
     },
     {
       "id": "shirasagistore-com",
@@ -183,7 +183,7 @@
       "url": "https://shirasagistore.com",
       "ok": true,
       "products": 1585,
-      "ms": 38809
+      "ms": 37349
     },
     {
       "id": "staysharpmtl-com",
@@ -191,7 +191,7 @@
       "url": "https://staysharpmtl.com",
       "ok": true,
       "products": 2040,
-      "ms": 5316
+      "ms": 5373
     },
     {
       "id": "bernalcutleryshop-com",
@@ -200,7 +200,7 @@
       "ok": false,
       "error": "fetch failed",
       "products": 0,
-      "ms": 4599
+      "ms": 4638
     },
     {
       "id": "curacook-com",
@@ -208,7 +208,7 @@
       "url": "https://curacook.com",
       "ok": true,
       "products": 2293,
-      "ms": 47868
+      "ms": 53194
     }
   ],
   "hits": [
@@ -6551,8 +6551,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-sujihiki-270mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-sujihiki-270mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-sujihiki-270mm-wood-handle-884472.jpg?v=1763743175",
-        "priceMin": 556,
-        "priceMax": 556,
+        "priceMin": 555,
+        "priceMax": 555,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6809,8 +6809,8 @@
         "handle": "takada-no-hamono-white-1-suiboku-santoku-180mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-white-1-suiboku-santoku-180mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-white-1-suiboku-santoku-180mm-ho-wood-handle-814589.jpg?v=1763585085",
-        "priceMin": 375,
-        "priceMax": 375,
+        "priceMin": 374,
+        "priceMax": 374,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6907,8 +6907,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-santoku-180mm-wood-act-extra-thin",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-santoku-180mm-wood-act-extra-thin",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-santoku-180mm-wood-handle-extra-thin-504161.jpg?v=1763585058",
-        "priceMin": 387,
-        "priceMax": 387,
+        "priceMin": 386,
+        "priceMax": 386,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7006,8 +7006,8 @@
         "handle": "takada-no-hamono-blue-1-suiboku-santoku-180mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-suiboku-santoku-180mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-suiboku-santoku-180mm-ho-wood-handle-653939.jpg?v=1763585023",
-        "priceMin": 375,
-        "priceMax": 375,
+        "priceMin": 374,
+        "priceMax": 374,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7140,8 +7140,8 @@
         "handle": "bca-s3hh-05-ga240",
         "url": "https://hitohira-japan.com/products/bca-s3hh-05-ga240",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/files/DSC03850_ed159c8c-8cda-424e-bba8-065f6dad0a0e.jpg?v=1684722734",
-        "priceMin": 320,
-        "priceMax": 320,
+        "priceMin": 319,
+        "priceMax": 319,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7248,8 +7248,8 @@
         "handle": "bca-b1d-04-fa210",
         "url": "https://hitohira-japan.com/products/bca-b1d-04-fa210",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC06937_6cb15c18-6211-43b4-a1fc-4234cccdbe99.jpg?v=1660985294",
-        "priceMin": 693,
-        "priceMax": 693,
+        "priceMin": 692,
+        "priceMax": 692,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7572,8 +7572,8 @@
         "handle": "bca-s3su-05-ga210",
         "url": "https://hitohira-japan.com/products/bca-s3su-05-ga210",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC03860_45beb5f9-14f1-4f8c-add0-556b6f8d6a46.jpg?v=1650698578",
-        "priceMin": 459,
-        "priceMax": 459,
+        "priceMin": 458,
+        "priceMax": 458,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7644,8 +7644,8 @@
         "handle": "bca-b1su-45-ga210",
         "url": "https://hitohira-japan.com/products/bca-b1su-45-ga210",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC03563_d2274875-dba9-455b-8ff5-598a12677755.jpg?v=1649746983",
-        "priceMin": 493,
-        "priceMax": 493,
+        "priceMin": 492,
+        "priceMax": 492,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7787,8 +7787,8 @@
         "handle": "bca-w2hon-04-fa210",
         "url": "https://hitohira-japan.com/products/bca-w2hon-04-fa210",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC02524_a37a6ac4-e3f9-4d20-966a-d93918bba824.jpg?v=1647499608",
-        "priceMin": 1438,
-        "priceMax": 1438,
+        "priceMin": 1437,
+        "priceMax": 1437,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7857,8 +7857,8 @@
         "handle": "bca-w2hon-05-fa240",
         "url": "https://hitohira-japan.com/products/bca-w2hon-05-fa240",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC02541_deb3d1c5-891b-49c1-ae04-f0aac948907c.jpg?v=1647499695",
-        "priceMin": 1586,
-        "priceMax": 1586,
+        "priceMin": 1585,
+        "priceMax": 1585,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7929,8 +7929,8 @@
         "handle": "bca-hhw2-05-fa210",
         "url": "https://hitohira-japan.com/products/bca-hhw2-05-fa210",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC05212.jpg?v=1680513927",
-        "priceMin": 269,
-        "priceMax": 269,
+        "priceMin": 268,
+        "priceMax": 268,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8001,8 +8001,8 @@
         "handle": "bca-sbb2-05-da",
         "url": "https://hitohira-japan.com/products/bca-sbb2-05-da",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC07050_25a77092-876d-4e16-b810-e9ca8a163498.jpg?v=1680519421",
-        "priceMin": 477,
-        "priceMax": 477,
+        "priceMin": 476,
+        "priceMax": 476,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8397,8 +8397,8 @@
         "handle": "bca-w2hh-05-oa",
         "url": "https://hitohira-japan.com/products/bca-w2hh-05-oa",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC03183_8e144b39-32ad-4368-a0eb-154236d0961b.jpg?v=1647016474",
-        "priceMin": 394,
-        "priceMax": 394,
+        "priceMin": 393,
+        "priceMax": 393,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8577,8 +8577,8 @@
         "handle": "bca-s3su-06-fa210",
         "url": "https://hitohira-japan.com/products/bca-s3su-06-fa210",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC07104_f4f6d7d4-1271-4002-8070-4689c96ea6d9.jpg?v=1647021476",
-        "priceMin": 537,
-        "priceMax": 537,
+        "priceMin": 536,
+        "priceMax": 536,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8792,8 +8792,8 @@
         "handle": "bca-sbb2-05-fa270",
         "url": "https://hitohira-japan.com/products/bca-sbb2-05-fa270",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC08083_7dec0d63-eb27-48ab-9012-c92c2271b6c9.jpg?v=1647022853",
-        "priceMin": 663,
-        "priceMax": 663,
+        "priceMin": 662,
+        "priceMax": 662,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -8828,8 +8828,8 @@
         "handle": "bca-s3su-06-da180",
         "url": "https://hitohira-japan.com/products/bca-s3su-06-da180",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC08071_9f686f6d-a835-4570-b3fc-7fcdc79b706e.jpg?v=1647022819",
-        "priceMin": 504,
-        "priceMax": 504,
+        "priceMin": 503,
+        "priceMax": 503,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -9260,8 +9260,8 @@
         "handle": "bca-w1su-06-fa240",
         "url": "https://hitohira-japan.com/products/bca-w1su-06-fa240",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC06836_ac97e66c-a9fe-4e70-b806-2df65d485e47.jpg?v=1647034775",
-        "priceMin": 632,
-        "priceMax": 632,
+        "priceMin": 631,
+        "priceMax": 631,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -9800,8 +9800,8 @@
         "handle": "bca-b1hh-05-fa210",
         "url": "https://hitohira-japan.com/products/bca-b1hh-05-fa210",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC08745_b07deb6e-222e-4a18-958f-0077ed302a88.jpg?v=1647036739",
-        "priceMin": 349,
-        "priceMax": 349,
+        "priceMin": 348,
+        "priceMax": 348,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -9872,8 +9872,8 @@
         "handle": "bca-b1su-06-fa240",
         "url": "https://hitohira-japan.com/products/bca-b1su-06-fa240",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC08793_9bef183b-6fe8-485a-a109-1328f90fa557.jpg?v=1647036825",
-        "priceMin": 632,
-        "priceMax": 632,
+        "priceMin": 631,
+        "priceMax": 631,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -11078,8 +11078,8 @@
         "handle": "takada-no-hamono-aogami-1-suiboku-petty-135mm-ho",
         "url": "https://staysharpmtl.com/products/takada-no-hamono-aogami-1-suiboku-petty-135mm-ho",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0622/8600/4398/products/1D4421C3-3089-48B4-A492-C3C0D11BF36F.jpg?v=1666797110",
-        "priceMin": 262,
-        "priceMax": 262,
+        "priceMin": 261,
+        "priceMax": 261,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -11308,8 +11308,8 @@
         "handle": "takada-no-hamono-white-2-hh-santoku-135mm-bois-de-ho",
         "url": "https://staysharpmtl.com/products/takada-no-hamono-white-2-hh-santoku-135mm-bois-de-ho",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0622/8600/4398/products/products-DSC_1002-scaled.jpg?v=1666792052",
-        "priceMin": 237,
-        "priceMax": 237,
+        "priceMin": 236,
+        "priceMax": 236,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -11841,8 +11841,8 @@
         "handle": "bca-w1su-06-fa240",
         "url": "https://hitohira-japan.com/products/bca-w1su-06-fa240",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC06836_ac97e66c-a9fe-4e70-b806-2df65d485e47.jpg?v=1647034775",
-        "priceMin": 632,
-        "priceMax": 632,
+        "priceMin": 631,
+        "priceMax": 631,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -11913,8 +11913,8 @@
         "handle": "bca-b1su-06-fa240",
         "url": "https://hitohira-japan.com/products/bca-b1su-06-fa240",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0002/6889/4261/products/DSC08793_9bef183b-6fe8-485a-a109-1328f90fa557.jpg?v=1647036825",
-        "priceMin": 632,
-        "priceMax": 632,
+        "priceMin": 631,
+        "priceMax": 631,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
