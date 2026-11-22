@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-22T11:56:47.520Z",
+  "generatedAt": "2026-11-22T18:57:43.751Z",
   "retailers": [
     {
       "id": "tosho",
       "name": "Tosho Knife Arts",
       "url": "https://toshoknifearts.com",
       "ok": true,
-      "products": 1815,
-      "ms": 2271
+      "products": 1817,
+      "ms": 1296
     },
     {
       "id": "knives-and-stones-au",
@@ -15,7 +15,7 @@
       "url": "https://knivesandstones.com.au",
       "ok": true,
       "products": 242,
-      "ms": 529
+      "ms": 530
     },
     {
       "id": "carbon-knife-co",
@@ -23,7 +23,7 @@
       "url": "https://carbonknifeco.com",
       "ok": true,
       "products": 3212,
-      "ms": 4170
+      "ms": 4629
     },
     {
       "id": "strata",
@@ -31,7 +31,7 @@
       "url": "https://strataportland.com",
       "ok": true,
       "products": 3812,
-      "ms": 3276
+      "ms": 3984
     },
     {
       "id": "bernal",
@@ -39,7 +39,7 @@
       "url": "https://bernalcutlery.com",
       "ok": true,
       "products": 5059,
-      "ms": 9769
+      "ms": 4103
     },
     {
       "id": "sugi",
@@ -47,7 +47,7 @@
       "url": "https://sugicutlery.com",
       "ok": true,
       "products": 2610,
-      "ms": 5178
+      "ms": 2182
     },
     {
       "id": "tokushu",
@@ -55,15 +55,15 @@
       "url": "https://tokushuknife.com",
       "ok": true,
       "products": 953,
-      "ms": 2600
+      "ms": 2965
     },
     {
       "id": "sharp-knife-shop",
       "name": "Sharp Knife Shop",
       "url": "https://sharpknifeshop.com",
       "ok": true,
-      "products": 377,
-      "ms": 963
+      "products": 375,
+      "ms": 459
     },
     {
       "id": "knifewear",
@@ -71,7 +71,7 @@
       "url": "https://knifewear.com",
       "ok": true,
       "products": 249,
-      "ms": 551
+      "ms": 610
     },
     {
       "id": "district-cutlery",
@@ -79,7 +79,7 @@
       "url": "https://www.districtcutlery.com",
       "ok": true,
       "products": 413,
-      "ms": 666
+      "ms": 500
     },
     {
       "id": "coutelier",
@@ -87,7 +87,7 @@
       "url": "https://couteliernola.com",
       "ok": true,
       "products": 884,
-      "ms": 1338
+      "ms": 736
     },
     {
       "id": "eating-tools",
@@ -95,7 +95,7 @@
       "url": "https://www.eatingtools.com",
       "ok": true,
       "products": 1071,
-      "ms": 2472
+      "ms": 3888
     },
     {
       "id": "modern-cooking",
@@ -103,7 +103,7 @@
       "url": "https://www.moderncooking.com",
       "ok": true,
       "products": 507,
-      "ms": 1702
+      "ms": 1094
     },
     {
       "id": "tetogi",
@@ -111,7 +111,7 @@
       "url": "https://tetogi.com",
       "ok": true,
       "products": 2142,
-      "ms": 2833
+      "ms": 6997
     },
     {
       "id": "oishya",
@@ -119,7 +119,7 @@
       "url": "https://oishya.com",
       "ok": true,
       "products": 53,
-      "ms": 7225
+      "ms": 7318
     },
     {
       "id": "ai-and-om",
@@ -127,7 +127,7 @@
       "url": "https://aiandomknives.com",
       "ok": true,
       "products": 993,
-      "ms": 3202
+      "ms": 862
     },
     {
       "id": "town-cutler",
@@ -135,7 +135,7 @@
       "url": "https://www.towncutler.com",
       "ok": true,
       "products": 203,
-      "ms": 451
+      "ms": 275
     },
     {
       "id": "homebutcher",
@@ -143,15 +143,15 @@
       "url": "https://homebutcher.com",
       "ok": true,
       "products": 1134,
-      "ms": 948
+      "ms": 989
     },
     {
       "id": "kitchen-provisions",
       "name": "Kitchen Provisions",
       "url": "https://www.kitchenprovisions.co.uk",
       "ok": true,
-      "products": 281,
-      "ms": 1191
+      "products": 280,
+      "ms": 353
     },
     {
       "id": "bryan-raquin-direct",
@@ -159,15 +159,15 @@
       "url": "https://www.bryanraquin.com",
       "ok": true,
       "products": 80,
-      "ms": 858
+      "ms": 686
     },
     {
       "id": "jns",
       "name": "Japanese Natural Stones (JNS)",
       "url": "https://www.japanesenaturalstones.com",
       "ok": true,
-      "products": 6691,
-      "ms": 33165
+      "products": 6693,
+      "ms": 35834
     },
     {
       "id": "hitohira-japan-com",
@@ -175,7 +175,7 @@
       "url": "https://hitohira-japan.com",
       "ok": true,
       "products": 6143,
-      "ms": 7990
+      "ms": 11531
     },
     {
       "id": "shirasagistore-com",
@@ -183,7 +183,7 @@
       "url": "https://shirasagistore.com",
       "ok": true,
       "products": 1597,
-      "ms": 41625
+      "ms": 41622
     },
     {
       "id": "staysharpmtl-com",
@@ -191,7 +191,7 @@
       "url": "https://staysharpmtl.com",
       "ok": true,
       "products": 2040,
-      "ms": 4371
+      "ms": 4496
     },
     {
       "id": "bernalcutleryshop-com",
@@ -200,7 +200,7 @@
       "ok": false,
       "error": "fetch failed",
       "products": 0,
-      "ms": 4636
+      "ms": 4647
     },
     {
       "id": "curacook-com",
@@ -208,7 +208,7 @@
       "url": "https://curacook.com",
       "ok": true,
       "products": 2293,
-      "ms": 50967
+      "ms": 66941
     }
   ],
   "hits": [
@@ -11174,8 +11174,8 @@
         "handle": "takada-no-hamono-aogami-1-suiboku-gyuto-210mm-rose",
         "url": "https://staysharpmtl.com/products/takada-no-hamono-aogami-1-suiboku-gyuto-210mm-rose",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0622/8600/4398/products/1F59D4D6-E665-43AA-840D-45B74F6DC4C4.jpg?v=1666797100",
-        "priceMin": 417,
-        "priceMax": 417,
+        "priceMin": 416,
+        "priceMax": 416,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -11289,8 +11289,8 @@
         "handle": "takada-no-hamono-shirogami-2-hh-bunka-170mm-ho",
         "url": "https://staysharpmtl.com/products/takada-no-hamono-shirogami-2-hh-bunka-170mm-ho",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0622/8600/4398/products/55C03509-021C-41DF-8166-FF62F2AF9ABB.jpg?v=1666794465",
-        "priceMin": 257,
-        "priceMax": 257,
+        "priceMin": 256,
+        "priceMax": 256,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
