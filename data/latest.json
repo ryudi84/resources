@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-27T21:50:56.139Z",
+  "generatedAt": "2026-11-28T02:26:07.324Z",
   "retailers": [
     {
       "id": "tosho",
       "name": "Tosho Knife Arts",
       "url": "https://toshoknifearts.com",
       "ok": true,
-      "products": 1843,
-      "ms": 888
+      "products": 1844,
+      "ms": 913
     },
     {
       "id": "knives-and-stones-au",
@@ -15,15 +15,15 @@
       "url": "https://knivesandstones.com.au",
       "ok": true,
       "products": 243,
-      "ms": 600
+      "ms": 344
     },
     {
       "id": "carbon-knife-co",
       "name": "Carbon Knife Co",
       "url": "https://carbonknifeco.com",
       "ok": true,
-      "products": 3176,
-      "ms": 2750
+      "products": 3178,
+      "ms": 1934
     },
     {
       "id": "strata",
@@ -31,7 +31,7 @@
       "url": "https://strataportland.com",
       "ok": true,
       "products": 3815,
-      "ms": 1976
+      "ms": 2696
     },
     {
       "id": "bernal",
@@ -39,7 +39,7 @@
       "url": "https://bernalcutlery.com",
       "ok": true,
       "products": 5080,
-      "ms": 2425
+      "ms": 3676
     },
     {
       "id": "sugi",
@@ -47,7 +47,7 @@
       "url": "https://sugicutlery.com",
       "ok": true,
       "products": 2622,
-      "ms": 2516
+      "ms": 2130
     },
     {
       "id": "tokushu",
@@ -55,15 +55,15 @@
       "url": "https://tokushuknife.com",
       "ok": true,
       "products": 954,
-      "ms": 533
+      "ms": 923
     },
     {
       "id": "sharp-knife-shop",
       "name": "Sharp Knife Shop",
       "url": "https://sharpknifeshop.com",
       "ok": true,
-      "products": 356,
-      "ms": 466
+      "products": 352,
+      "ms": 495
     },
     {
       "id": "knifewear",
@@ -71,7 +71,7 @@
       "url": "https://knifewear.com",
       "ok": true,
       "products": 249,
-      "ms": 326
+      "ms": 186
     },
     {
       "id": "district-cutlery",
@@ -79,7 +79,7 @@
       "url": "https://www.districtcutlery.com",
       "ok": true,
       "products": 417,
-      "ms": 432
+      "ms": 388
     },
     {
       "id": "coutelier",
@@ -87,7 +87,7 @@
       "url": "https://couteliernola.com",
       "ok": true,
       "products": 889,
-      "ms": 898
+      "ms": 950
     },
     {
       "id": "eating-tools",
@@ -95,7 +95,7 @@
       "url": "https://www.eatingtools.com",
       "ok": true,
       "products": 1067,
-      "ms": 1616
+      "ms": 1737
     },
     {
       "id": "modern-cooking",
@@ -103,7 +103,7 @@
       "url": "https://www.moderncooking.com",
       "ok": true,
       "products": 507,
-      "ms": 910
+      "ms": 942
     },
     {
       "id": "tetogi",
@@ -111,7 +111,7 @@
       "url": "https://tetogi.com",
       "ok": true,
       "products": 2164,
-      "ms": 2780
+      "ms": 1848
     },
     {
       "id": "oishya",
@@ -119,7 +119,7 @@
       "url": "https://oishya.com",
       "ok": true,
       "products": 53,
-      "ms": 7422
+      "ms": 8420
     },
     {
       "id": "ai-and-om",
@@ -127,7 +127,7 @@
       "url": "https://aiandomknives.com",
       "ok": true,
       "products": 1012,
-      "ms": 1291
+      "ms": 1120
     },
     {
       "id": "town-cutler",
@@ -135,7 +135,7 @@
       "url": "https://www.towncutler.com",
       "ok": true,
       "products": 203,
-      "ms": 261
+      "ms": 329
     },
     {
       "id": "homebutcher",
@@ -143,7 +143,7 @@
       "url": "https://homebutcher.com",
       "ok": true,
       "products": 1134,
-      "ms": 1089
+      "ms": 1055
     },
     {
       "id": "kitchen-provisions",
@@ -151,7 +151,7 @@
       "url": "https://www.kitchenprovisions.co.uk",
       "ok": true,
       "products": 297,
-      "ms": 826
+      "ms": 960
     },
     {
       "id": "bryan-raquin-direct",
@@ -159,7 +159,7 @@
       "url": "https://www.bryanraquin.com",
       "ok": true,
       "products": 80,
-      "ms": 589
+      "ms": 1251
     },
     {
       "id": "jns",
@@ -167,7 +167,7 @@
       "url": "https://www.japanesenaturalstones.com",
       "ok": true,
       "products": 6708,
-      "ms": 43590
+      "ms": 41720
     },
     {
       "id": "hitohira-japan-com",
@@ -175,7 +175,7 @@
       "url": "https://hitohira-japan.com",
       "ok": true,
       "products": 6143,
-      "ms": 8896
+      "ms": 5128
     },
     {
       "id": "shirasagistore-com",
@@ -183,7 +183,7 @@
       "url": "https://shirasagistore.com",
       "ok": true,
       "products": 1603,
-      "ms": 34653
+      "ms": 36721
     },
     {
       "id": "staysharpmtl-com",
@@ -191,7 +191,7 @@
       "url": "https://staysharpmtl.com",
       "ok": true,
       "products": 2039,
-      "ms": 2531
+      "ms": 1770
     },
     {
       "id": "bernalcutleryshop-com",
@@ -200,7 +200,7 @@
       "ok": false,
       "error": "fetch failed",
       "products": 0,
-      "ms": 4585
+      "ms": 4655
     },
     {
       "id": "curacook-com",
@@ -208,7 +208,7 @@
       "url": "https://curacook.com",
       "ok": true,
       "products": 2293,
-      "ms": 46920
+      "ms": 46254
     }
   ],
   "hits": [
@@ -227,8 +227,8 @@
         "handle": "/jns-raquin-collab-bunka-190mm-sc125/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-bunka-190mm-sc125/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7547/79604/P1420438__16309.1777817606.jpg",
-        "priceMin": 1026.9,
-        "priceMax": 1026.9,
+        "priceMin": 1024.1,
+        "priceMax": 1024.1,
         "available": true,
         "variantsAvailable": 1,
         "variantsTotal": 1
@@ -2442,8 +2442,8 @@
         "handle": "/jns-raquin-collab-gyuto-220mm-145sc/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-gyuto-220mm-145sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7103/75896/P1370985__11973.1760173403.jpg",
-        "priceMin": 880.2,
-        "priceMax": 880.2,
+        "priceMin": 877.8,
+        "priceMax": 877.8,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2464,8 +2464,8 @@
         "handle": "/jns-raquin-collab-nakiri-155mm-145sc/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-nakiri-155mm-145sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7105/75916/P1380004__60356.1760173406.jpg",
-        "priceMin": 733.5,
-        "priceMax": 733.5,
+        "priceMin": 731.5,
+        "priceMax": 731.5,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2486,8 +2486,8 @@
         "handle": "/jns-raquin-collab-gyuto-220mm-white-1/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-gyuto-220mm-white-1/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7187/76591/P1380809__94259.1760792889.jpg",
-        "priceMin": 1026.9,
-        "priceMax": 1026.9,
+        "priceMin": 1024.1,
+        "priceMax": 1024.1,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2508,8 +2508,8 @@
         "handle": "/jns-raquin-collab-nakiri-210mm-white-1/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-nakiri-210mm-white-1/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7188/76598/P1380818__77406.1760793046.jpg",
-        "priceMin": 1173.6,
-        "priceMax": 1173.6,
+        "priceMin": 1170.4,
+        "priceMax": 1170.4,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2530,8 +2530,8 @@
         "handle": "/jns-raquin-collab-gyuto-230mm-145sc/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-gyuto-230mm-145sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7314/77672/P1400063__26964.1765986886.jpg",
-        "priceMin": 1173.6,
-        "priceMax": 1173.6,
+        "priceMin": 1170.4,
+        "priceMax": 1170.4,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2552,8 +2552,8 @@
         "handle": "/jns-raquin-collab-gyuto-265mm-145sc/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-gyuto-265mm-145sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7394/78332/P1400895__02391.1770822023.jpg",
-        "priceMin": 2053.8,
-        "priceMax": 2053.8,
+        "priceMin": 2048.2,
+        "priceMax": 2048.2,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2574,8 +2574,8 @@
         "handle": "/jns-raquin-collab-butcher-200mm-white-1/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-butcher-200mm-white-1/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7395/78349/P1400907__32151.1770911452.jpg",
-        "priceMin": 1026.9,
-        "priceMax": 1026.9,
+        "priceMin": 1024.1,
+        "priceMax": 1024.1,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2596,8 +2596,8 @@
         "handle": "/jns-raquin-collab-slicer-225mm-145sc/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-slicer-225mm-145sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7398/78382/P1400942__36280.1771086156.jpg",
-        "priceMin": 953.55,
-        "priceMax": 953.55,
+        "priceMin": 950.95,
+        "priceMax": 950.95,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2618,8 +2618,8 @@
         "handle": "/jns-raquin-collab-gyuto-235mm-125sc/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-gyuto-235mm-125sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7489/79075/P1410847__81343.1774022451.jpg",
-        "priceMin": 1173.6,
-        "priceMax": 1173.6,
+        "priceMin": 1170.4,
+        "priceMax": 1170.4,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2640,8 +2640,8 @@
         "handle": "/jns-raquin-collab-gyuto-205mm-145sc/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-gyuto-205mm-145sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7492/79109/P1410904__46700.1774191053.jpg",
-        "priceMin": 953.55,
-        "priceMax": 953.55,
+        "priceMin": 950.95,
+        "priceMax": 950.95,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2662,8 +2662,8 @@
         "handle": "/jns-raquin-collab-gyuto-230mm-white-1/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-gyuto-230mm-white-1/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7494/79137/P1410935__21298.1774362035.jpg",
-        "priceMin": 1173.6,
-        "priceMax": 1173.6,
+        "priceMin": 1170.4,
+        "priceMax": 1170.4,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2684,8 +2684,8 @@
         "handle": "/jns-raquin-collab-sujihiki-280mm-125sc/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-sujihiki-280mm-125sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7497/79171/P1410968__27691.1774542475.jpg",
-        "priceMin": 1320.3,
-        "priceMax": 1320.3,
+        "priceMin": 1316.7,
+        "priceMax": 1316.7,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2706,8 +2706,8 @@
         "handle": "/jns-raquin-collab-gyuto-250mm-145sc-laser/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-gyuto-250mm-145sc-laser/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7552/79660/P1000025__43446.1778080888.jpg",
-        "priceMin": 1173.6,
-        "priceMax": 1173.6,
+        "priceMin": 1170.4,
+        "priceMax": 1170.4,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2728,8 +2728,8 @@
         "handle": "/jns-raquin-collab-sujihiki-260mm-145sc/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-sujihiki-260mm-145sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7729/81205/P1001697__29600.1787412308.jpg",
-        "priceMin": 1026.9,
-        "priceMax": 1026.9,
+        "priceMin": 1024.1,
+        "priceMax": 1024.1,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2750,8 +2750,8 @@
         "handle": "/jns-raquin-collab-meat-saber-275mm-145sc/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-meat-saber-275mm-145sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7784/81640/P1002281__18354.1789226468.jpg",
-        "priceMin": 1320.3,
-        "priceMax": 1320.3,
+        "priceMin": 1316.7,
+        "priceMax": 1316.7,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2772,8 +2772,8 @@
         "handle": "/jns-raquin-collab-meat-saber-280mm-145sc/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-meat-saber-280mm-145sc/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7874/82450/P1003185__99362.1794067390.jpg",
-        "priceMin": 1393.65,
-        "priceMax": 1393.65,
+        "priceMin": 1389.85,
+        "priceMax": 1389.85,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2794,8 +2794,8 @@
         "handle": "/jns-x-raquin-collab-honyaki-gyutohiki-235mm-white-1/",
         "url": "https://www.japanesenaturalstones.com/jns-x-raquin-collab-honyaki-gyutohiki-235mm-white-1/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7875/82462/P1003199__06041.1794149676.jpg",
-        "priceMin": 1393.65,
-        "priceMax": 1393.65,
+        "priceMin": 1389.85,
+        "priceMax": 1389.85,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -2816,8 +2816,8 @@
         "handle": "/jns-raquin-collab-bunka-195mm-sc125/",
         "url": "https://www.japanesenaturalstones.com/jns-raquin-collab-bunka-195mm-sc125/",
         "imageUrl": "https://cdn11.bigcommerce.com/s-qblte8/images/stencil/500w/products/7885/82564/P1003309__59512.1794675516.jpg",
-        "priceMin": 880.2,
-        "priceMax": 880.2,
+        "priceMin": 877.8,
+        "priceMax": 877.8,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1
@@ -6528,10 +6528,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-petty-135mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-petty-135mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-petty-135mm-wood-handle-239325.jpg?v=1766336648",
-        "priceMin": 292,
-        "priceMax": 292,
-        "compareAtMax": 344,
-        "salePct": 15,
+        "priceMin": 275,
+        "priceMax": 275,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6562,10 +6560,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-gyuto-210mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-gyuto-210mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-gyuto-210mm-wood-handle-850909.jpg?v=1771519157",
-        "priceMin": 483,
-        "priceMax": 483,
-        "compareAtMax": 568,
-        "salePct": 15,
+        "priceMin": 454,
+        "priceMax": 454,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6596,10 +6592,8 @@
         "handle": "takada-no-hamono-blue-1-suiboku-nakiri-180mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-suiboku-nakiri-180mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-suiboku-nakiri-180mm-wood-handle-431623.jpg?v=1771518242",
-        "priceMin": 470,
-        "priceMax": 470,
-        "compareAtMax": 553,
-        "salePct": 15,
+        "priceMin": 442,
+        "priceMax": 442,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6630,10 +6624,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-sujihiki-270mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-sujihiki-270mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-sujihiki-270mm-wood-handle-884472.jpg?v=1763743175",
-        "priceMin": 584,
-        "priceMax": 584,
-        "compareAtMax": 687,
-        "salePct": 15,
+        "priceMin": 550,
+        "priceMax": 550,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6664,10 +6656,8 @@
         "handle": "takada-no-hamono-white-2-hh-sujihiki-270mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-white-2-hh-sujihiki-270mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-white-2-hh-sujihiki-270mm-wood-handle-786434.jpg?v=1763743475",
-        "priceMin": 318,
-        "priceMax": 318,
-        "compareAtMax": 374,
-        "salePct": 15,
+        "priceMin": 299,
+        "priceMax": 299,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6698,10 +6688,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-sujihiki-300mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-sujihiki-300mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-sujihiki-300mm-wood-handle-494170.jpg?v=1763742276",
-        "priceMin": 666,
-        "priceMax": 666,
-        "compareAtMax": 784,
-        "salePct": 15,
+        "priceMin": 627,
+        "priceMax": 627,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6732,10 +6720,8 @@
         "handle": "takada-no-hamono-silver-3-hh-gyuto-210mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-hh-gyuto-210mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-hh-gyuto-210mm-ho-wood-handle-116179.jpg?v=1763742269",
-        "priceMin": 330,
-        "priceMax": 330,
-        "compareAtMax": 389,
-        "salePct": 15,
+        "priceMin": 311,
+        "priceMax": 311,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6766,10 +6752,8 @@
         "handle": "takada-no-hamono-white-2-hh-bunka-180mm-ho-wood-handle-mukimono-kaku-type",
         "url": "https://tetogi.com/products/takada-no-hamono-white-2-hh-bunka-180mm-ho-wood-handle-mukimono-kaku-type",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-white-2-hh-bunka-180mm-ho-wood-handle-mukimono-kaku-type-199919.jpg?v=1763741521",
-        "priceMin": 280,
-        "priceMax": 280,
-        "compareAtMax": 329,
-        "salePct": 15,
+        "priceMin": 263,
+        "priceMax": 263,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6800,10 +6784,8 @@
         "handle": "takada-no-hamono-silver-3-hh-sujihiki-270mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-hh-sujihiki-270mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-hh-sujihiki-270mm-ho-wood-handle-386075.jpg?v=1763741464",
-        "priceMin": 330,
-        "priceMax": 330,
-        "compareAtMax": 389,
-        "salePct": 15,
+        "priceMin": 311,
+        "priceMax": 311,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6834,10 +6816,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-sujihiki-210mm-tagayasan-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-sujihiki-210mm-tagayasan-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-sujihiki-210mm-tagayasan-handle-910909.jpg?v=1763741847",
-        "priceMin": 463,
-        "priceMax": 463,
-        "compareAtMax": 545,
-        "salePct": 15,
+        "priceMin": 436,
+        "priceMax": 436,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6869,10 +6849,8 @@
         "handle": "takada-no-hamono-white-2-hh-santoku-180mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-white-2-hh-santoku-180mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-white-2-hh-santoku-180mm-ho-wood-handle-503546.jpg?v=1763585098",
-        "priceMin": 254,
-        "priceMax": 254,
-        "compareAtMax": 299,
-        "salePct": 15,
+        "priceMin": 239,
+        "priceMax": 239,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6904,10 +6882,8 @@
         "handle": "takada-no-hamono-white-1-suiboku-santoku-180mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-white-1-suiboku-santoku-180mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-white-1-suiboku-santoku-180mm-ho-wood-handle-814589.jpg?v=1763585085",
-        "priceMin": 394,
-        "priceMax": 394,
-        "compareAtMax": 463,
-        "salePct": 15,
+        "priceMin": 371,
+        "priceMax": 371,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6939,10 +6915,8 @@
         "handle": "takada-no-hamono-white-1-suiboku-petty-135mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-white-1-suiboku-petty-135mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-white-1-suiboku-petty-135mm-wood-handle-958427.jpg?v=1763585075",
-        "priceMin": 286,
-        "priceMax": 286,
-        "compareAtMax": 336,
-        "salePct": 15,
+        "priceMin": 269,
+        "priceMax": 269,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -6974,10 +6948,8 @@
         "handle": "takada-no-hamono-white-1-suiboku-petty-135mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-white-1-suiboku-petty-135mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-white-1-suiboku-petty-135mm-ho-wood-handle-640832.jpg?v=1763585064",
-        "priceMin": 273,
-        "priceMax": 273,
-        "compareAtMax": 321,
-        "salePct": 15,
+        "priceMin": 257,
+        "priceMax": 257,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7008,10 +6980,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-santoku-180mm-wood-act-extra-thin",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-santoku-180mm-wood-act-extra-thin",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-santoku-180mm-wood-handle-extra-thin-504161.jpg?v=1763585058",
-        "priceMin": 406,
-        "priceMax": 406,
-        "compareAtMax": 478,
-        "salePct": 15,
+        "priceMin": 383,
+        "priceMax": 383,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7043,10 +7013,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-petty-135mm-wood-act-extra-thin",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-petty-135mm-wood-act-extra-thin",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-petty-135mm-wood-handle-extra-thin-356956.jpg?v=1763585049",
-        "priceMin": 267,
-        "priceMax": 267,
-        "compareAtMax": 314,
-        "salePct": 15,
+        "priceMin": 251,
+        "priceMax": 251,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7078,10 +7046,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-gyuto-240mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-gyuto-240mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-gyuto-240mm-wood-handle-827469.jpg?v=1763585037",
-        "priceMin": 565,
-        "priceMax": 565,
-        "compareAtMax": 665,
-        "salePct": 15,
+        "priceMin": 532,
+        "priceMax": 532,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7113,10 +7079,8 @@
         "handle": "takada-no-hamono-blue-1-suiboku-santoku-180mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-suiboku-santoku-180mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-suiboku-santoku-180mm-ho-wood-handle-653939.jpg?v=1763585023",
-        "priceMin": 394,
-        "priceMax": 394,
-        "compareAtMax": 463,
-        "salePct": 15,
+        "priceMin": 371,
+        "priceMax": 371,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7148,10 +7112,8 @@
         "handle": "takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-handle-654832.jpg?v=1763584947",
-        "priceMin": 495,
-        "priceMax": 495,
-        "compareAtMax": 583,
-        "salePct": 15,
+        "priceMin": 466,
+        "priceMax": 466,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7182,10 +7144,8 @@
         "handle": "takada-no-hamono-blue-1-suiboku-gyuto-210mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-suiboku-gyuto-210mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-suiboku-gyuto-210mm-ho-wood-handle-603791.jpg?v=1763584937",
-        "priceMin": 432,
-        "priceMax": 432,
-        "compareAtMax": 508,
-        "salePct": 15,
+        "priceMin": 406,
+        "priceMax": 406,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -7217,10 +7177,8 @@
         "handle": "takada-no-hamono-blue-1-hh-petty-135mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-hh-petty-135mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-hh-petty-135mm-ho-wood-handle-470319.jpg?v=1763584926",
-        "priceMin": 229,
-        "priceMax": 229,
-        "compareAtMax": 269,
-        "salePct": 15,
+        "priceMin": 215,
+        "priceMax": 215,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -11823,10 +11781,8 @@
         "handle": "takada-no-hamono-silver-3-suiboku-gyuto-240mm-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-silver-3-suiboku-gyuto-240mm-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-silver-3-suiboku-gyuto-240mm-wood-handle-827469.jpg?v=1763585037",
-        "priceMin": 565,
-        "priceMax": 565,
-        "compareAtMax": 665,
-        "salePct": 15,
+        "priceMin": 532,
+        "priceMax": 532,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
@@ -11858,10 +11814,8 @@
         "handle": "takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-act",
         "url": "https://tetogi.com/products/takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-act",
         "imageUrl": "https://cdn.shopify.com/s/files/1/0616/3539/5817/products/takada-no-hamono-blue-1-suiboku-gyuto-240mm-ho-wood-handle-654832.jpg?v=1763584947",
-        "priceMin": 495,
-        "priceMax": 495,
-        "compareAtMax": 583,
-        "salePct": 15,
+        "priceMin": 466,
+        "priceMax": 466,
         "available": false,
         "variantsAvailable": 0,
         "variantsTotal": 1,
